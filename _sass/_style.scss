@@ -144,3 +144,182 @@ code {
   color: #ccc;
   cursor: help;
 }
+
+// Base content width
+article {
+  position: relative;
+  width: 85%;
+}
+
+// Sidenote essentials
+.sidenote {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 45%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  vertical-align: baseline;
+  position: relative;
+}
+
+// Sidenote numbers and toggle
+.sidenote-number {
+  counter-increment: sidenote-counter;
+  cursor: pointer;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 0.8rem;
+  top: -0.5rem;
+  left: 0.1rem;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-size: 0.8rem;
+  top: -0.5rem;
+  position: relative;
+}
+
+// Hide checkbox
+input.margin-toggle {
+  display: none;
+}
+
+// Mobile adjustments
+@media (max-width: 760px) {
+  article {
+    width: 105%;
+  }
+  
+  label.margin-toggle.sidenote-number {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .sidenote {
+    display: none;
+    float: left;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    padding: 0.5rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .margin-toggle:checked + .sidenote {
+    display: block;
+  }
+}
+
+// Marginnote styles (very similar to sidenotes but without counter)
+.marginnote {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 45%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  vertical-align: baseline;
+  position: relative;
+}
+
+// Toggle symbol for marginnotes
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+// Mobile adjustments for both sidenotes and marginnotes
+@media (max-width: 760px) {
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+    content: "⊕";
+  }
+
+  .marginnote {
+    display: none;
+    float: left;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    padding: 0.5rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+  }
+
+  .margin-toggle:checked + .marginnote {
+    display: block;
+  }
+}
+
+// Newthought style - small caps for the first few words of a section
+.newthought {
+  font-variant: small-caps;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+}
+
+// Main column figure styles
+.maincolumn-figure {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.maincolumn-figure img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.maincolumn-figure figcaption {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Full-width figures
+.fullwidth {
+  position: relative;
+  width: 160%;        // Increased width to extend further
+  margin-left: 0;     // Align with left edge of content
+  margin-right: -60%; // Push into right margin
+  clear: both;
+  padding: 2rem 0;
+}
+
+.fullwidth img {
+  width: 100%;
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #666;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+// Mobile adjustments
+@media (max-width: 760px) {
+  .fullwidth {
+    width: 100%;
+    margin-right: 0;
+  }
+}

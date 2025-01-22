@@ -3,6 +3,10 @@ title: Your first seed
 ---
 
 ### Welcome!
+// For a full-width figure:
+{% fullwidth 'assets/napoleons-march.png' 'This is the caption for the full-width figure' %}
+
+{% maincolumn 'assets/napoleons-march.png' 'This is the caption for the main column figure' %}
 
 This is your first note. You'll find it in the [`notes/`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/tree/master/_notes) directory. 
 
@@ -91,6 +95,14 @@ If you'd like to quote other people, consider using quote blocks:
 And of course, images look great:
 
 <img src="{{ site.baseurl }}/assets/image.jpg"/>
+
+
+
+// For a margin figure:
+{% marginfigure 'fig-id-1' 'assets/image.jpg' 'This is the caption for the margin figure' %}
+
+// For a main column figure:
+{% maincolumn 'assets/image.jpg' 'This is the caption for the main column figure' %}
 
 You can also ==highlight some content== by wrapping it with `==`.
 
