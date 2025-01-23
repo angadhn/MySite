@@ -1,4 +1,4 @@
----
+Tufte-style Jekyll blog---
 title: Your first seed
 ---
 
@@ -9,9 +9,9 @@ This is your first note. You'll find it in the [`notes/`](https://github.com/max
 
 To link to another note, you can use multiple syntaxes. The following four use the "double-bracket" notation ([view the Markdown source file](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/master/_notes/your-first-note.md#link-syntax) to see the underlying syntax).
 
-- Using the note title: [[a note about cats]]
-- Using the note's filename: [[cats]]
-- Using the note's title, with a label: [[A note about cats|link to the note about cats using the note title]]
+- Using the note title: [[Tufte-style Jekyll blog]]
+- Using the note's filename: [[Tufte Jekyll with Obsidian]]
+- Using the note's title, with a label: [[Tufte-style Jekyll blog|link to the note about Jekyll Tufte written in Obsidian]]
 - Using the note's filename, with a label: [[inflatable von Braun Stations|link to the note about inflatable von Braun stations using the note's filename]]
 
 You can organize notes in subdirectories and link them normally. For example, the links above all point to the `_notes/animals/cats.md` file. Here's another example: [[tigers]].
