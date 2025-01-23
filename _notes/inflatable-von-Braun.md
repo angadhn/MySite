@@ -24,7 +24,7 @@ and scientific lens for some time now.
 
 Today's technocultural space community of thinkers has conjured or
 realised astonishing visions like the Apollo program and reusable rockets in
-the $20^{th}$ and $21^{st}$ centuries. The technical community no longer
+the $$20^{th}$$ and $$21^{st}$$ centuries. The technical community no longer
 battles claims of heresy but politics, as if fighting to overcome the limits 
 of physics isn't hard enough. Bureaucratic operators seek short-term
 justifications for projects and hinder progress towards sci-fi realities
@@ -40,7 +40,7 @@ definitively prove this, of course, but it feels to me a pathway to solving
 the [UK's productivity puzzle](https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/labourproductivity/articles/whatistheproductivitypuzzle/2015-07-07)." %}
 but want to do so without investing in visions of a limitlessly abundant future.
 Meanwhile, private investors want rapid returns on investment while making
-bold claims, like wanting flying cars but getting $140$ characters, extending the
+bold claims, like wanting flying cars but getting $$140$$ characters, extending the
 participation in space progress to mostly the superwealthy.
 
 From hereon, this post will focus on the radical notion of space
@@ -56,19 +56,19 @@ relevant.
 
 ## The vision
 Simply put, the vision I am putting forward is of deploying monolithic
-space stations with crew capacities of at least $100$ astronauts, i.e., 
-$>10x$ the ISS's typical crew size; I call this the Hundred Person Habitat (HPH).
+space stations with crew capacities of at least $$100$$ astronauts, i.e., 
+$$>10x$$ the ISS's typical crew size; I call this the Hundred Person Habitat (HPH).
 To date, no station has offered an order of magnitude increase on its
 predecessors and none are in the pipeline{% sidenote 'inflatables-3' "The
 in-development Lunar Gateway will operate at an orbit further to the
 International Space Station (ISS) with a crew of 4. See table
 [here](https://www.angadhn.com/online_textbooks/UG_final_year_project/#large-space-stations-modular-or-monolithic)"%}.
-Assuming that a pressurized volume $>20x$ of the ISS gives each crew member a 
-hypothetical $\approx 200\,m^3$ of volume though, in practice, the habitable portion is
+Assuming that a pressurized volume $$>20x$$ of the ISS gives each crew member a 
+hypothetical $$\approx 200\,m^3$$ of volume though, in practice, the habitable portion is
 roughly identical to the space occupied by on-board equipment/instruments
 for experiments and life support. The station will be a toroid and thus 
 conceptually resembles von Braun's{% sidenote 'potocnik'
-"He was apparently inspired by Herman Potočnik's $30\,m$ ring-shaped habitat
+"He was apparently inspired by Herman Potočnik's $$30\,m$$ ring-shaped habitat
 described in [*The Problem of Space Travel*](https://books.google.co.uk/books/about/The_Problem_of_Space_Travel.html?id=6m0bCwAAQBAJ&redir_esc=y)" 
 at GEO over Berlin.%} rotating wheel station. The below table
 compares the HPH to the ISS and von Braun station:
@@ -166,7 +166,7 @@ flight due to concerns that the soft materials it was made from{% sidenote
 'goodyear-materials' 'three-ply nylon cords, held together by butyl elastomer.'%}
 weren’t strong enough to withstand micrometeoroid collisions.
 Nonetheless, this was an early example of a monolithic space station;
-a tenth of von Braun's wheel station that could be packaged to $2\%$
+a tenth of von Braun's wheel station that could be packaged to $$2\%$$
 of its inflated volume (another cool image below).
 
 {% maincolumn 'assets/LittekenPaper_GoodYear.png' "
@@ -180,7 +180,7 @@ A long lull on habitable space inflatables followed
 until NASA's TransHab program (1997) which developed
 high strength materials capable of withstanding collisions with
 micrometeoroids and orbital debris (MMOD). TransHab inspired
-a cylindrical inflatable ISS module ($13\,ft$ in length and $10\,ft$
+a cylindrical inflatable ISS module ($$13\,ft$$ in length and $$10\,ft$$
 in diameter)- BEAM (Bigelow Expandable Activity Module)- in
 operation since 2016. The period between the GoodYear and TransHab
 inflatable space stations laid the foundations for today's dominant
@@ -264,4 +264,4 @@ help me gain a deeper perspective on the early inflatable station. Fun fact: ano
 
 
 ## Notes
-[^a]: I've only read a summary of Brick Moon, a story of workers building a 200-foot sphere that are accidentally launched into space to become first inhabitants of space. The moon was to serve as a navigational aid for sailors. It also estimates a cost for the construction at ${\$}250k$ using $12$ million bricks.
+[^a]: I've only read a summary of Brick Moon, a story of workers building a 200-foot sphere that are accidentally launched into space to become first inhabitants of space. The moon was to serve as a navigational aid for sailors. It also estimates a cost for the construction at $${\$}250k$$ using $$12$$ million bricks.
