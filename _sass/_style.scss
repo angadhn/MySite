@@ -110,7 +110,7 @@ a {
   padding: 0 0.1em;
   text-decoration: none;
   border-bottom: 1px solid $color-border;
-  color: $color-primary;
+  color: crimson;
   &:hover {
     color: black !important;
     background: #fffaf1;
@@ -202,7 +202,8 @@ article {
 }
 
 .sidenote-number:after {
-  content: counter(sidenote-counter);
+  content: counter(sidenote-counter, lower-roman);
+  color: crimson;
   font-size: 0.8rem;
   top: -0.5rem;
   left: 0.1rem;
@@ -211,7 +212,8 @@ article {
 }
 
 .sidenote:before {
-  content: counter(sidenote-counter) " ";
+  content: counter(sidenote-counter, lower-roman) " ";
+  color: crimson;
   font-size: 0.8rem;
   top: -0.5rem;
   position: relative;
@@ -780,5 +782,10 @@ input:checked + .slider {
         .cp { color: #6c7a89; }
         .c1 { color: #6c7a89; }
         .cs { color: #6c7a89; }
+    }
+
+    .sidenote-number:after,
+    .sidenote:before {
+        color: #00adb5;
     }
 }
