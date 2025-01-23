@@ -1,3 +1,214 @@
 <div>
     <a class="internal-link" href="{{ site.baseurl }}/"><b>{{ site.title }}</b></a>
+    <div style="float: right;" class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
 </div>
+
+<style>
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 48px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+[data-theme="dark"] {
+    background-color: #252a34;  /* $background-color */
+    color: #eaeaea;  /* $text-color */
+}
+
+[data-theme="dark"] * {
+    color: #eaeaea;
+}
+
+[data-theme="dark"] code {
+    background-color: #1f232b;  /* $code-background-color */
+}
+
+[data-theme="dark"] a {
+    color: #00adb5;  /* $primary-color */
+    border-color: #3d434d;  /* $border-color */
+}
+
+[data-theme="dark"] a:hover {
+    background-color: #1f232b;
+    color: #eaeaea !important;
+}
+
+[data-theme="dark"] .internal-link,
+[data-theme="dark"] .invalid-link {
+    color: #00adb5;  /* $primary-color */
+    background-color: #1f232b;  /* Same as code background */
+}
+
+[data-theme="dark"] .invalid-link-brackets {
+    color: #3d434d;  /* $border-color - for the [[]] characters */
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] span {
+    color: #eaeaea;
+}
+
+[data-theme="dark"] .slider {
+    background-color: #1f232b;  /* $code-background-color */
+}
+
+[data-theme="dark"] .slider:before {
+    background-color: #eaeaea;  /* $text-color */
+}
+
+[data-theme="dark"] mark {
+    background-color: #1f232b;  /* Same subtle background as code blocks */
+    color: #ffeb3b;  /* A softer yellow color */
+    padding: 0.1em 0.2em;
+    border-radius: 4px;
+}
+
+[data-theme="dark"] .backlink-box {
+    background-color: #1f232b;  /* Same as internal links background */
+    border-radius: 4px;
+    padding: 1em;
+}
+
+[data-theme="dark"] .backlink-box a {
+    color: #00adb5;  /* $primary-color */
+}
+
+[data-theme="dark"] .backlink-box div {
+    color: #eaeaea;  /* Make sure the excerpt text is visible */
+}
+
+[data-theme="dark"] .highlight {
+    background-color: #1f232b;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+/* Syntax highlighting colors for dark mode */
+[data-theme="dark"] .highlight .c { color: #6c7a89; } /* Comment */
+[data-theme="dark"] .highlight .err { color: #ff6b6b; } /* Error */
+[data-theme="dark"] .highlight .k { color: #c678dd; } /* Keyword */
+[data-theme="dark"] .highlight .s { color: #98c379; } /* String */
+[data-theme="dark"] .highlight .n { color: #eaeaea; } /* Name */
+[data-theme="dark"] .highlight .o { color: #56b6c2; } /* Operator */
+[data-theme="dark"] .highlight .p { color: #eaeaea; } /* Punctuation */
+[data-theme="dark"] .highlight .cm { color: #6c7a89; } /* Comment.Multiline */
+[data-theme="dark"] .highlight .cp { color: #6c7a89; } /* Comment.Preproc */
+[data-theme="dark"] .highlight .c1 { color: #6c7a89; } /* Comment.Single */
+[data-theme="dark"] .highlight .cs { color: #6c7a89; } /* Comment.Special */
+
+[data-theme="dark"] blockquote,
+[data-theme="dark"] .epigraph {
+    background-color: #1f232b;  /* Same as code blocks */
+    margin: 1.5em 0;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+/* Separate styling for epigraphs */
+[data-theme="dark"] .epigraph {
+    border-left: none;  /* Remove the left border */
+    padding-left: 3em;  /* Add some indent instead */
+}
+
+[data-theme="dark"] blockquote {
+    border-left: 4px solid #00adb5;  /* Keep border only for regular blockquotes */
+}
+
+[data-theme="dark"] blockquote p,
+[data-theme="dark"] .epigraph p {
+    color: #eaeaea;
+    margin: 0;
+}
+
+[data-theme="dark"] blockquote cite,
+[data-theme="dark"] .epigraph cite {
+    color: #6c7a89;  /* Slightly muted color for citations */
+    display: block;
+    margin-top: 0.5em;
+}
+</style>
+
+<script>
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+// Check for saved theme preference
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+</script>
