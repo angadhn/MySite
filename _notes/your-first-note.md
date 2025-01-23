@@ -2,7 +2,7 @@
 title: Your first seed
 ---
 
-This is based on the [[jekyll.md]].
+This is based on the [[jekyll]].
 ### Welcome!
 // For a full-width figure:
 {% fullwidth 'assets/napoleons-march.png' 'This is the caption for the full-width figure' %}
