@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
         Authorization: `Token ${BUTTONDOWN_API_KEY}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email_address: email }),
     });
 
     const responseText = await response.text();
