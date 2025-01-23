@@ -1,7 +1,7 @@
 <style>
   .links line {
-    stroke: #ccc;
-    opacity: 0.5;
+    stroke: #8b88e6;
+    opacity: 0.7;
   }
 
   .nodes circle {
@@ -16,10 +16,29 @@
     text-shadow: -1px -1px 0 #fafafabb, 1px -1px 0 #fafafabb, -1px 1px 0 #fafafabb, 1px 1px 0 #fafafabb;
   }
 
+  [data-theme="dark"] .links line {
+    stroke: #8b88e6;
+    opacity: 0.7;
+  }
+
+  [data-theme="dark"] .nodes circle {
+    fill: #00adb5;  /* Using the teal color from your existing theme */
+  }
+
+  [data-theme="dark"] .text text {
+    fill: #eaeaea;
+    text-shadow: -1px -1px 0 #1f232bbb, 1px -1px 0 #1f232bbb, -1px 1px 0 #1f232bbb, 1px 1px 0 #1f232bbb;
+  }
+
   .nodes [active],
   .text [active] {
     cursor: pointer;
     fill: black;
+  }
+
+  [data-theme="dark"] .nodes [active],
+  [data-theme="dark"] .text [active] {
+    fill: #ffffff;
   }
 
   .inactive {
@@ -31,6 +50,10 @@
     background: #fcfcfc;
     border-radius: 4px;
     height: auto;
+  }
+
+  [data-theme="dark"] #graph-wrapper {
+    background: #1f232b;
   }
   
   #graph-wrapper > svg {
