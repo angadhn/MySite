@@ -44,15 +44,44 @@ img {
   border-radius: $border-radius;
 }
 
-blockquote {
-  padding: 1.5em;
-  margin: 0;
-  font-size: 0.88em;
+blockquote,
+.epigraph {
   background: $color-box-background;
+  margin: 1.5em 0;
+  padding: 1em;
   border-radius: $border-radius;
+  border-left: 4px solid #00adb5;
 
-  p {
+  p:first-child {  // Quote text
     margin: 0;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-style: italic;
+    color: $color-text;
+  }
+
+  // Citation styling
+  p + p:last-child {
+    &:before {
+      content: "— ";
+    }
+    color: $color-subtext;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 0.9em;
+    font-style: normal;
+    font-family: $font-family;
+  }
+
+  cite {
+    color: $color-subtext;
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 0.9em;
+    font-style: normal;
+    font-family: $font-family;
   }
 }
 
