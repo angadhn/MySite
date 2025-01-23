@@ -2,10 +2,16 @@
 title: Buttondown Newsletter Setup
 ---
 
-Used this [post](https://buttondown.com/blog/netlify) to setup newsletter on my blog.
+I saw Steph Ango has ButtonDown to his email subscribers, which essentially makes his blog a newsletter.
+This [blogpost](https://michaelsoolee.com/buttondown-newsletter-5-reasons/) made it sound nicer than
+other options so I looked for guidance on integrating it with [Jekyll](https://buttondown.com/blog/netlify).
 
-However, it should have spelled out more clearly two things that were bugs for me:
+However, I was getting a 422 error at ButtonDown. Coulnd't figure out why but eventually Claude helped me
+out that we were sending the wrong field name (not what Buttondown's API expects). The
+javascript (`submission-created.js`) should have used { email_address: email } and not { email }. The blog
+was also unclear about a few orther things. Some stand out ones are:
 1. the need to install `node-fetch` by the following command: `npm init -y && npm install node-fetch`
-2. Creating a `success.html` file in the `_includes` folder and adding the following to the `_layouts/default.html` file.
+2. Indicating the right build folder for a Jekyll website in the `netlfy.toml` and the right command for it
+for netlify to deploy it.
 
-I saw Steph Ango has it and this [blog](https://michaelsoolee.com/buttondown-newsletter-5-reasons/) made it sound nice too.
+
