@@ -1,7 +1,7 @@
 ---
 ---
 
-Tufte-style Jekyll blog---
+---
 title: Your first seed
 ---
 
