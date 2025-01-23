@@ -1,0 +1,20 @@
+<div class="newsletter-container">
+    <h2>Receive my updates</h2>
+    <p>Follow me via email, <a href="/feed.xml">RSS</a>, <a href="https://twitter.com/yourusername">Twitter</a>, and <a href="/contact">other options</a></p>
+    
+    <form
+      name="newsletter"
+      method="POST"
+      action="/success/"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+    >
+      <label class="hidden">Don't fill this out:</label>
+      <input class="hidden" name="bot-field" />
+      
+      <div class="input-group">
+        <input type="email" name="email" required placeholder="Enter your email" />
+        <button type="submit">Sign up</button>
+      </div>
+    </form>
+  </div>
