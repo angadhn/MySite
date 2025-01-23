@@ -129,7 +129,7 @@ a {
   }
 }
 
-*:focus {
+*:focus:not(nav *, .theme-switch *) {
   background: #ffe8bc !important;
   color: black !important;
 }
@@ -613,7 +613,7 @@ input:checked + .slider {
     background-color: #252a34;
     color: #eaeaea;
 
-    * {
+    body, p, li, span:not(nav span) {
         color: #eaeaea;
     }
 
@@ -815,5 +815,18 @@ input:checked + .slider {
     // Style the toggle symbol for dark mode
     label.margin-toggle:not(.sidenote-number) {
         color: #00adb5;
+    }
+
+    // Override focus style for dark mode, excluding nav
+    *:focus:not(nav *, .theme-switch *) {
+        background: #1f232b !important;
+        color: #00adb5 !important;
+    }
+
+    // Add specific nav styles for dark mode
+    nav {
+        a, span {
+            background: transparent !important;
+        }
     }
 }
