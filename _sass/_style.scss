@@ -788,4 +788,32 @@ input:checked + .slider {
     .sidenote:before {
         color: #00adb5;
     }
+
+    // Dark mode mobile sidenote/marginnote styles
+    @media (max-width: 760px) {
+        .sidenote,
+        .marginnote {
+            background-color: #1f232b;
+            border: 1px solid #3d434d;
+            color: #eaeaea;
+        }
+
+        label.margin-toggle:not(.sidenote-number) {
+            color: #eaeaea;
+        }
+
+        .sidenote-number {
+            color: #00adb5;
+        }
+    }
+
+    // Ensure sidenote numbers maintain dark theme colors
+    .sidenote-number:after {
+        color: #00adb5;
+    }
+
+    // Style the toggle symbol for dark mode
+    label.margin-toggle:not(.sidenote-number) {
+        color: #00adb5;
+    }
 }
