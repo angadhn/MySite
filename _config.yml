@@ -41,3 +41,6 @@ defaults:
       path: "_notes/**/*.md"
     values:
       layout: "note"
+
+url: "https://zippy-caramel-cd7d1c.netlify.app"  # Your actual Netlify domain
+description: "A digital garden of interconnected notes and thoughts"  # You can customize this description
