@@ -4,9 +4,7 @@ import fetch from "node-fetch";
 exports.handler = async (event, context) => {
   try {
     const email = JSON.parse(event.body).payload.email;
-    console.log('DEBUG: Starting function');
-    console.log(`DEBUG: Email received: ${email}`);
-    console.log('DEBUG: API Key exists:', !!BUTTONDOWN_API_KEY);
+    console.log(`Subscribing email: ${email}`);
 
     const response = await fetch("https://api.buttondown.email/v1/subscribers", {
       method: "POST",
@@ -17,25 +15,30 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ email_address: email }),
     });
 
-    const responseText = await response.text();
-    console.log('DEBUG: Response status:', response.status);
-    console.log('DEBUG: Response body:', responseText);
+    const responseData = await response.json();
 
-    return {
-      statusCode: response.status,
-      body: JSON.stringify({
-        status: response.status,
-        response: responseText,
-        message: 'Check logs for details'
-      })
-    };
+    if (response.ok) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({
+          message: "Successfully subscribed to newsletter"
+        })
+      };
+    } else {
+      console.error("Subscription error:", responseData);
+      return {
+        statusCode: response.status,
+        body: JSON.stringify({
+          message: "Error subscribing to newsletter"
+        })
+      };
+    }
   } catch (error) {
-    console.error('DEBUG: Error caught:', error);
+    console.error("Function error:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: error.message,
-        stack: error.stack
+        message: "Internal server error"
       })
     };
   }
