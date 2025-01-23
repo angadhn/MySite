@@ -1,5 +1,5 @@
 ---
-title: Bon appétit!
+title: Buttondown Newsletter Setup
 ---
 
 Used this [post](https://buttondown.com/blog/netlify) to setup newsletter on my blog.
