@@ -12,7 +12,7 @@ To link to another note, you can use multiple syntaxes. The following four use t
 - Using the note title: [[a note about cats]]
 - Using the note's filename: [[cats]]
 - Using the note's title, with a label: [[A note about cats|link to the note about cats using the note title]]
-- Using the note's filename, with a label: [[inflatable-von-Braun|link to the note about inflatable von Braun stations using the note's filename]]
+- Using the note's filename, with a label: [[inflatable von Braun Stations|link to the note about inflatable von Braun stations using the note's filename]]
 
 You can organize notes in subdirectories and link them normally. For example, the links above all point to the `_notes/animals/cats.md` file. Here's another example: [[tigers]].
 
