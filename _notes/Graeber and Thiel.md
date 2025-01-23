@@ -74,22 +74,31 @@ seeking behaviours, social welfare economic policies
 (such as universal basic income) could also overcome the grander
 creative stagnation evident today.
 
-{% epigraph "Money isn't just measuring the value of stuff. It's also measuring the value of human actions and it's also a promise of future creativity." 'David Graeber' %}
+> Money isn't just measuring the value of stuff. It's also measuring the value of human actions and it's also a promise of future creativity.
+>
+> David Graeber
+
 Graeber evidences how the UK's social welfare policies unleashed creativity in the
 60s, a period that coincided with the emergence of new bands, like the Beatles,
 and musical trends every few years. But today's conditional welfare
 policies, which he says are from the Blair era, hinder discovering today's Beatles.
 
-{% epigraph "Now John Lennon is like lifting boxes in some department store's welfare conditionality so we are never gonna hear the new the new trend." 'David Graeber' %}
+> Now John Lennon is like lifting boxes in some department store's welfare conditionality so we are never gonna hear the new the new trend.
+>
+> David Graeber
 
 # Competition and Debt Kill Eccentrics
 Though we are in the company of the leading contrarians of our time,
 they are in short supply. The public, like my mom, still think that
 academia is a home for eccentric thinkers but that is no longer the case
 which Graeber and Thiel remind us: 
-{% epigraph "Almost any functional society, almost any society which has ever existed, has something which they do with brilliant, imaginative, but extremely impractical people. We don't know what to do with them anymore. They’re all living in their mothers’ basements saying weird things on the internet, and you can’t tell which are crazy and which actually have something to contribute. You used to put them in academia, but now academia is all about self-marketing. Being in academia, I can see very easily what’s happened in my own discipline where any kind of new thinking is really discouraged." "David Graeber" %}
+> Almost any functional society, almost any society which has ever existed, has something which they do with brilliant, imaginative, but extremely impractical people. We don't know what to do with them anymore. They’re all living in their mothers’ basements saying weird things on the internet, and you can’t tell which are crazy and which actually have something to contribute. You used to put them in academia, but now academia is all about self-marketing. Being in academia, I can see very easily what’s happened in my own discipline where any kind of new thinking is really discouraged.
+>
+> David Graeber
 
-{% epigraph 'The eccentric university professor is a species that is going extinct fast.' 'Peter Thiel' %}
+> The eccentric university professor is a species that is going extinct fast.
+>
+> Peter Thiel
 
 Today, academics are competing for resources by writing grants in an endless cycle.
 This aligns perfectly with Thiel's general thesis that competition kills innovation.
