@@ -37,7 +37,7 @@ If we were more concerned with developing solutions of scale and breadth that re
 directors, and not dictators, I can see the logic in Graeber's view. His solution is
 for groups to embrace a rotating policy that eschews permanent leadership structures.
 Of course, Graeber's not interested in pursuit of power or profits but in creating
-an egalitarian world[^a].
+an egalitarian world[^1].
 
 Further, Graeber argues that monopolies like Apple, Google and Facebook
 operate in competitive markets and largely stifle innovation because systematic
@@ -121,4 +121,4 @@ For those interested in the conversation, here's a [link to the talk](https://ww
 
 # Footnotes
 
-[^a]: To some extent answers an internal question I have of why academics, despite being individualist, are motivated to work in groups or departments because they believe in egalitarianism (which might explain why Graeber's collectivist philosophy resulted in not making tenure at Yale. Absurd!). But I will contrast again that academia attracts too many early stage researchers without a rudder in early stages. And worse, makes those who have a rudder lose it over time. And this is where startup-style systems differ - the existence of rewards are clear in terms of both power and profit even if it is without purpose.
+[^1]: To some extent answers an internal question I have of why academics, despite being individualist, are motivated to work in groups or departments because they believe in egalitarianism (which might explain why Graeber's collectivist philosophy resulted in not making tenure at Yale. Absurd!). But I will contrast again that academia attracts too many early stage researchers without a rudder in early stages. And worse, makes those who have a rudder lose it over time. And this is where startup-style systems differ - the existence of rewards are clear in terms of both power and profit even if it is without purpose.
