@@ -1,5 +1,5 @@
 ---
-title: Final Year Project: Space Station Design
+title: Final Year Project on Space Station Design
 ---
 
 {% marginfigure 'mf-id-1' 'assets/HQ_Final_Logo_for_light_theme.png' 'Logo for SpaceHQ.
