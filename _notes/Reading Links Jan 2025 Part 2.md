@@ -1,5 +1,5 @@
 ---
-title:  "Reading Links"
+title: Reading Links Jan 2025 Part 2
 ---
 
 Couple of highlights from my online readings this week:
