@@ -10,7 +10,7 @@ permalink: /
 <div class="welcome-block">
   Depending on how you know [[about|me]], you might want to take a look at some of <span class="internal-link">[[My teaching content]]</span> or <span class="internal-link">[[My research interests]]</span>.
   
-  Or best of all, start with the most recently updated notes to get started on your exploration.
+  If you just stumbled on here, you might wish to read <span class="internal-link">[[ My longer form blogpost-y notes]]</span> or just explore the most recently updated notes in the list below.
 </div>
 
 This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
