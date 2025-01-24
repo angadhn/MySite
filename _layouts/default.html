@@ -6,10 +6,9 @@
     <div class="wrapper">
       <main>{{ content }}</main>
     </div>
-
+    {% include bluesky-comments.html %}
     {% include link-previews.html wrapperQuerySelector="content" %}
     {% include newsletter.html %}
-    {% include bluesky-comments.html %}
     <footer>{% include footer.html %}</footer>
   </body>
 </html>

@@ -49,6 +49,15 @@
               <a href="${postUrl}" 
                  target="_blank" 
                  rel="noopener noreferrer">Bluesky</a>!</p>`;
+        } else {
+          // Case 3: Default case when neither condition is met
+          message = `
+            <p>Unable to load comments.</p>
+            <p>Visit 
+              <a href="https://bsky.app/profile/${author}" 
+                 target="_blank" 
+                 rel="noopener noreferrer">Bluesky</a> 
+              to join the discussion!</p>`;
         }
 
         container.innerHTML = `
