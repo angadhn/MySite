@@ -28,6 +28,27 @@ class BidirectionalLinksGenerator < Jekyll::Generator
         end
 
         new_href = "#{site.baseurl}#{note_potentially_linked_to.url}#{link_extension}"
+
+        # Handle links to headings with custom text [[note#heading|label]]
+        current_note.content.gsub!(
+          /\[\[#{note_title_regexp_pattern}#([^\]|]+)\|([^\]]+)\]\]/i
+        ) do |match|
+          heading = $1
+          link_text = $2
+          heading_id = heading.downcase.gsub(/\s+/, '-').gsub(/[^\w-]/, '')
+          "<a class='internal-link' href='#{new_href}##{heading_id}'>#{link_text}</a>"
+        end
+
+        # Handle links to headings [[note#heading]]
+        current_note.content.gsub!(
+          /\[\[#{note_title_regexp_pattern}#([^\]]+)\]\]/i
+        ) do |match|
+          heading = $1
+          heading_id = heading.downcase.gsub(/\s+/, '-').gsub(/[^\w-]/, '')
+          "<a class='internal-link' href='#{new_href}##{heading_id}'>#{note_title_regexp_pattern} § #{heading}</a>"
+        end
+
+        # Keep existing link patterns
         anchor_tag = "<a class='internal-link' href='#{new_href}'>\\1</a>"
 
         # Replace double-bracketed links with label using note title
