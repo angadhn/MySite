@@ -10,7 +10,7 @@ habitats. BEAM's addition to the ISS jas proved that expandable tech on a human-
 BEAM was added to ISS shortly after in April 2016 as an addition to
 the Tranquility module, delivered on a Dragon capsule launched on a SpaceX Falcon 9
 {%sidenote "1" "what a legacy!" %}. A good example of in-orbit assembly, the mission
-profile involves the the Canadarm2, which extracts BEAM from the Dragon’s
+profile involves the the Canadarm2, which extracts BEAM from the Dragon's
 unpressurised trunk 5 days after. The arm is also used in berthing Dragon, after its two day journey to the ISS, to Node 2's nadir berthing port of the ISS. Then the arm is moved via its [Mobile Transporter cart](https://en.wikipedia.org/wiki/Mobile_Servicing_System#:~:text=Mobile%20Transporter%20cart)
 (at least that's how I understood Rajib) and BEAM is berthed to the Node-3 aft port. The below image of the ISS shows these directions and others.
 
@@ -38,9 +38,12 @@ The objectives for BEAM were to:
 4. Distributed Impact Detection System (DIDS) is a sensor to measure the impact of MMOD on the outer surface of the module; and
 5. sensors to measure the thermal conditions and air quality in the module.
 
-A lot of data was envisioned to be collected over two years aligned to these objectives. After that, the plan was to jettison beam using Canadarm: it grapples BEAM using the aft side [power data and grapple fixtures](https://en.wikipedia.org/wiki/Grapple_fixture#Flight-Releasable_Grapple_Fixture:~:text=Power%20Data%20Grapple%20Fixture%20(PDGF)%20allows%20for%20grappling%20and%20latching)
-and transfers BEAM to the extreme nadir position of the ISS for release. Their estimated time for jettison and uncontrolled re-entry is “less than a year”.
+A lot of data was envisioned to be collected over two years aligned to these objectives. After 
+that, the plan was to jettison beam using Canadarm: it grapples BEAM using the aft
+side [power data and grapple fixtures](https://en.wikipedia.org/wiki/Grapple_fixture#Flight-Releasable_Grapple_Fixture:~:text=Power%20Data%20Grapple%20Fixture%20(PDGF)%20allows%20for%20grappling%20and%20latching) and transfers BEAM to the extreme nadir position of the 
+ISS for release. Their estimated time for jettison and uncontrolled re-entry is "less than a year".
 Fortunately, BEAM has exceeded expectations and is still in use in 2024 as additional cargo.
 
-Video below:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9tBkjUhpFj8?si=Fq23ro8nmHCwLro-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/9tBkjUhpFj8?si=Fq23ro8nmHCwLro-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>

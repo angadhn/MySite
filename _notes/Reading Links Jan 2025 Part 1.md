@@ -6,7 +6,7 @@ title: Reading Links Jan 2025 Part 1
 which is a good companion to my earlier post on [his debate with Thiel](https://www.angadhn.com/opinions/Post3/).
 
 2. A friend also shared with me Varoufakis's post on
-[Star Trek's model for a techno-optimist utopia](https://unherd.com/2025/01/why-the-left-needs-to-watch-star-trek/).
+[Star Trek's model for a techno-optimist utopia](https://unherd.com/2025/01/why-the-left-needs-to-watch-star-trek/); I generally was left feeling that [[Varoufakis offers no solutions just vision]].
 
 3. In additon, I am reading Eric Berger's [Liftoff](https://www.amazon.co.uk/Liftoff-Desperate-Early-Launched-SpaceX/dp/0008445621),
 which grounds the reality of building SpaceX against these utopian visions.
