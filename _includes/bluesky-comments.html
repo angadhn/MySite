@@ -1,4 +1,4 @@
-{% if page.comments != false and page.collection == 'notes' %}
+{% if page.comments != false %}
 <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.css">
 
 <div id="bluesky-comments"></div>
@@ -28,19 +28,27 @@
       ],
       onEmpty: (details) => {
         console.error('Failed to load comments:', details);
+        const message = details.message.includes('No matching post found') 
+          ? `<p>Comments not enabled for this post yet.</p>
+             <p>Share this page on 
+               <a href="https://bsky.app/profile/${author}" 
+                  target="_blank" 
+                  rel="noopener noreferrer">Bluesky</a> 
+               to enable comments!</p>`
+          : `<p>No comments on this post yet.</p>
+             <p>Be the first to comment on 
+               <a href="https://bsky.app/profile/${author}" 
+                  target="_blank" 
+                  rel="noopener noreferrer">Bluesky</a>!</p>`;
+
         container.innerHTML = `
           <div style="text-align: center; padding: 2em;">
-            <p>No comments on this post yet.</p>
-            <p style="color: #666;">Details: ${details.message}</p>
-            <p>Be the first to comment on 
-              <a href="https://bsky.app/profile/${author}" 
-                 target="_blank" 
-                 rel="noopener noreferrer">Bluesky</a>!
-            </p>
+            ${message}
+            <p style="color: #666; font-size: 0.8em;">Details: ${details.message}</p>
           </div>
         `;
       }
     })
   );
 </script>
-{% endif %}
+{% endif %} 
