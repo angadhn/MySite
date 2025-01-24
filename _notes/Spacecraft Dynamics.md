@@ -1,7 +1,6 @@
 ---
 title: Computational Spacecraft Dynamics
 ---
-
 ## [Weblink](http://angadhn.com/SpacecraftDynamics)
 
 ## Who might find the above link useful?

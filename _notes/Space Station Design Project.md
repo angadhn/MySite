@@ -1,7 +1,6 @@
 ---
 title: Final Year Project on Space Station Design
 ---
-
 {% marginfigure 'mf-id-1' 'assets/HQ_Final_Logo_for_light_theme.png' 'Logo for SpaceHQ.
 We like to think of ourseleves as a ragtag group of outliers trying to figure out how we
 can build larger structures in space. An example challenge is how we can go from 

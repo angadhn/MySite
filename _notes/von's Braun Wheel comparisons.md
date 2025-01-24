@@ -1,9 +1,5 @@
 ---
-title:  "Some Space Stations in Fiction and Reality"
-date:   2024-09-29 14:30:00
-categories:
-  - Large Space Stations
-  - Space Exploration
+title: Some Space Stations in Fiction and Reality
 ---
 {% newthought "An earlier post in my teaching resources for" %} a final
 year undergraduate project had a pretty helpful
