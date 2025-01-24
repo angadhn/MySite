@@ -496,29 +496,14 @@ div.epigraph > blockquote > footer > cite {
   max-width: 600px;
   margin: 0 auto;
 
-  h1 {
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-    color: $color-primary;
-  }
-  
-  p {
-    color: $color-text;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
+  h1, p, .small, .back-home {
+    color: $color-text;  // This will respect the theme
   }
 
-  .small {
-    font-size: 0.9rem;
-    color: $color-subtext;
-  }
-  
   .back-home {
     display: inline-block;
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    color: $color-primary;
     border: 1px solid $color-border;
     border-radius: $border-radius;
     text-decoration: none;
@@ -532,14 +517,6 @@ div.epigraph > blockquote > footer > cite {
 
     &:after {
       content: "";  // Remove the ↗ arrow from this link
-    }
-  }
-
-  @media (max-width: 760px) {
-    padding: 2rem 1rem;
-    
-    h1 {
-      font-size: 2rem;
     }
   }
 }
@@ -838,6 +815,21 @@ input:checked + .slider {
 
     img[src*="_for_light_theme"] {
         opacity: 1;
+    }
+
+    .success-message {
+        h1, p, .small, .back-home {
+            color: #eaeaea;  // Use the dark theme text color
+        }
+
+        .back-home {
+            border-color: #3d434d;
+            
+            &:hover {
+                background: #00adb5;
+                border-color: #00adb5;
+            }
+        }
     }
 }
 
