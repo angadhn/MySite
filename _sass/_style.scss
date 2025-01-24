@@ -848,16 +848,3 @@ input:checked + .slider {
   background-color: #1f232b;
   color: #eaeaea;
 }
-
-// Add this to your existing styles
-#bluesky-comments {
-  max-width: 100%;
-  margin: 2em 0;
-  padding: 1em;
-  background: $color-box-background;
-  border-radius: $border-radius;
-}
-
-[data-theme="dark"] #bluesky-comments {
-  background-color: #1f232b;
-}
