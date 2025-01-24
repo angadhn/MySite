@@ -13,10 +13,6 @@ permalink: /
   If you just stumbled on here, you might wish to read <span class="internal-link">[[My longer form blogpost-y notes]]</span> or just explore the most recently updated notes in the list below.
 </div>
 
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
 <strong>Recently updated notes</strong>
 
 <ul>
