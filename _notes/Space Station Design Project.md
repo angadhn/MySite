@@ -246,7 +246,7 @@ Commercial entities are now trying to get a piece of the pie.
 **<u>Existing Players</u>**
 
 
--[ClearSpace](http://clearspace.today)
+- [ClearSpace](http://clearspace.today)
 
 ## Technical Areas needing attention
 I will keep adding to this list as
