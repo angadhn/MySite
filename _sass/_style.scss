@@ -270,6 +270,12 @@ input.margin-toggle {
   line-height: 1.4;
   vertical-align: baseline;
   position: relative;
+  font-style: italic;
+  img + br {
+    display: block;
+    content: "";
+    margin: -0.5rem 0;  // Minimal space between image and caption
+  }
 }
 
 // Toggle symbol for marginnotes
@@ -323,7 +329,6 @@ label.margin-toggle:not(.sidenote-number) {
 .maincolumn-figure figcaption {
   font-size: 1rem;
   line-height: 1.4;
-  color: #666;
   text-align: center;
   margin-top: 0.5rem;
   max-width: 90%;
@@ -349,7 +354,7 @@ label.margin-toggle:not(.sidenote-number) {
 figcaption {
   font-size: 1rem;
   line-height: 1.4;
-  color: #666;
+  color: $color-text;
   text-align: center;
   margin-top: 0.5rem;
   font-style: italic;
