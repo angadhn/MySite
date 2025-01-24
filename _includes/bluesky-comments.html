@@ -1,3 +1,4 @@
+{% if page.comments != false and page.collection == 'notes' %}
 <link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.css">
 
 <div id="bluesky-comments"></div>
@@ -41,4 +42,5 @@
       }
     })
   );
-</script> 
+</script>
+{% endif %}

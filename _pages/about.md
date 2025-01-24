@@ -2,6 +2,7 @@
 layout: note
 title: About
 permalink: /about
+comments: false
 ---
 
 <img src="{{ site.baseurl }}/assets/MeAndTilly.jpg"/>
@@ -51,7 +52,7 @@ within formal academia). The dangers of eschewing exploration in
 education is bearing the anti-fruit in the extant STEM research model where group
 leaders are focused on enhancing publication metrics
 by collecting more publications in a bid to raise personal research productivity indices{%sidenote
-'Four' 'A classic case of Goodhart’s law. My issue is that these metrics are not an
+'Four' 'A classic case of Goodhart's law. My issue is that these metrics are not an
 effective measure of the true outputs from academia- the career of advisees [^b].
 Of course, this presumes advisees must also be self-motivated to grow their opportunities.'%}.
 My conclusion is that a lot of today's professoriate are not too different from
