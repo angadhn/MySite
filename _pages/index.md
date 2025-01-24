@@ -10,7 +10,7 @@ permalink: /
 <div class="welcome-block">
   Depending on how you know [[about|me]], you might want to take a look at some of <span class="internal-link">[[My teaching content]]</span> or <span class="internal-link">[[My research interests]]</span>.
   
-  If you just stumbled on here, you might wish to read <span class="internal-link">[[My longer form blogpost-y notes]]</span> or just explore the most recently updated notes in the list below.
+  If you just stumbled on here, you might wish to read <span class="internal-link">[[My longer form blogpost-y notes]]</span> or browse the <a class="internal-link" href="{{ site.baseurl }}/all-notes">complete archive of notes</a>, or just explore the most recently updated notes in the list below.
 </div>
 
 <strong>Recently updated notes</strong>
