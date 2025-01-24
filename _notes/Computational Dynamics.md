@@ -1,5 +1,6 @@
 ---
 title: Symbolic Computational Dynamics
+permalink: /online_textbooks/computational_dynamics/
 ---
 
 ## [Weblink](https://www.angadhn.com/ComputationalDynamics/kinematics/introduction.html)

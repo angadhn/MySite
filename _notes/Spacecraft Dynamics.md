@@ -1,5 +1,6 @@
 ---
 title: Computational Spacecraft Dynamics
+permalink: /online_textbooks/spacecraft_dynamics/
 ---
 ## [Weblink](http://angadhn.com/SpacecraftDynamics)
 
