@@ -5,8 +5,8 @@
     <nav>{% include nav.html %}</nav>
     <div class="wrapper">
       <main>{{ content }}</main>
+      {% include bluesky-comments.html %}
     </div>
-    {% include bluesky-comments.html %}
     {% include link-previews.html wrapperQuerySelector="content" %}
     {% include newsletter.html %}
     <footer>{% include footer.html %}</footer>

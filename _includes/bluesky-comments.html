@@ -14,17 +14,25 @@
 <script type="module">
   import { createElement } from 'react';
   import { createRoot } from 'react-dom/client';
-  import { BlueskyComments } from 'https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.es.js';
+  import { BlueskyComments, BlueskyFilters } from 'https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.es.js';
 
-  const author = 'angadhn.com';  // Your Bluesky handle
+  const author = 'angadhn.com';
   const container = document.getElementById('bluesky-comments');
   const root = createRoot(container);
   root.render(
     createElement(BlueskyComments, {
-      "author": author,
+      author: author,
       commentFilters: [
-        comment => comment.post.record.text.length < 2
-      ]
+        BlueskyFilters.NoPins,  // Hide pin-only comments
+        BlueskyFilters.MinCharacterCountFilter(2),  // Hide very short comments
+        comment => comment.post.record.text.includes('🤖')  // Hide bot-like comments
+      ],
+      onEmpty: (details) => {
+        console.error('Failed to load comments:', details);
+        container.innerHTML = details.message.includes('No matching post found')
+          ? 'Comments will appear here after sharing this page on Bluesky.'
+          : 'No comments yet. Be the first to comment!';
+      }
     })
   );
 </script> 
