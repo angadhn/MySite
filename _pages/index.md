@@ -23,20 +23,3 @@ permalink: /
     </li>
   {% endfor %}
 </ul>
-
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-
-  .welcome-block {
-    padding: 3em 1em;
-    background: #f5f7ff;
-    border-radius: 4px;
-  }
-
-  [data-theme="dark"] .welcome-block {
-    background-color: #1f232b;
-    color: #eaeaea;
-  }
-</style>
