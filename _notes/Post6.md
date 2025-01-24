@@ -17,7 +17,7 @@ called an adapter is because, much like an electrical adapter, it has two differ
 On the one side is the American standard of a Common Berthing Mechanism (CBM) and on the other side is the
 Russian standard of an Automated Proximity and Approach System (APAS):
 
-{% fullwidth 'assets/PMA1withCMBandAPAS.png' 'PMA1 has a CBM on one side and an APAS on the other.' %}
+{% maincolumn 'assets/PMA1withCMBandAPAS.png' 'PMA1 has a CBM on one side and an APAS on the other.' %}
 
 {% marginfigure 'fig-cbmuses' 'assets/CBM_uses.png' 'The CBM connects modules from Japan and Europe to the American segment.' %}
 
