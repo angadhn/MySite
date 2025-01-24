@@ -2,7 +2,7 @@
 title:  "The ISS's Connector Mechanisms"
 ---
 
-In an earlier post, I linked to Jared Owen's excellent video on space stations and that I
+In an [[ISS assembly animation|earlier post, I linked to Jared Owen's excellent video on space stations]] and that I
 would follow up with a summary of his chapter on docking ports.
 
 {% marginfigure 'fig-iss-segs' 'assets/ISS_Two_Segments.png' 'The ISS has two segments.' %}
