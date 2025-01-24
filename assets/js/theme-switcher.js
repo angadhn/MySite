@@ -1,11 +1,7 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-function switchTheme(e) {
-    const isDark = e.target.checked;
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    
-    // Handle theme-specific images
+// Handle image switching for theme changes
+function updateImages(isDark) {
     document.querySelectorAll('img').forEach(img => {
         const currentSrc = img.getAttribute('src');
         if (currentSrc) {
@@ -18,20 +14,48 @@ function switchTheme(e) {
     });
 }
 
+// Apply theme changes
+function applyTheme(themeName) {
+    document.documentElement.setAttribute('data-theme', themeName);
+    toggleSwitch.checked = themeName === 'dark';
+    updateImages(themeName === 'dark');
+}
+
+// Handle manual theme switching
+function switchTheme(e) {
+    const isDark = e.target.checked;
+    const themeName = isDark ? 'dark' : 'light';
+    localStorage.setItem('theme', themeName);
+    applyTheme(themeName);
+}
+
+// Listen for toggle switch changes
 toggleSwitch.addEventListener('change', switchTheme, false);
 
-// Check for saved theme preference and set initial images
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-        // Set initial dark theme images
-        document.querySelectorAll('img').forEach(img => {
-            const currentSrc = img.getAttribute('src');
-            if (currentSrc && currentSrc.includes('_for_dark_theme')) {
-                img.src = currentSrc.replace('_for_dark_theme', '_for_light_theme');
-            }
-        });
+// Check system theme preference
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Initialize theme
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        const systemTheme = prefersDarkScheme.matches ? 'dark' : 'light';
+        applyTheme(systemTheme);
     }
-} 
+}
+
+// Listen for system theme changes
+prefersDarkScheme.addListener((e) => {
+    // Only apply system theme changes if user hasn't set a preference
+    if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+    }
+});
+
+// Initialize theme when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeTheme();
+}); 
