@@ -47,8 +47,8 @@ Here, I assumed that 60% of the pressurized volume is habitable. This is a consi
 compared to the 42% of ISS.
 
 ### How did von Braun imagine its realisation?
-{% marginfigure 'mf-id-1' 'assets/imgs/AssemblyOfRim.png' 'Assembly of the Modular Rotating Wheel Space Station.'  %}
-{% marginfigure 'mf-id-2' 'assets/imgs/CondenserPipesInstallation.png' 'Condenser pipes being unwound for installation.'  %}
+{% marginfigure 'mf-id-1' 'assets/AssemblyOfRim.png' 'Assembly of the Modular Rotating Wheel Space Station.'  %}
+{% marginfigure 'mf-id-2' 'assets/CondenserPipesInstallation.png' 'Condenser pipes being unwound for installation.'  %}
 
 The short-version is that he assumed predominantly modular robotic assembly and a minor reliance on inflatables
 for the airlock. First, the hub is inflated using compressed air from built-in tanks. Protection from meteors
