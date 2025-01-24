@@ -1,5 +1,5 @@
 ---
-title: Weekend readings (4$$^{th}$$ and 5$$^{th}$$ January 2025)
+title: Weekend readings 4 and 5 January 2025
 ---
 
 1. Graeber opines on [flying cars and technological stagnation](https://davidgraeber.org/wp-content/uploads/2012-Of-flying-cars-and-the-declining-rate-of-profit.pdf),
