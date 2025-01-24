@@ -22,9 +22,9 @@ space station with 9 sections for:
 7. A/C equipment
 8. Living quarters
 9. Botanical and Zoological Laboratory
-The video shows two decks per section, which I assume is 6 $m$ in heigh (i.e. the habitable portion between the
+The video shows two decks per section, which I assume is 6 $$m$$ in heigh (i.e. the habitable portion between the
 outer rim and inner rim). Wikipedia says the concept had 3 decks but as I haven't looked that up, I will stick to two
-6 $m$ decks for now.
+6 $$m$$ decks for now.
 
 The system is powered by an atomic reactor attached on one side of its central hub; its heat will drive a
 turbo generator to power the station. Radio and radar antennas sit atop the reactor. The other side of the hub has
@@ -33,11 +33,11 @@ had thin spokes are condensers for the turbo generator and air-conditioning plan
 shafts that connect the hub to the main habitable sections of the wheel station. The station would:
 - host 50 astronauts though [Wikipedia](https://en.wikipedia.org/wiki/Rotating_wheel_space_station#History) states 80 people.
 - rotate at roughly 3 rpm to produce artificial gravity on the rim; and
-- be a torus of 250 $ft$ (76  $m$) diameter. The distance from the center of the tube to the center of the torus is $R = 70/2 = 35 \, m$ and the minor radius of the tube is $r = 6/2 = 3 \, m$. The volume of this torus is then the station's total pressurized volume, which is given by $$(V_{tot})_{vB} = 2 {\pi^2} R {r^2}$$.
+- be a torus of 250 $$ft$$ (76  $$m$$) diameter. The distance from the center of the tube to the center of the torus is $$R = 70/2 = 35 \, m$$ and the minor radius of the tube is $$r = 6/2 = 3 \, m$$. The volume of this torus is then the station's total pressurized volume, which is given by $$(V_{tot})_{vB} = 2 {\pi^2} R {r^2}$$.
 
 So, we can estimate that the von Braun space station has a:
-- Total Pressurized Volume: = 6217.85 $m^3$
-- Habitable Volume = 3730.71 $m^3$ 
+- Total Pressurized Volume: = 6217.85 $$m^3$$
+- Habitable Volume = 3730.71 $$m^3$$ 
 
 Here, I assumed that 60% of the pressurized volume is habitable. This is a considerably more optimistic percentage
 compared to the 42% of ISS.
@@ -56,14 +56,14 @@ Pre-fabricated and tested on the ground after which it is dismantled and assembl
 A number successive launches (he says) ensure the "parts of the station  are assembled in the correct order".
 Nylon tethers prevent parts from drifting away. The reactor appears to be the next big piece that is installed
 so I assume this is the third launch. This is followed by the elevator shafts and the rim sections being brought
-together. We can assume a single launch for each module: $3$ elevator tubes and 9 rim modules (assuming one per
+together. We can assume a single launch for each module: $$3$$ elevator tubes and 9 rim modules (assuming one per
 section). Assuming condenser pipes are installed from one launch (but the structure itself needs to be unwound robotically, which seems unreasonable/unreal at the moment as a robotic task.
 
 
 Lastly, the installation of instruments/equipment (a simple catch-all term for imaging antennas and
 the lab facilities compute for astronomical/Earth Observation data analysis, I think) and two small
 rocket motors on the rim. These rocket motors "blast for a few seconds" to revolve the station at about
-$3 \, RPM$. 
+$$3 \, RPM$$. 
 
 ## Comparing to ISS and Space Station V (2001: A Space Odyssey)
 {% marginnote 'table-1-id' '*Table 1*:  Comparing the ISS to fictional ideas.' %}
@@ -72,11 +72,11 @@ $3 \, RPM$.
 | -------------------------------------------- | ------ | ---------------------- | --------------- |
 | crew size (# of astronauts)                  | 7-13   | 50-80                  | 2               |
 | diameter of the station (m)                  | n/a    | 75                     | 300             |
-| total volume $m^3$                           | 916    | 6217.85                | 26647.93        |
+| total volume $$m^3$$                           | 916    | 6217.85                | 26647.93        |
 | habitable %                                  | 42.35% | 60% (assumed)          | ?               |
-| Max. volume per crew $(\frac{m^3}{person})$  | 64.66  | 52.67 assuming 50 crew | 13223.46        |
+| Max. volume per crew $$(\frac{m^3}{person})$$  | 64.66  | 52.67 assuming 50 crew | 13223.46        |
 | Rotational speed for artificial gravity (RPM)|  -     | 3                      | 2.44            |
-| Gravity on-board  ($m/s^2$)                  |  -     | 1.655                  | 9.81            |
+| Gravity on-board  ($$m/s^2$$)                  |  -     | 1.655                  | 9.81            |
 
 ## Some gaps in von Braun design
 1. Assumes a launch every 24 hours- not close to it then and not really close to that kind of cadence today. What could we do today?

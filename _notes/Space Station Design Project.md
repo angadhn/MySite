@@ -254,7 +254,7 @@ I learn of areas:
 - Sample return is a technically expensive area of work. At the October 2024 talk 
 at IOP, I think it was Andrew Bacon who spewed some statistics
 of sample return being unchanged since the Shuttle era. It was
-$£40,000/kg$ (USD) in the Shuttle era and is currently $£45,000/kg$ (USD) for
+$$£40,000/kg$$ (USD) in the Shuttle era and is currently $$£45,000/kg$$ (USD) for
 the SpaceX Dragon 2. I presume this is in 2024 currency as this was said in dialogue.
 
 - Rendezvous and Proximity Operations (RPO) are a technical gap that Astroscale mentioned
