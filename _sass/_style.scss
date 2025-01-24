@@ -43,6 +43,12 @@ img {
   margin: 0 auto;
   max-height: 75vh;
   border-radius: $border-radius;
+  transition: opacity 0.3s ease;
+  
+  &[src*="_for_dark_theme"],
+  &[src*="_for_light_theme"] {
+    opacity: 1;
+  }
 }
 
 blockquote,
@@ -828,6 +834,10 @@ input:checked + .slider {
         a, span {
             background: transparent !important;
         }
+    }
+
+    img[src*="_for_light_theme"] {
+        opacity: 1;
     }
 }
 
