@@ -12,7 +12,7 @@ To link to another note, you can use multiple syntaxes. The following four use t
 - Using the note title: [[Tufte-style Jekyll blog]]
 - Using the note's filename: [[Tufte Jekyll with Obsidian]]
 - Using the note's title, with a label: [[Tufte-style Jekyll blog|link to the note about Jekyll Tufte written in Obsidian]]
-- Using the note's filename, with a label: [[inflatable von Braun Stations|link to the note about inflatable von Braun stations using the note's filename]]
+- Using the note's filename, with a label: [[Inflatable von Braun Stations|link to the note about inflatable von Braun stations using the note's filename]]
 
 You can organize notes in subdirectories and link them normally. For example, the links above all point to the `_notes/animals/cats.md` file. Here's another example: [[tigers]].
 

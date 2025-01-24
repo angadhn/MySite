@@ -1,5 +1,5 @@
 ---
-title:  "Graeber and Thiel"
+title: Graeber and Thiel on Stagnation
 ---
 
 _This is a summary towards a longer form essay that will eventually go into "Longer Form" writing_
