@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.css">
+
+<div id="bluesky-comments"></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18",
+    "react-dom/client": "https://esm.sh/react-dom@18/client"
+  }
+}
+</script>
+
+<script type="module">
+  import { createElement } from 'react';
+  import { createRoot } from 'react-dom/client';
+  import { BlueskyComments } from 'https://unpkg.com/bluesky-comments@0.9.0/dist/bluesky-comments.es.js';
+
+  const author = 'angadhn.com';  // Your Bluesky handle
+  const container = document.getElementById('bluesky-comments');
+  const root = createRoot(container);
+  root.render(
+    createElement(BlueskyComments, {
+      "author": author,
+      commentFilters: [
+        comment => comment.post.record.text.length < 2  // Filter out very short comments
+      ],
+      onEmpty: (details) => {
+        console.error('Failed to load comments:', details);
+        container.innerHTML = `
+          <div style="text-align: center; padding: 2em;">
+            <p>No comments on this post yet.</p>
+            <p style="color: #666;">Details: ${details.message}</p>
+            <p>Be the first to comment on 
+              <a href="https://bsky.app/profile/${author}" 
+                 target="_blank" 
+                 rel="noopener noreferrer">Bluesky</a>!
+            </p>
+          </div>
+        `;
+      }
+    })
+  );
+</script> 
