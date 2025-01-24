@@ -1,11 +1,5 @@
 ---
 title:  "Commercial Space Stations in development."
-date:   2024-12-25 15:17:00
-comments: true
-toc: false
-categories:
-  - Space Stations
-  - Commercial Space Stations
 ---
 
 Scott Manley has made summarized the state of play with commercial space stations

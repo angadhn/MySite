@@ -1,12 +1,5 @@
 ---
 title:  "Nekoo et al. In-space collisions"
-date:   2064-12-09 17:45:00
-comments: true
-toc: true
-categories:
-  - Space Robotics
-  - Collisions
-  - Dynamics and Control
 ---
 
 _These are some notes on the paper ["Free-floating space

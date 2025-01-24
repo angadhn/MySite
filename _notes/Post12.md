@@ -1,13 +1,5 @@
 ---
 title:  "Reading Links"
-date:   2025-01-21 02:15:00
-comments: true
-toc: false
-categories:
-  - Reading Links
-  - Energy
-  - Brain
-  - Academia
 ---
 
 Couple of highlights from my online readings this week:

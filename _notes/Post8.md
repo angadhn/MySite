@@ -1,12 +1,5 @@
 ---
 title:  "Some notes on BEAM"
-date:   2024-12-31 14:17:00
-comments: true
-toc: false
-categories:
-  - Inflatable Space Stations
-  - ISS
-  - ISS modules
 ---
 
 Rajib Dasgupta's 2016 interview as NASA BEAM (Bigelow Expandable Activity Module)

@@ -1,12 +1,5 @@
 ---
 title:  "Inflatable Things"
-date:   2024-12-09 17:45:00
-comments: true
-toc: false
-categories:
-  - Robotics
-  - Inflatables
-  - Space Stations
 ---
 
 I have [previously written](https://www.angadhn.com/large%20space%20stations/space%20exploration/space-inflatables-1/) about inflatable tubes as a

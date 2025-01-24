@@ -1,13 +1,5 @@
 ---
 title:  "One of the best ISS videos I have seen."
-date:   2024-12-20 00:45:00
-comments: true
-toc: false
-categories:
-  - Robotics
-  - Inflatables
-  - Space Stations
-  - ISS
 ---
 
 Jared Owen has made a really cool animation that breaks down the ISS; I decided to watch this

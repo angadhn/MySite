@@ -1,13 +1,5 @@
 ---
 title:  "ISS Rendezvous (and some) Docking"
-date:   2024-12-19 19:45:00
-comments: true
-toc: false
-categories:
-  - Robotics
-  - Inflatables
-  - Space Stations
-  - ISS
 ---
 
 I started thinking about how docking might work with an inflatable station such as the Goodyear one that I
