@@ -8,7 +8,9 @@ permalink: /
 # Welcome! 🌱
 
 <div class="welcome-block">
-  Take a look at <span class="internal-link">[[Your first note]]</span> to get started on your exploration.
+  Depending on how you know me, you might want to take a look at some of <span class="internal-link">[[My teaching content]]</span> or <span class="internal-link">[[research interests]]</span>.
+  
+  Or best of all, start with the most recently updated notes to get started on your exploration.
 </div>
 
 This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
