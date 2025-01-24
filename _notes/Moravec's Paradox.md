@@ -1,7 +1,6 @@
 ---
 title:  "Moravec's Paradox"
 ---
-
 Over lunch, I watched Chelsea Finn
 [discuss Moravec's Paradox](https://www.wired.com/video/watch/5-levels-computer-scientist-explains-one-concept-in-5-levels-of-difficulty)
 with people across age and skills groups from kids to expert researchers. It is the idea that humans

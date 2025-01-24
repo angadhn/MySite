@@ -1,9 +1,6 @@
 ---
 title: Graeber and Thiel on Stagnation
 ---
-
-_This is a summary towards a longer form essay that will eventually go into "Longer Form" writing_
-
 My friends are big fans of David Graeber's _Bullshit Jobs_ and _Debt_.
 Having been more a listener of his, I find his candor amusing and cutting.
 So when I happened upon him and Peter Thiel talking, I wasn't
