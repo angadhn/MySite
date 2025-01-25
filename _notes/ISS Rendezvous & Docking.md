@@ -19,7 +19,7 @@ The video below is similar to the one by Destin Sandlin in that it gives some in
 However, it gives a lot more insight into Soyuz-related launch from Baikonur and
 its high-level structural design (I just decided to toss in the Soyuz image from the video).
 
-{% maincolumn 'assets/Soyuz_ESA_video.png' 'Soyuz structure.' %}
+{% maincolumn 'assets/OldSite/Soyuz_ESA_video.png' 'Soyuz structure.' %}
 
 The voice of the narrator is a bit annoying, though.
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
