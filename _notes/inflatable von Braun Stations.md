@@ -23,26 +23,13 @@ and scientific lens for some time now.
 
 Today's technocultural space community of thinkers has conjured or
 realised astonishing visions like the Apollo program and reusable rockets in
-the $$20^{th}$$ and $$21^{st}$$ centuries. The technical community no longer
-battles claims of heresy but politics, as if fighting to overcome the limits 
-of physics isn't hard enough. Bureaucratic operators seek short-term
-justifications for projects and hinder progress towards sci-fi realities
-of large scale space travel and habitation{% sidenote 'inflatables-2' "not so for
-space data services,
-as satellites have been miniaturised, commodified, and productised out of the hands
-of governments."%}, branding these pursuits as potentially irresponsible to justify with
-taxpayer money. Governments want to solve the flat-lining productivity problem[^1]
-but want to do so without investing in visions of a limitlessly abundant future.
-Meanwhile, private investors want rapid returns on investment while making
-bold claims, like wanting flying cars but getting $$140$$ characters, extending the
-participation in space progress to mostly the superwealthy.
+the $$20^{th}$$ and $$21^{st}$$ 
+centuries. The technical community no longer battles claims of heresy but politics, as if fighting to overcome the limits of physics isn't hard enough. Bureaucratic operators seek short-term
+justifications for projects and hinder progress towards sci-fi realities of large scale space travel and habitation[^2], branding these pursuits as potentially irresponsible to justify with taxpayer
+money. Governments want to solve the flat-lining productivity problem[^1] but want to do so without investing in visions of a limitlessly abundant future. Meanwhile, private investors want rapid returns on investment while making bold claims, like wanting flying cars but getting $$140$$
+characters, extending the participation in space progress to mostly the superwealthy.
 
-From hereon, this post will focus on the radical notion of space
-superstructures, such as rotating wheel space stations, that expand our
-presence in various Earth orbits and then extend our reach to go deeper into space. The
-post mostly argues for a focus on developing inflatable technologies to
-realise these structures in the near-term but it is possible that this is
-too ambitious a goal. Note that other options for realising space superstructures
+From hereon, this post will focus on the radical notion of space superstructures, such as rotating wheel space stations, that expand our presence in various Earth orbits and then extend our reach to go deeper into space. The post mostly argues for a focus on developing inflatable technologies to realise these structures in the near-term but it is possible that this istoo ambitious a goal. Note that other options for realising space superstructures
 (e.g., robots) are not really considered here but are generally important. Along
 the way, readers may find claims that explain why supporting the development 
 of space superstructures in the near-term is potentially valuable and socially
@@ -61,10 +48,7 @@ Assuming that a pressurized volume $$>20x$$ of the ISS gives each crew member a
 hypothetical $$\approx 200\,m^3$$ of volume though, in practice, the habitable portion is
 roughly identical to the space occupied by on-board equipment/instruments
 for experiments and life support. The station will be a toroid and thus 
-conceptually resembles von Braun's{% sidenote 'potocnik'
-"He was apparently inspired by Herman Potočnik's $$30\,m$$ ring-shaped habitat
-described in [*The Problem of Space Travel*](https://books.google.co.uk/books/about/The_Problem_of_Space_Travel.html?id=6m0bCwAAQBAJ&redir_esc=y)" 
-at GEO over Berlin.%} rotating wheel station. The below table
+conceptually resembles von Braun's rotating wheel station[^3]. The below table
 compares the HPH to the ISS and von Braun station:
 
 {% marginnote 'space-station-comparison-id' '*Table 1*: Comparison of different space station designs.' %}
@@ -204,3 +188,8 @@ then creates skilled populations- some of whom work on new visions that generate
 jobs and others work in these jobs or enter the existing labour market. I can't
 definitively prove this, of course, but it feels to me a pathway to solving
 the [UK's productivity puzzle](https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/labourproductivity/articles/whatistheproductivitypuzzle/2015-07-07).
+
+[^2]: not so for space data services, as satellites have been miniaturised, commodified, and productised out of the hands of governments.
+
+[^3]: He was apparently inspired by Herman Potočnik's $$30\,m$$ 
+	ring-shaped habitat described in [*The Problem of Space Travel*](https://books.google.co.uk/books/about/The_Problem_of_Space_Travel.html?id=6m0bCwAAQBAJ&redir_esc=y)" at GEO over Berlin.
