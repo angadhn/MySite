@@ -69,23 +69,7 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
 
   <!-- Favicon Configuration -->
-  <style>
-  @font-face {
-    font-family: 'Aniron';
-    src: url('/assets/aniron.ttf') format('truetype'); /* Adjust the path if necessary */
-    font-weight: normal;
-    font-style: normal;
-  }
-</style>
-
-<!-- Light Mode Favicon -->
-<link rel="icon" 
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>@font-face{font-family:'Aniron';src:url('/assets/aniron.ttf') format('truetype');font-weight:normal;font-style:normal;}text{font-family:'Aniron';}</style><text y='.9em' font-size='90' font-family='Aniron' font-weight='normal'>A</text></svg>" 
-      media="(prefers-color-scheme: light)">
-
-<!-- Dark Mode Favicon -->
-<link rel="icon" 
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><style>@font-face{font-family:'Aniron';src:url('/assets/aniron.ttf') format('truetype');font-weight:normal;font-style:normal;}text{font-family:'Aniron';fill:white;}</style><text y='.9em' font-size='90' font-family='Aniron' font-weight='normal' fill='white'>A</text></svg>" 
-      media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon-light.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon-dark.svg" media="(prefers-color-scheme: dark)">
   
 </head>
