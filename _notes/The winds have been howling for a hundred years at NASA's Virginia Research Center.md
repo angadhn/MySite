@@ -23,17 +23,17 @@ After the war, the scientists and engineers at Langley were primarily focused on
 
 {% marginnote 'mn-id-whatever' "Early 1920s: Langley Research Center's first wind tunnel. (Photo: NASA)" %}
 
-![Early 1920s: Langley Research Center's first wind tunnel.](https://kep.index.hu/1/0/1472/14728/147280/14728013_e8b411f948e2ecd6ac02ab167bdf1d54_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728013_e8b411f948e2ecd6ac02ab167bdf1d54_wm.jpg)
 
 
 {% marginnote 'mn-id-whatever' "1922: Using the Variable Density Tunnel (VDT) shown in the image, Langley researchers were the first in the world to begin conducting more precise wind tunnel experiments with scaled models than ever before. (Photo: NASA)" %}
 
-![1922: Using the Variable Density Tunnel (VDT) shown in the image, Langley researchers were the first in the world to begin conducting more precise wind tunnel experiments with scaled models than ever before.](https://kep.index.hu/1/0/1472/14728/147280/14728035_5ff50c88cb849b877ab0ccd014da3076_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728035_5ff50c88cb849b877ab0ccd014da3076_wm.jpg)
 
 
 {% marginnote 'mn-id-whatever' "In the 1920s, Langley scientists were primarily researching ways to reduce air resistance, and among other things, they successfully experimented with engine cowlings shown in the image. (Photo: NASA)" %}
 
-![In the 1920s, Langley scientists were primarily researching ways to reduce air resistance, and among other things, they successfully experimented with engine cowlings shown in the image.](https://kep.index.hu/1/0/1472/14728/147280/14728027_ddb6836a811243fd987750dad0baf394_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728027_ddb6836a811243fd987750dad0baf394_wm.jpg)
 
 
 {% marginnote 'mn-id-whatever' "In this group photo from around 1922, from left to right: Thomas Carroll, NACA test pilot, Ruth Elder, actress and pilot, Henry J. E. Reid, Langley director, and Edward R. Sharp, administrative leader. (Photo: NASA)" %}
@@ -43,12 +43,12 @@ After the war, the scientists and engineers at Langley were primarily focused on
 
 {% marginnote 'mn-id-whatever' "1934: Aircraft engineers' conference in the Full Scale Wind Tunnel (FSWT) (Photo: NASA)" %}
 
-![1934: Aircraft engineers' conference in the Full Scale Wind Tunnel (FSWT)](https://kep.index.hu/1/0/1472/14728/147280/14728015_eb8d38328febded1f0f67e5fffb06dea_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728015_eb8d38328febded1f0f67e5fffb06dea_wm.jpg)
 
 
 {% marginnote 'mn-id-whatever' "1941: One of the strangest experimental aircraft ever built, the Vought-Sikorsky V-173 'Flying Pancake' in the FSWT test section. (Photo: NASA)" %}
 
-![1941: One of the strangest experimental aircraft ever built, the Vought-Sikorsky V-173 'Flying Pancake' in the FSWT test section.](https://kep.index.hu/1/0/1472/14727/147279/14727997_11bfa2803b83776c8a3062f104cb5ce8_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727997_11bfa2803b83776c8a3062f104cb5ce8_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1950: Not just aircraft, but other vehicles were and are tested in Langley's wind tunnels. The image shows testing of the 'aerodynamic' properties of the experimental submarine Albacore. The Albacore's shape became the standard for modern nuclear submarines. (Photo: Bettmann Archive / Getty Images Hungary)" %}
 ![1950: Not just aircraft, but other vehicles were and are tested in Langley's wind tunnels. The image shows testing of the "aerodynamic" properties of the experimental submarine Albacore. The Albacore's shape became the standard for modern nuclear submarines.](https://kep.index.hu/1/0/1472/14727/147279/14727959_6055105d7d799862161feac8cca72ad6_wm.jpg)
@@ -61,10 +61,10 @@ After the war, the scientists and engineers at Langley were primarily focused on
 ![1957: Two LRC employees perform aeronautical calculations with an IBM 704 computer.](https://kep.index.hu/1/0/1472/14728/147280/14728005_0296614d063e71ad737b6a2804b5caa8_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1958: A wooden supersonic wing model. Look familiar? This is represented by the red element in NASA's logo." %}
-![1958: A wooden supersonic wing model. Look familiar? This is represented by the red element in NASA's logo.](https://kep.index.hu/1/0/1472/14727/147279/14727993_df8c4a598378dd940c5f7211f38531f8_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727993_df8c4a598378dd940c5f7211f38531f8_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1959: Testing of the Mercury program's single-person spacecraft in Langley's wind tunnel built for testing full-scale flying vehicles." %}
-![1959: Testing of the Mercury program's single-person spacecraft in Langley's wind tunnel built for testing full-scale flying vehicles.](https://kep.index.hu/1/0/1472/14728/147280/14728033_33331fb303e576d8b786abcdee118d24_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728033_33331fb303e576d8b786abcdee118d24_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1960: A scientist studying sonic booms examines a barely three-centimeter aircraft model." %}
 ![1960: A scientist studying sonic booms examines a barely three-centimeter aircraft model.](https://kep.index.hu/1/0/1472/14727/147279/14727981_2f935f53581f9bc89b1e2f8e91d352a6_wm.jpg)
@@ -73,13 +73,13 @@ After the war, the scientists and engineers at Langley were primarily focused on
 ![1961: NASA Director James Webb with an inflatable space station model created by Langley engineers in collaboration with Goodyear.](https://kep.index.hu/1/0/1472/14727/147279/14727963_d9f6afc5726fd6b8382cfdb32ce65fcc_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1962: X-15 experimental spacecraft model in one of LRC's supersonic wind tunnels. The so-called Schlieren photo shows the air waves generated by the model." %}
-![1962: X-15 experimental spacecraft model in one of LRC's supersonic wind tunnels. The so-called Schlieren photo shows the air waves generated by the model.](https://kep.index.hu/1/0/1472/14727/147279/14727991_ca96352f1e69b1693a2cba7e3c0718b7_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727991_ca96352f1e69b1693a2cba7e3c0718b7_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1962: Lunar rendezvous simulator in action. The image reveals that the path to the Moon landing was paved by engineers in ties and white shirts." %}
 ![1962: Lunar rendezvous simulator in action. The image reveals that the path to the Moon landing was paved by engineers in ties and white shirts.](https://kep.index.hu/1/0/1472/14728/147280/14728007_56820f660fc08aa8b78dc4f6781f1a0c_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1963: The first version of the Reduced Gravity Walking Simulator in one of LRC's hangars. In this position, the test subject's feet feel exactly one-sixth of their body weight, just like on the Moon." %}
-![1963: The first version of the Reduced Gravity Walking Simulator in one of LRC's hangars. In this position, the test subject's feet feel exactly one-sixth of their body weight, just like on the Moon.](https://kep.index.hu/1/0/1472/14727/147279/14727989_e3060d401e50a338928c0f596339512a_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727989_e3060d401e50a338928c0f596339512a_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1964: The 2.6-meter diameter Explorer 24 inflatable satellite was designed by Langley engineers. The satellite studied the relationship between solar radiation and atmospheric density." %}
 ![1964: The 2.6-meter diameter Explorer 24 inflatable satellite was designed by Langley engineers. The satellite studied the relationship between solar radiation and atmospheric density.](https://kep.index.hu/1/0/1472/14727/147279/14727985_cf208e749d985ff546ff224ffc21553e_wm.jpg)
@@ -91,54 +91,55 @@ After the war, the scientists and engineers at Langley were primarily focused on
 ![1966: The LOLA simulator (Lunar Orbit and Landing Approach) was used to practice lunar orbit insertion and landing.](https://kep.index.hu/1/0/1472/14728/147280/14728023_da9ea8ebfdec1af8851088fb708262be_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "Artists commissioned by NASA created four huge Moons for the LOLA simulator. As it later turned out, the LOLA method wasn't very effective since it couldn't simulate one of the most important moments: docking in lunar orbit." %}
-![Artists commissioned by NASA created four huge Moons for the LOLA simulator. As it later turned out, the LOLA method wasn't very effective since it couldn't simulate one of the most important moments: docking in lunar orbit.](https://kep.index.hu/1/0/1472/14728/147280/14728021_0e67f18ed33990cd10bc9de435c2f6ed_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728021_0e67f18ed33990cd10bc9de435c2f6ed_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "Langley engineers also created terrain similar to the Moon's surface for practicing lunar landings." %}
-![Langley engineers also created terrain similar to the Moon's surface for practicing lunar landings.](https://kep.index.hu/1/0/1472/14727/147279/14727965_539813460d0e141e6661f9bf2ef0f6e2_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727965_539813460d0e141e6661f9bf2ef0f6e2_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1967: Nighttime lunar landing practice." %}
-![1967: Nighttime lunar landing practice.](https://kep.index.hu/1/0/1472/14728/147280/14728017_5e4a4d0df78492414600432964aa52cd_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728017_5e4a4d0df78492414600432964aa52cd_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1969: Neil Armstrong practicing landing with a lunar module model in LRC's lunar landing research facility." %}
-![1969: Neil Armstrong practicing landing with a lunar module model in LRC's lunar landing research facility.](https://kep.index.hu/1/0/1472/14727/147279/14727995_7606748e26fc319229616a4ae54c9bc9_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727995_7606748e26fc319229616a4ae54c9bc9_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "Large model of a supersonic aircraft in the wind tunnel, in the seventies." %}
-![Large model of a supersonic aircraft in the wind tunnel, in the seventies.](https://kep.index.hu/1/0/1472/14727/147279/14727977_4db5800b10cd37255220729cbe412df7_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727977_4db5800b10cd37255220729cbe412df7_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1975: Space shuttle model bombarded with electron radiation in wind tunnel. The test was designed to simulate the plasma surrounding space shuttles during atmospheric reentry." %}
-![1975: Space shuttle model bombarded with electron radiation in wind tunnel. The test was designed to simulate the plasma surrounding space shuttles during atmospheric reentry.](https://kep.index.hu/1/0/1472/14727/147279/14727983_9c711934935c1d1070f82f0be188b392_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727983_9c711934935c1d1070f82f0be188b392_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1975: Space shuttle model bombarded with electron radiation in wind tunnel. The test was designed to simulate the plasma surrounding space shuttles during atmospheric reentry." %}
-![1975: Space shuttle model bombarded with electron radiation in wind tunnel. The test was designed to simulate the plasma surrounding space shuttles during atmospheric reentry.](https://kep.index.hu/1/0/1472/14727/147279/14727983_9c711934935c1d1070f82f0be188b392_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727983_9c711934935c1d1070f82f0be188b392_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "Interior of the 16-Foot Transonic Wind Tunnel, built in 1939, renovated in 1990, and demolished in 2011, showing the massive air deflector installed." %}
-![Interior of the 16-Foot Transonic Wind Tunnel, built in 1939, renovated in 1990, and demolished in 2011, showing the massive air deflector installed.](https://kep.index.hu/1/0/1472/14728/147280/14728031_adb9b51a78406258007974d893946ddf_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728031_adb9b51a78406258007974d893946ddf_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "The Langley Research Center in the eighties. The huge tubes are the wind tunnels." %}
-![The Langley Research Center in the eighties. The huge tubes are the wind tunnels.](https://kep.index.hu/1/0/1472/14727/147279/14727975_9ee85e5082051d74ba1fb3167258fbdf_wm.jpg)
+![T.](https://kep.index.hu/1/0/1472/14727/147279/14727975_9ee85e5082051d74ba1fb3167258fbdf_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1981: Passenger aircraft model in LRC's air vortex research laboratory." %}
-![1981: Passenger aircraft model in LRC's air vortex research laboratory.](https://kep.index.hu/1/0/1472/14728/147280/14728011_d462fcd32a8ccb44ed59e08798fe6a4d_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728011_d462fcd32a8ccb44ed59e08798fe6a4d_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "1991: A magnetically suspended space shuttle model in one of LRC's low-speed (0.5 Mach) wind tunnels." %}
-![1991: A magnetically suspended space shuttle model in one of LRC's low-speed (0.5 Mach) wind tunnels.](https://kep.index.hu/1/0/1472/14728/147280/14728003_a84115d39ca92bef34e6929459abacda_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14728/147280/14728003_a84115d39ca92bef34e6929459abacda_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "2009: A significant portion of new research on supersonic passenger aircraft is conducted at Langley. The Boeing model shown in the image is planned to fly at 2.4 times the speed of sound." %}
-![2009: A significant portion of new research on supersonic passenger aircraft is conducted at Langley. The Boeing model shown in the image is planned to fly at 2.4 times the speed of sound.](https://kep.index.hu/1/0/1472/14727/147279/14727979_03799fef66cfd7b1948c6bcb873bd1e3_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727979_03799fef66cfd7b1948c6bcb873bd1e3_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "2009: X-48B experimental aircraft wind tunnel test." %}
-![2009: X-48B experimental aircraft wind tunnel test.](https://kep.index.hu/1/0/1472/14727/147279/14727969_7d66727a2e59dce6c547c9ab94054e63_wm.jpg)
+![.](https://kep.index.hu/1/0/1472/14727/147279/14727969_7d66727a2e59dce6c547c9ab94054e63_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "2011: In the spirit of economic and scientific rationalization, several legendary wind tunnels were demolished, including the full-scale aircraft testing facility (Langley Full Scale Tunnel, LFST)." %}
 ![2011: In the spirit of economic and scientific rationalization, several legendary wind tunnels were demolished, including the full-scale aircraft testing facility (Langley Full Scale Tunnel, LFST).](https://kep.index.hu/1/0/1472/14728/147280/14728057_4662a778c517a64bbec3f87da15d5d79_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "2011: Hybrid-wing aircraft model sprayed with fluorescent oil in subsonic wind tunnel, researchers observed airflow patterns on the experimental aircraft's surfaces." %}
-![2011: Hybrid-wing aircraft model sprayed with fluorescent oil in subsonic wind tunnel, researchers observed airflow patterns on the experimental aircraft's surfaces.](https://kep.index.hu/1/0/1472/14727/147279/14727967_34c8a64e93f8be8e24e9d1896614e682_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727967_34c8a64e93f8be8e24e9d1896614e682_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "2011: One of the Orion spacecraft's water landing simulation tests in Langley's outdoor drop pool." %}
-![2011: One of the Orion spacecraft's water landing simulation tests in Langley's outdoor drop pool.](https://kep.index.hu/1/0/1472/14727/147279/14727961_222e039929f5d70ac1c0f4082a6d056a_wm.jpg)
+![](https://kep.index.hu/1/0/1472/14727/147279/14727961_222e039929f5d70ac1c0f4082a6d056a_wm.jpg)
 
 {% marginnote 'mn-id-whatever' "2013: A scientist tests the SAGE III (Stratospheric Aerosol and Gas Experiment) atmospheric analyzer instrument, which was later sent to the International Space Station, in the research center's clean room." %}
-![2013: A scientist tests the SAGE III (Stratospheric Aerosol and Gas Experiment) atmospheric analyzer instrument, which was later sent to the International Space Station, in the research center's clean room.](https://kep.index.hu/1/0/1472/14727/147279/14727971_d243f3c19e2f77520f9f4b611e72ace0_wm.jpg)
+![2013: A scientist tests the SAGE III (Stratospheric Aerosol and Gas Experiment) atmospheric analyzer instrument, which was later sent to the International Space Station, in the research center"s clean room.](https://kep.index.hu/1/0/1472/14727/147279/14727971_d243f3c19e2f77520f9f4b611e72ace0_wm.jpg)
+
 
 

@@ -88,7 +88,18 @@ If you'd like to quote other people, consider using quote blocks:
 
 And of course, images look great:
 
-<img src="{{ site.baseurl }}/assets/image.jpg"/>
+![Markdown Image description works just like the `maincolumn` below; the only issues is that it apostrophes can break it.](/assets/OldSite/image.jpg)
+
+{% maincolumn "assets/OldSite/image.jpg" "Maincolumn's Image description" %}
+
+It also works with a URL image. For example, putting in
+```
+![2011: Hybrid-wing aircraft model sprayed with fluorescent oil in subsonic wind tunnel, researchers observed airflow patterns on the surfaces of an experimental aircraft](https://kep.index.hu/1/0/1472/14727/147279/14727967_34c8a64e93f8be8e24e9d1896614e682_wm.jpg)
+```
+
+will render as
+
+![2011: Hybrid-wing aircraft model sprayed with fluorescent oil in subsonic wind tunnel, researchers observed airflow patterns on the surfaces of an experimental aircraft](https://kep.index.hu/1/0/1472/14727/147279/14727967_34c8a64e93f8be8e24e9d1896614e682_wm.jpg)
 
 You can also ==highlight some content== by wrapping it with `==`.
 
