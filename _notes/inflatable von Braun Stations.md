@@ -43,7 +43,7 @@ To date, no station has offered an order of magnitude increase on its
 predecessors and none are in the pipeline{% sidenote 'inflatables-3' "The
 in-development Lunar Gateway will operate at an orbit further to the
 International Space Station (ISS) with a crew of 4. See table
-[here](https://www.angadhn.com/online_textbooks/UG_final_year_project/#large-space-stations-modular-or-monolithic)"%}.
+[[Space Station Design Project#Large Space Stations (Modular or Monolithic)|here]]"%}.
 Assuming that a pressurized volume $$>20x$$ of the ISS gives each crew member a 
 hypothetical $$\approx 200\,m^3$$ of volume though, in practice, the habitable portion is
 roughly identical to the space occupied by on-board equipment/instruments
