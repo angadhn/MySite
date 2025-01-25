@@ -140,10 +140,7 @@ solutions are those that challenge our Earth-biased intuitions.
 
 ## Why is now a good time to return to inflatable space structures?
 There are probably many more reasons than I describe below as to why
-now{% sidenote 'robotics1'
-"Unlike was done with inflatables, we should maintain/increase support to
-mature in-space robotic assembly and maintenance technology development
-as I imagine that at even larger scales, a reliance on robots is inevitable."%}
+now [^4]
 is a good time to revisit the GoodYear inflatable station idea{% sidenote 'robotics2' "In fact,
 such stations are just one application of inflatable 
 technologies I see. They could totally transform space robotics by using pneumatic actuation
@@ -171,11 +168,7 @@ by the donor organ market.
 All of which is even before we consider making these
 stations rotate to produce an artificial gravity enabling safer long-haul
 journeys for astronaut crews
-heading to Mars or other locations away from the Earth{% sidenote 'hansen' "I am
-currently reading James Hansen's
-[_Spaceflight Revolution_](https://www.nasa.gov/wp-content/uploads/2023/04/sp-4308.pdf) that should
-help me gain a deeper perspective on the early inflatable station. Fun fact: another of his books was adapted into
-[First Man](https://en.wikipedia.org/wiki/First_Man_(film)) with Ryan Gosling playing Neil Armstrong."%}.
+heading to Mars or other locations away from the Earth[^5].
 
 <!-- ## Other opportunities with space inflatables? Long-horizon projections: Where would this take us in 20 years? or Where else could inflatable structures be used? -->
 
@@ -189,3 +182,7 @@ help me gain a deeper perspective on the early inflatable station. Fun fact: ano
 
 [^3]: He was apparently inspired by Herman Potočnik's $$30\,m$$ 
 	ring-shaped habitat described in [*The Problem of Space Travel*](https://books.google.co.uk/books/about/The_Problem_of_Space_Travel.html?id=6m0bCwAAQBAJ&redir_esc=y)" at GEO over Berlin.
+
+[^4]: Unlike was done with inflatables, we should maintain/increase support to mature in-space robotic assembly and maintenance technology development as I imagine that at even larger scales, a reliance on robots is inevitable.
+
+[^5]: I am currently reading James Hansen's [_Spaceflight Revolution_](https://www.nasa.gov/wp-content/uploads/2023/04/sp-4308.pdf) that should help me gain a deeper perspective on the early inflatable station. Fun fact: another of his books was adapted into [First Man](https://en.wikipedia.org/wiki/First_Man_(film)) with Ryan Gosling playing Neil Armstrong.
