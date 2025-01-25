@@ -13,7 +13,7 @@ profile involves the the Canadarm2, which extracts BEAM from the Dragon's
 unpressurised trunk 5 days after. The arm is also used in berthing Dragon, after its two day journey to the ISS, to Node 2's nadir berthing port of the ISS. Then the arm is moved via its [Mobile Transporter cart](https://en.wikipedia.org/wiki/Mobile_Servicing_System#:~:text=Mobile%20Transporter%20cart)
 (at least that's how I understood Rajib) and BEAM is berthed to the Node-3 aft port. The below image of the ISS shows these directions and others.
 
-{% maincolumn 'assets/ISS_directions.png' "ISS directional sense (courtesy: Jared Owen's [ISS video](https://www.youtube.com/watch?v=FhKOuxhGlmI))." %}
+{% maincolumn 'assets/OldSite/ISS_directions.png' "ISS directional sense (courtesy: Jared Owen's [ISS video](https://www.youtube.com/watch?v=FhKOuxhGlmI))." %}
 
 Then, the module can be deployed and inflated. The inflation process plays out
 in the following way: the first part is to pressurise the vestibule, which is the 

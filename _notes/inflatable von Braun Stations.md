@@ -152,7 +152,7 @@ as NASA itself: using an inflatable
 tube structure.
 
 ## Inflatable tubular space stations: a counterintuitive idea
-{% maincolumn 'assets/Goodyear1961.JPG' "Testing of an inlatable
+{% maincolumn 'assets/OldSite/Goodyear1961.JPG' "Testing of an inlatable
 space habitat prototype by Goodyear in 1961." %}
 
 In 1961, Goodyear Aircraft Corporation prototyped an inflatable tube
@@ -168,7 +168,7 @@ Nonetheless, this was an early example of a monolithic space station;
 a tenth of von Braun's wheel station that could be packaged to $$2\%$$
 of its inflated volume (another cool image below).
 
-{% maincolumn 'assets/LittekenPaper_GoodYear.png' "
+{% maincolumn 'assets/OldSite/LittekenPaper_GoodYear.png' "
 [Litteken's paper on space inflatables](https://ntrs.nasa.gov/api/citations/20190001443/downloads/20190001443.pdf)
 has this really nice image of GoodYear's inital testing taken from James Hansen's
 [_Spaceflight Revolution_](https://www.nasa.gov/wp-content/uploads/2023/04/sp-4308.pdf).

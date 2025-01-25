@@ -4,9 +4,9 @@ title:  "The ISS's Connector Mechanisms"
 In an [[ISS assembly animation|earlier post, I linked to Jared Owen's excellent video on space stations]] and that I
 would follow up with a summary of his chapter on docking ports.
 
-{% marginfigure 'fig-iss-segs' 'assets/ISS_Two_Segments.png' 'The ISS has two segments.' %}
+{% marginfigure 'fig-iss-segs' 'assets/OldSite/ISS_Two_Segments.png' 'The ISS has two segments.' %}
 
-{% marginfigure 'fig-pma' 'assets/All_PMAs.png' 'PMA-1 connects the Russian and American segments whereas PMA-2 and PMA-3 are used for docking with the Shuttle and the Crew Dragon.' %}
+{% marginfigure 'fig-pma' 'assets/OldSite/All_PMAs.png' 'PMA-1 connects the Russian and American segments whereas PMA-2 and PMA-3 are used for docking with the Shuttle and the Crew Dragon.' %}
 
 Now, the ISS can be considered to be made of two segments (see image on right margin)-
 a Russian and an American one- that are connected to each other by an adapter, called
@@ -17,16 +17,16 @@ each side. On the one side is the American standard of a Common Berthing Mechani
 and on the other side is the Russian standard of an Automated Proximity and Approach System
 (APAS):
 
-{% maincolumn 'assets/PMA1withCMBandAPAS.png' 'PMA1 has a CBM on one side and an APAS on the other.' %}
+{% maincolumn 'assets/OldSite/PMA1withCMBandAPAS.png' 'PMA1 has a CBM on one side and an APAS on the other.' %}
 
-{% marginfigure 'fig-cbmuses' 'assets/CBM_uses.png' 'The CBM connects modules from Japan and Europe to the American segment.' %}
+{% marginfigure 'fig-cbmuses' 'assets/OldSite/CBM_uses.png' 'The CBM connects modules from Japan and Europe to the American segment.' %}
 
 The CBM is used to connect modules from Japan and Europe to the American segment (see
 image on right margin). The two other PMAs are also on the American segment; they previously 
 allowed the Shuttle to dock to the ISS. Since its retirement, PMA2's got another adapter- called
 the International Docking Adapter (IDA)- to allow the Crew Dragon to dock to the ISS.
 
-{% marginfigure 'fig-ida' 'assets/IDA.png' 'The IDA is used to connect the Crew Dragon to the ISS.' %}
+{% marginfigure 'fig-ida' 'assets/OldSite/IDA.png' 'The IDA is used to connect the Crew Dragon to the ISS.' %}
 
 To learn more about the early part of the ISS's assembly, Jared Owen's video
 is [[ISS assembly animation|highly recommended]]! Hope he completes the rest of the ISS assembly sequence in
