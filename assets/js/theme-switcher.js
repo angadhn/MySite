@@ -19,6 +19,12 @@ function applyTheme(themeName) {
     document.documentElement.setAttribute('data-theme', themeName);
     toggleSwitch.checked = themeName === 'dark';
     updateImages(themeName === 'dark');
+    
+    // Update manifest link
+    const manifestLink = document.querySelector('link[rel="manifest"]');
+    if (manifestLink) {
+        manifestLink.href = `${site.baseurl}/assets/favicon_io-${themeName}/site.webmanifest`;
+    }
 }
 
 // Handle manual theme switching

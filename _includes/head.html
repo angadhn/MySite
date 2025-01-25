@@ -77,9 +77,20 @@
   <link rel="icon" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-dark.svg" media="(prefers-color-scheme: dark)">
   <link rel="mask-icon" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-dark.svg" color="#ffffff" media="(prefers-color-scheme: dark)"> <!-- Safari pinned tabs - dark mode -->
   
-  <!-- Fallback icons for broader compatibility -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-light-share.png"> <!-- General favicon fallback for older browsers -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-light-share.png"> <!-- iOS/Safari home screen icon -->
+  <!-- iOS/Mobile specific icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon_io-light/apple-touch-icon.png"> <!-- iOS home screen icon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicon_io-light/android-chrome-192x192.png" media="(prefers-color-scheme: light)"> <!-- Android Chrome - light -->
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicon_io-dark/android-chrome-192x192.png" media="(prefers-color-scheme: dark)"> <!-- Android Chrome - dark -->
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/assets/favicon_io-light/android-chrome-512x512.png" media="(prefers-color-scheme: light)"> <!-- Large Android Chrome - light -->
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/assets/favicon_io-dark/android-chrome-512x512.png" media="(prefers-color-scheme: dark)"> <!-- Large Android Chrome - dark -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-32x32.png" media="(prefers-color-scheme: light)"> <!-- Standard favicon - light -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-32x32.png" media="(prefers-color-scheme: dark)"> <!-- Standard favicon - dark -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-16x16.png" media="(prefers-color-scheme: light)"> <!-- Small favicon - light -->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-16x16.png" media="(prefers-color-scheme: dark)"> <!-- Small favicon - dark -->
+  
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="{{ site.baseurl }}/assets/favicon_io-light/site.webmanifest" media="(prefers-color-scheme: light)"> <!-- Progressive Web App support - light -->
+  <link rel="manifest" href="{{ site.baseurl }}/assets/favicon_io-dark/site.webmanifest" media="(prefers-color-scheme: dark)"> <!-- Progressive Web App support - dark -->
 
   <!-- Theme colors for mobile browsers -->
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <!-- Mobile browser UI color - light mode -->
