@@ -4,7 +4,7 @@ title: About
 permalink: /about
 ---
 
-<img src="{{ site.baseurl }}/assets/MeAndTilly.jpg"/>
+<img src="{{ site.baseurl }}/assets/OldSite/MeAndTilly.jpg"/>
 
 ## My Background and Interests
 {% newthought 'At present, I am a Lecturer in Spacecraft Engineering'%} at Queen Mary University of

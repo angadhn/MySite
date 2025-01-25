@@ -66,6 +66,7 @@ rocket motors on the rim. These rocket motors "blast for a few seconds" to revol
 $$3 \, RPM$$. 
 
 ## Comparing to ISS and Space Station V (2001: A Space Odyssey)
+
 {% marginnote 'table-1-id' '*Table 1*:  Comparing the ISS to fictional ideas.' %}
 
 |                                              | ISS    | von Braun              | Space Station V |
