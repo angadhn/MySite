@@ -1,7 +1,6 @@
 ---
 title: Reading Links Jan 2025 Part 2
 ---
-
 Couple of highlights from my online readings this week:
 1. I see the Henry Adams curve [mentioned](https://worksinprogress.co/issue/interview-jstorrshall/) a [lot](https://worksinprogress.co/issue/making-energy-too-cheap-to-meter/); I think one of those posts led me to search a bit more and I read [this post by J Storrs Hall](https://wimflyc.blogspot.com/2021/01/the-henry-adams-curve-closer-look.html) where he dissects Henry Adams’ quote:
 {% epigraph "The coal-output of the world, speaking roughly, doubled every ten years between 1840 and 1900, in the form of utilized power, for the ton of coal yielded three or four times as much power in 1900 as in 1840. Rapid as this rate of acceleration in volume seems, it may be tested in a thousand ways without greatly reducing it. Perhaps the ocean steamer is nearest unity and easiest to measure, for any one might hire, in 1905, for a small sum of money, the use of 30,000 steam-horse-power to cross the ocean, and by halving this figure every ten years, he got back to 234 horse-power for 1835, which was accuracy enough for his purposes" %}
