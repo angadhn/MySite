@@ -19,9 +19,7 @@ but I am also generally a bit skeptical of the idea that we use data for everyth
 are inherently noisy- if all we care about is outputs then this is fine but separating process (or
 signal) from noise is a deeper thing that I think we will lose. Perhaps I am also old-fashioned but
 the idea of forfeiting our ability to develop abstractions (based on human measurement-free 
-sensors and observations) to computers is also a bit scary{% sidenote 'data' 'Not in a way that I
-fear about the role of humans but that it will lead to a loss of taste and will eventually kill
-creativity' %}.
+sensors and observations) to computers is also a bit scary{% sidenote 'data' 'Not in a way that I fear about the role of humans but that it will lead to a loss of taste and will eventually kill creativity.' %}.
 
 The other thing I loved was [Michael Frank](https://scholar.google.com/citations?user=dErAioMAAAAJ&hl=en) describing his work on computationally modeling 
 babies' cognition to answer the question "How do babies become human?". I also appreciated 
