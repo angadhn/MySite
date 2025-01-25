@@ -108,9 +108,6 @@ After the war, the scientists and engineers at Langley were primarily focused on
 {% marginnote 'mn-id-24' "1975: Space shuttle model bombarded with electron radiation in wind tunnel. The test was designed to simulate the plasma surrounding space shuttles during atmospheric reentry." %}
 ![](https://kep.index.hu/1/0/1472/14727/147279/14727983_9c711934935c1d1070f82f0be188b392_wm.jpg)
 
-{% marginnote 'mn-id-25' "1975: Space shuttle model bombarded with electron radiation in wind tunnel. The test was designed to simulate the plasma surrounding space shuttles during atmospheric reentry." %}
-![](https://kep.index.hu/1/0/1472/14727/147279/14727983_9c711934935c1d1070f82f0be188b392_wm.jpg)
-
 {% marginnote 'mn-id-26' "Interior of the 16-Foot Transonic Wind Tunnel, built in 1939, renovated in 1990, and demolished in 2011, showing the massive air deflector installed." %}
 ![](https://kep.index.hu/1/0/1472/14728/147280/14728031_adb9b51a78406258007974d893946ddf_wm.jpg)
 
