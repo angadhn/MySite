@@ -373,6 +373,11 @@ figcaption {
     width: 100%;
     margin-right: 0;
   }
+  figcaption {
+    font-size: 0.9rem;  // Slightly smaller font
+    margin-top: 0.3rem; // Less margin
+    padding: 0 1rem;    // Add some side padding
+  }
 }
 
 /* Table styling */
