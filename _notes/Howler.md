@@ -1,22 +1,21 @@
 ---
-title:  "Howler"
-date:   2022-06-22 12:14:30
-comments: false
-categories:
-  -  Social Media
-  -  Grants
+title: Howler pitches and an old EV4AI proposal
 ---
-
-
 # AIGrant
 ## Pitch
-<iframe width="560" height="315" src="https://www.youtube.com/embed/C8x2bBiaFRs?si=SQAvL0OKU132P2WJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/C8x2bBiaFRs?si=SQAvL0OKU132P2WJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ## Demo
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VbslBJX4Rfw?si=0VuB5dtqsDkyczMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/VbslBJX4Rfw?si=0VuB5dtqsDkyczMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 # YCombinator
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SoVezD4F5-k?si=6nM5tToakeFEIhjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/SoVezD4F5-k?si=6nM5tToakeFEIhjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 The below is my proposal to Emergent Ventures 4 AI submitted in June
 2022{% sidenote "EV4AI" "The proposal was not successful and reading it now,
@@ -78,13 +77,12 @@ My achievements from solely driving Howler over ~14 months:
 - <u>Voice message users</u>: A large community globally and particularly in [developing economies](https://restofworld.org/2021/facebook-didnt-know-why-half-of-messengers-voice-traffic-comes-from-cambodia-heres-why/). People with disabilities; one nearly blind user believes Howler is a stronger alternative to WhatsApp-style voice messaging.
 
 ## How EV helps
-Howlerʼs main early stage challenge is reaching ”[ramen profitability](https://paulgraham.com/ramenprofitable.html)” which is why I have, so far, built it myself (often working full-time, alongside my full-time academic post). Emeregent Venures' recognition alongside $250K cash support will help Howler:
+Howlerʼs main early stage challenge is reaching "[ramen profitability](https://paulgraham.com/ramenprofitable.html)" which is why I have, so far, built it myself (often working full-time, alongside my full-time academic post). Emeregent Venures' recognition alongside $250K cash support will help Howler:
 1. recruit [Mughees](https://www.linkedin.com/in/mugheesasif/) and [John](https://www.linkedin.com/in/johnpeterflynn/) to drive Android and AI developments, respectively ($150k shared between three of us);
 2. purchase $100k of Google Cloud Platform credits to develop/test AI content moderation;
 3. gain visibility, ideally through use in producing Tyler's and Shruti's podcasts.
 
 Howler will then be in a strong position to pitch investors for further investment and connect to a strong talent pool to scale our team (with Tyler's expertise and network, if possible)
-
 # Footnotes
 
 [^1]: I am especially privileged from an Indian context with 19 mostlycomfortable years abroad (UK: 5, America: 8, and Nigeria: 6).

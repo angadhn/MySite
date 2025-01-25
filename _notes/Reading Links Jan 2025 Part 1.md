@@ -3,7 +3,7 @@ title: Reading Links Jan 2025 Part 1
 ---
 
 1. Graeber opines on [flying cars and technological stagnation](https://davidgraeber.org/wp-content/uploads/2012-Of-flying-cars-and-the-declining-rate-of-profit.pdf),
-which is a good companion to my earlier post on [his debate with Thiel](https://www.angadhn.com/opinions/Post3/).
+which is a good companion to [[Graeber and Thiel|my earlier post on his debate with Thiel]].
 
 2. A friend also shared with me Varoufakis's post on
 [Star Trek's model for a techno-optimist utopia](https://unherd.com/2025/01/why-the-left-needs-to-watch-star-trek/); I generally was left feeling that [[Varoufakis offers no solutions just vision]].

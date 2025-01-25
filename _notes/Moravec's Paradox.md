@@ -1,12 +1,16 @@
 ---
 title:  "Moravec's Paradox"
 ---
-Over lunch, I watched Chelsea Finn
-[discuss Moravec's Paradox](https://www.wired.com/video/watch/5-levels-computer-scientist-explains-one-concept-in-5-levels-of-difficulty)
-with people across age and skills groups from kids to expert researchers. It is the idea that humans
-think any task easy for humans is hard for robots and things that appear
-hard for humans are easy for robots. For example, physical tasks like stacking plates and folding laundry are easier for humans than robots
-but multiplying large numbers is harder for us{% sidenote 'moravec' 'The funny thing is that I am writing this within Cursor, which automatically chucked in the sentence "Human intelligence is the ability to do things that are hard to do, and artificial intelligence is the ability to do things that are easy to do." as a sidenote. I think it is a good way to think about the difference between human intelligence and artificial intelligence but it is hard to repeatedly do easy things.' %}. It is something I had noted
+Over lunch, I watched Chelsea Finn [discuss Moravec's Paradox](https://www.wired.com/video/watch/5-levels-computer-scientist-explains-one-concept-in-5-levels-of-difficulty) with people across age and 
+skills groups from kids to expert researchers. It is the idea that humans think any task easy for
+humans is hard for robots and things that appear hard for humans are easy for robots. For
+example, physical tasks like stacking plates and folding laundry are easier for humans than 
+robots but multiplying large numbers is harder for us{% sidenote 'moravec' 'The funny thing is 
+that I am writing this within Cursor, which automatically chucked in the sentence "Human 
+intelligence is the ability to do things that are hard to do, and artificial intelligence is the ability to 
+do things that are easy to do." as a sidenote. I think it is a good way to think about the difference 
+between human intelligence and artificial intelligence but it is hard to repeatedly do easy things.' 
+%}. It is something I had noted
 when we saw Lee Sedol beaten by AlphaGo- where was the robot that actually moved the pieces?
 
 Overall, I thought the video was very engaging but I found a couple of points to be noteworthy{% sidenote 'notes' 'Hence, the note😜.' %}.
