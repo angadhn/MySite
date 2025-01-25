@@ -337,11 +337,13 @@ figure {
 .marginal-caption {
   position: absolute;
   right: -60%;
-  top: 0;  // Align with top of figure
+  top: 0;
   width: 45%;
   font-size: 1rem;
   line-height: 1.4;
   font-style: italic;
+  color: $color-text;
+  text-align: left;
 }
 
 @media (max-width: 760px) {
