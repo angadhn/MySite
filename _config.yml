@@ -43,5 +43,5 @@ defaults:
     values:
       layout: "note"
 
-url: "https://angadh.netlify.app"  # Your actual Netlify domain
+url: "https://angadh.com"
 description: "Angadh's meditations"  # Make this more descriptive
