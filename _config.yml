@@ -22,6 +22,7 @@ relative_permalinks: false
 
 plugins:
   - jekyll-last-modified-at
+  - jekyll-sitemap
 
 sass:
   sass_dir:          _sass
@@ -43,4 +44,4 @@ defaults:
       layout: "note"
 
 url: "https://angadh.netlify.app"  # Your actual Netlify domain
-description: "Angadh's meditations"  # You can customize this description
+description: "Angadh's meditations"  # Make this more descriptive
