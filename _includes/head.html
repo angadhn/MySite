@@ -9,6 +9,9 @@
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
 
+  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}robotics, aerospace engineering, space systems, control theory, dynamics, teaching, research, academic writing, engineering education, spacecraft design, orbital mechanics, Queen Mary University of London, QMUL{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+
   <meta property="og:site_name" content="{{ site.title }}">
 
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">

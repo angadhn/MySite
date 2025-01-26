@@ -930,3 +930,22 @@ input:checked + .slider {
 [data-theme="dark"] .nav-wrapper {
   background: #252a34;
 }
+
+.tag-list {
+  margin: 2em 0;
+  
+  a {
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    background: var(--color-box-background);
+    
+    &:hover {
+      background: var(--color-primary);
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
