@@ -246,6 +246,24 @@ a {
       color: var(--link-icon-color-hover);
     }
   }
+
+  &.site-logo {
+    border-bottom: none;  // Remove underline
+    padding: 0;          // Remove padding
+    
+    &:after {
+      content: none;     // Remove any after content (arrow/favicon)
+    }
+    
+    &:hover {
+      background: none;  // Remove hover effect
+    }
+
+    img {
+      margin: 0;        // Remove any margin
+      padding: 0;       // Remove any padding
+    }
+  }
 }
 
 *:focus:not(nav *, .theme-switch *) {
@@ -1116,4 +1134,38 @@ input:checked + .slider {
 
 [data-theme="dark"] .dark-logo {
     display: block;
+}
+
+// Also add this to exclude site-logo from favicon fetching
+a:not(.site-logo):not(.internal-link):not(.custom-icon):not([href*="wikipedia.org"]):not([href*="github.com"]):not([href*="google.com"]):not([href*="youtube.com"]):not([href*="twitter.com"]):not([href*="ourworldindata.org"]):not([href$=".pdf"]):after {
+  content: "";
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+  background-image: var(--favicon-url, url('https://www.google.com/s2/favicons?domain=unknown&size=32'));
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 0.3em;
+  vertical-align: super;
+  opacity: 0.7;
+}
+
+.logo-wrapper {
+  a {
+    border: none;
+    padding: 0;
+    
+    &:after {
+      display: none !important;
+    }
+    
+    &:hover {
+      background: none;
+    }
+  }
+  
+  img {
+    margin: 0;
+    padding: 0;
+  }
 }
