@@ -124,6 +124,8 @@ a {
     color: black !important;
     background: #fffaf1;
   }
+  
+  // Default arrow for external links
   &:after {
     position: relative;
     top: -0.5em;
@@ -131,10 +133,49 @@ a {
     content: "↗";
     color: #aaaaaa;
   }
+
+  // Remove arrow for internal links and footnotes
   &.internal-link:after,
   &.footnote:after,
   &.reversefootnote:after {
     content: "";
+  }
+
+  // Popular site icons using FontAwesome
+  &[href*="google.com"]:after {
+    content: "\f1a0";
+    font-family: "Font Awesome 6 Brands";
+    color: #4285F4;
+  }
+
+  &[href*="github.com"]:after {
+    content: "\f09b";
+    font-family: "Font Awesome 6 Brands";
+    color: #333;
+  }
+
+  &[href*="twitter.com"]:after {
+    content: "\f099";
+    font-family: "Font Awesome 6 Brands";
+    color: #1DA1F2;
+  }
+  
+  &[href*="youtube.com"]:after {
+    content: "\f167";
+    font-family: "Font Awesome 6 Brands";
+    color: #FF0000;
+  }
+
+  &[href*="wikipedia.org"]:after {
+    content: "\f266";
+    font-family: "Font Awesome 6 Brands";
+    color: #333;  // Dark color for light mode
+  }
+
+  &[href$=".pdf"]:after {
+    content: "\f1c1";  // PDF file icon
+    font-family: "Font Awesome 6 Free";
+    color: #EC1C24;    // Adobe red color
   }
 }
 
@@ -769,6 +810,10 @@ input:checked + .slider {
             background-color: #1f232b;
             color: #eaeaea !important;
         }
+
+        &[href$=".pdf"]:after {
+          color: #EC1C24;  // Keep Adobe red in dark mode as it's visible enough
+        }
     }
 
     .internal-link,
@@ -896,6 +941,25 @@ input:checked + .slider {
                 border-color: #00adb5;
             }
         }
+    }
+
+    // Dark theme adjustments for icons
+    a {
+      &[href*="google.com"]:after {
+        content: "\f1a0";  // FontAwesome Google icon
+      }
+
+      &[href*="github.com"]:after {
+        content: "\f09b";  // FontAwesome GitHub icon
+      }
+
+      &[href*="youtube.com"]:after {
+        content: "\f167";  // FontAwesome YouTube icon
+      }
+
+      &[href*="wikipedia.org"]:after {
+        color: #ffffff;  // White for dark mode
+      }
     }
 }
 
