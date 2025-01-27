@@ -1,5 +1,6 @@
 ---
 title:  "Inflatable von Braun space stations: an idea worth revisiting?"
+published: 2024-10-06
 ---
 ## Background
 {% newthought "Kepler's" %} [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel)){% sidenote

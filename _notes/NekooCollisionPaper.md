@@ -1,5 +1,6 @@
 ---
 title:  "Nekoo et al. In-space collisions"
+published: 2024-12-07
 ---
 
 _These are some notes on the paper ["Free-floating space

@@ -1,5 +1,6 @@
 ---
 title: A File over App Website leveraging Obsidian, Netlify, and Git
+published: 2025-01-22
 created: 2025-01-22 02:15:00
 updated: 2025-01-25 02:15:00
 ---

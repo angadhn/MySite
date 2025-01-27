@@ -1,6 +1,7 @@
 ---
 title: Computational Spacecraft Dynamics
 permalink: /online_textbooks/spacecraft_dynamics/
+published: 2024-09-01
 ---
 ## [Weblink](http://angadhn.com/SpacecraftDynamics)
 

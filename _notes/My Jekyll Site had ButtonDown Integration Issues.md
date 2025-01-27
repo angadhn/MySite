@@ -1,5 +1,6 @@
 ---
 title: ButtonDown Integration Issues with a Jekyll static website
+published: 2025-01-24
 ---
 Once I was done [following the instructions to integrate ButtonDown with Netlify and Jekyll](https://buttondown.com/blog/netlify), I was getting a 422 error on ButtonDown. I couldn't figure out why but eventually Claude helped me figure out that I was sending the wrong field name to Buttondown (not what it's API expects). The javascript (`submission-created.js`) should have used { email_address: email } and not { email }, as described in the guidance.
 

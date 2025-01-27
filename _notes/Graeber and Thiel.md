@@ -1,5 +1,6 @@
 ---
 title: Graeber and Thiel on Stagnation
+published: 2024-12-11
 ---
 My friends are big fans of David Graeber's _Bullshit Jobs_ and _Debt_.
 Having been more a listener of his, I find his candor amusing and cutting.

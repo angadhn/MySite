@@ -1,5 +1,6 @@
 ---
 title: Some Space Stations in Fiction and Reality
+published: 2024-09-29
 ---
 {% newthought "An earlier post in my teaching resources for" %} a final
 year undergraduate project had a pretty helpful

@@ -1,5 +1,6 @@
 ---
 title: Howler pitches and an old EV4AI proposal
+published: 2022-06-22
 ---
 # AIGrant
 ## Pitch
