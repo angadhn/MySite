@@ -134,8 +134,47 @@ a {
     color: #aaaaaa;
   }
 
-  // Remove arrow for internal links and footnotes
+  // Remove default arrow for internal links, custom icons, and specific sites
   &.internal-link:after,
+  &.custom-icon:after,
+  &[href*="wikipedia.org"]:after,
+  &[href*="github.com"]:after,
+  &[href*="google.com"]:after,
+  &[href*="youtube.com"]:after,
+  &[href*="twitter.com"]:after,
+  &[href*="ourworldindata.org"]:after,
+  &[href$=".pdf"]:after {
+    content: "";  // This removes the arrow
+  }
+
+    // Generic favicon fetching for other external sites
+    &:not(.internal-link):not(.custom-icon):not([href*="wikipedia.org"]):not([href*="github.com"]):not([href*="google.com"]):not([href*="youtube.com"]):not([href*="twitter.com"]):not([href*="ourworldindata.org"]):not([href$=".pdf"]):after {
+      content: "";
+      display: inline-block;
+      width: 0.7em;
+      height: 0.7em;
+      background-image: var(--favicon-url, url('https://www.google.com/s2/favicons?domain=unknown&size=32'));
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-left: 0.3em;
+      vertical-align: super;
+      opacity: 0.7;
+    }
+      
+  // Internal link styling with favicon
+  &.internal-link:after {
+    content: "";
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    background: url('../assets/favicon_io-light/favicon-light.svg') no-repeat center center;
+    background-size: contain;
+    margin-left: 0.3em;
+    vertical-align: super;
+    opacity: 0.7;
+  }
+
+  // Remove arrow for internal links and footnotes
   &.footnote:after,
   &.reversefootnote:after {
     content: "";
@@ -176,6 +215,36 @@ a {
     content: "\f1c1";  // PDF file icon
     font-family: "Font Awesome 6 Free";
     color: #EC1C24;    // Adobe red color
+  }
+
+  // Add OWID specific style
+  &[href*="ourworldindata.org"]:after {
+    content: "OWID";
+    font-family: monospace;
+    font-size: 0.7em;
+    color: #333;  // Dark color for light mode
+    position: relative;
+    top: -0.5em;
+    margin-left: 0.3em;
+  }
+
+  &.custom-icon {
+    position: relative;
+    
+    .link-icon-hook {
+      &:after {
+        content: var(--link-icon);
+        color: var(--link-icon-color);
+        font-size: 0.7em;
+        position: relative;
+        top: -0.5em;
+        margin-left: 0.3em;
+      }
+    }
+
+    &:hover .link-icon-hook:after {
+      color: var(--link-icon-color-hover);
+    }
   }
 }
 
@@ -814,6 +883,11 @@ input:checked + .slider {
         &[href$=".pdf"]:after {
           color: #EC1C24;  // Keep Adobe red in dark mode as it's visible enough
         }
+
+        // Internal link styling with favicon
+        &.internal-link:after {
+          background-image: url('../assets/favicon_io-dark/favicon-dark.svg');
+        }
     }
 
     .internal-link,
@@ -960,6 +1034,15 @@ input:checked + .slider {
       &[href*="wikipedia.org"]:after {
         color: #ffffff;  // White for dark mode
       }
+
+      // Dark mode adjustment for OWID
+      &[href*="ourworldindata.org"]:after {
+        color: #ffffff;  // Light color for dark mode
+      }
+    }
+
+    a.custom-icon .link-icon-hook.dark-mode-invert:after {
+      color: #eaeaea;
     }
 }
 
