@@ -175,9 +175,18 @@ a {
   }
 
   // Remove arrow for internal links and footnotes
-  &.footnote:after,
-  &.reversefootnote:after {
-    content: "";
+  &.footnote,
+  &.reversefootnote {
+    border: none;
+    padding: 0;
+    
+    &:after {
+      display: none !important;  // Use !important to ensure it overrides other styles
+    }
+    
+    &:hover {
+      background: none;
+    }
   }
 
   // Popular site icons using FontAwesome
