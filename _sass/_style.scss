@@ -905,7 +905,7 @@ input:checked + .slider {
 }
 
 .welcome-block {
-  padding: 3em 1em;
+  padding: 1em 1em;
   background: #f5f7ff;
   border-radius: 4px;
 }
@@ -948,4 +948,25 @@ input:checked + .slider {
       text-decoration: none;
     }
   }
+}
+
+// Logo switching styles
+.logo {
+    height: 30px;
+}
+
+.light-logo {
+    display: block;
+}
+
+.dark-logo {
+    display: none;
+}
+
+[data-theme="dark"] .light-logo {
+    display: none;
+}
+
+[data-theme="dark"] .dark-logo {
+    display: block;
 }
