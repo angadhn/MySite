@@ -1,14 +1,12 @@
 ---
-title: Things that inspired me enough to freewrite about
-published: 2025-01-24
-tags: [writing]
+title: A List of Notes to Expand
+created: 28-01-2025
+published: 2025-01-28
+tags:
+  - writing
+permalink:
 ---
-I sometimes get wound up enough that I will dive deeper into something in a research-y sense (especially on space things) but sometimes I will ruminate on the nature of being. The below is a list in no specific order:
-- [[Some Space Stations in Fiction and Reality]]
-- [[Inflatable von Braun Stations]]
-- [[Graeber and Thiel on Stagnation]]
-
-There are also some posts that I should expand on further, such as:
+The following is a list of notes I should expand on further, such as:
 - [[Moravec's Paradox]]
 
 There are some others that could be more technical that a historical perspective on:
