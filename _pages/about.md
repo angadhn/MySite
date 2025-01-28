@@ -1,6 +1,6 @@
 ---
 layout: note
-title: About
+title: About Me
 permalink: /about
 ---
 <img src="{{ site.baseurl }}/assets/OldSite/MeAndTilly.jpg"/>
