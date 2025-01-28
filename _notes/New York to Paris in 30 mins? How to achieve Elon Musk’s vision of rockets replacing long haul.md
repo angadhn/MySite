@@ -6,6 +6,7 @@ author:
 published: 2025-01-27
 created: 2025-01-23
 description: "Trump’s return as US president could hasten the SpaceX Earth to Earth project."
+tags: [rockets, space]
 ---
 
 _This is my piece for [The Conversation](https://theconversation.com/new-york-to-paris-in-30-mins-how-to-achieve-elon-musks-vision-of-rockets-replacing-long-haul-248181)._
