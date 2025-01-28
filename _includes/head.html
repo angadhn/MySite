@@ -129,19 +129,31 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Try multiple possible content containers
       const content = document.querySelector('.content, .post, article, main');
       console.log('Content container found:', content);
       
       if (content) {
-        const firstP = content.querySelector('p:first-of-type');
-        console.log('First paragraph found:', firstP);
+        // Get all paragraphs
+        const paragraphs = content.querySelectorAll('p');
+        console.log('Found paragraphs:', paragraphs.length);
         
-        if (firstP) {
-          firstP.classList.add('dropcap');
-          console.log('Added dropcap class to:', firstP.textContent.substring(0, 50) + '...');
+        // Find first text paragraph (not just image)
+        let firstTextP = null;
+        for (const p of paragraphs) {
+          // Skip if paragraph only contains an image
+          if (!p.querySelector('img') && p.textContent.trim().length > 0) {
+            firstTextP = p;
+            break;
+          }
+        }
+        
+        console.log('First text paragraph found:', firstTextP);
+        
+        if (firstTextP) {
+          firstTextP.classList.add('dropcap');
+          console.log('Added dropcap class to:', firstTextP.textContent.substring(0, 50) + '...');
         } else {
-          console.log('No first paragraph found');
+          console.log('No suitable paragraph found');
         }
       } else {
         console.log('No content container found');
