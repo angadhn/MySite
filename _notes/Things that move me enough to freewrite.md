@@ -9,4 +9,4 @@ tags:
 ---
 Reading or watching/listening to someone/something will often inspire me- a smaller subset will actually get me off my ass to get to a notebook or computer to start writing some comments or notes and there are some that I think are worth of expanding on in [[Future Writings]].
 
-Note: The space stuff I have been ingesting for a long time so those are more from researching something specific (like [[ISS Connectors]]) or for teaching whereas writing about other topics (like [[Moravec's Paradox]]) emerged from stumbling onto some specific content (usually mentioned in the piece). 
+Note: The space stuff I have been ingesting for a long time so those are more from researching something specific (like [[ISS Connectors]]) or for teaching whereas writing about other topics (like [[Moravec's Paradox]]) emerged from stumbling onto some specific content (usually mentioned in the piece).
