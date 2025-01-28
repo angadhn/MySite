@@ -3,12 +3,10 @@ layout: note
 title: About
 permalink: /about
 ---
-
 <img src="{{ site.baseurl }}/assets/OldSite/MeAndTilly.jpg"/>
 
-## My Background and Interests
-{% newthought 'At present, I am a Lecturer in Spacecraft Engineering'%} at Queen Mary University of
-London in the UK{% sidenote 'One' '[My QMUL page](https://www.seresearch.qmul.ac.uk/robotics/people/ananjangud/)' %}.
+At present, I am a Lecturer in Spacecraft Engineering at Queen Mary University of
+London in the UK {% sidenote 'One' '[My QMUL page](https://www.seresearch.qmul.ac.uk/robotics/people/ananjangud/)' %}.
 Since entering academia in 2020, I have attempted to traverse the twofold research and education
 landscape in a manner that I think expands consciousness- mine as well as of those who
 work with me. This is especially the case (I'd like to think) for students and early career

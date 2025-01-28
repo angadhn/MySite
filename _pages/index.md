@@ -5,7 +5,7 @@ id: home
 permalink: /
 ---
 
-# Welcome! 🌱
+# Welcome!
 <!-- 
 <div class="welcome-block">
   • This website belongs to [[about|me]], <span class="external-link"><a href="https://www.sems.qmul.ac.uk/staff/a.nanjangud">Angadh</a></span><br>

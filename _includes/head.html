@@ -126,4 +126,26 @@
   </script>
 
   <script src="{{ site.baseurl }}/assets/js/favicon-loader.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Try multiple possible content containers
+      const content = document.querySelector('.content, .post, article, main');
+      console.log('Content container found:', content);
+      
+      if (content) {
+        const firstP = content.querySelector('p:first-of-type');
+        console.log('First paragraph found:', firstP);
+        
+        if (firstP) {
+          firstP.classList.add('dropcap');
+          console.log('Added dropcap class to:', firstP.textContent.substring(0, 50) + '...');
+        } else {
+          console.log('No first paragraph found');
+        }
+      } else {
+        console.log('No content container found');
+      }
+    });
+  </script>
 </head>
