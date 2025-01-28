@@ -1345,9 +1345,3 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not([href*="wikipedia.or
     }
   }
 }
-
-[data-theme="dark"] .dropcap {
-  &:first-letter {
-    color: #00adb5;
-  }
-}

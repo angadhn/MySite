@@ -28,7 +28,7 @@ permalink: /
 > find these useful to filter through my writings on space tech. Current undergraduate
 > students at QMUL looking for teaching materials can go  straight to [[My teaching content]]. 
 
-**Recently updated notes**
+<h5>Recently updated notes</h5>
 
 <ul>
   {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
@@ -39,7 +39,7 @@ permalink: /
   {% endfor %}
 </ul>
 
-<strong>Topics</strong>
+<h5>Topics</h5>
 
 <div class="category-list">
 {% assign tags = site.notes | map: "tags" | uniq | sort_natural %}
