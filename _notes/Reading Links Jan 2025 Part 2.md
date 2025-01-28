@@ -1,6 +1,7 @@
 ---
 title: Reading Links Jan 2025 Part 2
 published: 2025-01-21
+tags: [reading]
 ---
 Couple of highlights from my online readings this week:
 1. I see the Henry Adams curve [mentioned](https://worksinprogress.co/issue/interview-jstorrshall/) a [lot](https://worksinprogress.co/issue/making-energy-too-cheap-to-meter/); I think one of those posts led me to search a bit more and I read [this post by J Storrs Hall](https://wimflyc.blogspot.com/2021/01/the-henry-adams-curve-closer-look.html) where he dissects Henry Adams’ quote:

@@ -1,6 +1,7 @@
 ---
 title:  "One of the best ISS videos I have seen."
 published: 2024-12-20
+tags: [space stations]
 ---
 Jared Owen has made a really cool animation that breaks down the ISS; I decided to watch this
 purely because it had a chapter on docking ports (thanks, YouTube) but I think it's a cool

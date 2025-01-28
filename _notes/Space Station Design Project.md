@@ -2,6 +2,7 @@
 title: Final Year Project on Space Station Design
 permalink: /online_textbooks/UG_final_year_project/
 published: 2024-09-15
+tags: [teaching, space stations]
 ---
 {% marginfigure 'mf-id-1' 'assets/OldSite/HQ_Final_Logo_for_light_theme.png' 'Logo for SpaceHQ.
 We like to think of ourseleves as a ragtag group of outliers trying to figure out how we

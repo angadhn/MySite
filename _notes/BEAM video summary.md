@@ -1,6 +1,7 @@
 ---
 title:  "Some notes on BEAM"
 published: 2024-12-31
+tags: [space stations, inflatable]
 ---
 Rajib Dasgupta's 2016 interview as NASA BEAM (Bigelow Expandable Activity Module)
 project manager is quite informative for those interested in inflatable space 

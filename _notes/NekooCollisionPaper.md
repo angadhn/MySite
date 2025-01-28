@@ -1,6 +1,7 @@
 ---
 title:  "Nekoo et al. In-space collisions"
 published: 2024-12-07
+tags: [research, space robotics]
 ---
 
 _These are some notes on the paper ["Free-floating space

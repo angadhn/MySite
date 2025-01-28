@@ -1,6 +1,7 @@
 ---
 title:  "Inflatable Things"
 published: 2024-12-09
+tags: [robotics, inflatable]
 ---
 
 I have [[inflatable von Braun Stations|previously written]] about inflatable tubes as a means to realising a von Braun wheel. The 

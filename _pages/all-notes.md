@@ -5,7 +5,7 @@ id: all-notes
 permalink: /all-notes
 ---
 
-# All Notes by Date 📝
+### All Notes by Date 📝
 
 {% assign sorted_notes = site.notes | sort: "published" | reverse %}
 {% assign notes_by_year = sorted_notes | group_by_exp: "note", "note.published | date: '%Y'" %}
