@@ -5,7 +5,7 @@ tags: [space stations]
 ---
 {% newthought "An earlier post in my teaching resources for" %} a final
 year undergraduate project had a pretty helpful
-AI-generated{%sidenote 'thankclaude' 'thanks to [Claude](claude.ai)'%}
+AI-generated{%sidenote 'thankclaude' 'thanks to [Claude](https://claude.ai)'%}
 [[Space Station Design Project#Large Space Stations (Modular or Monolithic)|table]].
 This is a quick post about Wernher von Braun's 1950's
 [conceptual rotating wheel station](https://www.youtube.com/watch?v=5JJL8CUfF-o) with some basic comparisons
