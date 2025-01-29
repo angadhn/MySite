@@ -7,11 +7,11 @@ permalink: /
 
 # Welcome!
 
-> This website belongs to [[TheSiteRepo/_pages/about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). Sometimes I write digital notes
+> This website belongs to  [[_pages/about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). Sometimes I write digital notes
 > and a small percentage of it gets published here. If you stumbled
 > here as an internet stranger, you might wish to see what's top of my mind
 > by exploring the most recently updated notes below. A [[all notes|complete archive]] is also available
-> but I'd recommend surfing by Topics at the bottom of this page instead. Current undergraduate students at QMUL looking for teaching materials can go  straight to [[MySiteBroken/_notes/My teaching content]]. 
+> but I'd recommend surfing by Topics at the bottom of this page instead. Current undergraduate students at QMUL looking for teaching materials can go  straight to [[My teaching content]]. 
 
 <h5>Recently updated notes</h5>
 

@@ -4,7 +4,7 @@ published: 2024-12-09
 tags: [robotics, inflatable]
 ---
 
-I have [[TheSiteRepo/_notes/inflatable von Braun Stations|previously written]] about inflatable tubes as a means to realising a von Braun wheel. The 
+I have  [[inflatable von Braun Stations|previously written]] about inflatable tubes as a means to realising a von Braun wheel. The 
 idea of using inflatables is clearly old. Learning about Saul Griffith's robotics work in this 
 area has been fun to see when I started thinking about using inflatables for space robotic
 applications in the summer of 2024. Here are two interesting pieces of media from Saul Griffith.

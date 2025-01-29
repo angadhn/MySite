@@ -15,7 +15,7 @@ Going into it, I anticipated an alignment in their values - moreso than one
 might think purely because the comparably less famous Graeber is anarchist and Thiel is
 libertarian; this is why I think of this as a conversation rather than a debate. 
 I suspected their alignment given my own sensibilities that anarchists and early stage 
-startup founders{% sidenote 'anarchistStartups' "It's also why I, despite formally being a space engineer, was inspired to build [[TheSiteRepo/_notes/Howler]] and kept at it while listening to Chomsky's [optimistic views](https://youtu.be/BQXsPU25B60?t=8361) on [small decentralised media](https://en.wikipedia.org/wiki/ZNetwork) in Manufacturing Consent." %}
+startup founders{% sidenote 'anarchistStartups' "It's also why I, despite formally being a space engineer, was inspired to build [[Howler]] and kept at it while listening to Chomsky's [optimistic views](https://youtu.be/BQXsPU25B60?t=8361) on [small decentralised media](https://en.wikipedia.org/wiki/ZNetwork) in Manufacturing Consent." %}
 have a lot in common, in the mold of Aaron Swartz or early-SpaceX Elon Musk.
 
 # Overcoming stagnation: working outside or within systems?
