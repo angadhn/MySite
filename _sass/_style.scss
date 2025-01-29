@@ -11,7 +11,14 @@ $favicon-dark-color: #252a34;  // Matching your dark theme background
 
 @font-face {
   font-family: 'Aniron';
+  src: url('../assets/anironm.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Aniron';
   src: url('../assets/anironBold.ttf') format('truetype');
+  font-weight: bold;
 }
 
 body {
@@ -1304,6 +1311,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 .dropcap {
   &:first-letter {
     font-family: 'Aniron', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-weight: bold;
     font-size: 3.5em;
     float: left;
     padding-right: 0.1em;
@@ -1312,6 +1320,8 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   }
 
   &:first-line {
+    font-family: 'Aniron', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-weight: normal;
     text-transform: uppercase;
     font-size: 1.1em;
     line-height: 1.5;
