@@ -3,7 +3,10 @@ title: A File over App Website leveraging Obsidian, Netlify, and Git
 published: 2025-01-22
 created: 2025-01-22 02:15:00
 updated: 2025-01-25 02:15:00
-tags: [site, writing]
+tags:
+  - site
+  - writing
+  - essays
 ---
 I am a big time and longtime fan of [Obsidian](https://obsidian.md) for notes- it is my note-taking
 tool of choice both for its usability and, just as importantly, its [ethos](https://stephango.com/file-over-app).

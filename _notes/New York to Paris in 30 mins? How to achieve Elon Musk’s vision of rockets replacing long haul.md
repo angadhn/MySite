@@ -1,12 +1,15 @@
 ---
-title: "New York to Paris in 30 mins? How to achieve Elon Musk’s vision of rockets replacing long haul"
-source: "https://theconversation.com/new-york-to-paris-in-30-mins-how-to-achieve-elon-musks-vision-of-rockets-replacing-long-haul-248181"
+title: New York to Paris in 30 mins? How to achieve Elon Musk’s vision of rockets replacing long haul
+source: https://theconversation.com/new-york-to-paris-in-30-mins-how-to-achieve-elon-musks-vision-of-rockets-replacing-long-haul-248181
 author:
   - "[[Angadh Nanjangud]]"
 published: 2025-01-27
 created: 2025-01-23
-description: "Trump’s return as US president could hasten the SpaceX Earth to Earth project."
-tags: [rockets, space]
+description: Trump’s return as US president could hasten the SpaceX Earth to Earth project.
+tags:
+  - rockets
+  - space
+  - essays
 ---
 
 _This is my piece for [The Conversation](https://theconversation.com/new-york-to-paris-in-30-mins-how-to-achieve-elon-musks-vision-of-rockets-replacing-long-haul-248181)._

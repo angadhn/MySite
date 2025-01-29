@@ -1,10 +1,14 @@
 ---
-title:  "Inflatable von Braun space stations: an idea worth revisiting?"
+title: "Inflatable von Braun space stations: an idea worth revisiting?"
 published: 2024-10-06
-tags: [space stations, inflatable]
+tags:
+  - space
+  - stations
+  - inflatable
+  - essays
 ---
 ## Background
-{% newthought "Kepler's" %} [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel)){% sidenote
+Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel)){% sidenote
 `somnium` "At the time of my writing this post, his sci-fi story was
 archived [here](https://frostydrew.org/papers.dc/papers/paper-somnium)"%}
 in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s

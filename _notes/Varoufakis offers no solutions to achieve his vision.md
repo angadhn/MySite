@@ -1,7 +1,10 @@
 ---
 title: Varoufakis' and Graeber's critique and visions of progress offer no solutions
 published: 2025-01-06
-tags: [stagnation, techno-optimism]
+tags:
+  - stagnation
+  - techno-optimism
+  - essays
 ---
 
 These were some quick thoughts I shared with a friend after reading

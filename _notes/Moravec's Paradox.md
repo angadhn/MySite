@@ -1,7 +1,10 @@
 ---
-title:  "Moravec's Paradox"
+title: Moravec's Paradox
 published: 2024-12-09
-tags: [intelligence, robotics]
+tags:
+  - intelligence
+  - robotics
+  - essays
 ---
 Over lunch, I watched Chelsea Finn [discuss Moravec's Paradox](https://www.wired.com/video/watch/5-levels-computer-scientist-explains-one-concept-in-5-levels-of-difficulty) with people across age and 
 skills groups from kids to expert researchers. It is the idea that humans think any task easy for
