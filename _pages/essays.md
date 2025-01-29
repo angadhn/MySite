@@ -10,9 +10,9 @@ permalink: /essays/
   <article class="essay-item">
     <div style="display: flex; align-items: baseline; gap: 1em;">
       <time style="color: #666; white-space: nowrap;" datetime="{{ note.published | date_to_xmlschema }}">{{ note.published | date: "%Y-%m-%d" }}</time>
-      <h6 style="margin: 0; padding: 0;">
+      <h5 style="margin: 0; padding: 0;">
         <a href="{{ note.url }}" style="text-decoration: none; font-family: 'Aniron', serif;">{{ note.title }}</a>
-      </h6>
+      </h5>
     </div>
   </article>
 {% endfor %}

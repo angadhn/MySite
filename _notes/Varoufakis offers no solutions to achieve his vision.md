@@ -1,5 +1,5 @@
 ---
-title: Varoufakis' and Graeber's critique and visions of progress offer no solutions
+title: Varoufakis' word salad visions offer no solution path
 published: 2025-01-06
 tags:
   - stagnation

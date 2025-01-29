@@ -7,7 +7,7 @@ permalink: /
 
 # Welcome!
 
-> This website belongs to  [[_pages/about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). Sometimes I write digital notes
+> This website belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). Sometimes I write digital notes
 > and a small percentage of it gets published here. If you stumbled
 > here as an internet stranger, you might wish to see what's top of my mind
 > by exploring the most recently updated notes below. A [[all notes|complete archive]] is also available
