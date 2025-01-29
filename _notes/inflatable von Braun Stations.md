@@ -8,10 +8,7 @@ tags:
   - essays
 ---
 ## Background
-Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel))[^6] {% sidenote
-`somnium` "At the time of my writing this post, his sci-fi story was
-archived [here](https://frostydrew.org/papers.dc/papers/paper-somnium)"%}
-in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s
+Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel))[^6] in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s
 [Brick Moon](https://en.wikipedia.org/wiki/Brick_Moon) [^a]
 from 1865 are
 early fantasy science-fiction of space-faring humans. Kepler
