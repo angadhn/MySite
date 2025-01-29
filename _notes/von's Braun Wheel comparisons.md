@@ -15,7 +15,7 @@ This is a quick post about Wernher von Braun's 1950's
 to the ISS (1998-present) and 1968's Space Station V from 2001: A Space
 Odyssey{%sidenote 'spaceOdyssey' 'Watch this as homework!'%}.
 
-## Von Braun's Rotating Wheel Space Station
+## von Braun's Rotating Wheel Space Station
 Wernher von Braun's [video](https://www.youtube.com/watch?v=5JJL8CUfF-o) envisioned a rotating wheel
 space station with 9 sections for:
 1. Headquarters and Communications

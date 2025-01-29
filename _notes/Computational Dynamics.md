@@ -4,7 +4,6 @@ permalink: /online_textbooks/computational_dynamics/
 published: 2024-09-12
 tags:
   - education
-  - essays
 ---
 ---
 ## [Weblink](https://www.angadhn.com/ComputationalDynamics/kinematics/introduction.html)
