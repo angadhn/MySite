@@ -1,9 +1,10 @@
 ---
 title: Symbolic Computational Dynamics
-permalink: /online_textbooks/computational_dynamics/
+created: 12/09/2024
 published: 2024-09-12
 tags:
   - education
+permalink: /online_textbooks/computational_dynamics/
 ---
 ---
 ## [Weblink](https://www.angadhn.com/ComputationalDynamics/kinematics/introduction.html)
