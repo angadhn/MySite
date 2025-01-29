@@ -10,7 +10,6 @@ permalink: /online_textbooks/UG_final_year_project/
 ---
 {% marginfigure 'mf-id-1' 'assets/OldSite/HQ_Final_Logo_for_light_theme.png' 'Logo for SpaceHQ. We like to think of ourselves as a ragtag group of outliers trying to figure out how we can build larger structures in space. An example challenge is how we can go from modular stations such as ISS, as seen on the left of our logo, to rotating wheel space stations, on the right of our logo.' %}
 
-## Who this page serves?
 This is likely only useful for QMUL's final year undergraduate students in who are taking
 [EMS690U final year project](https://www.qmul.ac.uk/modules/items/ems690u-integrated-design-project.html)
 under my supervision. It will make little to no sense for anyone else (inlcuding those from QMUL) as
