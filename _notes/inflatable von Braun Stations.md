@@ -8,10 +8,8 @@ tags:
   - essays
 ---
 ## Background
-Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel))[^6] in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s
-[Brick Moon](https://en.wikipedia.org/wiki/Brick_Moon) [^a]
-from 1865 are
-early fantasy science-fiction of space-faring humans. Kepler
+Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel))[^6] in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s [Brick Moon](https://en.wikipedia.org/wiki/Brick_Moon) [^a]
+from 1865 are early fantasy science-fiction of space-faring humans. Kepler
 faced more flak than fanfare for his work{% sidenote 'flak' "Kepler's mom was put on
 [trial](https://thonyc.wordpress.com/2014/07/30/johannes-keplers-somnium-and-katharina-keplers-trial-for-witchcraft-the-emergence-of-a-myth/)
 for witchcraft with some connections to Somnium.
