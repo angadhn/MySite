@@ -7,7 +7,7 @@ tags:
   - essays
 permalink: /vonBraunComparison
 ---
-{% newthought "An earlier post in my teaching resources for" %} a final
+An earlier post in my teaching resources for a final
 year undergraduate project had a pretty helpful
 AI-generated{%sidenote 'thankclaude' 'thanks to [Claude](https://claude.ai)'%}
  [[Space Station Design Project#Large Space Stations (Modular or Monolithic)|table]].

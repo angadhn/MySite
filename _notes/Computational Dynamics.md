@@ -10,7 +10,7 @@ permalink: /online_textbooks/computational_dynamics/
 ## [Weblink](https://www.angadhn.com/ComputationalDynamics/kinematics/introduction.html)
 
 ## Who might find the above link useful?
-{% newthought "The above text is most useful for" %} QMUL's first year undergraduate students taking
+The above text is most useful for QMUL's first year undergraduate students taking
 [EMS418U: Computational and Mathematical Modelling 2](https://www.qmul.ac.uk/modules/items/ems418u-computational-and-mathematical-modelling-2.html).
 It could also be a useful resource for educators interested in classical mechanics wishing to teach computational
 modeling to students using computer symbolic algebra. The content makes have use of `sympy`; specifically, its 
