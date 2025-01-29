@@ -4,8 +4,8 @@ title: Essays
 permalink: /essays/
 ---
 
-The below are some passages I've written that are probably over 600 words. I am currently qualifying
-any writing of that length as an essay for now but is likely to be revisited in future.
+> The below are some passages I've written that are probably over 600 words. I am currently qualifying
+> any writing of that length as an essay for now but is likely to be revisited in future.
 
 <div class="essays-list" style="font-size: 0.9em;">
 {% assign notes_with_essays = site.notes | where_exp: "note", "note.tags contains 'essays'" | sort: "published" | reverse %}
