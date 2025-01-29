@@ -8,7 +8,7 @@ tags:
   - writing
   - essays
 ---
-I am a big time and longtime fan of [Obsidian](https://obsidian.md) for notes- it is my note-taking
+I am a big-time and longtime fan of [Obsidian](https://obsidian.md) for notes- it is my note-taking
 tool of choice both for its usability and, just as importantly, its [ethos](https://stephango.com/file-over-app).
 However, my use of it recently reduced when I started using [academicpages](https://academicpages.github.io/)
 as a template for my website; I actually spent a lot of time making it fit
