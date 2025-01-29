@@ -20,7 +20,7 @@ permalink: /
       {% assign top_notes = site.notes | where: "top_of_mind", true | sort: "last_modified_at_timestamp" | reverse %}
       {% for note in top_notes limit: 5 %}
         <li>
-          {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+          • <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
         </li>
       {% endfor %}
     </ul>
@@ -32,7 +32,7 @@ permalink: /
       {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
       {% for note in recent_notes limit: 5 %}
         <li>
-          {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+          • <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
         </li>
       {% endfor %}
     </ul>
