@@ -1406,3 +1406,36 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
         padding: 0 0.2em;
     }
 }
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .notes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.notes-column {
+  min-width: 0;
+  
+  h5 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+}

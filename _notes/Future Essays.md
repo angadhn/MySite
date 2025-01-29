@@ -5,6 +5,7 @@ published: 2025-01-28
 tags:
   - writing
 permalink: /futureEssays
+top_of_mind: "true"
 ---
 The following is a list of notes I intend to expand on further, such as:
 -  [[Moravec's Paradox]]

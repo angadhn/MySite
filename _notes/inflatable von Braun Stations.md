@@ -7,6 +7,7 @@ tags:
   - inflatable
   - essays
 permalink: /inflatablevonBraun
+top_of_mind: "true"
 ---
 ## Background
 Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel))[^6] in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s [Brick Moon](https://en.wikipedia.org/wiki/Brick_Moon) [^a]

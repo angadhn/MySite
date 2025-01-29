@@ -1,7 +1,11 @@
 ---
-title:  "The ISS's Connector Mechanisms"
+title: The ISS's Connector Mechanisms
 published: 2024-12-21
-tags: [space stations]
+tags:
+  - space
+  - stations
+top_of_mind: "true"
+created: 2024-12-21
 ---
 In an  [[ISS assembly animation|earlier post, I linked to Jared Owen's excellent video on space stations]] and that I
 would follow up with a summary of his chapter on docking ports.
