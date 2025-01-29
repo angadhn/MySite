@@ -5,6 +5,7 @@ tags:
   - stagnation
   - techno-optimism
   - essays
+permalink: /varoufakis
 ---
 
 These were some quick thoughts I shared with a friend after reading
