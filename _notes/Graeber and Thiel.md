@@ -1,10 +1,12 @@
 ---
 title: Graeber and Thiel on Stagnation
+created: 09-12-2024
 published: 2024-12-11
 tags:
   - stagnation
   - technology
   - essays
+permalink: /graeberAndThiel
 ---
 My friends are big fans of David Graeber's _Bullshit Jobs_ and _Debt_.
 Having been more a listener of his, I find his candor amusing and cutting.

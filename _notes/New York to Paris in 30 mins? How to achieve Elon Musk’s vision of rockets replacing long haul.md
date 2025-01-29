@@ -10,6 +10,7 @@ tags:
   - rockets
   - space
   - essays
+permalink: /externalWritings/1
 ---
 
 _This is my piece for [The Conversation](https://theconversation.com/new-york-to-paris-in-30-mins-how-to-achieve-elon-musks-vision-of-rockets-replacing-long-haul-248181)._
