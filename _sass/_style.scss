@@ -1350,6 +1350,12 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 // Add specific nav-link styles
 .nav-link {
   border-bottom: none;
+  text-decoration: none;
+  
+  &:after {
+    content: none !important;  // Forcefully remove any after content
+    display: none !important;  // Make extra sure it's gone
+  }
   
   &:hover {
     background: none;
