@@ -4,7 +4,7 @@ created: 28-01-2025
 published: 2025-01-28
 tags:
   - writing
-permalink: /future
+permalink: /futureEssays
 ---
 The following is a list of notes I intend to expand on further, such as:
 -  [[Moravec's Paradox]]
