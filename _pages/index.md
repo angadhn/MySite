@@ -11,7 +11,7 @@ permalink: /
 > and a small percentage of it gets published here. If you stumbled
 > here as an internet stranger, you might wish to see what's top of my mind
 > by exploring the most recently updated notes below. A [[all notes|complete archive]] is also available
-> but I'd recommend surfing by Topics at the bottom of this page instead. Current undergraduate students at QMUL looking for teaching materials can go  straight to [[My teaching content]]. 
+> but I'd recommend surfing by Topics at the bottom of this page instead. Those of you looking for my online teaching materials are directed to [[My teaching content]]. 
 
 <h5>Recently updated notes</h5>
 
