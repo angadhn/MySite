@@ -8,7 +8,7 @@ tags:
   - essays
 ---
 ## Background
-Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel)){% sidenote
+Kepler's [Somnium](https://en.wikipedia.org/wiki/Somnium_(novel))[^6] {% sidenote
 `somnium` "At the time of my writing this post, his sci-fi story was
 archived [here](https://frostydrew.org/papers.dc/papers/paper-somnium)"%}
 in 1608 and [Edward Everett Hale](https://en.wikipedia.org/wiki/Edward_Everett_Hale)'s
@@ -49,7 +49,7 @@ To date, no station has offered an order of magnitude increase on its
 predecessors and none are in the pipeline{% sidenote 'inflatables-3' "The
 in-development Lunar Gateway will operate at an orbit further to the
 International Space Station (ISS) with a crew of 4. See table
-[[Space Station Design Project#Large Space Stations (Modular or Monolithic)|here]]"%}.
+[[TheSiteRepo/_notes/Space Station Design Project#Large Space Stations (Modular or Monolithic)|here]]"%}.
 Assuming that a pressurized volume $$>20x$$ of the ISS gives each crew member a 
 hypothetical $$\approx 200\,m^3$$ of volume though, in practice, the habitable portion is
 roughly identical to the space occupied by on-board equipment/instruments
@@ -192,3 +192,5 @@ heading to Mars or other locations away from the Earth[^5].
 [^4]: Unlike was done with inflatables, we should maintain/increase support to mature in-space robotic assembly and maintenance technology development as I imagine that at even larger scales, a reliance on robots is inevitable.
 
 [^5]: I am currently reading James Hansen's [_Spaceflight Revolution_](https://www.nasa.gov/wp-content/uploads/2023/04/sp-4308.pdf) that should help me gain a deeper perspective on the early inflatable station. Fun fact: another of his books was adapted into [First Man](https://en.wikipedia.org/wiki/First_Man_(film)) with Ryan Gosling playing Neil Armstrong.
+
+[^6]: At the time of my writing this post, his sci-fi story was archived [here](https://frostydrew.org/papers.dc/papers/paper-somnium).

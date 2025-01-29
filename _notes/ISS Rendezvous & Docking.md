@@ -4,7 +4,7 @@ published: 2024-12-19
 tags: [space stations]
 ---
 I started thinking about how docking might work with an inflatable station since writing about the
-Goodyear concept [[inflatable von Braun Stations|here]]. I have been trying to think about how spacecraft might dock to such a 
+Goodyear concept [[TheSiteRepo/_notes/inflatable von Braun Stations|here]]. I have been trying to think about how spacecraft might dock to such a 
 station and how crew might transfer from one vehicle to the other. While I don't have an answer 
 yet, I thought I would share some videos I watched to ignite my mind. I found the following one by Destin Sandlin to be a nice intro to rendezvousing with the ISS:
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">

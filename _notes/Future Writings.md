@@ -6,7 +6,7 @@ tags:
   - writing
 permalink: /future
 ---
-The following is a list of notes I intend to expand on further, such as:
+The following is a list of notes I should expand on further, such as:
 - [[TheSiteRepo/_notes/Moravec's Paradox]]
 
 There are some others that could be more technical that a historical perspective on:

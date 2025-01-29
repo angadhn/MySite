@@ -6,7 +6,7 @@ tags: [space stations]
 Scott Manley has made summarized the state of play with commercial space stations
 nicely below while offering insights on the Chinese Space Station and Starship
 becoming a future space station- because why not! This couples really well
-with Jared Owen's animation of the ISS construction [[ISS assembly animation|that I wrote about earlier]] and also
+with Jared Owen's animation of the ISS construction [[TheSiteRepo/_notes/ISS assembly animation|that I wrote about earlier]] and also
 with the writeup on [docking mechanisms](https://angadhn.com/opinions/Post6).
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
