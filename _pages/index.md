@@ -7,12 +7,7 @@ permalink: /
 
 # Welcome!
 
-> This website belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). Sometimes I write digital notes
-> and a small percentage of it gets published here. If you stumbled
-> here as an internet stranger, you might wish to see what's top of my mind
-> by exploring the most recently updated notes below. A [[all notes|complete archive]] is also available
-> but I'd recommend surfing by Topics at the bottom of this page instead. Those of you looking for my online teaching materials are directed to [[My teaching content]]. 
-
+> This website belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). It is my version of making a place that I consider aesthetic to display things I write. While these are on the web, the intended frequent audience is likely to be just one- myself. My intention is to work my digital notes into essays that opine on things. Now, if you are not me and you stumbled here as an internet stranger looking to explore, you might wish to see what's top of my mind or seeing my recently updated notes below. They may not always be the same. A [[all notes|complete archive]] of this site's content is also available though I am not sure if it is as useful as filtering by topic, which can be found below. I do maintain another [online presence](angadhn.com), my first attempt at making a personal site that I thought was aesthetic but I have come to admit that it isn't. However, it will continue to exist (and maybe even evolve) as the domain is linked to into my online teaching materials. A list of thse can also be found on this [[My teaching content|site]]. 
 <div class="notes-grid">
   <div class="notes-column">
     <h5>Top of Mind</h5>
