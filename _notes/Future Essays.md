@@ -20,5 +20,5 @@ There are some others that could be more technical that a historical perspective
 	we might wish to develop.
 - A deeper perspective on inflatable stations developed thru history and where we might wish to futher invest in R&D:
 	-  [[inflatable von Braun Stations]] +  [[BEAM video summary]]
-	-  [[Reading Links Jan 2025 Part 3]] that has content on inflatables
+	-  [[Reading Links Part 3]] that has content on inflatables
 	- [[Saul Griffith on Inflatables]]

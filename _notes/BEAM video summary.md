@@ -7,7 +7,7 @@ tags:
   - stations
   - inflatable
   - essays
-permalink: /BEAM-1
+permalink: /BEAM
 ---
 Rajib Dasgupta's 2016 interview as NASA BEAM (Bigelow Expandable Activity Module)
 project manager is quite informative for those interested in inflatable space 
