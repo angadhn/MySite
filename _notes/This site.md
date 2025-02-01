@@ -96,24 +96,22 @@ which is generated using Markdown as so:
 Within Obsidian, this gives me an image (without captions, which I can live with for my writing).
 On the website, I have been able to build in some nifty behaviour: in most cases, captions appear on the right margin of an image but, on mobile screens, defaults to being under the image. I think this optimises for both my writing and reading experience. I think the power of this is best experienced in [[The winds have been howling for a hundred years at NASA's Virginia Research Center]], an article translated from Hungarian to English [^8].
 ### Full Width Figures and Margin Figures
-I don't have a good solution in case a full-width image or figure must be included, like so:
+I don't have a good Liquid tags-free solution for full-width and margin figures. There is probably a time and place to use both types of figures. The below is a great example of when full width is needed:
 
 {% fullwidth 'assets/OldSite/napoleons-march.png' "Napoleon's March *(Edward Tufte’s English translation)*" %}
 
-which needs to use custom liquid tag is available to use. Oddly enough, it is named 'fullwidth', and this markup:
+This needs custom liquid tag but is unwieldy to write:
 
-``` markdown
+```
 {{ "{% fullwidth 'assets/OldSite/napoleons-march.png' 'Napoleon's March *(Edward Tufte’s English translation)*' "}} %}
 ```
-  
+
 {% marginfigure 'mf-id-1' "assets/OldSite/exports-imports.png" "From Edward Tufte, *Visual Display of Quantitative Information*, page 92" %}
 
-This is also true of margin figures
-which again reads poorly in Obsidian:
-``` markdown
+Using Liquid tags permits margin figures which again reads poorly and is a pain to write in Obsidian (or any editor for that matter[^9]):
+```
 {{ "{% marginfigure 'mf-id-whatever' 'assets/OldSite/rhino.png' 'F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.' "}} %}
 ```
-
 ## Equations
 The Markdown parser being used by this Jekyll theme is Kramdown, which contains some built-in [Mathjax](//www.mathjax.org) support. The only thing I am unhappy about is the way inline math currently works.
 For instance, the following inline sequence:
@@ -346,3 +344,5 @@ Enclose the code block in three backticks, followed by a space and then the lang
 [^7]: While it might be feasible to convert Markdown footnotes into margin notes during the build, I sense that there must be some limit on how long a sidenote must be before it is formatted as a footnote. So this is a quite low priority todo for me.
 
 [^8]: Getting this page made was so cool- I got the page into Obsidian using the Obsidian Web Clipper. I then popped into Cursor and asked Claude to translate the article.
+
+[^9]: Using cursor's autosuggest helps quite a bit with this but it's still not the most fun place to write, for me.
