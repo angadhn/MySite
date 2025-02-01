@@ -6,6 +6,13 @@
   font-size: 0.9em;
   overflow: auto;
   margin: 1em -1em;
+  
+  // Add dark mode styles
+  [data-theme="dark"] & {
+    background: #1f232b;  // Dark background that matches your theme
+    color: #eaeaea;      // Light text color for readability
+  }
+  
   code{
     padding: 0;
   }
@@ -75,3 +82,44 @@ div.highlight {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+// Update syntax highlighting colors for dark mode
+[data-theme="dark"] {
+  .highlight {
+    padding: 1px 1em;
+    border-radius: 3px;
+    font-size: 1em;
+    font-size: 0.9em;
+    overflow: auto;
+    margin: 1em -1em;
+    
+    code{
+      padding: 0;
+    }
+
+    .c, .cm, .cp, .c1, .cs { color: #6c7280; }  // Comments
+    .err { color: #ff6b6b; background-color: transparent; }  // Errors
+    .k, .kc, .kd, .kp, .kr { color: #79b8ff; }  // Keywords
+    .o, .ow { color: #eaeaea; }  // Operators
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #9ecbff; }  // Strings
+    .na { color: #b392f0; }  // Name.Attribute
+    .nb { color: #79b8ff; }  // Name.Builtin
+    .nc { color: #b392f0; }  // Name.Class
+    .no { color: #79b8ff; }  // Name.Constant
+    .nd { color: #79b8ff; }  // Name.Decorator
+    .ni { color: #e36209; }  // Name.Entity
+    .ne { color: #ff6b6b; }  // Name.Exception
+    .nf { color: #b392f0; }  // Name.Function
+    .nl { color: #79b8ff; }  // Name.Label
+    .nn { color: #b392f0; }  // Name.Namespace
+    .nt { color: #79b8ff; }  // Name.Tag
+    .nv { color: #79b8ff; }  // Name.Variable
+    .w { color: #6c7280; }   // Text.Whitespace
+    .m, .mf, .mh, .mi, .mo { color: #79b8ff; }  // Numbers
+    .gd { color: #ff6b6b; }  // Generic.Deleted
+    .gi { color: #85e89d; }  // Generic.Inserted
+    .gs { color: #eaeaea; }  // Generic.Strong
+    .gu { color: #6c7280; }  // Generic.Subheading
+    .gt { color: #ff6b6b; }  // Generic.Traceback
+  }
+}

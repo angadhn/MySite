@@ -333,12 +333,6 @@ nav {
   border-radius: $border-radius;
 }
 
-code {
-  background: #f5f5f5;
-  padding: 0.1em 0.2em;
-  border-radius: 4px;
-}
-
 .invalid-link {
   color: #444444;
   cursor: help;
@@ -920,10 +914,6 @@ input:checked + .slider {
         border-left: none;
         margin: 0;
         padding: 0;
-    }
-
-    code {
-        background-color: #1f232b;
     }
 
     a {
