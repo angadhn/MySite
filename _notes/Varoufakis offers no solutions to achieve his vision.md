@@ -1,11 +1,14 @@
 ---
 title: Varoufakis' word salad visions offer no solution path
-published: 2025-01-06
+published: 2025-01-29
 tags:
   - stagnation
   - techno-optimism
   - essays
 permalink: /varoufakis
+created: 
+top_of_mind: "false"
+topic:
 ---
 
 These were some quick thoughts I shared with a friend after reading

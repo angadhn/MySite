@@ -3,7 +3,7 @@ title: Reading Links Jan 2025 Part 1
 created: 06/01/2025
 published: 2025-01-06
 tags:
-  - reading
+  - readings
 permalink: /readingLinks/1
 ---
 1. David Graeber opines on [flying cars and technological stagnation](https://davidgraeber.org/wp-content/uploads/2012-Of-flying-cars-and-the-declining-rate-of-profit.pdf), which is a good companion to [[TheSiteRepo/_notes/Graeber and Thiel|my earlier post on his debate with Thiel]].

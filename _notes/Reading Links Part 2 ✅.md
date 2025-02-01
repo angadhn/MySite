@@ -3,7 +3,7 @@ title: Reading Links Jan 2025 Part 2
 created: 21-01-2025
 published: 2025-01-21
 tags:
-  - reading
+  - readings
 permalink: /readingLinks/2
 ---
 Couple of highlights from my online readings this week:

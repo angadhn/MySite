@@ -3,7 +3,7 @@ title: Reading List for Inflatable Space Stations
 created: 2025-01-11
 published: 2025-01-11
 tags:
-  - reading
+  - readings
 permalink: /readingLinks/3
 ---
 - In preparing my WiP piece, I have been reading Hansen's Spaceflight Revolution. This led me to find Berglund's [patent](https://patents.google.com/patent/US3169725A/en) for the [Hexagon Space Station](https://patentimages.storage.googleapis.com/a4/81/3b/cbb51975e79b10/US3169725.pdf).

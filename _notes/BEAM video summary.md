@@ -3,8 +3,7 @@ title: Some notes on BEAM
 created: 22/12/2024
 published: 2024-12-31
 tags:
-  - space
-  - stations
+  - space stations
   - inflatable
   - essays
 permalink: /BEAM
