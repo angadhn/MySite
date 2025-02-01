@@ -157,7 +157,7 @@ The Markdown parser being used by this Jekyll theme is Kramdown, which contains 
 
 For instance, the following inline sequence:
 
-*When $$ a \ne 0 $$, there are two solutions to $$ ax^2 + bx + c = 0 $$*
+*When $a \ne 0$, there are two solutions to $$ ax^2 + bx + c = 0 $$*
 
 is written by enclosing a Mathjax expression within *a matching pair of double dollar signs: ```$$```*:
 

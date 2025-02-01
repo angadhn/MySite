@@ -1,5 +1,5 @@
 ---
-title: One of the best ISS videos I have seen.
+title: One of the best ISS videos I have seen
 published: 2024-12-20
 tags:
   - space

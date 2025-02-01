@@ -7,7 +7,7 @@ tags:
 top_of_mind: "true"
 created: 2024-12-21
 ---
-In an  [[ISS assembly animation|earlier post, I linked to Jared Owen's excellent video on space stations]] and that I
+In an  [[In-Orbit Assembly of the ISS|earlier post, I linked to Jared Owen's excellent video on space stations]] and that I
 would follow up with a summary of his chapter on docking ports.
 
 {% marginfigure 'fig-iss-segs' 'assets/OldSite/ISS_Two_Segments.png' 'The ISS has two segments.' %}
@@ -35,5 +35,5 @@ the International Docking Adapter (IDA)- to allow the Crew Dragon to dock to the
 {% marginfigure 'fig-ida' 'assets/OldSite/IDA.png' 'The IDA is used to connect the Crew Dragon to the ISS.' %}
 
 To learn more about the early part of the ISS's assembly, Jared Owen's video
-is  [[ISS assembly animation|highly recommended]]! Hope he completes the rest of the ISS assembly sequence in
+is  [[In-Orbit Assembly of the ISS|highly recommended]]! Hope he completes the rest of the ISS assembly sequence in
 a future video.
