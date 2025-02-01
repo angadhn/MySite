@@ -2,8 +2,7 @@
 title: Some Space Stations in Fiction and Reality
 published: 2024-09-29
 tags:
-  - space
-  - stations
+  - space stations
   - essays
   - NASA
 permalink: /vonBraunComparison

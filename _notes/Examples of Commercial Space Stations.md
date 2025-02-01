@@ -3,8 +3,7 @@ title: Examples of commercial space stations being developed
 created: 27-12-2024
 published: 2024-12-27
 tags:
-  - space
-  - stations
+  - space stations
 permalink: commercialSpaceStations2024
 ---
 Scott Manley has made summarized the state of play with commercial space stations
