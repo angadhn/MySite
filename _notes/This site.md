@@ -90,7 +90,7 @@ One place that you will see margin notes appear is when I insert an image, like 
 
 ![F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.](assets/OldSite/rhino.png) 
 which is generated using Markdown as so:
-``` markdown
+```
 ![F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.](assets/OldSite/rhino.png)
 ```
 Within Obsidian, this gives me an image (without captions, which I can live with for my writing).
