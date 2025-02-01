@@ -20,7 +20,7 @@ I just did not know\
 That there was somewhere to go.
 
 There are faces that we see right now\
-But who knows what tomorrow brings\ 
+But who knows what tomorrow brings\
 Should we even make it there\
 That’s how little I know of what will be\
 Will be.
