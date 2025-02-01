@@ -76,7 +76,7 @@ In text, I like the idea of Tufte's sidenotes{% sidenote 'sn-id-whatever' 'This 
 ``` markdown
 {% sidenote 'sn-id-xx' 'This is a sidenote and *displays a superscript*'%}
 ```
-Might get this sorted in the future; but as I said, this is a quite low priority as it is not just a matter of handling the Liquid tags with Claude[^7] but requires my own insight into how I write and how long these footnotes can get to convey sufficient information.
+Might get this sorted in the future; but as I said, this is a quite low priority as it is not just a matter of handling the Liquid tags with Claude but requires my own insight into how I write and how long these footnotes can get to convey sufficient information.
 ## Margin notes
 Tufte’s style is well known for its extensive use of notes in margins- this was one of the driving forces for me modifying my previous site's template. My sense is that footnotes are disorienting for readers (this is how I feel but YMMV). The following Liquid tag snippet in my markdown file renders the margin note to the right {% marginnote 'mn-id-whatever' 'This is a margin note.' %}
 
