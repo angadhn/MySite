@@ -5,6 +5,7 @@ tags:
   - site
   - aesthetics
 permalink: ObsidianToTufteWorkflow
+top_of_mind: "true"
 ---
 I am a big-time and longtime fan of [Obsidian](https://obsidian.md)- it is my note-taking tool of choice both for its usability and, just as importantly, its [ethos](https://stephango.com/file-over-app) of avoiding the travails of lock-in. However, my use of it recently plateaued- perhaps, even dropped off a cliff- when I started working on creating a personal static website using Jekyll. This seemed absurd to me as the reason to build the website was that it generated pages from Markdown.
 
