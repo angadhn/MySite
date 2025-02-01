@@ -72,13 +72,13 @@ More excerpts from Tufte CSS:
 > [Tufte CSS](https://edwardtufte.github.io/tufte-css/)
 
 ## Sidenotes
-In text, I like the idea of Tufte's sidenotes{% sidenote 'sn-id-whatever' 'This is a sidenote and *displays a superscript*'%} which display a superscript- very similar to footnotes but without the disorienting scrolling behaviours. However, I have to be very judicious here as it requires using Liquid tags, which looks like this in markdown
+Tufte’s style is well known for its extensive use of notes in margins- this was one of the driving forces for me modifying my previous site's template. My sense is that footnotes are disorienting for readers (this is how I feel but YMMV).  Tufte's sidenotes{% sidenote 'sn-id-whatever' 'This is a sidenote and *displays a superscript*'%} display a superscript, similar to numbered footnotes but make for a much more pleasant reading experience; they lack the disorienting scrolling behaviours of footnotes. However, I have to be very judicious with using sidenotes as it requires using Liquid tags, which looks like this in markdown
 ``` markdown
 {% sidenote 'sn-id-xx' 'This is a sidenote and *displays a superscript*'%}
 ```
-Might get this sorted in the future; but as I said, this is a quite low priority as it is not just a matter of handling the Liquid tags with Claude but requires my own insight into how I write and how long these footnotes can get to convey sufficient information.
-## Margin notes
-Tufte’s style is well known for its extensive use of notes in margins- this was one of the driving forces for me modifying my previous site's template. My sense is that footnotes are disorienting for readers (this is how I feel but YMMV). The following Liquid tag snippet in my markdown file renders the margin note to the right {% marginnote 'mn-id-whatever' 'This is a margin note.' %}
+I might work on getting this addressed in the future; but this is quite a low priority item as it is not just a matter of converting footnotes into sidenotes via Jekyll but also requires personal judgment. Is it worth never having footnotes? Longer form content in such tangential notes work better as footnotes than sidenotes. Perhaps footnotes are the kind of thing that become longer posts. And sidenotes are essentially some kind of staging for footnotes? And perhaps in there lies a virtuous cycle of writing short form with the vision of making it long form. 
+## Margin notes with Figures
+The following Liquid tag snippet in my markdown file renders the margin note to the right {% marginnote 'mn-id-whatever' 'This is a margin note.' %}
 
 ``` markdown
  {% marginnote 'mn-id-whatever' 'This is a margin note.' %}
@@ -94,9 +94,9 @@ which is generated using Markdown as so:
 ![F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.](assets/OldSite/rhino.png)
 ```
 Within Obsidian, this gives me an image (without captions, which I can live with for my writing).
-On the website, I have been able to build in some nifty behaviour: in most cases, captions appear on the right margin of an image but, on mobile screens, defaults to being under the image. I think this optimises for both my writing and reading experience. I think the power of this is best experienced in [[The winds have been howling for a hundred years at NASA's Virginia Research Center]], an article translated from Hungarian to English [^8].
+On the website, I have been able to build in some nifty behaviour with Claude: on bigger screens, captions appear on the right margin of an image but, on mobile screens, defaults to being beneath the image. I think this optimises for both writing and reading experiences. I think the beauty of this can be best experienced in [[The winds have been howling for a hundred years at NASA's Virginia Research Center]], a photographic celebration of NASA Langley's centenary year )translated from Hungarian to English [^8]).
 ### Full Width Figures and Margin Figures
-I don't have a good Liquid tags-free solution for full-width and margin figures. There is probably a time and place to use both types of figures. The below is a great example of when full width is needed:
+Ultra wide images and images in the margin are also possible but I don't have a good Liquid tags-free solution for either. There is probably a time and place to use these types of figures. The below is a great example of when full width looks great and is useful:
 
 {% fullwidth 'assets/OldSite/napoleons-march.png' "Napoleon's March *(Edward Tufte’s English translation)*" %}
 
@@ -112,6 +112,7 @@ Using Liquid tags permits margin figures which again reads poorly and is a pain 
 ```
 {{ "{% marginfigure 'mf-id-whatever' 'assets/OldSite/rhino.png' 'F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.' "}} %}
 ```
+So, I think in most cases, I will be using the general markdown `![Caption](Image_file_or_link)` syntax, and let Jekyll convert that into images with margin captions.
 ## Equations
 The Markdown parser being used by this Jekyll theme is Kramdown, which contains some built-in [Mathjax](//www.mathjax.org) support. The only thing I am unhappy about is the way inline math currently works.
 For instance, the following inline sequence:
