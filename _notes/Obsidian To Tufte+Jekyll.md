@@ -6,11 +6,25 @@ tags:
   - aesthetics
 permalink: ObsidianToTufteWorkflow
 ---
-The Tufte Jekyll theme is an attempt to create a website design with the look and feel of Edward Tufte's books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.<!--more--> The idea for this project is essentially cribbed wholesale from Tufte and R Markdown's Tufte Handout format{% sidenote 'One' 'See [tufte-latex.github.io/tufte-latex/](https://tufte-latex.github.io/tufte-latex/) and [rmarkdown.rstudio.com/tufte_handout_format](http://rmarkdown.rstudio.com/tufte_handout_format.html)' %} This page is an adaptation of the [Tufte Handout PDF](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
+I am a big-time and longtime fan of [Obsidian](https://obsidian.md) for notes- it is my note-taking tool of choice both for its usability and, just as importantly, its [ethos](https://stephango.com/file-over-app).
+However, my use of it recently reduced when I started wanting to publish my writing online. As a novice website builder, I used [academicpages](https://academicpages.github.io/). I also wanted some element of control on that site’s appearance but never felt upto take. However, with the development of [Cursor](https://cursor.ai), it became possible to build something that aligned with my aesthetics for what a website should be (largely informed by the beauty of Gwern’s website).
 
+With the site built and ready for publication, my writing workflow became one of writing blogposts in markdown form within Cursor. This made me go into the terrible workflow of more directories, subdirectories for organising my thinking not to mention the unrelated general website management- this process of publication and maintenance had too much friction for my liking. It also didn’t help me write on/from my phone.
+
+Which is why I decided to overhaul all of this to start a new one- this one. Now anyone who has written notes on Obsidian knows how awesome it is. I can't place my finger on it but I think it is fantastic as a place to type. Also Obsidian Publish is just so good- it's so easy to get your notes out into the wild and in principle has everything I want in terms of low friction publication. But I wanted more control over the look and feel of Obsidian Publish[^1]; for example, I like the Tufte design a lot as I think it reflects how I think as a writer and also how a reader should want to experience reading on my site. I want my taste to be clear to anyone who finds their way here.
+
+So, lamenting the loss of Obsidian, I decided I to embark on a second journey to building a Jekyll website in Tufte style that gets its content straight out of Obsidian using its git plugin. For anyone looking to set up an Obsidian-based website, I recommend [this post by Steph Ango](https://stephango.com/vault)  on publishing websites from Obsidian with low friction by leveraging Obsidian's Git plugin, Jekyll, Github, and Netlify.
+
+I also saw Steph Ango uses ButtonDown to make his website into a Newsletter. This [blogpost](https://michaelsoolee.com/buttondown-newsletter-5-reasons/) made it sound nice too so I decided I would build this into  my  Jekyll[^2]site; [guidance for this integration is here](https://buttondown.com/blog/netlify). 
+
+[^1]: I am still paying for Obsidian Publish to host my notes for the moment- I have about 11 months on it so I will see what to do with it in future.
+
+## Tufte styling of Jekyll
+
+The Jekyll customisations of the Tufte theme of this site is an attempt to create a design with the look and feel of Edward Tufte's books and handouts but with my own twist. Tufte’s style is well known for its extensive use of sidenotes, among other things; it’s the main property I want on my site as footnotes can be unwieldy. Much of the theme’s implementation in my site is from [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog); this page is my adaptatijg a portion of their adaptation of [Tufte Handout PDF](http://rmarkdown.rstudio.com/examples/tufte-handout.pdf).
 ## Jekyll customizations
 
-This Jekyll blog theme is based on the github repository by Edward Tufte [here](https://github.com/edwardtufte/tufte-css), which was orginally created by Dave Leipmann, but is now labeled under Edward Tufte's moniker. I borrowed freely from the Tufte-CSS repo and have transformed many of the typographic and page-structural features into a set of custom Liquid tags that make creating content using this style much easier than writing straight HTML. Essentially, if you know markdown, and mix in a few custom Liquid tags, you can be creating a website with this document style in short order.
+This Jekyll blog theme is based on the github repository of [clayh53](). I borrowed freely from the Tufte-CSS repo and have transformed many of the typographic and page-structural features into a set of custom Liquid tags that make creating content using this style much easier than writing straight HTML. Essentially, if you know markdown, and mix in a few custom Liquid tags, you can be creating a website with this document style in short order.
 
 The remainder of this sample post is a self-documenting survey of the features of the Tufte-Jekyll theme. I have taken almost all of the sample content from the [Tufte-css](https://github.com/edwardtufte/tufte-css) repo and embedded it here to illustrate the parity in appearence between the two. The additional verbiage and commentary I have added is to document the custom *Liquid* markup tags and other features that are bundled with this theme.
 
@@ -381,3 +395,4 @@ Enclose the code block in three backticks, followed by a space and then the lang
     blah, blah...
    ```</code> </pre>
 
+[^2]: [[My Jekyll Site had ButtonDown Integration Issues|This note]] tells you of some issues I had with integrating ButtonDown in my Jekyll+Netlify site. Hope it helps someone.
