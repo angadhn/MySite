@@ -331,7 +331,7 @@ Enclose the code block in three backticks, followed by a space and then the lang
 <pre> <code>``` ruby
     module Jekyll
     blah, blah...
-
+   ```</code> </pre>
 
 [^2]: [[My Jekyll Site had ButtonDown Integration Issues|This note]] tells you of some issues I had with integrating ButtonDown in my Jekyll+Netlify site. Hope it helps someone.
 
