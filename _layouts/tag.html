@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<p class="topic-header"><a href="{{ site.baseurl }}/topics" class="topics-link">Topics</a><span class="topics-link">/</span><span class="highlight-tag">{{ page.tag }}</span></p>
+<h4 class="topic-header"><a href="{{ site.baseurl }}/topics" class="topics-link">Topics</a><span class="topic-separator">/</span><span class="highlight-tag">{{ page.tag }}</span></h4>
 
 {% assign notes = site.notes | where_exp: "note", "note.tags contains page.tag" %}
 <p class="entry-count">{{ notes | size }} entries about this topic</p>
