@@ -39,6 +39,25 @@ body {
   }
 }
 
+// Base content width
+article {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;    // New: center the article
+  // max-width: 800px;  // New: limit article width
+  // @media (max-width: 760px) {
+  //   width: 95%;
+  //   margin: 0;
+  // }
+}
+
+// // Base content width
+// article {
+//   position: relative;
+//   width: 125%;
+//   max-width: 1300px;
+// }
+
 time {
   display: block;
   color: $color-subtext;
@@ -343,12 +362,6 @@ nav {
 .invalid-link-brackets {
   color: #ccc;
   cursor: help;
-}
-
-// Base content width
-article {
-  position: relative;
-  width: 85%;
 }
 
 // Sidenote essentials
