@@ -2,9 +2,9 @@
 
 # Digital garden Jekyll template
 
-Use this template repository to get started with your own digital garden.
+If this is public access, then you may use this template repository to get started with your own digital garden.
 
-**I wrote a tutorial explaining how to set it up: [Setting up your own digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)**
+**I used a tutorial explaining how to set it up: [Setting up your own digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)**
 
 Preview the template here: https://digital-garden-jekyll-template.netlify.app/
 
