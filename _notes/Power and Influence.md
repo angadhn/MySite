@@ -6,10 +6,10 @@ tags:
 permalink: 
 top_of_mind: "false"
 ---
+_This essay is a Work in Progress_
+%% Why this new website? %%
 
-Why this new website?
-
- The increasing digitisation of human civilisation over the last 50 years has also increased each of our ability to leave behind a personal record like never before[^1]. From these plentiful records, future historians will work on piecing together a picture of life on our planet. I sense that conjectures and analyses about this moment will be remarkably different to those about Ancient Rome or the Indus Valley Civilisation purely because of the these electronic sources that permit a volume of personalities to be involved in public intellectual life. The bulk of our ancestral civilisations were maintained by authority; the Meditations of Marcus Aurelius remain popular to this day but do not make the life in these times any less coarse-grained as there is no way to undo the missing the granular description of life on the margins.
+The increasing digitisation of human civilisation over the last 50 years has also increased each of our ability to leave behind a personal record like never before[^1]. From these plentiful records, future historians will work on piecing together a picture of life on our planet. I sense that conjectures and analyses about this moment will be remarkably different to those about Ancient Rome or the Indus Valley Civilisation purely because of the these electronic sources that permit a volume of personalities to be involved in public intellectual life. The bulk of our ancestral civilisations were maintained by authority; the Meditations of Marcus Aurelius remain popular to this day but do not make the life in these times any less coarse-grained as there is no way to undo the missing the granular description of life on the margins.
 
 The digital makes us all immortal as we leave behind digital footprints whilst traversing the web of information at the tips of our fingers. At most times, I think this an unfortunate kind of involuntary immortality that feeds the engine of surveillance capitalism. The records of the passive internet-based citizen will appear not too different from those of the Roman peasantry in that this "modern" human's life is a record in another authoritarian entities documentation of the times.
 
