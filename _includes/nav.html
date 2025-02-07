@@ -6,6 +6,9 @@
             </a>
         </div>
         <a href="{{ site.baseurl }}/essays" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">·Essays·</a>
+        <!-- <a href="{{ site.baseurl }}/jobs" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">·Jobs·</a> -->
+        <!-- <a href="{{ site.baseurl }}/news" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">·Updates·</a> -->
+        <!-- <a href="{{ site.baseurl }}/about" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">About</a> -->
     </div>
     <div class="floating-theme-switch">
         <div class="theme-switch-wrapper">
@@ -18,3 +21,12 @@
 </div>
 
 <script src="{{ site.baseurl }}/assets/js/theme-switcher.js"></script>
+
+<!-- This is the script that sets the number of items in the dropdown menu in _nav.scss -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navContainer = document.querySelector('.nav-wrapper > div:first-child');
+        const menuItems = navContainer.querySelectorAll('.nav-link.link-page:not(:first-child)');
+        navContainer.style.setProperty('--item-count', menuItems.length);
+    });
+</script>
