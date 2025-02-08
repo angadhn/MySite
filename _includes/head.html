@@ -43,14 +43,14 @@
   {% if page.image %}
   <meta property="og:image" content="{{ site.url }}{{ page.image }}">
   {% else %}
-  <meta property="og:image" content="{{ site.url }}/assets/favicon_io-light/android-chrome-512x512.png">
+  <meta property="og:image" content="{{ site.url }}/assets/favicon_io/android-chrome-512x512.png">
   {% endif %}
 
   <!-- Twitter Card tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/favicon_io-light/android-chrome-512x512.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/favicon_io/android-chrome-512x512.png">
 
   <title>
     {% if page.id == "home" %}
@@ -86,27 +86,22 @@
 
   <!-- Favicon Configuration -->
   <!-- Light mode favicons -->
-  <link rel="icon" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-light.svg" media="(prefers-color-scheme: light)" sizes="any">
-  <link rel="mask-icon" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-light.svg" color="#000000" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon_io/favicon-light.svg" sizes="any">
+  <link rel="mask-icon" href="{{ site.baseurl }}/assets/favicon_io/favicon-light.svg" color="#000000">
   
   <!-- Dark mode favicons -->
-  <link rel="icon" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-dark.svg" media="(prefers-color-scheme: dark)" sizes="any">
-  <link rel="mask-icon" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-dark.svg" color="#ffffff" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="{{ site.baseurl }}/assets/favicon_io/favicon-dark.svg" sizes="any">
+  <link rel="mask-icon" href="{{ site.baseurl }}/assets/favicon_io/favicon-dark.svg" color="#ffffff">
   
   <!-- iOS/Mobile specific icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon_io-light/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicon_io-light/android-chrome-192x192.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicon_io-dark/android-chrome-192x192.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/assets/favicon_io-light/android-chrome-512x512.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/assets/favicon_io-dark/android-chrome-512x512.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-32x32.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-32x32.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon_io-light/favicon-16x16.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon_io-dark/favicon-16x16.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/assets/favicon_io/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon_io/favicon-16x16.png">
   
   <!-- Web App Manifest -->
-  <link rel="manifest" href="{{ site.baseurl }}/assets/favicon_io-light/site.webmanifest" media="(prefers-color-scheme: light)">
-  <link rel="manifest" href="{{ site.baseurl }}/assets/favicon_io-dark/site.webmanifest" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="{{ site.baseurl }}/assets/favicon_io/site.webmanifest">
 
   <!-- Theme colors for mobile browsers -->
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
