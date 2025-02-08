@@ -175,7 +175,7 @@ a {
   padding: 0 0.1em;
   text-decoration: none;
   border-bottom: 1px solid $color-border;
-  color: crimson;
+  color: #2c5282;
   &:hover {
     color: black !important;
     background: #fffaf1;
@@ -220,15 +220,18 @@ a {
       
   // Internal link styling with favicon
   &.internal-link:after {
-    content: "";
-    display: inline-block;
-    width: 0.7em;
-    height: 0.7em;
-    background: url('../assets/favicon_io-light/favicon-light.svg') no-repeat center center;
-    background-size: contain;
-    margin-left: 0.3em;
-    vertical-align: super;
-    opacity: 0.7;
+      content: "A";
+      font-family: 'Aniron';
+      font-style: normal;
+      color: crimson;
+      background-image: none;
+      width: auto;
+      height: auto;
+      margin-left: 0.2em;
+      font-size: 0.7em;
+      position: relative;
+      top: -0.5em;
+      opacity: 0.9;
   }
 
   // Remove arrow for internal links and footnotes
@@ -948,11 +951,6 @@ input:checked + .slider {
 
         &[href$=".pdf"]:after {
           color: #EC1C24;  // Keep Adobe red in dark mode as it's visible enough
-        }
-
-        // Internal link styling with favicon
-        &.internal-link:after {
-          background-image: url('../assets/favicon_io-dark/favicon-dark.svg');
         }
     }
 
