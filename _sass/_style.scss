@@ -381,7 +381,7 @@ nav {
   font-style: italic;
   float: right;
   clear: right;
-  margin-right: -60%;
+  margin-right: -55%;
   width: 45%;
   margin-top: 0;
   margin-bottom: 0;
@@ -454,7 +454,7 @@ input.margin-toggle {
   font-style: italic;
   float: right;
   clear: right;
-  margin-right: -60%;
+  margin-right: -55%;
   width: 45%;
   margin-top: 0;
   margin-bottom: 0;
@@ -519,7 +519,7 @@ figure {
 .marginal-caption {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   position: absolute;
-  right: -60%;
+  right: -55%;
   top: 0;
   width: 45%;
   font-size: 1rem;
@@ -1330,11 +1330,10 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   }
 
   &:first-line {
-    font-family: 'Aniron', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-family: 'Fugue', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-weight: normal;
     text-transform: uppercase;
-    font-style: normal;
-    font-size: 1.1em;
+    font-size: 0.8em;
     line-height: 1.5;
   }
 
