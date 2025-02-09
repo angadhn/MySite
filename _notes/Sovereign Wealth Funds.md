@@ -7,11 +7,12 @@ tags:
 permalink: /sovereignWealthFunds
 top_of_mind: "false"
 ---
-[Tyler Cowen's post](https://marginalrevolution.com/marginalrevolution/2025/02/usps-as-a-failed-sovereign-wealth-fund.html) quoted an article on the [USPS as a Sovereign Wealth Fund (SWF)](https://gopostal.substack.com/p/usps-is-a-failed-sovereign-wealth). Below, I quote form other linked articles and a conversation with Claude to understand this model of SWF. Claude tells me that a Sovereign Wealth Fund is essentially a state-owned investment fund that invests in real assets (like real estate), financial assets (stocks, bonds), and alternative investments (private equity, hedge funds).
+[Tyler Cowen's post](https://marginalrevolution.com/marginalrevolution/2025/02/usps-as-a-failed-sovereign-wealth-fund.html) quoted an article on the [USPS as a Sovereign Wealth Fund (SWF)](https://gopostal.substack.com/p/usps-is-a-failed-sovereign-wealth). Below, the quotes below are from a [Reuters article](https://www.reuters.com/business/finance/norway-wealth-fund-hits-record-20-trillion-crowns-2024-12-06/) and a conversation with Claude to understand SWFs better.
+
+A Sovereign Wealth Fund is essentially a state-owned investment fund that invests in real assets (like real estate), financial assets (stocks, bonds), and alternative investments (private equity, hedge funds).
 # Norway
 > The value of Norway's sovereign wealth fund, the world's largest, rose to a record 20 trillion crowns ($1.80 trillion) on Friday, doubling its value in just five years as oil and gas revenue flowed in and stock markets rose.
 >
-  [Reuters](https://www.reuters.com/business/finance/norway-wealth-fund-hits-record-20-trillion-crowns-2024-12-06/)
 
 The money typically comes from a country's surplus reserves, often derived from natural resource revenues, trade surpluses, or foreign exchange reserves. Norway decided in the 1990s to save and invest its North Sea oil revenues for future generations rather than spend it all immediately.
 >  Its current value corresponds to about $321,000 for every man, woman and child living in the country of 5.6 million people.
