@@ -7,7 +7,7 @@ tags:
 permalink: /sovereignWealthFunds
 top_of_mind: "false"
 ---
-[Tyler Cowen's post](https://marginalrevolution.com/marginalrevolution/2025/02/usps-as-a-failed-sovereign-wealth-fund.html) quoted an article on the [USPS as a Sovereign Wealth Fund (SWF)](https://gopostal.substack.com/p/usps-is-a-failed-sovereign-wealth). Below, the quotes below are from a [Reuters article](https://www.reuters.com/business/finance/norway-wealth-fund-hits-record-20-trillion-crowns-2024-12-06/) and a conversation with Claude to understand SWFs better.
+[Tyler Cowen's post](https://marginalrevolution.com/marginalrevolution/2025/02/usps-as-a-failed-sovereign-wealth-fund.html) quoted an article on the [USPS as a Sovereign Wealth Fund (SWF)](https://gopostal.substack.com/p/usps-is-a-failed-sovereign-wealth). The quotes below are from a [Reuters article](https://www.reuters.com/business/finance/norway-wealth-fund-hits-record-20-trillion-crowns-2024-12-06/) and a conversation with Claude to understand SWFs better.
 
 A Sovereign Wealth Fund is essentially a state-owned investment fund that invests in real assets (like real estate), financial assets (stocks, bonds), and alternative investments (private equity, hedge funds).
 # Norway
