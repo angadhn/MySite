@@ -1450,3 +1450,39 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
     margin-bottom: 0.5rem;
   }
 }
+
+.footnotes {
+  position: relative;
+  margin-top: 4em;  // Space for the line
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: -2em;      // Position the line
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $color-border;
+  }
+
+  &:after {
+    content: "Footnotes";  // Add the heading text
+    position: absolute;
+    top: -1.5em;    // Position text below the line
+    left: 0;
+    font-family: 'Aniron', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 1.17em;    // Matches h3 size
+    font-weight: bold;
+  }
+}
+
+// Dark mode support
+[data-theme="dark"] .footnotes {
+  &:before {
+    background: #3d434d;  // Darker line for dark mode
+  }
+  
+  &:after {
+    color: #eaeaea;  // Light text for dark mode
+  }
+}
