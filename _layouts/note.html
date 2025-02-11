@@ -5,10 +5,14 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
+    <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+      {% if page.type != 'pages' %}
       Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
       {% endif %}
     </time>
+    <div class="reading-info">
+      {{ content | word_count }} words · {{ content | reading_time }} min read
+    </div>
   </div>
 
   <div id="notes-entry-container">
