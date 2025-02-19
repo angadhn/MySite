@@ -7,7 +7,7 @@ tags:
 permalink: /sovereignWealthFunds
 top_of_mind: "false"
 ---
-[Tyler Cowen's post](https://marginalrevolution.com/marginalrevolution/2025/02/usps-as-a-failed-sovereign-wealth-fund.html) quoted an article on the [USPS as a Sovereign Wealth Fund (SWF)](https://gopostal.substack.com/p/usps-is-a-failed-sovereign-wealth). The quotes below are from a [Reuters article](https://www.reuters.com/business/finance/norway-wealth-fund-hits-record-20-trillion-crowns-2024-12-06/) and a conversation with Claude to understand SWFs better.
+[Tyler Cowen's post](https://marginalrevolution.com/marginalrevolution/2025/02/usps-as-a-failed-sovereign-wealth-fund.html) quoted an article claiming the [USPS is a Failed Sovereign Wealth Fund (SWF)](https://gopostal.substack.com/p/usps-is-a-failed-sovereign-wealth). The quotes below are from a [Reuters article](https://www.reuters.com/business/finance/norway-wealth-fund-hits-record-20-trillion-crowns-2024-12-06/) and a conversation with Claude to understand SWFs better.
 
 A Sovereign Wealth Fund is essentially a state-owned investment fund that invests in real assets (like real estate), financial assets (stocks, bonds), and alternative investments (private equity, hedge funds).
 # Norway
@@ -19,10 +19,7 @@ The money typically comes from a country's surplus reserves, often derived from 
 
 > The fund's value was comparable in size to the annual GDP of Australia, a country with five times the population of Norway.
 
-The goal, Claude tells me, was to:
-1. Avoid "Dutch disease[^1]" (where natural resource wealth makes other sectors uncompetitive)
-2. Ensure the oil wealth benefits future generations of Norwegians
-3. Create a long-term diversified investment portfolio that isn't dependent on oil prices.
+The goal, Claude tells me, was to avoid "Dutch disease[^1]" (where natural resource wealth makes other sectors uncompetitive)- [Daniel Yergin recommends](https://youtube.com/shorts/bQMQeRHUPYs?si=aqu7k3oX6qeX6itj) SWFs as a means of avoiding Dutch Disease, as well. From an economical standpoint, it creates a long-term diversified investment portfolio that isn't dependent on oil prices. The SWF then fits into a larger plan to ensure that the oil wealth benefits future generations of Norwegians (i.e. intergenerational wealth), but also medium-term by investing in health and education. As Yergin puts it, it’s a way to turn financial capital into human capital. 
 
 On Norway's investment strategy:
 >  Norges Bank Investment Management, which operates the fund, invests some 70% of assets in global stocks, about 25% in bonds and the rest in real estate and renewable energy plants, with most of its portfolio tracking international market indexes.
