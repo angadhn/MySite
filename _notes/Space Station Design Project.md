@@ -380,5 +380,4 @@ and another [CalTech/NASA-JPL paper on 80 metre telescopes](https://kiss.caltech
  - [Inflatable von Braun stations](http://www.angadhn.com/inflatable%20space%20habitats/inflatable%20space%20habitats/)
 4. A LOT of textbooks that I have collected in many areas (not just space) that you can use for your reports is available [here](https://github.com/spaceHQ-ltd/Textbooks).
 
-### Footnotes
 [^a]: Here, I do not just mean space technolgoies but even those that you use in preparing your reports such as GitHub and $$\LaTeX$$.
