@@ -4,13 +4,13 @@ created: 2025-02-08
 published: 2025-03-19
 tags:
   - essays
-permalink: /thoreau
+permalink: /thoreau-1
 top_of_mind: "false"
 memorable phrases: Peaceable revolution, Civil disobedience
 ---
 > When I meet a government which says to me, "Your money or your life," why should I be in haste to give it my money? It may be in a great strait, and not know what to do: I cannot help that. It must help itself; do as I do.
 
-I recently read Thoreau's Civil Disobedience alongside Claude in my one-person book club[^5]. I was prompted to dust off Thoreau's essay from my bookshelf when I started [Critical Art Ensemble](https://en.wikipedia.org/wiki/Critical_Art_Ensemble)'s [Electronic Civil Disobedience](https://en.wikipedia.org/wiki/Electronic_civil_disobedience)[^6]. Stanford Plato's article on [Civil Disobedience](https://plato.stanford.edu/entries/civil-disobedience/) clarified that Thoreau's use of _civil_ does not imply _civility_ in one's acts of disobedience but to the disobedience of a [civil society](https://en.wikipedia.org/wiki/Civil_society) towards (unjust) government.
+I recently read Thoreau's Civil Disobedience alongside Claude in my two-person book club[^5]. I was prompted to dust off Thoreau's essay from my bookshelf when I started [Critical Art Ensemble](https://en.wikipedia.org/wiki/Critical_Art_Ensemble)'s [Electronic Civil Disobedience](https://en.wikipedia.org/wiki/Electronic_civil_disobedience)[^6]. Stanford Plato's article on [Civil Disobedience](https://plato.stanford.edu/entries/civil-disobedience/) clarified that Thoreau's use of _civil_ does not imply _civility_ in one's acts of disobedience but to the disobedience of a [civil society](https://en.wikipedia.org/wiki/Civil_society) towards (unjust) government.
 
 I was also reminded of Gandhi's Civil Disobedience[^2] and wondered what parallels it had with the Thoreauvian idea. It is clear that civility and non-violence are precepts of a Thoreauvian world-view, very early in the essay, as he makes clear both his anti-war posture[^1]  and identification as an abolitionist. In fact, these lawfully permitted violent actions are the foundational reasons for his disobedience to the American government, finding their perpetuation of war and slavery as unconscionable. Very early, the reader can do little but agree with his view that elected governments cannot de facto be presumed as just- strength in numbers doesn’t imply fairness. His observation that a majority-elected ruling govt that does not protect its minority members (comprising slaves and abolitionists) but seeks to openly hurt them teases out this distinction between an unjust majority-elected democratic government from a moral one.
 
