@@ -4,6 +4,8 @@ created: 2025-02-08
 published: 2025-03-19
 tags:
   - essays
+  - thoreau
+  - politics
 permalink: /thoreau-1
 top_of_mind: "false"
 memorable phrases: Peaceable revolution, Civil disobedience

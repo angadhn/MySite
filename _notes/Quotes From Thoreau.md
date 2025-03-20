@@ -2,7 +2,9 @@
 title: Some nice quotes from Civil Disobedience and Thoreau
 created: 2025-03-20
 published: 2025-03-20
-tags: 
+tags:
+  - quotes
+  - thoreau
 permalink: /thoreau-2
 top_of_mind: "false"
 ---
