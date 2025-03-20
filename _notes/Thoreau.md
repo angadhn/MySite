@@ -1,5 +1,5 @@
 ---
-title: Some Thoughts from Reading Thoreau
+title: Thoreau, Taxes, and Techno-Optimism
 created: 2025-02-08
 published: 2025-03-19
 tags:
