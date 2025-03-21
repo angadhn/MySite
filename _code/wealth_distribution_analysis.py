@@ -35,17 +35,21 @@ print(f"Modern era - Middle 40% wealth share: {modern_era['middle_40_percent'] *
 print(f"Thoreau era - Concentration ratio (Top 1% / Middle 40%): {thoreau_concentration:.2f}")
 print(f"Modern era - Concentration ratio (Top 1% / Middle 40%): {modern_concentration:.2f}")
 
-# Slave ownership distribution in the South
-southern_white_population = {
-    "non_slaveholders": 0.75,  # ~75% owned no slaves
-    "small_slaveholders": 0.24,  # ~24% owned between 1-19 slaves
-    "large_slaveholders": 0.01   # ~1% owned 20+ slaves
+# Update the slave ownership data to match 1860 statistics
+slaveholding_1860 = {
+    "non_slaveholders": 76.1,    # 76.1%
+    "slaves_1_9": 17.2,         # 17.2%
+    "slaves_10_99": 6.6,        # 6.6%
+    "slaves_over_100": 0.1      # 0.1%
 }
 
-print("\nSlavery in the antebellum South:")
-print(f"Percentage of Southern white families owning no slaves: {southern_white_population['non_slaveholders'] * 100:.1f}%")
-print(f"Percentage of Southern white families owning 1-19 slaves: {southern_white_population['small_slaveholders'] * 100:.1f}%")
-print(f"Percentage of Southern white families owning 20+ slaves: {southern_white_population['large_slaveholders'] * 100:.1f}%")
+# Distribution of slaves held
+slave_distribution = {
+    "no_slaves": {"families": 75, "slaves_held": 0},
+    "slaves_1_6": {"families": 15, "slaves_held": 16},
+    "slaves_7_39": {"families": 9, "slaves_held": 53},
+    "slaves_40plus": {"families": 1, "slaves_held": 31}
+}
 
 # Economic composition of antebellum America
 antebellum_economic_groups = {
@@ -157,5 +161,121 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
         full_html=False
     )
 
-# Generate the plot
-create_interactive_wealth_distribution_plot(thoreau_era, modern_era) 
+def create_slave_ownership_plot():
+    # Create figure with secondary y-axis
+    fig = make_subplots(specs=[[{"secondary_y": True}]])
+    
+    # Data for slaveholding distribution
+    labels = ['0', '1-9', '10-99', '100+']
+    values = [
+        slaveholding_1860['non_slaveholders'],
+        slaveholding_1860['slaves_1_9'],
+        slaveholding_1860['slaves_10_99'],
+        slaveholding_1860['slaves_over_100']
+    ]
+
+    # First bar plot - Percentage of slaveholding families
+    fig.add_trace(
+        go.Bar(
+            x=labels,
+            y=values,
+            name="% of White Families",
+            marker_color='rgb(0, 173, 181)',
+            text=[f'{v:.1f}%' for v in values],
+            textposition='auto',
+        ),
+        secondary_y=False
+    )
+
+    # Second bar plot - Distribution of slaves held
+    slave_labels = ['0', '1-6', '7-39', '40+']
+    slave_values = [
+        slave_distribution['no_slaves']['slaves_held'],
+        slave_distribution['slaves_1_6']['slaves_held'],
+        slave_distribution['slaves_7_39']['slaves_held'],
+        slave_distribution['slaves_40plus']['slaves_held']
+    ]
+
+    fig.add_trace(
+        go.Bar(
+            x=slave_labels,
+            y=slave_values,
+            name="% of Slaves Held",
+            marker_color='rgb(220, 20, 60)',
+            text=[f'{v:.1f}%' for v in slave_values],
+            textposition='auto',
+        ),
+        secondary_y=True
+    )
+
+    fig.update_layout(
+        template='plotly',
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        title={
+            'text': 'Slave Ownership in the South (1860)',
+            'y':0.95,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top',
+            'font': {'size': 18}
+        },
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="center",
+            x=0.5,
+            font={'size': 12}
+        ),
+        margin=dict(
+            l=50,
+            r=20,
+            t=80,
+            b=50
+        ),
+        barmode='group'  # Group bars side by side
+    )
+
+    # Update yaxis properties
+    fig.update_yaxes(
+        title_text="Percentage of White Families",
+        title_font={'size': 14},
+        tickfont={'size': 12},
+        gridcolor='rgba(128,128,128,0.2)',
+        range=[0, 100],
+        secondary_y=False
+    )
+
+    # Update secondary yaxis properties
+    fig.update_yaxes(
+        title_text="Percentage of Total Slaves Held",
+        title_font={'size': 14},
+        tickfont={'size': 12},
+        gridcolor='rgba(128,128,128,0.2)',
+        range=[0, 100],
+        secondary_y=True
+    )
+
+    # Update xaxis properties
+    fig.update_xaxes(
+        title_text="Number of Slaves Owned",
+        title_font={'size': 14},
+        tickfont={'size': 12}
+    )
+
+    config = {
+        'responsive': True,
+        'displayModeBar': False
+    }
+
+    fig.write_html(
+        'assets/plots/slave_ownership.html',
+        config=config,
+        include_plotlyjs=True,
+        full_html=False
+    )
+
+# Generate both plots
+create_interactive_wealth_distribution_plot(thoreau_era, modern_era)
+create_slave_ownership_plot()
