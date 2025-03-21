@@ -18,7 +18,7 @@ Thoreau's use of [_civil_ does not imply _civility_ in one's acts of disobedienc
 
 > A corporation has no conscience; but a corporation of conscientious men is a corporation with a conscience.
 
-Like Thoreau, I also believe that morally right decisions, either by individuals or groups, can be reached by using conscience as a compass and almost certainly not by majority[^9]; anyone with a sense of what is good and right would not, for example, turn a blind eye to the plight of slaves. Refusal to pay his taxes to an unjust government was Thoreau's demonstration of his conscience governing his decisions and against the lack of it by the government. Isolating himself from his tax-paying neighbours, Thoreau’s words below precurse like the more famous Woody Allen one.
+Like Thoreau, I also believe that morally right decisions, either by individuals or groups, can be reached by using conscience as a compass and almost certainly not by majority[^9]; anyone with a sense of what is good and right would not, for example, turn a blind eye to the plight of slaves. Refusal to pay his taxes to an unjust government was Thoreau's demonstration of his conscience governing his decisions while also opposing the government's lack of one. Isolating himself from his tax-paying neighbours, Thoreau’s words below precurse like the more famous Woody Allen one.
 
 > I, Henry Thoreau, do not wish to be regarded as a member of any incorporated society which I have not joined.
 
