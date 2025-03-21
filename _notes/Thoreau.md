@@ -87,4 +87,4 @@ With a combination of the right choices in the digital domain and by instructing
 
 [^18]: SPOILER: He does end up in prison, which he describes in a very funny way in his essay. 
 
-[^19]: So employers are like Uber; a middle man between governments and citizens.
+[^19]: So, in such a system, our employers are like an Uber or Amazon; a middle layer between governments and citizens.
