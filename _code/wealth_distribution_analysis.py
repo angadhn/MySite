@@ -9,10 +9,10 @@ from plotly.subplots import make_subplots
 
 # Mid-19th century America (Thoreau's time, ~1850)
 thoreau_era = {
-    "top_1_percent": 0.20,  # ~20% of wealth (estimate based on historical trends)
-    "next_9_percent": 0.30,  # ~30% of wealth
-    "middle_40_percent": 0.35,  # ~35% of wealth
-    "bottom_50_percent": 0.15   # ~15% of wealth
+    "top_1_percent": 0.19,      # Top 1% owned 19% of wealth
+    "next_9_percent": 0.34,     # Next 9% owned 34% (difference: 0.53 - 0.19)
+    "middle_40_percent": 0.37,  # Middle 40% owned 37% (difference: 0.90 - 0.53)
+    "bottom_50_percent": 0.10   # Bottom 50% owned 10% (difference: 1.00 - 0.90)
 }
 
 # Modern America (Federal Reserve data, 2024:Q4)
