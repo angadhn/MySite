@@ -1497,6 +1497,18 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   width: 100%;
   margin: 2rem 0;
 
+  .marginal-caption {
+    position: absolute;
+    right: -55%;
+    top: 0;
+    width: 45%;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+    color: $color-text;
+    text-align: left;
+  }
+
   iframe {
     width: 100%;
     height: 500px;
@@ -1508,11 +1520,20 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   @media (max-width: 760px) {
     margin: 1rem 0;
     
+    .marginal-caption {
+      position: relative;
+      right: 0;
+      width: 100%;
+      margin: 0.5rem 0 0 0;  // Changed margin to put space above caption
+      text-align: center;
+      color: $color-subtext;
+    }
+    
     iframe {
-      height: 400px;  // Shorter height on mobile
-      min-width: 300px; // Ensure minimum width
-      margin: 0 -20px;  // Negative margin to counter padding
-      width: calc(100% + 40px); // Compensate for the negative margin
+      height: 400px;
+      min-width: 300px;
+      margin: 0 -20px;
+      width: calc(100% + 40px);
     }
   }
 }
@@ -1525,7 +1546,17 @@ article {
 }
 
 [data-theme="dark"] {
-  .plot-container iframe {
-    filter: invert(1) hue-rotate(180deg);
+  .plot-container {
+    iframe {
+      filter: invert(1) hue-rotate(180deg);
+    }
+    
+    .marginal-caption {
+      color: #eaeaea;
+      
+      @media (max-width: 760px) {
+        color: #eaeaea;
+      }
+    }
   }
 }

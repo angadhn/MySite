@@ -114,14 +114,6 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
         template='plotly',
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
-        title={
-            'text': 'Wealth Distribution Comparison',
-            'y':0.95,
-            'x':0.5,
-            'xanchor': 'center',
-            'yanchor': 'top',
-            'font': {'size': 18}
-        },
         yaxis={
             'title': {
                 'text': 'Share of Total Wealth (%)',
@@ -212,14 +204,6 @@ def create_slave_ownership_plot():
         template='plotly',
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
-        title={
-            'text': 'Slave Ownership in the South (1860)',
-            'y':0.95,
-            'x':0.5,
-            'xanchor': 'center',
-            'yanchor': 'top',
-            'font': {'size': 18}
-        },
         legend=dict(
             orientation="h",
             yanchor="bottom",
