@@ -15,12 +15,12 @@ thoreau_era = {
     "bottom_50_percent": 0.15   # ~15% of wealth
 }
 
-# Modern America (most recent estimates, ~2020)
+# Modern America (Federal Reserve data, 2024:Q4)
 modern_era = {
-    "top_1_percent": 0.32,  # ~32.1% of wealth (Federal Reserve estimate)
-    "next_9_percent": 0.38,  # ~37.7% of wealth
-    "middle_40_percent": 0.28,  # ~27.9% of wealth
-    "bottom_50_percent": 0.02   # ~2% of wealth
+    "top_1_percent": 0.308,     # ($22.14T + $27.32T) / $160.35T = ~30.8% of wealth
+    "next_9_percent": 0.364,    # $58.34T / $160.35T = ~36.4% of wealth
+    "middle_40_percent": 0.303, # $48.54T / $160.35T = ~30.3% of wealth
+    "bottom_50_percent": 0.025  # $4.01T / $160.35T = ~2.5% of wealth
 }
 
 # Calculate the concentration ratios
