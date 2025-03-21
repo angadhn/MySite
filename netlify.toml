@@ -5,3 +5,8 @@
 [functions]
   directory = "netlify/functions/"
   node_bundler = "esbuild"
+
+[[headers]]
+  for = "/assets/plots/*"
+    [headers.values]
+    Content-Type = "text/html"
