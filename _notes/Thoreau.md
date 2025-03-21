@@ -22,7 +22,7 @@ Like Thoreau, I also believe that morally right decisions, either by individuals
 
 > I, Henry Thoreau, do not wish to be regarded as a member of any incorporated society which I have not joined.
 
-His action to not pay his taxes poses an interesting thought experiment today when individuals earning a wage, in most cases[^10], cannot simply opt out of paying income tax (at least not in America or much of the West). For these reasons, people find Thoreau's essay dated[^14]. But to this crowd, I countenance that the problem of unjust governments lingers even if the mode of individual protest seems invalid. In fact, the precise things he found unjust are indisputably part of today’s system as there are standing militaries and much fighting across states which, much like in Thoreau's times, are supported by our taxes. The difference between the eras is that Thoreau could withhold taxes from the government whereas our taxes are withheld by the employers for the government. Clearly, Thoreau's essay is timeless even if his strategy is not.
+His action to not pay his taxes poses an interesting thought experiment today when individuals earning a wage, in most cases[^10], cannot simply opt out of paying income tax (at least not in America or much of the West). For these reasons, people find Thoreau's essay dated[^14]. But to this crowd, I countenance that the problem of unjust governments lingers even if the mode of individual protest seems invalid. In fact, the precise things he found unjust are indisputably part of today’s system as there are standing militaries and much fighting across states which, much like in Thoreau's times, are supported by our taxes. The difference between the eras is that Thoreau could withhold taxes from the government whereas our taxes are withheld by the employers for the government[^19]. Clearly, Thoreau's essay is timeless even if his strategy is not.
 # Technology in Modern Civil Disobedience
 A hundred years later, we enter Gandhi’s era of disobedience. Then, it was still possible to do the same as Thoreau as the technology of money hadn't yet undergone the radical electronic transformation commonplace today. So, taxes were personally or manually collected and not electronically withheld as done today.
 
@@ -86,3 +86,5 @@ With a combination of the right choices in the digital domain and by instructing
 [^17]: I mean that it should not disrupt the common person on the street; I do not buy into, for example, Extinction Rebellion's protests to shut down the tube. It disrupts the daily commuter more than the corporations, who are possibly just mildly irritated.
 
 [^18]: SPOILER: He does end up in prison, which he describes in a very funny way in his essay. 
+
+[^19]: So employers are like Uber; a middle man between governments and citizens.
