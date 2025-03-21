@@ -12,7 +12,9 @@ memorable phrases: Peaceable revolution, Civil disobedience
 ---
 > When I meet a government which says to me, "Your money or your life," why should I be in haste to give it my money? It may be in a great strait, and not know what to do: I cannot help that. It must help itself; do as I do.
 
-<iframe src="/assets/plots/wealth_distribution.html" width="100%" height="600px" frameborder="0"></iframe>
+<div class="plot-container">
+  <iframe src="/assets/plots/wealth_distribution.html" frameborder="0"></iframe>
+</div>
 
 I recently read Thoreau's Civil Disobedience alongside Claude in my book club of two[^5]. I was prompted to dust off Thoreau's essay from my shelf, whilst attempting to read [Critical Art Ensemble](https://en.wikipedia.org/wiki/Critical_Art_Ensemble)'s [Electronic Civil Disobedience](https://en.wikipedia.org/wiki/Electronic_civil_disobedience)[^6] in a noisy pub but got sidetracked into a more interesting Claude chat which helped me decide that, perhaps, going to the source would be a better starting point. Prior to reading the essay, I wondered if Thoreauvian disobedience differed from Gandhi's civil disobedience movement. I learned that [Gandhi had disputed being inspired by Thoreau](https://en.wikipedia.org/wiki/Satyagraha#:~:text=The%20statement%20that%20I%20had%20derived%20my%20idea%20of%20civil%20disobedience%20from%20the%20writings%20of%20Thoreau%20is%20wrong.) but the shared principle of non-cooperation seems, to me, unquestionable; the main difference appears to be that Thoreau's was an individual's action whereas Gandhi's scales to groups. Both remain relevant today in developing a peaceful, non-violent, and non-disruptive[^17] non-cooperation. The essay is timeless and I recommend everyone read it.
 # Thoreau

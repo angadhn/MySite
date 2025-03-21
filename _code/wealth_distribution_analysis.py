@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import plotly.graph_objects as go
+import plotly.io as pio
 from plotly.subplots import make_subplots
 
 # Wealth share estimates for different time periods
@@ -85,20 +86,74 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
         modern_era['bottom_50_percent'] * 100
     ]
 
-    fig = go.Figure(data=[
-        go.Bar(name="Thoreau's Era (~1850)", x=labels, y=thoreau_values),
-        go.Bar(name='Modern Era (~2020)', x=labels, y=modern_values)
-    ])
+    fig = go.Figure()
 
-    fig.update_layout(
-        title='Wealth Distribution Comparison',
-        yaxis_title='Share of Total Wealth (%)',
-        barmode='group',
-        height=500
+    fig.add_trace(
+        go.Bar(
+            x=labels,
+            y=thoreau_values,
+            name="Thoreau's Era (~1850)",
+            marker_color='rgb(0, 173, 181)'  # Teal color
+        )
     )
 
-    # Save the plot as an HTML file
-    fig.write_html('assets/plots/wealth_distribution.html')
+    fig.add_trace(
+        go.Bar(
+            x=labels,
+            y=modern_values,
+            name='Modern Era (~2020)',
+            marker_color='rgb(220, 20, 60)'  # Crimson color
+        )
+    )
 
-# Create the interactive plot
+    fig.update_layout(
+        template='plotly',
+        plot_bgcolor='rgba(0,0,0,0)',
+        paper_bgcolor='rgba(0,0,0,0)',
+        margin=dict(
+            l=50,    # left margin
+            r=20,    # right margin
+            t=80,    # top margin
+            b=50     # bottom margin
+        ),
+        title=dict(
+            text='Wealth Distribution Comparison',
+            y=0.95,
+            x=0.5,
+            xanchor='center',
+            yanchor='top',
+            font=dict(size=18, color='#333333')
+        ),
+        yaxis=dict(
+            title='Share of Total Wealth (%)',
+            gridcolor='rgba(128,128,128,0.2)',
+            tickfont=dict(size=12, color='#333333'),
+            title_font=dict(size=14, color='#333333')
+        ),
+        xaxis=dict(
+            tickfont=dict(size=12, color='#333333')
+        ),
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="center",
+            x=0.5,
+            font=dict(size=12, color='#333333')
+        )
+    )
+
+    config = {
+        'responsive': True,
+        'displayModeBar': False
+    }
+
+    fig.write_html(
+        'assets/plots/wealth_distribution.html',
+        config=config,
+        include_plotlyjs=True,
+        full_html=False
+    )
+
+# Generate the plot
 create_interactive_wealth_distribution_plot(thoreau_era, modern_era) 
