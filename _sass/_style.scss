@@ -68,8 +68,10 @@ article {
 
 time {
   display: block;
-  color: $color-subtext;
+  color: $color-subtext;  // Default color for light theme
   margin: 0.5em 0 1em;
+  font-size: 0.95em;     // Slightly larger for better readability
+  opacity: 0.9;          // Slightly more opaque
 }
 
 footer {
@@ -157,7 +159,7 @@ h2{
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: normal;
   font-style: italic;
-  text-align: right;
+  text-align: center;
   line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -1113,6 +1115,11 @@ input:checked + .slider {
     a.custom-icon .link-icon-hook.dark-mode-invert:after {
       color: #eaeaea;
     }
+
+    time {
+      color: #b4b4b4;      // Lighter gray for dark theme
+      opacity: 0.95;       // More visible in dark mode
+    }
 }
 
 // Home page specific styles
@@ -1457,12 +1464,14 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 
 .footnotes {
   position: relative;
-  margin-top: 4em;  // Space for the line
+  margin-top: 4em;
+  font-size: 0.9em;    // Make footnotes 90% of body text size
+  line-height: 1.6;    // Slightly tighter line height for smaller text
   
   &:before {
     content: "";
     position: absolute;
-    top: -2em;      // Position the line
+    top: -2em;
     left: 0;
     right: 0;
     height: 1px;
@@ -1470,24 +1479,30 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   }
 
   &:after {
-    content: "Footnotes";  // Add the heading text
+    content: "Footnotes";
     position: absolute;
-    top: -1.5em;    // Position text below the line
+    top: -1.5em;
     left: 0;
     font-family: 'Aniron', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    font-size: 1.17em;    // Matches h3 size
+    font-size: 1.17em;
     font-weight: bold;
+  }
+
+  // Make the footnote numbers slightly smaller too
+  .footnote-backref {
+    font-size: 0.9em;
+    padding: 0 0.2em;
   }
 }
 
 // Dark mode support
 [data-theme="dark"] .footnotes {
   &:before {
-    background: #3d434d;  // Darker line for dark mode
+    background: #3d434d;
   }
   
   &:after {
-    color: #eaeaea;  // Light text for dark mode
+    color: #eaeaea;
   }
 }
 
