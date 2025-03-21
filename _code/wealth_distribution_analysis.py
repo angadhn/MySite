@@ -93,7 +93,7 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
             x=labels,
             y=thoreau_values,
             name="Thoreau's Era (~1850)",
-            marker_color='rgb(0, 173, 181)'  # Teal color
+            marker_color='rgb(0, 173, 181)'
         )
     )
 
@@ -102,7 +102,7 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
             x=labels,
             y=modern_values,
             name='Modern Era (~2020)',
-            marker_color='rgb(220, 20, 60)'  # Crimson color
+            marker_color='rgb(220, 20, 60)'
         )
     )
 
@@ -110,36 +110,38 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
         template='plotly',
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
+        title={
+            'text': 'Wealth Distribution Comparison',
+            'y':0.95,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top',
+            'font': {'color': 'currentColor', 'size': 18}
+        },
+        yaxis={
+            'title': 'Share of Total Wealth (%)',
+            'gridcolor': 'rgba(128,128,128,0.2)',
+            'tickfont': {'color': 'currentColor', 'size': 12},
+            'titlefont': {'color': 'currentColor', 'size': 14}
+        },
+        xaxis={
+            'tickfont': {'color': 'currentColor', 'size': 12},
+            'titlefont': {'color': 'currentColor', 'size': 14}
+        },
+        legend=dict(
+            orientation="h",     # horizontal legend
+            yanchor="bottom",   
+            y=1.02,            # position above the plot
+            xanchor="center",
+            x=0.5              # center horizontally
+        ),
+        font={'color': 'currentColor', 'size': 12},
+        modebar={'bgcolor': 'rgba(0,0,0,0)', 'color': 'currentColor'},
         margin=dict(
             l=50,    # left margin
             r=20,    # right margin
             t=80,    # top margin
             b=50     # bottom margin
-        ),
-        title=dict(
-            text='Wealth Distribution Comparison',
-            y=0.95,
-            x=0.5,
-            xanchor='center',
-            yanchor='top',
-            font=dict(size=18, color='#333333')
-        ),
-        yaxis=dict(
-            title='Share of Total Wealth (%)',
-            gridcolor='rgba(128,128,128,0.2)',
-            tickfont=dict(size=12, color='#333333'),
-            title_font=dict(size=14, color='#333333')
-        ),
-        xaxis=dict(
-            tickfont=dict(size=12, color='#333333')
-        ),
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="center",
-            x=0.5,
-            font=dict(size=12, color='#333333')
         )
     )
 
