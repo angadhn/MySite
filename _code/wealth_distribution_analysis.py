@@ -9,18 +9,18 @@ from plotly.subplots import make_subplots
 
 # Mid-19th century America (Thoreau's time, ~1850)
 thoreau_era = {
-    "top_1_percent": 0.25,  # ~25% of wealth
-    "next_9_percent": 0.28,  # ~28% of wealth
-    "middle_40_percent": 0.33,  # ~33% of wealth
-    "bottom_50_percent": 0.14   # ~14% of wealth
+    "top_1_percent": 0.20,  # ~20% of wealth (estimate based on historical trends)
+    "next_9_percent": 0.30,  # ~30% of wealth
+    "middle_40_percent": 0.35,  # ~35% of wealth
+    "bottom_50_percent": 0.15   # ~15% of wealth
 }
 
 # Modern America (most recent estimates, ~2020)
 modern_era = {
-    "top_1_percent": 0.35,  # ~35% of wealth
-    "next_9_percent": 0.38,  # ~38% of wealth
-    "middle_40_percent": 0.26,  # ~26% of wealth
-    "bottom_50_percent": 0.01   # ~1% of wealth
+    "top_1_percent": 0.32,  # ~32.1% of wealth (Federal Reserve estimate)
+    "next_9_percent": 0.38,  # ~37.7% of wealth
+    "middle_40_percent": 0.28,  # ~27.9% of wealth
+    "bottom_50_percent": 0.02   # ~2% of wealth
 }
 
 # Calculate the concentration ratios
@@ -116,32 +116,32 @@ def create_interactive_wealth_distribution_plot(thoreau_era, modern_era):
             'x':0.5,
             'xanchor': 'center',
             'yanchor': 'top',
-            'font': {'color': 'currentColor', 'size': 18}
+            'font': {'size': 18}
         },
         yaxis={
-            'title': 'Share of Total Wealth (%)',
+            'title': {
+                'text': 'Share of Total Wealth (%)',
+                'font': {'size': 14}
+            },
             'gridcolor': 'rgba(128,128,128,0.2)',
-            'tickfont': {'color': 'currentColor', 'size': 12},
-            'titlefont': {'color': 'currentColor', 'size': 14}
+            'tickfont': {'size': 12}
         },
         xaxis={
-            'tickfont': {'color': 'currentColor', 'size': 12},
-            'titlefont': {'color': 'currentColor', 'size': 14}
+            'tickfont': {'size': 12}
         },
         legend=dict(
-            orientation="h",     # horizontal legend
+            orientation="h",     
             yanchor="bottom",   
-            y=1.02,            # position above the plot
+            y=1.02,            
             xanchor="center",
-            x=0.5              # center horizontally
+            x=0.5,
+            font={'size': 12}
         ),
-        font={'color': 'currentColor', 'size': 12},
-        modebar={'bgcolor': 'rgba(0,0,0,0)', 'color': 'currentColor'},
         margin=dict(
-            l=50,    # left margin
-            r=20,    # right margin
-            t=80,    # top margin
-            b=50     # bottom margin
+            l=50,    
+            r=20,    
+            t=80,    
+            b=50     
         )
     )
 
