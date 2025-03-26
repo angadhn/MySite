@@ -33,11 +33,11 @@ body {
   box-sizing: content-box;
   font-family: 'Gill Sans', $font-family;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.5;
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   max-width: 80em;
   counter-reset: sidenote-counter;
   padding-top: 2vh;
@@ -50,21 +50,9 @@ body {
 // Base content width
 article {
   position: relative;
-  width: 85%;
-  margin: 0 auto;    // New: center the article
-  // max-width: 800px;  // New: limit article width
-  // @media (max-width: 760px) {
-  //   width: 95%;
-  //   margin: 0;
-  // }
+  width: 100%;
+  margin: 0 auto;
 }
-
-// // Base content width
-// article {
-//   position: relative;
-//   width: 125%;
-//   max-width: 1300px;
-// }
 
 time {
   display: block;
@@ -388,8 +376,8 @@ nav {
   font-style: italic;
   float: right;
   clear: right;
-  margin-right: -55%;
-  width: 45%;
+  margin-right: -45%;
+  width: 35%;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1rem;
@@ -526,9 +514,9 @@ figure {
 .marginal-caption {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   position: absolute;
-  right: -55%;
+  right: -45%;
   top: 0;
-  width: 45%;
+  width: 35%;
   font-size: 1rem;
   line-height: 1.4;
   font-style: italic;
@@ -1514,9 +1502,9 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 
   .marginal-caption {
     position: absolute;
-    right: -55%;
+    right: -45%;
     top: 0;
-    width: 45%;
+    width: 35%;
     font-size: 1rem;
     line-height: 1.4;
     font-style: italic;
