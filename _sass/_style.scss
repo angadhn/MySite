@@ -449,8 +449,8 @@ input.margin-toggle {
   font-style: italic;
   float: right;
   clear: right;
-  margin-right: -55%;
-  width: 45%;
+  margin-right: -45%;
+  width: 35%;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1rem;
@@ -458,10 +458,17 @@ input.margin-toggle {
   vertical-align: baseline;
   position: relative;
   font-style: italic;
+  
+  // Add max-width to ensure images don't overflow
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   img + br {
     display: block;
     content: "";
-    margin: -0.5rem 0;  // Minimal space between image and caption
+    margin: -0.5rem 0;
   }
 }
 
@@ -593,7 +600,7 @@ figcaption {
 /* Table styling */
 table, table.booktabs {
   width: auto;
-  margin: 1.4rem 0;
+  margin: 1.4rem auto;
   border-spacing: 0;
   border-collapse: collapse;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
@@ -622,6 +629,7 @@ td {
 // Keep existing wrapper for overflow handling
 .table-wrapper {
   overflow-x: auto;
+  text-align: center;
 }
 
 /* Chapter Epigraphs */
