@@ -57,10 +57,10 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
     mini_portile2 (2.8.8)
-    nokogiri (1.15.7)
+    nokogiri (1.18.6)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.15.7-arm64-darwin)
+    nokogiri (1.18.6-arm64-darwin)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -91,7 +91,7 @@ DEPENDENCIES
   jekyll (~> 4.3)
   jekyll-last-modified-at!
   jekyll-sitemap
-  nokogiri (~> 1.15.7)
+  nokogiri (~> 1.18.6)
   webrick (~> 1.9)
 
 BUNDLED WITH
