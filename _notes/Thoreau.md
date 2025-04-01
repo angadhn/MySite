@@ -1,5 +1,5 @@
 ---
-title: Thoreau, Taxes, and Techno-Optimism
+title: Revisiting Thoreau in the Twenty-first Century
 created: 2025-02-08
 published: 2025-03-19
 tags:
@@ -83,7 +83,7 @@ So, what I think of today when I hear "protection" is developing technologies to
 
 As I have tried to explain above, if we see this coupling between technology and government, we can then choose to take the right action of which technology platform to promote. And then, we may find the moral answer of what is an appropriate reaction to today's unjustness even if tax withholding isn’t really an option for the majority. Ideas of direct action groups and decentralised governance are some ideas of political action; David Graeber talks about these [here](https://www.youtube.com/watch?v=gqfoJvD0Ifg&t=5s) though I am not versed enough here to know of its viability in the West. I'll admit that I do not know its form, but I can say that this reaction's fundamental nature must be conscionable and non-violent. It is likely the only way to influencing government through co-ordinated action. With a combination of the right choices in the digital domain and by instructing governments to offer us the kind of protection we need- with advanced technology, we can solve problems that couldn't be done in Thoreau's times: eliminate natural existential threats within the human body and from its external environment, while investing in the expansion of our minds for a greater collective flourishing.
 
-*Thanks to Rohit and Preet for their patient reading and helpful pushback.*
+*Thanks to [Rohit Pillai](https://multiscaleflowx.github.io/team/rohit-pillai/) and [Preet Bains](https://preetandpen.wordpress.com/about-me) for their patient reading and helpful pushback.*
 
 
 [^1]: TIL, California and Texas were recent additions to the USA in the 1850's, during the Mexican war. This also reminded me of the American precdents of buying land from other countries. This historical context makes the potential purchases of Greenland and Gaza being mooted by Trump seem less absurd.
