@@ -9,7 +9,7 @@ tags:
 permalink: /thoreau-1
 top_of_mind: "true"
 memorable phrases: Peaceable revolution, Civil disobedience
-completion_score: 70
+completion_score: 80
 ---
 > When I meet a government which says to me, "Your money or your life," why should I be in haste to give it my money? It may be in a great strait, and not know what to do: I cannot help that. It must help itself; do as I do.
 
@@ -82,6 +82,8 @@ Human health is another example where governments could focus our taxes (and, to
 So, what I think of today when I hear "protection" is developing technologies to tackle death, illness, and aging. When I hear "defensive" technologies, I want to get behind the idea of defending ourselves from threats like asteroids and climate change. So, investing our taxes in such protection and defence is what I can get behind. Services that prop up this protective/defensive technology development will remain crucial too- investing in better education and housing seems obvious here.
 
 As I have tried to explain above, if we see this coupling between technology and government, we can then choose to take the right action of which technology platform to promote. And then, we may find the moral answer of what is an appropriate reaction to today's unjustness even if tax withholding isn’t really an option for the majority. Ideas of direct action groups and decentralised governance are some ideas of political action; David Graeber talks about these [here](https://www.youtube.com/watch?v=gqfoJvD0Ifg&t=5s) though I am not versed enough here to know of its viability in the West. I'll admit that I do not know its form, but I can say that this reaction's fundamental nature must be conscionable and non-violent. It is likely the only way to influencing government through co-ordinated action. With a combination of the right choices in the digital domain and by instructing governments to offer us the kind of protection we need- with advanced technology, we can solve problems that couldn't be done in Thoreau's times: eliminate natural existential threats within the human body and from its external environment, while investing in the expansion of our minds for a greater collective flourishing.
+
+*Thanks to Rohit and Preet for their helpful comments.*
 
 
 [^1]: TIL, California and Texas were recent additions to the USA in the 1850's, during the Mexican war. This also reminded me of the American precdents of buying land from other countries. This historical context makes the potential purchases of Greenland and Gaza being mooted by Trump seem less absurd.
