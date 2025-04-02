@@ -100,7 +100,7 @@ As I have tried to explain above, if we see this coupling between technology and
 
 [^15]: Especially as a single man. A couple weekends ago, a lady of interest asked for my Instagram account. Why can't we just trade numbers...?
 
-[^16]:  I learned how integral WhatsApp was when I got stuck in India when its second COVID wave announced. The UK was putting India on the red list for ten-day £3000 quarantines and I was trying to fly out within 3-4 hours. The only way to book a ticket happened to be via WhatsApp, which was the only way to speedily contact most of the travel agents.
+[^16]:  I learned how integral WhatsApp is to the social order when I nearly got stuck in India during its second COVID wave. The UK announced with a 48-hour notice about putting India on a red list with mandatory ten-dayquarantines at the expense of the traveler (£3000!); I was stuck in the remote Himalyas and had to get Delhi and somehow the ticket I bought hastily then turned out to be dud. The only way out with less than 15 hours of the red list was to book another ticket when there were barely any left. The only way to get this done at the airport at the last minute was via WhatsApp, where most of the travel agents conducted their business.
 
 [^17]: I mean that it should not disrupt the common person on the street; I do not buy into, for example, Extinction Rebellion's protests to shut down the tube. It disrupts the daily commuter more than the corporations, who are possibly just mildly irritated.
 
