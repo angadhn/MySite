@@ -1,5 +1,5 @@
 ---
-title: Revisiting Thoreau in the Twenty-First Century
+title: Revisiting Revisiting Thoreau in the Twenty-first Century
 created: 2025-02-08
 published: 2025-03-19
 tags:
@@ -29,7 +29,7 @@ For this reason, people might find Thoreau's essay dated[^14]. But to this crowd
 ## From Technocapitalism to an Oligotechnodemocracy in America
 Electronic money and modern taxation mechanisms diminish the possibility of an equivalent individual protest so what might Thoreauvian civil disobedience look like today? An answer is unlikely to be found without understanding the increasingly intertwining of government with technology.
 
-The financial technological coupling is quite tight but social media is emerging as a second coupling mechanism. Today, social media companies have coffers[^11] and better tools to surveil and steer the decision making of its users, comparable in size to nation states[^12] . These companies maintain critical infrastructure for global communications, commerce, and information flow that rivals or exceeds what many nations can provide, showing how much more powerful they are than their platform's individual users as well as the governments. Their data, in my opinion, is not used as much for governance as it is in [influencing our choices during elections](https://www.aljazeera.com/opinions/2020/1/18/cambridge-analytica-and-the-end-of-elections). But we are seeing the emergence of new symbiotic relationships with government ranging from [companies recruiting former civil servants in the UK](https://www.bbc.co.uk/news/articles/cgrw785585wo) to [reimagining "government efficiency" in the US](https://edition.cnn.com/2024/08/12/politics/elon-trump-twitter-interview-x/index.html); heck, even the name for [DOGE emerged from X!](https://x.com/elonmusk/status/1825713824785379477). This is leading to, as I see it, a two-party system of governance- a multivariable calculus that Thoreau didn't have to contend with- at least not in this way.
+The financial technological coupling is quite tight but social media is emerging as a second coupling mechanism. Today, social media companies have coffers[^11] and better tools to surveil and steer the decision making of its users, comparable in size to nation states . These companies maintain critical infrastructure for global communications, commerce, and information flow that rivals or exceeds what many nations can provide, showing how much more powerful they are than their platform's individual users as well as the governments. Their data, in my opinion, is not used as much for governance as it is in [influencing our choices during elections](https://www.aljazeera.com/opinions/2020/1/18/cambridge-analytica-and-the-end-of-elections). But we are seeing the emergence of new symbiotic relationships with government ranging from [companies recruiting former civil servants in the UK](https://www.bbc.co.uk/news/articles/cgrw785585wo) to [reimagining "government efficiency" in the US](https://edition.cnn.com/2024/08/12/politics/elon-trump-twitter-interview-x/index.html); heck, even the name for [DOGE emerged from X!](https://x.com/elonmusk/status/1825713824785379477). This is leading to, as I see it, a two-party system of governance- a multivariable calculus that Thoreau didn't have to contend with- at least not in this way.
 
 ![](assets/imgs/Doge.png)
 
@@ -93,8 +93,6 @@ As I have tried to explain above, if we see this coupling between technology and
 [^10]: At least not in America or much of the West though operating as a business or sole trader offers a pathway to consider one's taxes. Though this pathway also enables one to rethink personal banking itself works; it opens opportunities to having offshore bank accounts as one's net worth increases.
 
 [^11]: Companies like Apple, Google, Microsoft, and Meta have market capitalizations exceeding the GDP of many countries. Apple's market cap has exceeded $3 trillion, larger than the GDP of all but a handful of nations.
-
-[^12]: Meta's platforms collectively serve billions of users—more "citizens" than any single nation.
 
 [^13]: It is important to caveat this by stating that even the alternatives are founded/funded, primarily, by players from within these unconscionable technology organisations.
 
