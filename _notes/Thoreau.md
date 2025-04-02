@@ -1,5 +1,5 @@
 ---
-title: Revisiting Revisiting Thoreau in the Twenty-first Century
+title: Revisiting Thoreau in the Twenty-first Century
 created: 2025-02-08
 published: 2025-03-19
 tags:
