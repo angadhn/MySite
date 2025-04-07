@@ -7,7 +7,7 @@ tags:
   - stations
 permalink: /whereVonBraunWheel
 top_of_mind: "true"
-completion_score: 25
+completion_score: 75
 ---
 In 1961. Or maybe 1962.
 
