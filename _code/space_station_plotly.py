@@ -7,7 +7,7 @@ SPACE_STATIONS = [
     {'name': 'Salyut-1', 'total_volume': 214, 'pressurised_volume': 99, 'habitable_volume': 90, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
     {'name': 'Skylab', 'total_volume': 499, 'pressurised_volume': 351.6, 'habitable_volume': 270, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
     {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
-    {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 10, 'is_real': True, 'is_planned': False, 'has_gravity': False},
+    {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'is_planned': False, 'has_gravity': False},
     
     # Planned station
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'is_planned': True, 'has_gravity': False},
@@ -100,7 +100,7 @@ def create_multidimensional_bubble_chart():
         x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in planned_indices],
         y=[crews[plot_indices.index(i)] for i in planned_indices],
         mode='markers',
-        name='Planned',
+        name='0-g Planned',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in planned_indices],
             color='#F44336',
@@ -117,7 +117,7 @@ def create_multidimensional_bubble_chart():
         x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in concept_indices],
         y=[crews[plot_indices.index(i)] for i in concept_indices],
         mode='markers',
-        name='Concepts',
+        name='Artificial Gravity Concepts',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in concept_indices],
             color='#2979FF',
@@ -138,7 +138,8 @@ def create_multidimensional_bubble_chart():
         x=[stanford_torus['habitable_volume'] / stanford_torus['crew']],
         y=[110],
         mode='markers',
-        name='Superstructure',
+        name='Megastructure',
+        legendgroup='megastructure',
         marker=dict(
             size=30,
             color='#9C27B0',
@@ -159,6 +160,8 @@ def create_multidimensional_bubble_chart():
         y=[120],
         mode='markers',
         name='Megastructure',
+        legendgroup='megastructure',
+        showlegend=False,  # Hide this trace from the legend
         marker=dict(
             size=35,
             color='#9C27B0',
@@ -246,7 +249,7 @@ def create_multidimensional_bubble_chart():
             zerolinecolor='rgba(0,0,0,0)',
             range=[15, 130],
             dtick=10,
-            ticktext=["25", "35", "45", "55", "65", "75", "85", "95", "105", "Megastructure"],
+            ticktext=["25", "35", "45", "55", "65", "75", "85", "95", "105", "1000+"],
             tickvals=[25, 35, 45, 55, 65, 75, 85, 95, 105, 120]
         ),
         yaxis=dict(
@@ -255,7 +258,7 @@ def create_multidimensional_bubble_chart():
             zerolinecolor='rgba(0,0,0,0)',
             range=[-2, 130],
             dtick=10,
-            ticktext=["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "Superstructure", "Megastructure"],
+            ticktext=["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "10,000", "1M"],
             tickvals=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
         ),
         plot_bgcolor='rgba(0,0,0,0)',
