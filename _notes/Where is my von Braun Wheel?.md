@@ -121,7 +121,23 @@ Today, [ITAR](https://en.wikipedia.org/wiki/International_Traffic_in_Arms_Regula
 
 That said, it is in fashion to bash NASA right now. But I would like to remind readers that NASA excels at solving complex engineering challenges when given a clear mission focus- whether it was Apollo's lunar landings or the Space Shuttle's reusable orbiter development. This capability is perhaps best exemplified by JPL's remarkable track record with Mars missions: their evolution from early Viking landers to the sophisticated Curiosity and Perseverance rovers demonstrates an ability to build on experience and consistently execute challenging interplanetary missions. While other space agencies have struggled with Mars landings (like ESA's Beagle 2 and Russia's Mars 96), JPL has developed a repeatable expertise that makes the extraordinary seem routine. Their technologists pioneered a Martian landing technology that is now used to land SpaceX's rockets. So, the issue isn't NASA's engineering capability - it's about ensuring these formidable technical skills are directed toward the right long-term priorities for space development. And it’s about greeting a regulatory environment that allows more players to join in from all over the world by making ITAR a thing of the past.
 
+<!-- <div class="plot-container">
+  <iframe src="/assets/plots/space_station_capacity.html" frameborder="0"></iframe>
+  <div class="marginal-caption">Space Station Capacity vs Size</div>
+</div> -->
+
+<!-- <div class="plot-container">
+  <iframe src="/assets/plots/space_station_volume_per_astronaut.html" frameborder="0"></iframe>
+  <div class="marginal-caption">Space Station Capacity vs Size</div>
+</div> -->
+
 <div class="plot-container">
   <iframe src="/assets/plots/space_station_multidimensional.html" frameborder="0"></iframe>
   <div class="marginal-caption">Space Station Comparison: Volume per Astronaut vs Crew Capacity</div>
 </div>
+
+<!-- <div class="plot-container">
+  <iframe src="/assets/plots/space_station_megastructure.html" frameborder="0"></iframe>
+  <div class="marginal-caption">Towards Mega Space Stations</div>
+</div> -->
+
