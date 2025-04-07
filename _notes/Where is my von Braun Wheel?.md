@@ -9,7 +9,7 @@ permalink: /whereVonBraunWheel
 top_of_mind: "true"
 completion_score: 25
 ---
-In 1961. Or 1962. While the answer is disappointing, it is far less interesting than understanding how the Apollo program dismantled a serious effort to getting artificial gravity space stations.  Much of this engineering work was carried out at NASA's Langley- the home of [many other great projects undertaken there](https://angadh.com/translation/hungarianarticleaboutnasa). A series of decisions leading into and after Apollo then set us on the trajectory towards the smaller zero-gravity space stations that we eventually got. That is what I unpack here while also considering if a course-correction is needed.
+In 1961. Or 1962. While the answer is disappointing, it is far less interesting than understanding how the Apollo program dismantled a serious engineering effort to getting artificial gravity space stations at NASA's Langley- the [home of many great projects](https://angadh.com/translation/hungarianarticleaboutnasa). A series of decisions not just leading into but well after Apollo set us on a trajectory towards small zero-gravity space stations. How we got here is what I unpack here.
 ![James Webb, the former NASA admin immortalised by the JWST, standing underneath a prototype of a von Braun Wheel](assets/imgs/WebbGoodYear.jpg)
 
 # What is a vBW?
