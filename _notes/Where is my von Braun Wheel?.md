@@ -87,6 +87,11 @@ This work won’t be straightforward but we do need to push for it because minim
 
 Inflatable structures have minimal mechanical complexity, reduce failure points, and simplify construction. Moreover, our terrestrial experience doesn’t include living in inflatable habitats, making it non-obvious as a space solution. We’re accustomed to rigid structures so cannot envision lightweight, expandable living spaces as a viable alternative. Yet, in the vacuum of space, these structures provide vast habitable areas with superior radiation shielding and thermal management. This insight could have profound implications for future space missions. By embracing inflatable technologies, we can dramatically reduce launch costs, simplify construction processes, and create larger, more versatile space habitats than ever before. It’s a reminder that in space engineering, sometimes the most effective solutions are those that challenge our Earth-biased intuitions.
 
+<div class="plot-container">
+  <iframe src="/assets/plots/space_station_multidimensional.html" frameborder="0"></iframe>
+  <div class="marginal-caption">Space Station Comparison: Volume per Astronaut vs Crew Capacity</div>
+</div>
+
 # Conclusion
 While Mars feels closer than ever thanks to advances in rocket technology, we're still missing a critical piece of infrastructure: large rotating space stations. The path forward likely lies in revisiting and scaling up the inflatable concepts NASA Langley pioneered 60 years ago - an approach that could dramatically simplify construction while reducing assembly time and maintenance needs. Sometimes the best solutions for space aren't the ones that look most obvious on Earth.
 
@@ -130,11 +135,6 @@ That said, it is in fashion to bash NASA right now. But I would like to remind r
   <iframe src="/assets/plots/space_station_volume_per_astronaut.html" frameborder="0"></iframe>
   <div class="marginal-caption">Space Station Capacity vs Size</div>
 </div> -->
-
-<div class="plot-container">
-  <iframe src="/assets/plots/space_station_multidimensional.html" frameborder="0"></iframe>
-  <div class="marginal-caption">Space Station Comparison: Volume per Astronaut vs Crew Capacity</div>
-</div>
 
 <!-- <div class="plot-container">
   <iframe src="/assets/plots/space_station_megastructure.html" frameborder="0"></iframe>
