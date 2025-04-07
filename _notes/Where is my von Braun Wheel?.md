@@ -58,7 +58,9 @@ Nonetheless studies progressed, which looked into "wet" stations – a spent roc
 
 The Apollo Applications and MORL ideas eventually became Skylab – America's first space station. While significant in its own right, Skylab fell far short of the grand rotating wheel stations previously envisioned and used only a fraction of the Saturn V’s lifting power. Post-Apollo, NASA's funding shrank considerably, and the Space Shuttle became the "logical successor" to Apollo, with Skylab serving as a limited station based on Apollo technologies. The Soviet Union, meanwhile, cooled their interest in their lunar program and started Salyut, the first long-term space station program.
 
-The early ambitions displayed in Langley's inflatable torus and North American's hexagonal station now seem like relics of a more optimistic era – one where large crews would live comfortably in rotating structures that generated artificial gravity. These early concepts are notable not only in their ambition in directly pursuing von Braun's vision but also for what now feels like a very counterintuitive way of realising large stations as "unitised" structures i.e., a single structure that eliminates or reduces the need for in-orbit assembly. The initial plans for these architectures were designed for repeatability and scale which could've led to greater scientific output than all stations so far while offering a deeper understanding of the impact of artificial gravity on human health- something unstudied to date. We might have even had several orbiting settlements distributed across the Solar System by now, taking us closer to an Asimovian future of space settlements or that of Philip K. Dick's Mars settlements featuring in _Do Androids Dream of Electric Sheep?_
+The early ambitions displayed in Langley's inflatable torus and North American's hexagonal station now seem like relics of a more optimistic era – one where large crews would live comfortably in rotating structures that generated artificial gravity. These early concepts are notable not only in their ambition in directly pursuing von Braun's vision but also for what now feels like a very counterintuitive way of realising large stations as "unitised" structures i.e., a single structure that eliminates or reduces the need for in-orbit assembly. The initial plans for these architectures were designed for repeatability and scale which could've led to greater scientific output than all stations so far while offering a deeper understanding of the impact of artificial gravity on human health- something unstudied to date. We might have even had several orbiting settlements distributed across the Solar System by now, taking us closer to an Asimovian future of space settlements.
+
+This is probably a good time to note that I am quite critical of Apollo. But just like it’s better to have loved and lost than to not have loved at all, it’s also better to have Apollo’d and stopped than to never have Apollo’d at all.
 
 ## So will I ever get my Von Braun Wheel
 
@@ -83,11 +85,6 @@ We’re accustomed to rigid structures on Earth and so do not often think of lig
 - Robert Zubrin on [Why We Should Settle Mars](https://quillette.com/2023/12/04/why-we-should-go-to-mars/)
 - Casey Handmer on [Are modular space stations cost effective](https://caseyhandmer.wordpress.com/2019/06/26/are-modular-space-stations-cost-effective/)
 - Brian Potter on [Building Apollo](https://www.construction-physics.com/p/building-apollo)**
-
-Perhaps a line of research would have been initiated in 1961- we will never know. Soon after Apollo was announced by Kennedy, cancellation threats were issued to the ongoing space station development projects which had little relevance to landing man on the Moon in 8 years. The program survived through Langley’s leadership lobbying who convinced NASA HQ that larger stations were a logical successor to Apollo. The space station vision shrank to meet Apollo’s more modest needs: no artificial gravity and much smaller crews of 3. Post-Apollo era, NASA’s funding shrank and the Space Shuttle became the “logical successor” with a very limited station, Skylab, was launched based on Apollo technologies. The Soviet Union also cooled their interest in their lunar programme and started Salyut, the first serious space station programme.
-
-
-
 
 %% 
 # So what happened to these programs?
