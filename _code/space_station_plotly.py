@@ -50,215 +50,9 @@ def get_station_colors(data):
             colors.append('#2979FF')  # Blue for conceptual stations
     return colors
 
-def create_space_station_plot():
-    # Extract data for plotting
-    names = [station['name'] for station in SPACE_STATIONS]
-    volumes = [station['total_volume'] for station in SPACE_STATIONS]
-    crews = [station['crew'] for station in SPACE_STATIONS]
-    colors = get_station_colors(SPACE_STATIONS)
-    
-    # Calculate marker sizes (log scale for better visualization)
-    marker_sizes = [np.log10(vol) * 10 for vol in volumes]
-    
-    # Calculate min and max values for axis ranges
-    x_min = min(volumes) * 0.8
-    x_max = max(volumes) * 1.2
-    
-    # Create figure
-    fig = go.Figure()
-    
-    # Add scatter plot
-    fig.add_trace(go.Scatter(
-        x=volumes,
-        y=crews,
-        mode='markers',
-        name='Space Stations',
-        marker=dict(
-            size=marker_sizes,
-            color=colors,
-            line=dict(width=1, color='black'),
-            opacity=0.8
-        ),
-        text=[f"{name}<br>Total Volume: {vol:,.2f} m³<br>Pressurised Volume: {station['pressurised_volume']:,.2f} m³<br>Crew: {crew}" 
-              for name, vol, crew, station in zip(names, volumes, crews, SPACE_STATIONS)],
-        hoverinfo='text'
-    ))
-    
-    # Add station name labels with improved positioning
-    label_positions = {
-        'von Braun': dict(xanchor='right', yanchor='bottom', xshift=-10),
-        'Hexagonal Station': dict(xanchor='left', yanchor='bottom', xshift=10),
-        'ISS': dict(xanchor='right', yanchor='top', xshift=-10),
-        'Lunar Gateway': dict(xanchor='left', yanchor='bottom', xshift=10),
-        'Tiangong': dict(xanchor='right', yanchor='top', xshift=-10),
-        'Skylab': dict(xanchor='left', yanchor='top', xshift=10),
-        'Salyut-1': dict(xanchor='right', yanchor='bottom', xshift=-10)
-    }
-    
-    for i, name in enumerate(names):
-        position = label_positions.get(name, dict(xanchor='left', yanchor='bottom', xshift=10))
-        fig.add_annotation(
-            x=volumes[i],
-            y=crews[i],
-            text=name,
-            showarrow=False,
-            **position,
-            font=dict(size=12, color='#333')
-        )
-    
-    # Update layout
-    fig.update_layout(
-        title="Space Station Capacity vs Size",
-        xaxis=dict(
-            title="Total Volume (cubic meters)",
-            type="log",
-            gridcolor='rgba(0,0,0,0)',
-            zerolinecolor='rgba(0,0,0,0)',
-            range=[np.log10(x_min), np.log10(x_max)],
-            ticktext=[f"{x:,.0f}" for x in [100, 200, 500, 1000, 2000, 5000, 10000]],
-            tickvals=[np.log10(x) for x in [100, 200, 500, 1000, 2000, 5000, 10000]]
-        ),
-        yaxis=dict(
-            title="Number of Astronauts",
-            gridcolor='rgba(0,0,0,0)',
-            zerolinecolor='rgba(0,0,0,0)',
-            range=[0, 70]
-        ),
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        margin=dict(l=50, r=20, t=50, b=50),
-        hovermode='closest',
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="center",
-            x=0.5,
-            font=dict(size=12)
-        )
-    )
-    
-    # Add legend items
-    for label, color in [('Actual Station', '#4CAF50'), 
-                        ('Planned Station', '#F44336'), 
-                        ('Conceptual Design', '#2979FF')]:
-        fig.add_trace(go.Scatter(
-            x=[None], y=[None],
-            mode='markers',
-            name=label,
-            marker=dict(size=10, color=color),
-            showlegend=True
-        ))
-    
-    # Save as HTML
-    fig.write_html(
-        'assets/plots/space_station_capacity.html',
-        config={'responsive': True, 'displayModeBar': False},
-        include_plotlyjs=True,
-        full_html=False
-    )
-    
-    return fig
-
-def create_volume_per_astronaut_plot():
-    # Extract data for plotting
-    names = [station['name'] for station in SPACE_STATIONS]
-    total_volumes = [station['total_volume'] for station in SPACE_STATIONS]
-    habitable_volumes = [station['habitable_volume'] for station in SPACE_STATIONS]
-    crews = [station['crew'] for station in SPACE_STATIONS]
-    habitable_volume_per_astronaut = [vol/crew for vol, crew in zip(habitable_volumes, crews)]
-    colors = get_station_colors(SPACE_STATIONS)
-    
-    # Calculate marker sizes (log scale for better visualization)
-    marker_sizes = [np.log10(vol) * 10 for vol in total_volumes]
-    
-    # Create figure
-    fig = go.Figure()
-    
-    # Add scatter plot
-    fig.add_trace(go.Scatter(
-        x=habitable_volume_per_astronaut,
-        y=crews,
-        mode='markers',
-        name='Space Stations',
-        marker=dict(
-            size=marker_sizes,
-            color=colors,
-            line=dict(width=1, color='black'),
-            opacity=0.8
-        ),
-        text=[f"{name}<br>Habitable Volume per Astronaut: {vol_per_ast:,.2f} m³<br>Total Volume: {total_vol:,.2f} m³<br>Habitable Volume: {hab_vol:,.2f} m³<br>Pressurised Volume: {station['pressurised_volume']:,.2f} m³<br>Crew: {crew}" 
-              for name, vol_per_ast, total_vol, hab_vol, crew, station in zip(names, habitable_volume_per_astronaut, total_volumes, habitable_volumes, crews, SPACE_STATIONS)],
-        hoverinfo='text'
-    ))
-    
-    # Add station name labels
-    for i, name in enumerate(names):
-        fig.add_annotation(
-            x=habitable_volume_per_astronaut[i],
-            y=crews[i],
-            text=name,
-            showarrow=False,
-            xanchor='left',
-            yanchor='bottom',
-            xshift=10,
-            yshift=-5,
-            font=dict(size=12, color='#333')
-        )
-    
-    # Update layout
-    fig.update_layout(
-        title="Space Station Capacity vs Habitable Volume per Astronaut",
-        xaxis=dict(
-            title="Habitable Volume per Astronaut (cubic meters)",
-            type="linear",
-            gridcolor='rgba(0,0,0,0)',
-            zerolinecolor='rgba(0,0,0,0)'
-        ),
-        yaxis=dict(
-            title="Number of Astronauts",
-            gridcolor='rgba(0,0,0,0)',
-            zerolinecolor='rgba(0,0,0,0)'
-        ),
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        margin=dict(l=50, r=20, t=50, b=50),
-        hovermode='closest',
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="center",
-            x=0.5,
-            font=dict(size=12)
-        )
-    )
-    
-    # Add legend items
-    for label, color in [('Actual Station', '#4CAF50'), 
-                        ('Planned Station', '#F44336'), 
-                        ('Conceptual Design', '#2979FF')]:
-        fig.add_trace(go.Scatter(
-            x=[None], y=[None],
-            mode='markers',
-            name=label,
-            marker=dict(size=10, color=color),
-            showlegend=True
-        ))
-    
-    # Save as HTML
-    fig.write_html(
-        'assets/plots/space_station_volume_per_astronaut.html',
-        config={'responsive': True, 'displayModeBar': False},
-        include_plotlyjs=True,
-        full_html=False
-    )
-    
-    return fig
-
 def create_multidimensional_bubble_chart():
-    # Filter out the mega-stations for plotting
-    excluded_stations = []  # No longer excluding O'Neill Cylinder
+    # Filter out the mega-stations and Salyut-1 for plotting
+    excluded_stations = ['Salyut-1']  # Now excluding Salyut-1
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
@@ -270,6 +64,11 @@ def create_multidimensional_bubble_chart():
     
     # Calculate marker sizes (reduced size for better fit)
     marker_sizes = [np.log10(vol) * 12 for vol in total_volumes]
+    
+    # Adjust size for Hexagonal Station specifically
+    for i, name in enumerate(names):
+        if name == 'Hexagonal Station':
+            marker_sizes[i] *= 0.8  # Make Hexagonal Station marker 20% smaller
     
     # Create figure
     fig = go.Figure()
@@ -287,13 +86,13 @@ def create_multidimensional_bubble_chart():
         name='Current',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in current_indices],
-            color='#4CAF50',  # Green for current stations (works in both light/dark modes)
+            color='#4CAF50',
             line=dict(width=1, color='black'),
             opacity=0.8
         ),
-        text=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
-              for i in current_indices],
-        hoverinfo='text'
+        hoverinfo='text',
+        hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
+                  for i in current_indices]
     ))
     
     # Add planned stations
@@ -304,13 +103,13 @@ def create_multidimensional_bubble_chart():
         name='Planned',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in planned_indices],
-            color='#F44336',  # Red for planned stations (works in both light/dark modes)
+            color='#F44336',
             line=dict(width=1, color='black'),
             opacity=0.8
         ),
-        text=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
-              for i in planned_indices],
-        hoverinfo='text'
+        hoverinfo='text',
+        hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
+                  for i in planned_indices]
     ))
     
     # Add concept stations (with donut shape)
@@ -321,14 +120,14 @@ def create_multidimensional_bubble_chart():
         name='Concepts',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in concept_indices],
-            color='#2979FF',  # Blue for concept stations
+            color='#2979FF',
             line=dict(width=2, color='black'),
             opacity=0.8,
-            symbol='circle-open'  # Donut shape for artificial gravity stations
+            symbol='circle-open'
         ),
-        text=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
-              for i in concept_indices],
-        hoverinfo='text'
+        hoverinfo='text',
+        hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
+                  for i in concept_indices]
     ))
     
     # Add Stanford Torus as a superstructure
@@ -337,18 +136,18 @@ def create_multidimensional_bubble_chart():
     
     fig.add_trace(go.Scatter(
         x=[stanford_torus['habitable_volume'] / stanford_torus['crew']],
-        y=[110],  # Place at y=110 for the superstructure category
+        y=[110],
         mode='markers',
-        name='Superstructure',  # Changed from Megastructure to Superstructure
+        name='Superstructure',
         marker=dict(
-            size=30,  # Larger size to emphasize
-            color='#9C27B0',  # Purple for superstructure
+            size=30,
+            color='#9C27B0',
             line=dict(width=3, color='black'),
             opacity=0.9,
-            symbol='star'  # Star shape for superstructure
+            symbol='star'
         ),
-        text=f"{stanford_torus['name']}<br>Habitable Volume per Astronaut: {stanford_torus['habitable_volume']/stanford_torus['crew']:,.2f} m³<br>Total Volume: {stanford_torus['total_volume']:,.2f} m³<br>Habitable Volume: {stanford_torus['habitable_volume']:,.2f} m³<br>Pressurised Volume: {stanford_torus['pressurised_volume']:,.2f} m³<br>Crew: {stanford_torus['crew']:,}",
-        hoverinfo='text'
+        hoverinfo='text',
+        hovertext=f"{stanford_torus['name']}<br>Habitable Volume per Astronaut: {stanford_torus['habitable_volume']/stanford_torus['crew']:,.2f} m³<br>Total Volume: {stanford_torus['total_volume']:,.2f} m³<br>Habitable Volume: {stanford_torus['habitable_volume']:,.2f} m³<br>Pressurised Volume: {stanford_torus['pressurised_volume']:,.2f} m³<br>Crew: {stanford_torus['crew']:,}"
     ))
     
     # Add O'Neill Cylinder as a megastructure at fixed x=120
@@ -356,42 +155,50 @@ def create_multidimensional_bubble_chart():
     oneill_cylinder = SPACE_STATIONS[oneill_cylinder_index]
     
     fig.add_trace(go.Scatter(
-        x=[120],  # Fixed x position
-        y=[120],  # Place at y=120 for the megastructure category
+        x=[120],
+        y=[120],
         mode='markers',
-        name='Megastructure',  # Different name to avoid duplicate legend
+        name='Megastructure',
         marker=dict(
-            size=35,  # Slightly larger size to emphasize
-            color='#9C27B0',  # Purple for megastructure
+            size=35,
+            color='#9C27B0',
             line=dict(width=3, color='black'),
             opacity=0.9,
-            symbol='star'  # Star shape for megastructure
+            symbol='star'
         ),
-        text=f"{oneill_cylinder['name']}<br>Habitable Volume per Astronaut: {oneill_cylinder['habitable_volume']/oneill_cylinder['crew']:,.2f} m³<br>Total Volume: {oneill_cylinder['total_volume']:,.2f} m³<br>Habitable Volume: {oneill_cylinder['habitable_volume']:,.2f} m³<br>Pressurised Volume: {oneill_cylinder['pressurised_volume']:,.2f} m³<br>Crew: {oneill_cylinder['crew']:,}",
-        hoverinfo='text'
+        hoverinfo='text',
+        hovertext=f"{oneill_cylinder['name']}<br>Habitable Volume per Astronaut: {oneill_cylinder['habitable_volume']/oneill_cylinder['crew']:,.2f} m³<br>Total Volume: {oneill_cylinder['total_volume']:,.2f} m³<br>Habitable Volume: {oneill_cylinder['habitable_volume']:,.2f} m³<br>Pressurised Volume: {oneill_cylinder['pressurised_volume']:,.2f} m³<br>Crew: {oneill_cylinder['crew']:,}"
     ))
     
-    # Add station name labels with improved positioning (only for included stations)
+    # Add station name labels with improved positioning
     label_positions = {
-        'von Braun': dict(xanchor='right', yanchor='bottom', xshift=-10),
-        'Hexagonal Station': dict(xanchor='left', yanchor='bottom', xshift=10),
-        'ISS': dict(xanchor='right', yanchor='top', xshift=-10),
-        'Lunar Gateway': dict(xanchor='left', yanchor='bottom', xshift=10),
-        'Tiangong': dict(xanchor='right', yanchor='top', xshift=-10),
-        'Skylab': dict(xanchor='left', yanchor='top', xshift=10),
-        'Salyut-1': dict(xanchor='right', yanchor='bottom', xshift=-10)
+        'von Braun': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=15),
+        'Hexagonal Station': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
+        'ISS': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
+        'Lunar Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=5),
+        'Tiangong': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
+        'Skylab': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5)
     }
     
+    # Add annotations for each station
     for i, name in enumerate(names):
-        position = label_positions.get(name, dict(xanchor='left', yanchor='bottom', xshift=10))
-        fig.add_annotation(
-            x=habitable_volume_per_astronaut[i],
-            y=crews[i],
-            text=name,
-            showarrow=False,
-            **position,
-            font=dict(size=12, color='#333')
-        )
+        if name not in ['Stanford Torus', "O'Neill Cylinder"]:
+            position = label_positions.get(name, dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5))
+            color = '#4CAF50' if SPACE_STATIONS[plot_indices[i]]['is_real'] else (
+                    '#F44336' if SPACE_STATIONS[plot_indices[i]]['is_planned'] else '#2979FF')
+            fig.add_annotation(
+                x=habitable_volume_per_astronaut[i],
+                y=crews[i],
+                text=name,
+                showarrow=False,
+                **position,
+                font=dict(
+                    size=12,
+                    color=color
+                ),
+                bgcolor='rgba(255, 255, 255, 0.7)',  # Semi-transparent white background
+                borderpad=2
+            )
     
     # Add label for Stanford Torus
     fig.add_annotation(
@@ -399,11 +206,16 @@ def create_multidimensional_bubble_chart():
         y=110,
         text="Stanford Torus",
         showarrow=False,
-        xanchor='right',
-        yanchor='top',
-        xshift=-10,
+        xanchor='center',
+        yanchor='bottom',
         yshift=10,
-        font=dict(size=14, color='#9C27B0', family='Arial Black')
+        font=dict(
+            size=14,
+            color='#9C27B0',
+            family='Arial Black'
+        ),
+        bgcolor='rgba(255, 255, 255, 0.7)',  # Semi-transparent white background
+        borderpad=2
     )
     
     # Add label for O'Neill Cylinder
@@ -412,11 +224,16 @@ def create_multidimensional_bubble_chart():
         y=120,
         text="O'Neill Cylinder",
         showarrow=False,
-        xanchor='right',
-        yanchor='top',
-        xshift=-10,
+        xanchor='center',
+        yanchor='bottom',
         yshift=10,
-        font=dict(size=14, color='#9C27B0', family='Arial Black')
+        font=dict(
+            size=14,
+            color='#9C27B0',
+            family='Arial Black'
+        ),
+        bgcolor='rgba(255, 255, 255, 0.7)',  # Semi-transparent white background
+        borderpad=2
     )
     
     # Update layout with improved spacing and no title
@@ -426,9 +243,8 @@ def create_multidimensional_bubble_chart():
             type="linear",
             gridcolor='rgba(0,0,0,0)',
             zerolinecolor='rgba(0,0,0,0)',
-            range=[25, 130],  # Extended to accommodate megastructure label
+            range=[15, 130],
             dtick=10,
-            # Add a special tick for the megastructure category
             ticktext=["25", "35", "45", "55", "65", "75", "85", "95", "105", "Megastructure"],
             tickvals=[25, 35, 45, 55, 65, 75, 85, 95, 105, 120]
         ),
@@ -436,9 +252,8 @@ def create_multidimensional_bubble_chart():
             title="Crew Capacity (number of astronauts)",
             gridcolor='rgba(0,0,0,0)',
             zerolinecolor='rgba(0,0,0,0)',
-            range=[-2, 130],  # Extended to accommodate megastructures
+            range=[-2, 130],
             dtick=10,
-            # Add special ticks for the superstructure and megastructure categories
             ticktext=["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "Superstructure", "Megastructure"],
             tickvals=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
         ),
@@ -458,113 +273,23 @@ def create_multidimensional_bubble_chart():
         ),
         width=800,
         height=600,
-        showlegend=True
+        showlegend=True,
+        # Add hover template configuration
+        hoverlabel=dict(
+            bgcolor="white",
+            font_size=12,
+            font_family="Arial"
+        )
     )
     
-    # Save as HTML
+    # Save as HTML with updated config
     fig.write_html(
         'assets/plots/space_station_multidimensional.html',
-        config={'responsive': True, 'displayModeBar': False},
-        include_plotlyjs=True,
-        full_html=False
-    )
-    
-    return fig
-
-def create_megastructure_comparison():
-    # Select specific stations to compare
-    selected_stations = ['Skylab', 'ISS', 'von Braun', 'Stanford Torus', "O'Neill Cylinder"]
-    station_data = [s for s in SPACE_STATIONS if s['name'] in selected_stations]
-    
-    # Extract data for plotting
-    names = [station['name'] for station in station_data]
-    total_volumes = [station['total_volume'] for station in station_data]
-    habitable_volumes = [station['habitable_volume'] for station in station_data]
-    crews = [station['crew'] for station in station_data]
-    habitable_volume_per_astronaut = [vol/crew for vol, crew in zip(habitable_volumes, crews)]
-    
-    # Create figure
-    fig = go.Figure()
-    
-    # Add scatter plot for each category
-    for i, station in enumerate(station_data):
-        is_gravity = station['has_gravity']
-        color = '#4CAF50' if station['is_real'] else '#2979FF'  # Green for real, Blue for concepts
-        
-        fig.add_trace(go.Scatter(
-            x=[habitable_volume_per_astronaut[i]],
-            y=[crews[i]],
-            mode='markers',
-            name=station['name'],
-            marker=dict(
-                size=25,  # Fixed size for all markers
-                color=color,
-                line=dict(width=2, color='black'),
-                opacity=0.8,
-                symbol='circle-open' if is_gravity else 'circle'
-            ),
-            text=f"{names[i]}<br>Habitable Volume per Astronaut: {habitable_volume_per_astronaut[i]:,.2f} m³<br>Total Volume: {total_volumes[i]:,.2f} m³<br>Habitable Volume: {habitable_volumes[i]:,.2f} m³<br>Pressurised Volume: {station['pressurised_volume']:,.2f} m³<br>Crew: {crews[i]}",
-            hoverinfo='text'
-        ))
-    
-    # Add station name labels with improved positioning
-    label_positions = {
-        'von Braun': dict(xanchor='right', yanchor='middle', xshift=-30),
-        'ISS': dict(xanchor='left', yanchor='middle', xshift=30),
-        'Skylab': dict(xanchor='right', yanchor='middle', xshift=-30),
-        'Stanford Torus': dict(xanchor='right', yanchor='middle', xshift=-30),
-        "O'Neill Cylinder": dict(xanchor='right', yanchor='middle', xshift=-30)
-    }
-    
-    for i, name in enumerate(names):
-        position = label_positions.get(name, dict(xanchor='left', yanchor='middle', xshift=30))
-        fig.add_annotation(
-            x=habitable_volume_per_astronaut[i],
-            y=crews[i],
-            text=name,
-            showarrow=False,  # Remove arrows
-            **position,
-            font=dict(size=12, color='white'),
-            bgcolor='rgba(50, 50, 50, 0.8)',  # Dark semi-transparent background
-            bordercolor='rgba(255, 255, 255, 0.3)',
-            borderwidth=1,
-            borderpad=4,
-            opacity=0.8
-        )
-    
-    # Update layout
-    fig.update_layout(
-        xaxis=dict(
-            title="Habitable Volume per Astronaut (cubic meters)",
-            type="linear",
-            gridcolor='rgba(0,0,0,0)',
-            zerolinecolor='rgba(0,0,0,0)',
-            showgrid=True,
-            dtick=200,
-            range=[0, 1400]
-        ),
-        yaxis=dict(
-            title="Crew Capacity (number of astronauts)",
-            type="log",
-            gridcolor='rgba(0,0,0,0)',
-            zerolinecolor='rgba(0,0,0,0)',
-            showgrid=True,
-            dtick=1,
-            range=[0, 6]
-        ),
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        margin=dict(l=60, r=100, t=30, b=60),  # Increased right margin further
-        hovermode='closest',
-        showlegend=False,
-        width=800,
-        height=600
-    )
-    
-    # Save as HTML
-    fig.write_html(
-        'assets/plots/space_station_megastructure.html',
-        config={'responsive': True, 'displayModeBar': False},
+        config={
+            'responsive': True,
+            'displayModeBar': False,
+            'showTips': True
+        },
         include_plotlyjs=True,
         full_html=False
     )
@@ -572,7 +297,4 @@ def create_megastructure_comparison():
     return fig
 
 if __name__ == "__main__":
-    create_space_station_plot()
-    create_volume_per_astronaut_plot()
     create_multidimensional_bubble_chart()
-    create_megastructure_comparison() 
