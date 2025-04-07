@@ -10,7 +10,7 @@ permalink: /whereVonBraunWheel
 top_of_mind: "true"
 completion_score: 75
 ---
-In 1961. Or maybe 1962.
+In 1962.
 
 While the answer is disappointing, it is far more interesting to understand how the Apollo program dismantled a serious engineering effort into building artificial gravity space stations at NASA's Langley- the [home of many great projects over the last century](https://angadh.com/translation/hungarianarticleaboutnasa).
 
