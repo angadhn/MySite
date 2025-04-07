@@ -19,9 +19,11 @@ layout: default
   <div id="notes-entry-container">
     <content>
       {{ content }}
-    
+      
+      {% unless page.tags contains 'essays' %}
       <hr>
       
+
       <side style="font-size: 0.9em">
         <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
         {% if page.backlinks.size > 0 %}
@@ -41,12 +43,14 @@ layout: default
         </div>
         {% endif %}
       </side>
+      {% endunless %}
     </content>
   </div>
 </article>
 
 <hr>
 
+{% unless page.tags contains 'essays' %}
 <div style="margin-bottom: 1em;">
   <a class="internal-link" href="{{ site.baseurl }}/tags"> See all notes by topic </a>
 </div>
@@ -54,3 +58,4 @@ layout: default
 <p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
 
 {% include notes_graph.html %}
+{% endunless %}
