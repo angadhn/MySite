@@ -4,22 +4,22 @@ import numpy as np
 # Shared space station data
 SPACE_STATIONS = [
     # Real historical stations
-    {'name': 'Salyut-1', 'total_volume': 214, 'pressurised_volume': 99, 'habitable_volume': 90, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
-    {'name': 'MORL', 'total_volume': 254.85, 'pressurised_volume': 254.85, 'habitable_volume': 200, 'crew': 6, 'is_real': False, 'is_planned': True, 'has_gravity': False},
-    {'name': 'LORL', 'total_volume': 1905.85, 'pressurised_volume': 1905.85, 'habitable_volume': 1905.85, 'crew': 24, 'is_real': False, 'is_planned': True, 'has_gravity': False},
-    {'name': 'Haven-1', 'total_volume': 80, 'pressurised_volume': 80, 'habitable_volume': 45, 'crew': 4, 'is_real': False, 'is_planned': True, 'has_gravity': False},
-    {'name': 'Haven-2', 'total_volume': 1160, 'pressurised_volume': 1160, 'habitable_volume': 500, 'crew': 12, 'is_real': False, 'is_planned': True, 'has_gravity': False},
-    {'name': 'Skylab', 'total_volume': 499, 'pressurised_volume': 351.6, 'habitable_volume': 270, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
-    {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
-    {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'is_planned': False, 'has_gravity': False},
+    {'name': 'Salyut-1', 'total_volume': 214, 'pressurised_volume': 99, 'habitable_volume': 90, 'crew': 3, 'is_real': True, 'has_gravity': False},
+    {'name': 'MORL', 'total_volume': 254.85, 'pressurised_volume': 254.85, 'habitable_volume': 200, 'crew': 6, 'is_real': False, 'has_gravity': False},
+    {'name': 'LORL', 'total_volume': 1905.85, 'pressurised_volume': 1905.85, 'habitable_volume': 1905.85, 'crew': 24, 'is_real': False, 'has_gravity': False},
+    {'name': 'Haven-1', 'total_volume': 80, 'pressurised_volume': 80, 'habitable_volume': 45, 'crew': 4, 'is_real': False, 'has_gravity': False},
+    {'name': 'Haven-2', 'total_volume': 1160, 'pressurised_volume': 1160, 'habitable_volume': 500, 'crew': 12, 'is_real': False, 'has_gravity': False},
+    {'name': 'Skylab', 'total_volume': 499, 'pressurised_volume': 351.6, 'habitable_volume': 270, 'crew': 3, 'is_real': True, 'has_gravity': False},
+    {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'has_gravity': False},
+    {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'has_gravity': False},
     
     # Planned station
-    {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'is_planned': True, 'has_gravity': False},
+    {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
     
     # Conceptual designs
-    {'name': 'von Braun', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'is_planned': False, 'has_gravity': True},
-    # {'name': 'Space Base', 'total_volume': 1274325, 'pressurised_volume': 980000, 'crew': 87.5, 'is_real': False, 'is_planned': False, 'has_gravity': True},
-    {'name': 'Hexagonal Station', 'total_volume': 1274.3, 'pressurised_volume': 980, 'habitable_volume': 980, 'crew': 36, 'is_real': False, 'is_planned': False, 'has_gravity': True},
+    {'name': 'von Braun', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'has_gravity': True},
+    {'name': 'Space Base', 'total_volume': 5921, 'pressurised_volume': 3600, 'habitable_volume': 3600, 'crew': 100, 'is_real': False, 'has_gravity': True},
+    {'name': 'Hexagonal Station', 'total_volume': 1274.3, 'pressurised_volume': 980, 'habitable_volume': 980, 'crew': 36, 'is_real': False, 'has_gravity': True},
     {
         'name': '2035 AG Station',
         'total_volume': 2160,  # Using pressurized volume as total volume
@@ -27,7 +27,6 @@ SPACE_STATIONS = [
         'habitable_volume': 950,
         'crew': 40,
         'is_real': False,
-        'is_planned': True,
         'has_gravity': True
     },
     {
@@ -37,7 +36,6 @@ SPACE_STATIONS = [
         'habitable_volume': 650000,  # Estimated 75% of total volume as habitable
         'crew': 10000,
         'is_real': False,
-        'is_planned': False,
         'has_gravity': True
     },
     {
@@ -47,7 +45,6 @@ SPACE_STATIONS = [
         'habitable_volume': 1200000000,  # Estimated 75% of total volume as habitable
         'crew': 1000000,
         'is_real': False,
-        'is_planned': False,
         'has_gravity': True
     },
 ]
@@ -58,15 +55,15 @@ def get_station_colors(data):
     for station in data:
         if station['is_real']:
             colors.append('#4CAF50')  # Green for real stations (works in both light/dark modes)
-        elif station['is_planned']:
-            colors.append('#F44336')  # Red for planned stations (works in both light/dark modes)
+        elif station['has_gravity']:
+            colors.append('#2979FF')  # Blue for artificial gravity stations
         else:
-            colors.append('#2979FF')  # Blue for conceptual stations
+            colors.append('#F44336')  # Red for planned 0-g stations
     return colors
 
 def create_multidimensional_bubble_chart():
     # Filter out the mega-stations and Salyut-1 for plotting
-    excluded_stations = ['MORL', 'LORL']  # Now excluding MORL and LORL
+    excluded_stations = ['MORL', 'LORL', 'Space Base']  # Now excluding MORL and LORL
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
@@ -88,52 +85,66 @@ def create_multidimensional_bubble_chart():
     fig = go.Figure()
     
     # Separate indices for each category (using filtered indices)
-    current_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['is_real'] and station['name'] not in excluded_stations]
-    planned_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['is_planned'] and station['name'] not in excluded_stations]
-    concept_indices = [i for i, station in enumerate(SPACE_STATIONS) if not station['is_real'] and not station['is_planned'] and station['name'] not in excluded_stations and station['name'] not in ['Stanford Torus', "O'Neill Cylinder"]]
+    # 1. Real stations (green)
+    real_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['is_real'] and station['name'] not in excluded_stations]
     
-    # Add current stations
+    # 2. Planned 0-g stations (red)
+    planned_0g_indices = [i for i, station in enumerate(SPACE_STATIONS) 
+                         if not station['is_real'] and not station['has_gravity'] 
+                         and station['name'] not in excluded_stations]
+    
+    # 3. Artificial gravity stations (blue donut)
+    ag_indices = [i for i, station in enumerate(SPACE_STATIONS) 
+                 if not station['is_real'] and station['has_gravity'] 
+                 and station['name'] not in excluded_stations 
+                 and station['name'] not in ['Stanford Torus', "O'Neill Cylinder"]]
+    
+    # 4. Megastructures (purple star)
+    megastructure_indices = [i for i, station in enumerate(SPACE_STATIONS) 
+                           if station['name'] in ['Stanford Torus', "O'Neill Cylinder"]]
+    
+    # Add real stations (green)
     fig.add_trace(go.Scatter(
-        x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in current_indices],
-        y=[crews[plot_indices.index(i)] for i in current_indices],
+        x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in real_indices],
+        y=[crews[plot_indices.index(i)] for i in real_indices],
         mode='markers',
-        name='Current',
+        name='Real Stations',
         marker=dict(
-            size=[marker_sizes[plot_indices.index(i)] for i in current_indices],
+            size=[marker_sizes[plot_indices.index(i)] for i in real_indices],
             color='#4CAF50',
             line=dict(width=1, color='black'),
             opacity=0.8
         ),
         hoverinfo='text',
         hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
-                  for i in current_indices]
+                  for i in real_indices]
     ))
     
-    # Add planned stations
+    # Add planned 0-g stations (red)
     fig.add_trace(go.Scatter(
-        x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in planned_indices],
-        y=[crews[plot_indices.index(i)] for i in planned_indices],
+        x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in planned_0g_indices],
+        y=[crews[plot_indices.index(i)] for i in planned_0g_indices],
         mode='markers',
-        name='0-g Planned',
+        name='Planned 0-g Stations',
         marker=dict(
-            size=[marker_sizes[plot_indices.index(i)] for i in planned_indices],
+            size=[marker_sizes[plot_indices.index(i)] for i in planned_0g_indices],
             color='#F44336',
             line=dict(width=1, color='black'),
             opacity=0.8
         ),
         hoverinfo='text',
         hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
-                  for i in planned_indices]
+                  for i in planned_0g_indices]
     ))
     
-    # Add concept stations (with donut shape)
+    # Add artificial gravity stations (blue donut)
     fig.add_trace(go.Scatter(
-        x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in concept_indices],
-        y=[crews[plot_indices.index(i)] for i in concept_indices],
+        x=[habitable_volume_per_astronaut[plot_indices.index(i)] for i in ag_indices],
+        y=[crews[plot_indices.index(i)] for i in ag_indices],
         mode='markers',
         name='Artificial Gravity Concepts',
         marker=dict(
-            size=[marker_sizes[plot_indices.index(i)] for i in concept_indices],
+            size=[marker_sizes[plot_indices.index(i)] for i in ag_indices],
             color='#2979FF',
             line=dict(width=2, color='black'),
             opacity=0.8,
@@ -141,10 +152,10 @@ def create_multidimensional_bubble_chart():
         ),
         hoverinfo='text',
         hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
-                  for i in concept_indices]
+                  for i in ag_indices]
     ))
     
-    # Add Stanford Torus as a superstructure
+    # Add Stanford Torus as a megastructure
     stanford_torus_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Stanford Torus')
     stanford_torus = SPACE_STATIONS[stanford_torus_index]
     
@@ -202,8 +213,14 @@ def create_multidimensional_bubble_chart():
     for i, name in enumerate(names):
         if name not in ['Stanford Torus', "O'Neill Cylinder"]:
             position = label_positions.get(name, dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5))
-            color = '#4CAF50' if SPACE_STATIONS[plot_indices[i]]['is_real'] else (
-                    '#F44336' if SPACE_STATIONS[plot_indices[i]]['is_planned'] else '#2979FF')
+            # Determine color based on station type
+            if SPACE_STATIONS[plot_indices[i]]['is_real']:
+                color = '#4CAF50'  # Green for real stations
+            elif SPACE_STATIONS[plot_indices[i]]['has_gravity']:
+                color = '#2979FF'  # Blue for artificial gravity stations
+            else:
+                color = '#F44336'  # Red for planned 0-g stations
+                
             fig.add_annotation(
                 x=habitable_volume_per_astronaut[i],
                 y=crews[i],
