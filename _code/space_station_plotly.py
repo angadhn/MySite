@@ -5,6 +5,10 @@ import numpy as np
 SPACE_STATIONS = [
     # Real historical stations
     {'name': 'Salyut-1', 'total_volume': 214, 'pressurised_volume': 99, 'habitable_volume': 90, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
+    {'name': 'MORL', 'total_volume': 254.85, 'pressurised_volume': 254.85, 'habitable_volume': 200, 'crew': 6, 'is_real': False, 'is_planned': True, 'has_gravity': False},
+    {'name': 'LORL', 'total_volume': 1905.85, 'pressurised_volume': 1905.85, 'habitable_volume': 1905.85, 'crew': 24, 'is_real': False, 'is_planned': True, 'has_gravity': False},
+    {'name': 'Haven-1', 'total_volume': 80, 'pressurised_volume': 80, 'habitable_volume': 45, 'crew': 4, 'is_real': False, 'is_planned': True, 'has_gravity': False},
+    {'name': 'Haven-2', 'total_volume': 1160, 'pressurised_volume': 1160, 'habitable_volume': 500, 'crew': 12, 'is_real': False, 'is_planned': True, 'has_gravity': False},
     {'name': 'Skylab', 'total_volume': 499, 'pressurised_volume': 351.6, 'habitable_volume': 270, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
     {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'is_planned': False, 'has_gravity': False},
     {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'is_planned': False, 'has_gravity': False},
@@ -16,6 +20,16 @@ SPACE_STATIONS = [
     {'name': 'von Braun', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'is_planned': False, 'has_gravity': True},
     # {'name': 'Space Base', 'total_volume': 1274325, 'pressurised_volume': 980000, 'crew': 87.5, 'is_real': False, 'is_planned': False, 'has_gravity': True},
     {'name': 'Hexagonal Station', 'total_volume': 1274.3, 'pressurised_volume': 980, 'habitable_volume': 980, 'crew': 36, 'is_real': False, 'is_planned': False, 'has_gravity': True},
+    {
+        'name': '2035 AG Station',
+        'total_volume': 2160,  # Using pressurized volume as total volume
+        'pressurised_volume': 2160,
+        'habitable_volume': 950,
+        'crew': 40,
+        'is_real': False,
+        'is_planned': True,
+        'has_gravity': True
+    },
     {
         'name': 'Stanford Torus',
         'total_volume': 870000,  # Approximate volume in cubic meters
@@ -52,7 +66,7 @@ def get_station_colors(data):
 
 def create_multidimensional_bubble_chart():
     # Filter out the mega-stations and Salyut-1 for plotting
-    excluded_stations = []  # Now excluding Salyut-1
+    excluded_stations = ['MORL', 'LORL']  # Now excluding MORL and LORL
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
@@ -247,10 +261,10 @@ def create_multidimensional_bubble_chart():
             type="linear",
             gridcolor='rgba(0,0,0,0)',
             zerolinecolor='rgba(0,0,0,0)',
-            range=[15, 130],
+            range=[5, 130],
             dtick=10,
-            ticktext=["25", "35", "45", "55", "65", "75", "85", "95", "105", "1000+"],
-            tickvals=[25, 35, 45, 55, 65, 75, 85, 95, 105, 120]
+            ticktext=["5", "15", "25", "35", "45", "55", "65", "75", "85", "95", "105", "1000+"],
+            tickvals=[5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 120]
         ),
         yaxis=dict(
             title="Crew Capacity (number of astronauts)",
