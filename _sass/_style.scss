@@ -1522,9 +1522,10 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 
   iframe {
     width: 100%;
-    height: 500px;
+    height: 600px;  // Increased from 500px to 600px
     border: none;
     background: transparent;
+    min-height: 550px;  // Added minimum height
   }
 
   // Mobile-specific adjustments
@@ -1535,13 +1536,14 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
       position: relative;
       right: 0;
       width: 100%;
-      margin: 0.5rem 0 0 0;  // Changed margin to put space above caption
+      margin: 0.5rem 0 0 0;
       text-align: center;
       color: $color-subtext;
     }
     
     iframe {
-      height: 400px;
+      height: 500px;  // Slightly reduced height for mobile but still taller than before
+      min-height: 450px;  // Added minimum height for mobile
       min-width: 300px;
       margin: 0 -20px;
       width: calc(100% + 40px);
