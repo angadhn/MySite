@@ -10,7 +10,7 @@ SPACE_STATIONS = [
     {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 10, 'is_real': True, 'is_planned': False, 'has_gravity': False},
     
     # Planned station
-    {'name': 'Lunar Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'is_planned': True, 'has_gravity': False},
+    {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'is_planned': True, 'has_gravity': False},
     
     # Conceptual designs
     {'name': 'von Braun', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'is_planned': False, 'has_gravity': True},
@@ -52,7 +52,7 @@ def get_station_colors(data):
 
 def create_multidimensional_bubble_chart():
     # Filter out the mega-stations and Salyut-1 for plotting
-    excluded_stations = ['Salyut-1']  # Now excluding Salyut-1
+    excluded_stations = []  # Now excluding Salyut-1
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
@@ -172,10 +172,11 @@ def create_multidimensional_bubble_chart():
     
     # Add station name labels with improved positioning
     label_positions = {
+        'Salyut-1': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=-10),
         'von Braun': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=15),
         'Hexagonal Station': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
         'ISS': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
-        'Lunar Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=5),
+        'Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=5),
         'Tiangong': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
         'Skylab': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5)
     }
