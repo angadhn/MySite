@@ -63,7 +63,7 @@ def get_station_colors(data):
 
 def create_multidimensional_bubble_chart():
     # Filter out the mega-stations and Salyut-1 for plotting
-    excluded_stations = ['MORL', 'LORL', 'Space Base']  # Now excluding MORL and LORL
+    excluded_stations = ['MORL', 'LORL']  # Now excluding MORL and LORL
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
