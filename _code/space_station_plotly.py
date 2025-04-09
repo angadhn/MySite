@@ -31,9 +31,9 @@ SPACE_STATIONS = [
     },
     {
         'name': 'Stanford Torus',
-        'total_volume': 870000,  # Approximate volume in cubic meters
-        'pressurised_volume': 870000,
-        'habitable_volume': 650000,  # Estimated 75% of total volume as habitable
+        'total_volume': 8233000,  # Approximate volume in cubic meters
+        'pressurised_volume': 8233000,
+        'habitable_volume': 8233000,  # Estimated 75% of total volume as habitable
         'crew': 10000,
         'is_real': False,
         'has_gravity': True
