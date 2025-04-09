@@ -119,6 +119,7 @@ def create_multidimensional_bubble_chart():
         y=[crews[plot_indices.index(i)] for i in real_indices],
         mode='markers',
         name='Real Stations',
+        legendgroup='real_stations',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in real_indices],
             color='#4CAF50',
@@ -136,6 +137,7 @@ def create_multidimensional_bubble_chart():
         y=[crews[plot_indices.index(i)] for i in planned_0g_indices],
         mode='markers',
         name='Planned 0-g Stations',
+        legendgroup='planned_0g_stations',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in planned_0g_indices],
             color='#F44336',
@@ -153,6 +155,7 @@ def create_multidimensional_bubble_chart():
         y=[crews[plot_indices.index(i)] for i in ag_indices],
         mode='markers',
         name='Artificial Gravity Concepts',
+        legendgroup='ag_stations',
         marker=dict(
             size=[marker_sizes[plot_indices.index(i)] for i in ag_indices],
             color='#2979FF',
@@ -228,68 +231,184 @@ def create_multidimensional_bubble_chart():
         'Haven-1': dict(xanchor='center', yanchor='bottom', xshift=0, yshift=15)
     }
     
-    # Add annotations for each station
-    for i, name in enumerate(names):
-        if name not in ['Stanford Torus', "O'Neill Cylinder"]:
-            position = label_positions.get(name, dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5))
-            # Determine color based on station type
-            if SPACE_STATIONS[plot_indices[i]]['is_real']:
-                color = '#4CAF50'  # Green for real stations
-            elif SPACE_STATIONS[plot_indices[i]]['has_gravity']:
-                color = '#2979FF'  # Blue for artificial gravity stations
-            else:
-                color = '#F44336'  # Red for planned 0-g stations
-                
-            fig.add_annotation(
-                x=habitable_volume_per_astronaut[i],
-                y=crews[i],
-                text=name,
-                showarrow=False,
-                **position,
-                font=dict(
-                    size=12,
-                    color=color
-                ),
-                bgcolor='rgba(255, 255, 255, 0.7)',  # Semi-transparent white background
-                borderpad=2
-            )
-    
-    # Add label for Stanford Torus
-    fig.add_annotation(
-        x=110,  # Changed to 110
-        y=110,
-        text="Stanford Torus",
-        showarrow=False,
-        xanchor='center',
-        yanchor='bottom',
-        yshift=10,
-        font=dict(
-            size=14,
-            color='#9C27B0',
-            family='Arial Black'
-        ),
-        bgcolor='rgba(255, 255, 255, 0.7)',  # Semi-transparent white background
-        borderpad=2
-    )
-    
-    # Add label for O'Neill Cylinder
-    fig.add_annotation(
-        x=120,  # Changed to 120
-        y=120,
-        text="O'Neill Cylinder",
-        showarrow=False,
-        xanchor='center',
-        yanchor='bottom',
-        yshift=10,
-        font=dict(
-            size=14,
-            color='#9C27B0',
-            family='Arial Black'
-        ),
-        bgcolor='rgba(255, 255, 255, 0.7)',  # Semi-transparent white background
-        borderpad=2
-    )
-    
+    # Create text labels with the same legend groups
+    # Real stations text
+    real_station_names = [SPACE_STATIONS[i]['name'] for i in real_indices]
+    real_x = [habitable_volume_per_astronaut[plot_indices.index(i)] for i in real_indices]
+    real_y = [crews[plot_indices.index(i)] for i in real_indices]
+    real_text_positions = [label_positions.get(name, dict(xshift=15, yshift=5)) for name in real_station_names]
+
+    # Planned 0-g stations text
+    planned_0g_station_names = [SPACE_STATIONS[i]['name'] for i in planned_0g_indices]
+    planned_0g_x = [habitable_volume_per_astronaut[plot_indices.index(i)] for i in planned_0g_indices]
+    planned_0g_y = [crews[plot_indices.index(i)] for i in planned_0g_indices]
+    planned_0g_text_positions = [label_positions.get(name, dict(xshift=15, yshift=5)) for name in planned_0g_station_names]
+
+    # Add text for planned 0-g stations
+    for i, name in enumerate(planned_0g_station_names):
+        xanchor = planned_0g_text_positions[i].get('xanchor', 'left')
+        
+        # Calculate better text positioning
+        text_x = planned_0g_x[i]
+        text_y = planned_0g_y[i]
+        
+        # Adjust position based on the station name
+        if name == 'Gateway':
+            text_position = 'top center'  # Changed to top center
+            text_y += 4  # Move up even more
+        elif name == 'Haven-1':
+            text_position = 'top center'  # Keep top center
+            text_y += 4  # Move up more
+        elif name == 'Haven-2':
+            text_position = 'top right'
+            text_y += 3  # Move up slightly
+            text_x += 3  # Move right slightly
+        else:
+            text_position = 'middle right' if xanchor == 'left' else 'middle left'
+        
+        fig.add_trace(go.Scatter(
+            x=[text_x],
+            y=[text_y],
+            text=[name],
+            mode='text',
+            showlegend=False,
+            legendgroup='planned_0g_stations',
+            textposition=text_position,
+            textfont=dict(
+                color='#F44336',
+                size=12
+            ),
+            hoverinfo='skip',
+            texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
+        ))
+
+    # Add text for real stations
+    for i, name in enumerate(real_station_names):
+        xanchor = real_text_positions[i].get('xanchor', 'left')
+        
+        # Calculate better text positioning
+        text_x = real_x[i]
+        text_y = real_y[i]
+        
+        # Adjust position based on the station name
+        if name == 'ISS':
+            text_position = 'middle right'  # Changed to middle right
+            text_x += 4  # Move right more
+        elif name == 'Skylab':
+            text_position = 'bottom right'
+            text_x += 4  # Move right slightly
+        elif name == 'Tiangong':
+            text_position = 'middle right'  # Changed to middle right
+            text_x += 3.5  # Move right more
+            text_y += -2  # Move up more
+        elif name == 'Salyut-1':
+            text_position = 'bottom left'
+            text_x -= 3  # Move left slightly
+        else:
+            text_position = 'middle right' if xanchor == 'left' else 'middle left'
+        
+        fig.add_trace(go.Scatter(
+            x=[text_x],
+            y=[text_y],
+            text=[name],
+            mode='text',
+            showlegend=False,
+            legendgroup='real_stations',
+            textposition=text_position,
+            textfont=dict(
+                color='#4CAF50',
+                size=12
+            ),
+            hoverinfo='skip',
+            texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
+        ))
+
+    # Artificial gravity stations text
+    ag_station_names = [SPACE_STATIONS[i]['name'] for i in ag_indices]
+    ag_x = [habitable_volume_per_astronaut[plot_indices.index(i)] for i in ag_indices]
+    ag_y = [crews[plot_indices.index(i)] for i in ag_indices]
+    ag_text_positions = [label_positions.get(name, dict(xshift=15, yshift=5)) for name in ag_station_names]
+
+    # Add text for artificial gravity stations
+    for i, name in enumerate(ag_station_names):
+        xanchor = ag_text_positions[i].get('xanchor', 'left')
+        
+        # Calculate better text positioning
+        text_x = ag_x[i]
+        text_y = ag_y[i]
+        
+        # Adjust position based on the station name
+        if name == 'von Braun':
+            text_position = 'top center'
+            text_y += 7  # Move up even more
+        elif name == 'Hexagonal Station':
+            text_position = 'bottom right'
+            text_x += 2  # Move right more
+            text_y -= 4  # Move down more
+        elif name == '2035 AG Station':
+            text_position = 'top right'
+            text_y += 5  # Move up more
+            text_x += 2  # Move right slightly
+        elif name == 'Space Base':
+            text_position = 'top left'
+            text_x -= 3  # Move left more
+            text_y += 5  # Move up more
+        else:
+            text_position = 'middle right' if xanchor == 'left' else 'middle left'
+        
+        fig.add_trace(go.Scatter(
+            x=[text_x],
+            y=[text_y],
+            text=[name],
+            mode='text',
+            showlegend=False,
+            legendgroup='ag_stations',
+            textposition=text_position,
+            textfont=dict(
+                color='#2979FF',
+                size=12
+            ),
+            hoverinfo='skip',
+            texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
+        ))
+
+    # Add megastructure stations text
+    megastructure_station_names = [SPACE_STATIONS[i]['name'] for i in megastructure_indices]
+
+    # Add text for megastructure stations  
+    for i, name in enumerate(megastructure_station_names):
+        # Calculate positioning based on the station name
+        if name == 'Stanford Torus':
+            text_x = 102  # Position to the left of the star
+            text_y = 101
+            text_position = 'middle right'
+        elif name == "O'Neill Cylinder":
+            text_x = 94  # Position to the left of the star
+            text_y = 122  # Above the star
+            text_position = 'middle right'
+        else:
+            # Default positioning if we add more megastructures in the future
+            text_x = 110
+            text_y = 110
+            text_position = 'middle right'
+        
+        fig.add_trace(go.Scatter(
+            x=[text_x],
+            y=[text_y],
+            text=[name],
+            mode='text',
+            showlegend=False,
+            legendgroup='megastructure',
+            textposition=text_position,
+            textfont=dict(
+                color='#9C27B0',
+                size=14,
+                family='Arial Black'
+            ),
+            hoverinfo='skip',
+            texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 3px 6px; border-radius: 3px;">%{text}</span>'
+        ))
+
     # Update layout with improved spacing and fixed axis range
     fig.update_layout(
         xaxis=dict(
