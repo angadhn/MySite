@@ -1,5 +1,6 @@
 import plotly.graph_objects as go
 import numpy as np
+import math
 
 # Shared space station data
 SPACE_STATIONS = [
@@ -30,23 +31,32 @@ SPACE_STATIONS = [
         'has_gravity': True
     },
     {
-        'name': 'Stanford Torus',
-        'total_volume': 8233000,  # Approximate volume in cubic meters
-        'pressurised_volume': 8233000,
-        'habitable_volume': 8233000,  # Estimated 75% of total volume as habitable
-        'crew': 10000,
-        'is_real': False,
-        'has_gravity': True
+    'name': 'Stanford Torus',
+    'total_volume': 69220470,  # Correct volume in cubic meters
+    'pressurised_volume': 69220470,  # Assuming entire torus is pressurized
+    'habitable_volume': 34610235,  # Estimated 50% of total volume as habitable
+    'crew': 10000,  # Original NASA design specification
+    'is_real': False,
+    'has_gravity': True  # Via rotation
     },
     {
-        'name': "O'Neill Cylinder",
-        'total_volume': 1600000000,  # Approximate volume in cubic meters
-        'pressurised_volume': 1600000000,
-        'habitable_volume': 1200000000,  # Estimated 75% of total volume as habitable
-        'crew': 1000000,
-        'is_real': False,
-        'has_gravity': True
+    'name': "O'Neill Cylinder",
+    'total_volume': 1636828970203,  # Volume in cubic meters
+    'pressurised_volume': 1604092390799,  # 98% of total volume
+    'habitable_volume': 1227621727652,  # 75% of total volume as habitable
+    'crew': 1000000,  # Keeping original crew estimate
+    'is_real': False,
+    'has_gravity': True  # Via rotation
     },
+    {
+    'name': "O'Neill Cylinder (pair)",
+    'total_volume': 3273657940405,  # Volume in cubic meters
+    'pressurised_volume': 3208184781597,
+    'habitable_volume': 2455243455304,  # 75% of total volume as habitable
+    'crew': 2000000,  # Doubled crew estimate
+    'is_real': False,
+    'has_gravity': True  # Via rotation
+    }
 ]
 
 def get_station_colors(data):
@@ -158,9 +168,13 @@ def create_multidimensional_bubble_chart():
     # Add Stanford Torus as a megastructure
     stanford_torus_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Stanford Torus')
     stanford_torus = SPACE_STATIONS[stanford_torus_index]
+    stanford_torus_per_person = stanford_torus['habitable_volume'] / stanford_torus['crew']
+    
+    # Format values with appropriate significant figures
+    stanford_formatted = f"{stanford_torus_per_person/1000:.1f}K"  # Format as K for thousands
     
     fig.add_trace(go.Scatter(
-        x=[stanford_torus['habitable_volume'] / stanford_torus['crew']],
+        x=[110],  # Changed to 110
         y=[110],
         mode='markers',
         name='Megastructure',
@@ -173,15 +187,19 @@ def create_multidimensional_bubble_chart():
             symbol='star'
         ),
         hoverinfo='text',
-        hovertext=f"{stanford_torus['name']}<br>Habitable Volume per Astronaut: {stanford_torus['habitable_volume']/stanford_torus['crew']:,.2f} m³<br>Total Volume: {stanford_torus['total_volume']:,.2f} m³<br>Habitable Volume: {stanford_torus['habitable_volume']:,.2f} m³<br>Pressurised Volume: {stanford_torus['pressurised_volume']:,.2f} m³<br>Crew: {stanford_torus['crew']:,}"
+        hovertext=f"{stanford_torus['name']}<br>Habitable Volume per Astronaut: {stanford_formatted} m³<br>Total Volume: {stanford_torus['total_volume']:,.2f} m³<br>Habitable Volume: {stanford_torus['habitable_volume']:,.2f} m³<br>Pressurised Volume: {stanford_torus['pressurised_volume']:,.2f} m³<br>Crew: {stanford_torus['crew']:,}"
     ))
     
-    # Add O'Neill Cylinder as a megastructure at fixed x=120
+    # Add O'Neill Cylinder as a megastructure with fixed position
     oneill_cylinder_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == "O'Neill Cylinder")
     oneill_cylinder = SPACE_STATIONS[oneill_cylinder_index]
+    oneill_cylinder_per_person = oneill_cylinder['habitable_volume'] / oneill_cylinder['crew']
+    
+    # Format values with appropriate significant figures
+    oneill_formatted = f"{oneill_cylinder_per_person/1000000:.1f}M"  # Format as M for millions
     
     fig.add_trace(go.Scatter(
-        x=[120],
+        x=[120],  # Changed to 120
         y=[120],
         mode='markers',
         name='Megastructure',
@@ -195,7 +213,7 @@ def create_multidimensional_bubble_chart():
             symbol='star'
         ),
         hoverinfo='text',
-        hovertext=f"{oneill_cylinder['name']}<br>Habitable Volume per Astronaut: {oneill_cylinder['habitable_volume']/oneill_cylinder['crew']:,.2f} m³<br>Total Volume: {oneill_cylinder['total_volume']:,.2f} m³<br>Habitable Volume: {oneill_cylinder['habitable_volume']:,.2f} m³<br>Pressurised Volume: {oneill_cylinder['pressurised_volume']:,.2f} m³<br>Crew: {oneill_cylinder['crew']:,}"
+        hovertext=f"{oneill_cylinder['name']}<br>Habitable Volume per Astronaut: {oneill_formatted} m³<br>Total Volume: {oneill_cylinder['total_volume']:,.2f} m³<br>Habitable Volume: {oneill_cylinder['habitable_volume']:,.2f} m³<br>Pressurised Volume: {oneill_cylinder['pressurised_volume']:,.2f} m³<br>Crew: {oneill_cylinder['crew']:,}"
     ))
     
     # Add station name labels with improved positioning
@@ -238,7 +256,7 @@ def create_multidimensional_bubble_chart():
     
     # Add label for Stanford Torus
     fig.add_annotation(
-        x=stanford_torus['habitable_volume'] / stanford_torus['crew'],
+        x=110,  # Changed to 110
         y=110,
         text="Stanford Torus",
         showarrow=False,
@@ -256,7 +274,7 @@ def create_multidimensional_bubble_chart():
     
     # Add label for O'Neill Cylinder
     fig.add_annotation(
-        x=120,
+        x=120,  # Changed to 120
         y=120,
         text="O'Neill Cylinder",
         showarrow=False,
@@ -272,17 +290,17 @@ def create_multidimensional_bubble_chart():
         borderpad=2
     )
     
-    # Update layout with improved spacing and no title
+    # Update layout with improved spacing and fixed axis range
     fig.update_layout(
         xaxis=dict(
             title="Habitable Volume per Astronaut (cubic meters)",
-            type="linear",
+            type="linear",  # Using linear scale
             gridcolor='rgba(0,0,0,0)',
             zerolinecolor='rgba(0,0,0,0)',
-            range=[5, 130],
-            dtick=10,
-            ticktext=["5", "15", "25", "35", "45", "55", "65", "75", "85", "95", "105", "1000+"],
-            tickvals=[5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 105, 120]
+            range=[5, 130],  # Changed range to 5-130
+            tickmode='array',
+            tickvals=[20, 40, 60, 80, 100, 110, 120],
+            ticktext=["20", "40", "60", "80", "100", stanford_formatted, oneill_formatted],
         ),
         yaxis=dict(
             title="Crew Capacity (number of astronauts)",
