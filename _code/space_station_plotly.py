@@ -206,7 +206,8 @@ def create_multidimensional_bubble_chart():
         'ISS': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
         'Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=5),
         'Tiangong': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
-        'Skylab': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5)
+        'Skylab': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
+        'Haven-1': dict(xanchor='center', yanchor='bottom', xshift=0, yshift=15)
     }
     
     # Add annotations for each station
@@ -319,7 +320,7 @@ def create_multidimensional_bubble_chart():
     
     # Save as HTML with updated config
     fig.write_html(
-        'assets/plots/space_station_multidimensional.html',
+        'assets/plots/WiP1/space_station_multidimensional.html',
         config={
             'responsive': True,
             'displayModeBar': False,
