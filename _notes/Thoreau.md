@@ -31,7 +31,7 @@ Electronic money and modern taxation mechanisms diminish the possibility of an e
 
 The financial technological coupling is quite tight but social media is emerging as a second coupling mechanism. Today, social media companies have coffers[^11] and better tools to surveil and steer the decision making of its users, comparable in size to nation states . These companies maintain critical infrastructure for global communications, commerce, and information flow that rivals or exceeds what many nations can provide, showing how much more powerful they are than their platform's individual users as well as the governments. Their data, in my opinion, is not used as much for governance as it is in [influencing our choices during elections](https://www.aljazeera.com/opinions/2020/1/18/cambridge-analytica-and-the-end-of-elections). But we are seeing the emergence of new symbiotic relationships with government ranging from [companies recruiting former civil servants in the UK](https://www.bbc.co.uk/news/articles/cgrw785585wo) to [reimagining "government efficiency" in the US](https://edition.cnn.com/2024/08/12/politics/elon-trump-twitter-interview-x/index.html); heck, even the name for [DOGE emerged from X!](https://x.com/elonmusk/status/1825713824785379477){%sidenote 'DoGe' "It should be DoGE, by the way. DOGE would be Dept. Organising Govt. Efficiently."%}. This is leading to, as I see it, a two-party system of governance- a multivariable calculus that Thoreau didn't have to contend with- at least not in this way.
 
-![](assets/imgs/Doge.png)
+![](assets/imgs/Thoreau-1/Doge.png)
 
 I call the emerging two-party system an **oligotechnodemocracy**[^20]. The public, catching onto this form of governance, is expressing their discontent, targeting billionaire technologists via unconscionably violent acts of torching and defacing of Teslas across America and Europe by civilians. While certainly a form of disobedience, these are unfortunately not in keeping with Thoreau's spirit. However, it does expose the public acknowledging how such governing power has reached technologists via the crazy wealth gap.
 
@@ -46,14 +46,14 @@ Bernie Sanders has [repeated](https://www.politifact.com/factchecks/2019/jul/03/
 Reliable [_wealth_ by _wealth percentile_ data for 2024 is easy to find](https://www.federalreserve.gov/releases/z1/dataviz/dfa/distribute/chart/#range:2009.4,2024.4) but is nontrivial for Thoreau's time. Claude generated estimates without references for 1850s America but ChatGPT linked me to [this article](https://www.jstor.org/stable/1925000?saml_data=eyJpbnN0aXR1dGlvbklkcyI6WyIwMjIyZmFjMy1mZTBkLTRmMDAtYWNkOS1jNTg1ZDMyMTkyYTQiXSwic2FtbFRva2VuIjoiOTJiNzVlYzMtOTJjNy00ZDMwLWFkYzAtM2Y4NjI0OGI3MDY4In0&seq=1){% sidenote 'gptdata' 'Pretty good for the free tier!'%}; I compared data from Table 3 (which I hope I interpreted correctly) to Claude's numbers, which held up quite well! What we see is a steep increase over time in wealth concentration at the top 1% and steep declines in the latter categories. Today’s world is, indeed, very unequal.
 
 <div class="plot-container">
-  <iframe src="/assets/plots/wealth_distribution.html" frameborder="0"></iframe>
+  <iframe src="/assets/plots/Thoreau-1/wealth_distribution.html" frameborder="0"></iframe>
   <div class="marginal-caption">Wealth Distribution Comparison: Thoreau's Era vs Modern Era</div>
 </div>
 
 That the power law might be seen in slave ownership data for this period occured to me a little later. This is captured in census data on slave ownership in antebellum America, provided by the [Gilder Lehrman Institute of American History](https://www.gilderlehrman.org/history-resources/teaching-resource/statistics-slaves-and-slaveholdings?utm_source=chatgpt.com), and visualised below. Approximately 6.7% of white families with large plantations owned 84% of all enslaved people and over 76.1% of white families owned no slaves at all. The slave ownership pattern, using the red bars, could provide a proxy measure for economic stratification of that period; at least it appears a more data rich way to reach a conclusion about that period. The concentration of slave ownership in the 7-39 range accounts for 53% of enslaved people, suggesting a substantial "middle tier" of economic power. Perhaps this suggests a larger white middle class in Thoreau's times (in addition to their having more wealth than today) with the caveat that this data is limited to antebellum Southern USA so may not extrapolate to the rest of the country.
 
 <div class="plot-container">
-  <iframe src="/assets/plots/slave_ownership.html" frameborder="0"></iframe>
+  <iframe src="/assets/plots/Thoreau-1/slave_ownership.html" frameborder="0"></iframe>
   <div class="marginal-caption">Slave Ownership Distribution in the South (1860)</div>
 </div>
 

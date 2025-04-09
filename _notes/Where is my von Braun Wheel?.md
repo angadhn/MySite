@@ -18,14 +18,14 @@ While NASA's lunar focus delivered the historic moonshot, it dismantled a promis
 
 Had NASA maintained its parallel pursuit of artificial gravity, we might now have permanent orbital settlements supporting deep space missions rather than the limited outposts we've settled for. This historical pivot point matters today as commercial space companies contemplate artificial gravity again, potentially correcting a costly detour in humanity's path to becoming a spacefaring civilisation.
 
-![James Webb, the former NASA admin immortalised by the JWST, standing underneath a prototype of a von Braun Wheel](assets/imgs/WebbGoodYear.jpg)
+![James Webb, the former NASA admin immortalised by the JWST, standing underneath a prototype of a von Braun Wheel](assets/imgs/WiP1/WebbGoodYear.jpg)
 
 ## The need for artificial gravity
 Early space visionaries, such as Werner von Braun, strongly believed that settling the solar system required developing technologies to generate artificial gravity within orbiting habitats as- rephrasing [Heinlein](https://en.wikipedia.org/wiki/The_Moon_Is_a_Harsh_Mistress)- space is a harsh mistress. Modern-day astronauts [exercise a few hours each day](https://www.nasa.gov/wp-content/uploads/2015/05/167746main_fs_livingandworkinginspace508c.pdf) to overcome [microgravity](https://en.wikipedia.org/wiki/Weightlessness)'s effects on [the body](https://www.nature.com/articles/s41526-020-0095-y). von Braun was convinced that rotating-wheel space stations prevented such physiological problems and were thus ['as inevitable as the rising sun’](https://www.nasa.gov/humans-in-space/space-stations/)”. In these systems, humans live along the periphery of a wheel, within which they experience gravity due to the wheel's rotation. Popularised by von Braun in his 1949 sci-fi novel, _[Project Mars](https://en.wikipedia.org/wiki/Project_Mars:_A_Technical_Tale)_, and the [1956 Disney piece](https://www.youtube.com/watch?v=5JJL8CUfF-o), the concept actually traces back to [Herman Potočnik](https://en.wikipedia.org/wiki/Herman_Poto%C4%8Dnik#The_Problem_of_Space_Travel)'s 1929 book [_The Problem of Space Travel_](https://www.dlib.si/details/URN:NBN:SI:DOC-QK9YC09U). Its legacy is perhaps why many felt that an operational spinning station was, at best, a couple decades away.
 
-![Potocnik Concept art of a rotating space station.](assets/imgs/1929_potocnik_wheel.png)
+![Potocnik Concept art of a rotating space station.](assets/imgs/WiP1/1929_potocnik_wheel.png)
 
-![von Braun explaining the layout of his wheel-shaped station](assets/imgs/vonBraunWheel.jpg)
+![von Braun explaining the layout of his wheel-shaped station](assets/imgs/WiP1/vonBraunWheel.jpg)
 
 ## The difficulty of building large stations
 This elegant solution to generate artificial gravity, however, comes with a major engineering challenge. Much like a ferris wheel, the wheel's rotation could disorient astronauts if spun too fast. If the wheel spins slowly then its physics dictates it must be quite large. For example, one of von Braun's designs called for a massive 75 metre diameter wheel that generated lunar gravity if spun at 3 rpm and Earth-like gravity at 5 rpm- this range is considered [reasonable for astronauts](https://nss.org/wp-content/uploads/2017/07/Space-Settlement-Population-Rotation-Tolerance-Globus.pdf).
@@ -39,13 +39,13 @@ From today's vantage point, it is quite clear that the architectural bottleneck 
 From 1959 till 1962, NASA Langley explored various architectures to accelerate towards von Braun's vision enabled. A former Director of Aeronautical Research at NASA Langley, Larry Loftin, saw crewed stations as essential for manned exploration of the moon and planets following the success of Project Mercury. In keeping with this, he instigated a conference in 1959 to explore ideas at Langley, two of which were taken to the prototype stage. These early concepts are notable not only in their ambition in directly pursuing von Braun's vision but also for what now feels like a very counterintuitive way of realising large stations as "unitised" structures i.e., a single structure that eliminates or reduces the need for in-orbit assembly. An approach at odds with that used to assemble the ISS in-orbit, described above.
 
 The first unitised station idea explored the inflating large tyre tubes (obviously made by Goodyear!) into wheel-shaped space stations- this is what James Webb, the then NASA Administrator, is standing under in the opening image of this essay; the image below shows engineers walking within this tube.
-![source: https://archive.org/details/1962-L-00312](assets/imgs/1962-L-00312.jpg)
+![source: https://archive.org/details/1962-L-00312](assets/imgs/WiP1/1962-L-00312.jpg)
 
 Made from soft materials, like rubber and nylon, there were concerns that collisions with micrometeorites could puncture the station with fatal outcomes. So, a six-month contract in 1961 was awarded to North American Aviation to look into hexagonal space stations, one of Rene Berglund's many station concepts, made from six hinge-connected rigid pipes. A 15-foot prototype of this system was developed, based on the table-top concept shown below.
 
-![A deployable hexagonal space station  _source_: https://archive.org/details/1962-L-08732 ](assets/imgs/1962-L-08732.jpg)
+![A deployable hexagonal space station  _source_: https://archive.org/details/1962-L-08732 ](assets/imgs/WiP1/1962-L-08732.jpg)
 
-![The deployable hexagonal space station. _source_: https://archive.org/details/1962-L-08730](assets/imgs/1962-L-08730.jpg)
+![The deployable hexagonal space station. _source_: https://archive.org/details/1962-L-08730](assets/imgs/WiP1/1962-L-08730.jpg)
 
 This design folded neatly into a rocket for launch to later automatically deploy in-orbit; the rigidity of its habitable elements offered better protection to micrometeoroid collisions than Goodyear's rubber donut. Further, three inflatable tubes connected the habitats to a central hub via air-lock doors, which could be sealed in case of rupture. It was estimated that either system could be realised for $100 million (approximately a billion dollars in 2025) but, over time, the hexagonal station emerged as the most promising concept in Langley's Manned Space Laboratory Research Group. Space station R&D was one of the more active areas at Langley as NASA was unclear about the appropriate path to the moon and an orbiting station seemed like an appropriate purpose for crewed lunar and solar system exploration. Apollo would change everything- in May 1961, President Kennedy's landmark speech committed America to a lunar landing instead of the original plan to orbit the moon.
 ## The Apollo Applications Program: A Pivot Point
@@ -71,7 +71,7 @@ Possibly. The commercial potential for rotating space stations is gaining attent
 At the moment, Vast is developing smaller 0-g Haven stations and their 2035 plan is for a long spinning stick station; think of it as a two-bladed fan. This is a step in the right direction but the limiting feature of their design is that any artificial gravity will only be at the very ends of the sticks. Also, their stations continue to build on the modular Apollo-era technologies, which I think is questionable. One way to imagine this is by looking at the plot below, which shows the volume per astronaut alongside the size of the station. Vast's 2035 plans will likely be less comfortable than the ISS if one uses volume per astronaut; but this metric is in itself worth of questioning as artificial gravity stations should make use of area per person, like we do on Earth. For the first time since the Saturn rockets, Starship offers an opportunity to refocus efforts to develop unitised large space structures, that extend beyond the concepts developed at Langley.
 
 <div class="plot-container">
-  <iframe src="/assets/plots/space_station_multidimensional.html" frameborder="0"></iframe>
+  <iframe src="/assets/plots/WiP1/space_station_multidimensional.html" frameborder="0"></iframe>
   <div class="marginal-caption">Space Station Comparison: Volume per Astronaut vs Crew Capacity</div>
 </div>
 
