@@ -41,7 +41,7 @@ From 1959 till 1962, NASA Langley explored various architectures to accelerate t
 The first unitised station idea explored inflating large tyre tubes (obviously made by Goodyear!) into wheel-shaped space stations- this is what James Webb, the then NASA Administrator, is standing under in the opening image of this essay; the image below shows engineers walking within this tube.
 ![source: https://archive.org/details/1962-L-00312](assets/imgs/WiP1/1962-L-00312.jpg)
 
-Made from soft materials, like rubber and nylon, there were concerns that collisions with micrometeorites could puncture the station with fatal outcomes. So, a six-month contract in 1961 was awarded to North American Aviation to look into hexagonal space stations, one of Rene Berglund's many station concepts, made from six hinge-connected rigid pipes. A 15-foot prototype of this system was developed, based on the table-top concept shown below.
+Made from soft materials, like rubber and nylon, there were concerns that collisions with micrometeorites could puncture the station with fatal outcomes. So, a six-month contract was awarded in 1961 to North American Aviation to look into hexagonal space stations, one of Rene Berglund's many station concepts, made from six hinge-connected rigid pipes. A 15-foot prototype of this system was developed, based on the table-top concept shown below.
 
 ![A deployable hexagonal space station  _source_: https://archive.org/details/1962-L-08732 ](assets/imgs/WiP1/1962-L-08732.jpg)
 
