@@ -89,7 +89,7 @@ For the first time since the Saturn rockets, Starship offers an opportunity to r
 - Kelly and Zach Weinersmith’s “[A City on Mars: Can We Settle Space, Should We Settle Space, and Have We Really Thought This Through?](https://en.wikipedia.org/wiki/A_City_on_Mars)”
 - Robert Zubrin on [Why We Should Settle Mars](https://quillette.com/2023/12/04/why-we-should-go-to-mars/)
 - Casey Handmer on [Are modular space stations cost effective](https://caseyhandmer.wordpress.com/2019/06/26/are-modular-space-stations-cost-effective/)
-- Brian Potter on [Building Apollo](https://www.construction-physics.com/p/building-apollo)**
+- Brian Potter on [Building Apollo](https://www.construction-physics.com/p/building-apollo)
 
 
 <!--
