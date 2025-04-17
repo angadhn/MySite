@@ -31,7 +31,7 @@ $favicon-dark-color: #252a34;  // Matching your dark theme background
 
 body {
   box-sizing: content-box;
-  font-family: 'Gill Sans', $font-family;
+  font-family: $font-family;
   margin: 0 auto;
   line-height: 1.5;
   padding: 4vh 6vw;
@@ -1338,10 +1338,10 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   }
 
   &:first-line {
-    font-family: 'Fugue', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-family: $font-family;
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 1.2em;
     line-height: 1.5;
   }
 
