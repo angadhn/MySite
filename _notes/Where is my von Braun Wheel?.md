@@ -1,5 +1,5 @@
 ---
-title: Where is my von Braun Wheel?
+title: Where is my von Braun wheel?
 created: 2025-03-25
 published: 2025-03-27
 tags:
