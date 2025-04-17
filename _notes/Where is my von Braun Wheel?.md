@@ -91,7 +91,7 @@ For the first time since the Saturn rockets, Starship offers an opportunity to r
 - Casey Handmer on [Are modular space stations cost effective](https://caseyhandmer.wordpress.com/2019/06/26/are-modular-space-stations-cost-effective/)
 - Brian Potter on [Building Apollo](https://www.construction-physics.com/p/building-apollo)
 - Gary H. Kitmacher's paper [Design of the Space Station Habitable Modules](http://www.spacearchitect.org/pubs/IAC-02-IAA.8.2.04.pdf#page=12) at the 53<sup>rd</sup> IAC. Also [[IAC-02-IAA.8.2.04.pdf|here]].
-- Basic [QnA](https://space.stackexchange.com/questions/25526/why-does-the-iss-have-so-much-pressurized-but-uninhabitable-space)
+- Basic [QnA](https://space.stackexchange.com/questions/25526/why-does-the-iss-have-so-much-pressurized-but-uninhabitable-space).
 
 
 <!--
