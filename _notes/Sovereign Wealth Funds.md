@@ -4,6 +4,7 @@ created: 2025-02-09
 published: 2025-02-09
 tags:
   - economics
+  - essays
 permalink: /sovereignWealthFunds
 top_of_mind: "false"
 ---
