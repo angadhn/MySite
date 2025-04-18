@@ -8,7 +8,7 @@ tags:
   - essays
 permalink: /whereVonBraunWheel
 top_of_mind: "true"
-completion_score: 75
+completion_score: 80
 ---
 In 1962. There — that answers the clickbaity title right away.
 
