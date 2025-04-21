@@ -67,7 +67,7 @@ Despite these differences, the film still operates as science fiction under Dick
 I also examine "Harry Potter and the Philosopher's Stone" using Dick’s framework. This firmly sits in fantasy: its central premise of innate magical abilities contradicts known scientific principles and is generally regarded as impossible.
 1. **Conceptual Dislocation**: The world contains a hidden magical society existing alongside our ordinary world, completely separate and governed by entirely different rules.
 2. **The Great New Idea**: The central concept revolves around magic as an inherent ability possessed by certain people, with its own established rules and institutions that have existed parallel to our world for centuries.
-3. **Science Fiction vs. Fantasy Distinction**: The magical abilities depicted (casting spells, brewing potions with magical effects, magical creatures) are generally regarded as impossible under any scientific understanding.
+3. **Distinction as Fantasy**: The magical abilities depicted (casting spells, brewing potions with magical effects, magical creatures) are generally regarded as impossible under any scientific understanding.
 
 [^1]: I tried to parse it with Claude 3.7 Sonnet but, funnily enough, felt less effective at a minimal but complete set of rules.
 
