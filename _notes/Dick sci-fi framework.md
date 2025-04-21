@@ -14,6 +14,7 @@ According to Dick, a work qualifies as sci-fi if it has three core principles:
 1. **Conceptual Dislocation**: Creating a world and society that could exist but doesn't actually exist - a fictional world that differs from our reality in a significant, coherent way.
 2. **The Great New Idea**: This dislocation must be conceptual in nature - neither trivial nor bizarre, but a meaningful difference that generates _events_ impossible in our world.
 3. **Subjective Distinction from Fantasy**: Science fiction deals with what's generally regarded as possible under the right circumstances, whereas fantasy involves what's considered impossible. Dick says that this distinction is subjective, using the example of Ted Sturgeon's mutants to demonstrate how the same work could be science fiction or fantasy depending entirely on the reader's belief about what's possible[^3].
+
 # Application of Framework to Two Dick’s Novels
 Below are two of Dick's works evaluated against the three principles of novel-writing. He creates intricate worlds where characters' psychologies drive the narrative. Both books demonstrate how the novel form (as opposed to the story form) allows him to explore conceptual dislocations using well developed characters.​​​​​​​​​​​​​​​
 ## Do Androids Dream of Electric Sheep?
@@ -21,6 +22,7 @@ This novel centers on Deckard's psychological journey and moral development, wit
 1. **Conceptual dislocation**: A post-apocalyptic society where artificial beings are nearly indistinguishable from humans, and where natural animals are precious rarities, inverting traditional value systems.
 2. **Nature of dislocation**: The conceptual exploration of what constitutes humanity when the line between human and machine blurs. This is non-trivial as it challenges fundamental philosophical questions about consciousness, empathy, and authentic existence.
 3. **SF boundary**: The elements (advanced androids, mood organs, empathy boxes) exist in a realm readers could believe possible through technological advancement, placing it within science fiction rather than fantasy.
+
 ## The Man in the High Castle
 This novel examines its characters' inner lives and relationships as they navigate this altered reality, with their personalities driving their unique responses to the world rather than the plot dictating their behaviors.
 1. **Conceptual dislocation**: An alternate America divided between Japanese and German occupation following Axis victory in WWII, creating a society that could plausibly exist but doesn't.
