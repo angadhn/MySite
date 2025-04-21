@@ -9,7 +9,7 @@ top_of_mind: "false"
 completion_score: 45
 ---
 The author's foreword to [The Collected Stories of Philip K. Dick Volume 1](https://www.waterstones.com/book/the-collected-stories-of-philip-k-dick-volume-1/philip-k-dick/9781399611237) discusses the properties of science fiction. While interesting, I found it quite vague conveys and decided to extract a clearer ruleset from it[^1], which those aspiring to write in his style might find useful. Or it might help readers assess the sci-fi novels/stories[^2] through a Dickian lens. In this post, I present the framework and examine some of my recent readings as well as a couple movies (whose books I haven't read).
-# Dick’s framework for sci-fi
+# Dick’s Framework for Sci-Fi
 According to Dick, a work qualifies as sci-fi if it has three core principles:
 1. **Conceptual Dislocation**: Creating a world and society that could exist but doesn't actually exist - a fictional world that differs from our reality in a significant, coherent way.
 2. **The Great New Idea**: This dislocation must be conceptual in nature - neither trivial nor bizarre, but a meaningful difference that generates _events_ impossible in our world.
