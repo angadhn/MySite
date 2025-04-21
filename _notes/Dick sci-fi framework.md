@@ -14,7 +14,6 @@ According to Dick, a work qualifies as sci-fi if it has three core principles:
 1. **Conceptual Dislocation**: Creating a world and society that could exist but doesn't actually exist - a fictional world that differs from our reality in a significant, coherent way.
 2. **The Great New Idea**: This dislocation must be conceptual in nature - neither trivial nor bizarre, but a meaningful difference that generates _events_ impossible in our world.
 3. **Subjective Distinction from Fantasy**: Science fiction deals with what's generally regarded as possible under the right circumstances, whereas fantasy involves what's considered impossible. Dick says that this distinction is subjective, using the example of Ted Sturgeon's mutants to demonstrate how the same work could be science fiction or fantasy depending entirely on the reader's belief about what's possible[^3].
-
 # Application of Framework to Two Dick’s Novels
 Below are two of Dick's works evaluated against the three principles of novel-writing. He creates intricate worlds where characters' psychologies drive the narrative. Both books demonstrate how the novel form (as opposed to the story form) allows him to explore conceptual dislocations using well developed characters.​​​​​​​​​​​​​​​
 ## Do Androids Dream of Electric Sheep?
@@ -49,6 +48,7 @@ This aligns really nicely to Dick's sci-fi model:
 The film is notable as it exemplifies Dick's principle that science fiction isn't defined by futuristic technology or setting, but by its conceptual transformation of society. "Children of Men" contains few technological advances (at least not central to the plot line) beyond our world, focusing instead on societal regression in response to the fertility crisis.
 Movies are typically “novels” as they’re driven by characters and this centers on Theo's psychological journey and moral awakening, with his character development driving the narrative rather than the plot merely pushing him through events. His actions emerge organically from his evolving perspective as he rediscovers purpose in a seemingly hopeless world.
 The film is also a great example of Dick's view that _good_ science fiction uses its conceptual premise to explore profound questions about humanity, society, and existence itself.​​​​​​​​​​​​​​​​
+
 ## The Prestige(film)
 **The Prestige** film adaptation largely adheres to Dick's model of science fiction, much like the novel, though with some notable differences in how it handles the material:
 1. **Conceptual dislocation**: The film retains the same fundamental science fiction premise—Tesla's machine that can create perfect duplicates of a human. This creates a world nearly identical to Victorian reality but with one impossible technological element.
