@@ -62,6 +62,7 @@ The film is also a great example of Dick's view that _good_ science fiction uses
 4. **Tesla's role**: The film expands Tesla's character and makes his scientific contribution more central and explicit than in the novel.
 5. **Emphasis on rivalry**: The film focuses more intently on the direct rivalry between Angier and Borden, heightening the thriller elements at the expense of some of the novel's philosophical rumination.
 Despite these differences, the film still operates as science fiction under Dick's principles—it creates a conceptual dislocation through a coherent (if impossible) scientific advancement that transforms the protagonists' reality, and it explores how this change impacts human psychology and identity. The film retains enough character development and psychological exploration to function more as a "novel" than a mere "story" in Dick's framework, even with its more streamlined approach.​​​​​​​​​​​​​​​​
+
 # Fantasy and the Dickian framework
 I also examine "Harry Potter and the Philosopher's Stone" using Dick’s framework. This firmly sits in fantasy: its central premise of innate magical abilities contradicts known scientific principles and is generally regarded as impossible.
 1. **Conceptual Dislocation**: The world contains a hidden magical society existing alongside our ordinary world, completely separate and governed by entirely different rules.
