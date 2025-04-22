@@ -32,12 +32,18 @@ This elegant solution to generate artificial gravity, however, comes with a majo
 
 However, the physics of rockets presents a different obstacle as it must be slender, like an arrow, to escape Earth's gravity well and reach orbit. This defines the main upstream engineering challenge: how can we fit enormous space structures into slender rockets? For context, even Starship's [upper-stage](https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)), which is about 9 metres wide and 22 metres tall cannot fit von Braun's conceptual station in a straightforward manner.
 
+<!--
+{% marginfigure 'Stanford-1' "assets/imgs/WiP1/StanfordTorus.jpg" "The Stanford Torus concept for 10,000 space settlers was proposed during the 1975 NASA Summer Study." %}
+
+{% marginfigure 'ONeill-1' "assets/imgs/WiP1/ONeillCylinder.jpg" ""The O'Neill cylinder proposed in 1976 by Gerard O'Neill."" %}
+-->
+
 Architects of the International Space Station (ISS), the largest space structure ever built, tackled a similar packing problem using multiple smaller spacecraft which connect, like space Ikea, into a structure greater than its parts. Such in-space assembly involves spacecraft either gently crashing into each other at specific connection points (a manoeuvre called [rendezvous and docking](https://www.nasa.gov/reference/jsc-rendezvous-prox-ops-docking-subsystems/)) as well as [astronauts and space cranes](https://en.wikipedia.org/wiki/Mobile_Servicing_System) supporting finer assembly tasks. While this works great in theory, the ISS's assembly needed over 40 rocket launches spanning several years (and even more launches for cargo resupply and repairs). More damning is the typical ISS crew size of 7, which is a little over twice that of the first ever space station, Salyut, from 1972. Clearly 50 years of space station development does not indicate that such modular in-orbit assembly will scale to von Braun’s [anticipated 80 humans](https://en.wikipedia.org/wiki/Rotating_wheel_space_station#:~:text=It%20was%20envisaged%20as%20having%20a%20crew%20of%C2%A080) or, more relevant today, Starship’s [100](https://www.spacex.com/media/starship_users_guide_v1.pdf) any time soon. Civilisation-scale megastructures like the Stanford Torus and O'Neill cylinders appear even more outlandish to discuss today than when they were first proposed in the 70s.
 
 ![The Stanford Torus concept for 10,000 space settlers was proposed during the 1975 NASA Summer Study.](assets/imgs/WiP1/StanfordTorus.jpg)
 
-{% maincolumn "assets/imgs/WiP1/ONeillCylinder.jpg" "The O'Neill cylinder proposed in 1976 by Gerard O'Neill." %}
-![The O'Neill cylinder proposed in 1976.](assets/imgs/WiP1/ONeillCylinder.jpg)
+{% marginnote 'ONeillcylinder' "The O'Neill cylinder proposed in 1976 by Gerard O'Neill."  %}
+![](assets/imgs/WiP1/ONeillCylinder.jpg)
 
 From this vantage point, it is quite clear that the architectural bottleneck is a technology running through all operational space stations so far: their use of small 'tin can' modular spacecraft as the centrepiece for assembly, which is a legacy of Apollo. This, in my opinion, is unfit for building large space stations at scale or speed. But how did we get here? To understand this, we need to look into the pre-Apollo era space technology development programs and the consequence of Apollo's announcement on them.
 ## A pre-Apollo solution: unitised stations
