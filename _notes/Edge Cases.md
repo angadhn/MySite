@@ -1,7 +1,13 @@
 ---
 title: Edge Cases
 date: 2020-04-13 17:04:01
-tags: site
+tags:
+  - site
+created: 2025-02-01
+published: 2025-02-01
+permalink: /ThisSiteEdgeCases
+top_of_mind: "false"
+completion_score: 90
 ---
 Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
 <!--more-->
@@ -164,5 +170,5 @@ Example of the proper way to write an url inside a *Liquid* full-width image tag
 
 This code: ```{{ '{% fullwidth "assets/img/rhino.png" "Tuftes pet rhino (via <a href=\"//www.edwardtufte.com/tufte/\">Edward Tufte</a>)" ' }} %}```
 
-produces the following image with a title. Notice that I have had to escape the double quotes in the HTML with a backslash. Also, the example above leaves out the single quote in 'Tufte's" because of the topsy-turvy way that you have to escape the escapes in code sections that are used for illustrative purposes in this text. Bottom line is that there are occasionally some odd interactions between the Markdown parser, custom *Liquid* tags and HTML.
+produces the following image with a title. Notice that I have had to escape the double quotes in the HTML with a backslash. Also, the example above leaves out the single quote in _Tufte's_ because of the topsy-turvy way that you have to escape the escapes in code sections that are used for illustrative purposes in this text. Bottom line is that there are occasionally some odd interactions between the Markdown parser, custom *Liquid* tags and HTML.
 {% fullwidth "assets/OldSite/rhino.png" "Tufte's pet rhino (via [Edward Tufte](www.edwardtufte.com/tufte/))" %}

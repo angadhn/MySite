@@ -36,7 +36,8 @@ Architects of the International Space Station (ISS), the largest space structure
 
 ![The Stanford Torus concept for 10,000 space settlers was proposed during the 1975 NASA Summer Study.](assets/imgs/WiP1/StanfordTorus.jpg)
 
-![The O'Neill cylinder proposed in 1976 by Gerard O'Neill.](assets/imgs/WiP1/ONeillCylinder.jpg)
+{% maincolumn "assets/imgs/WiP1/ONeillCylinder.jpg" "The O'Neill cylinder proposed in 1976 by Gerard O'Neill" %}
+![The O'Neill cylinder proposed in 1976.](assets/imgs/WiP1/ONeillCylinder.jpg)
 
 From this vantage point, it is quite clear that the architectural bottleneck is a technology running through all operational space stations so far: their use of small 'tin can' modular spacecraft as the centrepiece for assembly, which is a legacy of Apollo. This, in my opinion, is unfit for building large space stations at scale or speed. But how did we get here? To understand this, we need to look into the pre-Apollo era space technology development programs and the consequence of Apollo's announcement on them.
 ## A pre-Apollo solution: unitised stations
