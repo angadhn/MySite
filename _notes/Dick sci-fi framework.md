@@ -51,6 +51,8 @@ Movies are typically “novels” as they’re driven by characters and this cen
 The film is also a great example of Dick's view that _good_ science fiction uses its conceptual premise to explore profound questions about humanity, society, and existence itself.​​​​​​​​​​​​​​​​
 
 ## The Prestige(film)
+> Obsession is a young man’s game.
+
 **The Prestige** film adaptation largely adheres to Dick's model of science fiction, much like the novel, though with some notable differences in how it handles the material:
 1. **Conceptual dislocation**: The film retains the same fundamental science fiction premise—Tesla's machine that can create perfect duplicates of a human. This creates a world nearly identical to Victorian reality but with one impossible technological element.
 2. **Nature of dislocation**: The film maintains the conceptual exploration of identity, sacrifice, and obsession when perfect duplication becomes possible. However, the film emphasizes the rivalry and psychological warfare between the magicians more prominently than some of the novel's deeper philosophical examinations of identity.
@@ -64,7 +66,7 @@ The film is also a great example of Dick's view that _good_ science fiction uses
 5. **Emphasis on rivalry**: The film focuses more intently on the direct rivalry between Angier and Borden, heightening the thriller elements at the expense of some of the novel's philosophical rumination.
 Despite these differences, the film still operates as science fiction under Dick's principles—it creates a conceptual dislocation through a coherent (if impossible) scientific advancement that transforms the protagonists' reality, and it explores how this change impacts human psychology and identity. The film retains enough character development and psychological exploration to function more as a "novel" than a mere "story" in Dick's framework, even with its more streamlined approach.​​​​​​​​​​​​​​​​
 
-# Fantasy and the Dickian framework
+# Fantasy in the Dickian framework
 I also examine "Harry Potter and the Philosopher's Stone" using Dick’s framework. This firmly sits in fantasy: its central premise of innate magical abilities contradicts known scientific principles and is generally regarded as impossible.
 1. **Conceptual Dislocation**: The world contains a hidden magical society existing alongside our ordinary world, completely separate and governed by entirely different rules.
 2. **The Great New Idea**: The central concept revolves around magic as an inherent ability possessed by certain people, with its own established rules and institutions that have existed parallel to our world for centuries.
