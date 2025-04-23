@@ -348,14 +348,14 @@ def create_multidimensional_bubble_chart():
         text_y = ag_y[i]
         
         # Adjust position based on the station name
-        if name == 'von Braun':
+        if name == 'von Braun wheel':
             text_position = 'top center'
             text_y += 7  # Move up even more
-        elif name == 'Hexagonal Station':
+        elif name == '1961 Hexagonal Station':
             text_position = 'bottom right'
             text_x += 2  # Move right more
             text_y -= 4  # Move down more
-        elif name == '2035 AG Station':
+        elif name == '2035 Vast Station':
             text_position = 'top right'
             text_y += 5  # Move up more
             text_x += 2  # Move right slightly
