@@ -62,7 +62,6 @@ This design also folded neatly into a rocket for launch to later deploy in-orbit
 
 Space station R&D was one of the more active areas at Langley as NASA was unclear about the appropriate path to the moon and an orbiting station seemed like an appropriate precursor to crewed lunar and solar system exploration. Apollo would change everything — in May 1961, President Kennedy's landmark speech committed America to a lunar landing instead of the original plan to merely orbit the moon.
 ## The Apollo Applications Program: A Pivot Point
-*[[Draft]] contains a new version of this section.*
 
 The Langley team's grand vision for artificial gravity space stations was systematically sidelined by Apollo program priorities, budget constraints, and shifting administrative focus (especially post-Apollo). This transformation represents a critical inflection point in space development: a move from ambitious long-term planning to pragmatic incrementalism that continues to shape space exploration today.
 
