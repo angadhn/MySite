@@ -54,7 +54,7 @@ The first unitised station idea explored inflating large tyre tubes (obviously m
 
 Made from soft materials, like rubber and nylon, there were concerns that collisions with micrometeorites could puncture the station with fatal outcomes. So, a six-month contract was awarded in 1961 to North American Aviation to look into hexagonal space stations, one of Rene Berglund's many station concepts, made from six hinge-connected rigid pipes. A 15-foot prototype of this system was developed, based on the table-top concept shown below.
 
-![The packed version of North American's deployable hexagonal space station  _source_: https://archive.org/details/1962-L-08732](assets/imgs/WiP1/1962-L-08732.jpg)
+![The packed version of the North American deployable hexagonal space station  _source_: https://archive.org/details/1962-L-08732](assets/imgs/WiP1/1962-L-08732.jpg)
 
 ![The hexagonal space station when fully deployed. _source_: https://archive.org/details/1962-L-08730](assets/imgs/WiP1/1962-L-08730.jpg)
 
