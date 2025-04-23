@@ -9,7 +9,7 @@ top_of_mind: "false"
 completion_score: 100
 image: /assets/imgs/Personal/LondonLove-1.jpg
 ---
-![](assets/imgs/Personal/LondonLove-1.png)
+![](assets/imgs/Personal/LondonLove-1.jpg)
 
 I often run into people who dunk on London (& the UK/Europe generally) a lot.
 
