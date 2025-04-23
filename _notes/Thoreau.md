@@ -10,6 +10,7 @@ permalink: /thoreau-1
 top_of_mind: "true"
 memorable phrases: Peaceable revolution, Civil disobedience
 completion_score: 80
+image: /assets/imgs/Thoreau-1/Thoreau.jpg
 ---
 > When I meet a government which says to me, "Your money or your life," why should I be in haste to give it my money? It may be in a great strait, and not know what to do: I cannot help that. It must help itself; do as I do.
 
