@@ -9,7 +9,7 @@ tags:
 permalink: /whereVonBraunWheel
 top_of_mind: "false"
 completion_score: 80
-image: assets/imgs/WiP1/WebbGoodYear.jpg
+image: /assets/imgs/WiP1/WebbGoodYear.jpg
 ---
 In 1962. There — that answers the clickbaity title right away.
 

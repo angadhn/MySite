@@ -7,7 +7,7 @@ tags:
 permalink: London-1
 top_of_mind: "false"
 completion_score: 100
-image: assets/imgs/Personal/LondonLove-1.png
+image: /assets/imgs/Personal/LondonLove-1.png
 ---
 ![](assets/imgs/Personal/LondonLove-1.png)
 
