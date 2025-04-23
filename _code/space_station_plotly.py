@@ -18,11 +18,11 @@ SPACE_STATIONS = [
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
     
     # Conceptual designs
-    {'name': 'von Braun', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'has_gravity': True},
+    {'name': 'von Braun wheel', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'has_gravity': True},
     {'name': 'Space Base', 'total_volume': 5921, 'pressurised_volume': 3600, 'habitable_volume': 3600, 'crew': 100, 'is_real': False, 'has_gravity': True},
     {'name': 'Hexagonal Station', 'total_volume': 1274.3, 'pressurised_volume': 980, 'habitable_volume': 980, 'crew': 36, 'is_real': False, 'has_gravity': True},
     {
-        'name': '2035 AG Station',
+        'name': '2035 Vast Station',
         'total_volume': 2160,  # Using pressurized volume as total volume
         'pressurised_volume': 2160,
         'habitable_volume': 950,
@@ -222,7 +222,7 @@ def create_multidimensional_bubble_chart():
     # Add station name labels with improved positioning
     label_positions = {
         'Salyut-1': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=-10),
-        'von Braun': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=15),
+        'von Braun wheel': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=15),
         'Hexagonal Station': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
         'ISS': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
         'Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=12),
@@ -351,7 +351,7 @@ def create_multidimensional_bubble_chart():
         if name == 'von Braun wheel':
             text_position = 'top center'
             text_y += 7  # Move up even more
-        elif name == '1961 Hexagonal Station':
+        elif name == 'Hexagonal Station':
             text_position = 'bottom right'
             text_x += 2  # Move right more
             text_y -= 4  # Move down more
@@ -359,7 +359,7 @@ def create_multidimensional_bubble_chart():
             text_position = 'top right'
             text_y += 5  # Move up more
             text_x += 2  # Move right slightly
-        elif name == '1968 Space Base':
+        elif name == 'Space Base':
             text_position = 'top left'
             text_x -= 3  # Move left more
             text_y += 5  # Move up more
