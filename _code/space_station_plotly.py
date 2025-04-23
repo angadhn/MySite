@@ -359,7 +359,7 @@ def create_multidimensional_bubble_chart():
             text_position = 'top right'
             text_y += 5  # Move up more
             text_x += 2  # Move right slightly
-        elif name == 'Space Base':
+        elif name == '1968 Space Base':
             text_position = 'top left'
             text_x -= 3  # Move left more
             text_y += 5  # Move up more
