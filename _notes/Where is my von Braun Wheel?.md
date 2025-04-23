@@ -1,14 +1,15 @@
 ---
 title: Where is my von Braun wheel?
 created: 2025-03-25
-published: 2025-03-27
+published: ""
 tags:
   - space
   - stations
   - essays
 permalink: /whereVonBraunWheel
-top_of_mind: "true"
+top_of_mind: "false"
 completion_score: 80
+image: assets/imgs/WiP1/WebbGoodYear.jpg
 ---
 In 1962. There — that answers the clickbaity title right away.
 

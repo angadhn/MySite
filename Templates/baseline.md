@@ -5,5 +5,6 @@ published: ""
 tags: 
 permalink: 
 top_of_mind: "false"
-completion_score:
+completion_score: 
+image:
 ---
