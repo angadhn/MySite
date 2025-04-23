@@ -1,7 +1,7 @@
 ---
 title: My first week in London
 created: 2025-04-23
-published: ""
+published: 2025-04-23
 tags:
   - personal
 permalink: London-1
