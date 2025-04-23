@@ -19,7 +19,7 @@ While NASA's lunar focus delivered the historic moonshot, it dismantled a promis
 
 Had NASA maintained its parallel pursuit of artificial gravity, we might now have permanent orbital settlements supporting deep space missions rather than the limited outposts we've settled for. This historical pivot point matters today as commercial space companies contemplate artificial gravity again, potentially correcting a costly detour in humanity's path to becoming a spacefaring civilisation.
 
-![James Webb, the former NASA admin immortalised by the JWST, standing underneath a prototype of a von Braun Wheel](assets/imgs/WiP1/WebbGoodYear.jpg)
+![James Webb, the former NASA administrator immortalised by the JWST, standing underneath a prototype of a von Braun Wheel](assets/imgs/WiP1/WebbGoodYear.jpg)
 
 ## The need for artificial gravity
 Early space visionaries, such as Werner von Braun, strongly believed that settling the solar system required developing technologies to generate artificial gravity within orbiting habitats as — rephrasing [Heinlein](https://en.wikipedia.org/wiki/The_Moon_Is_a_Harsh_Mistress) — space is a harsh mistress. Modern-day astronauts [exercise a few hours each day](https://www.nasa.gov/wp-content/uploads/2015/05/167746main_fs_livingandworkinginspace508c.pdf) to overcome [microgravity](https://en.wikipedia.org/wiki/Weightlessness)'s effects on [the body](https://www.nature.com/articles/s41526-020-0095-y). von Braun was convinced that rotating wheel space stations prevented such physiological problems and were thus ['as inevitable as the rising sun’](https://www.nasa.gov/humans-in-space/space-stations/)”. In these systems, humans live along the periphery of a wheel, within which they experience gravity due to the wheel's rotation. Popularised by von Braun in his 1949 sci-fi novel, _[Project Mars](https://en.wikipedia.org/wiki/Project_Mars:_A_Technical_Tale)_, and the [1956 Disney piece](https://www.youtube.com/watch?v=5JJL8CUfF-o), the concept actually traces back to [Herman Potočnik](https://en.wikipedia.org/wiki/Herman_Poto%C4%8Dnik#The_Problem_of_Space_Travel)'s 1929 book [_The Problem of Space Travel_](https://www.dlib.si/details/URN:NBN:SI:DOC-QK9YC09U). Its legacy is perhaps why many felt that an operational spinning station was, at best, a couple decades away.
@@ -43,8 +43,7 @@ Architects of the International Space Station (ISS), the largest space structure
 
 ![The Stanford Torus concept for 10,000 space settlers was proposed during the 1975 NASA Summer Study.](assets/imgs/WiP1/StanfordTorus.jpg)
 
-{% marginnote 'ONeillcylinder' "The O'Neill cylinder proposed in 1976 by Gerard O'Neill."  %}
-![](assets/imgs/WiP1/ONeillCylinder.jpg)
+![The O'Neill cylinder was proposed in 1976 by Gerard O'Neill.](assets/imgs/WiP1/ONeillCylinder.jpg)
 
 From this vantage point, it is quite clear that the architectural bottleneck is a technology running through all operational space stations so far: their use of small 'tin can' modular spacecraft as the centrepiece for assembly, which is a legacy of Apollo. This, in my opinion, is unfit for building large space stations at scale or speed. But how did we get here? To understand this, we need to look into the pre-Apollo era space technology development programs and the consequence of Apollo's announcement on them.
 ## A pre-Apollo solution: unitised stations

@@ -19,8 +19,8 @@ module Jekyll
       content.gsub(/!\[(.*?)\]\((.*?)\)/) do |match|
         caption = $1.empty? ? '' : $1
         image_path = $2.sub(/^\//, '') # Remove leading slash if present
-        # Format without square brackets, just single quotes
-        "{% maincolumn '#{image_path}' '#{caption}' %}"
+        # Format with single quotes for path, double quotes for caption
+        "{% maincolumn '#{image_path}' \"#{caption}\" %}"
       end
     end
   end
@@ -43,6 +43,6 @@ def convert_images(doc)
   doc.content.gsub!(/(?<!\[)!\[(.*?)\]\((.*?)\)/) do |match|
     caption = $1.empty? ? 'Imagine a caption' : $1
     image_path = $2.sub(/^\//, '')
-    "{% maincolumn '#{image_path}' '#{caption}' %}"
+    "{% maincolumn '#{image_path}' \"#{caption}\" %}"
   end
 end 
