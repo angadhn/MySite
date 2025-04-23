@@ -16,7 +16,9 @@ module Jekyll
     end
 
     def convert(content)
-      content.gsub(/!\[(.*?)\]\((.*?)\)/) do |match|
+      # This regex will handle normal image syntax but preserve links within captions
+      # It will match ![caption](image) where caption can contain [text](url) links
+      content.gsub(/!\[((?:\[(?:[^\[\]]|\[.*?\])*?\]\([^()]*?\)|.)*?)\]\((.*?)\)/) do |match|
         caption = $1.empty? ? '' : $1
         image_path = $2.sub(/^\//, '') # Remove leading slash if present
         # Format with single quotes for path, double quotes for caption
@@ -38,9 +40,8 @@ Jekyll::Hooks.register [:pages], :pre_render do |doc|
 end
 
 def convert_images(doc)
-  # Match standard Markdown image syntax
-  # Using negative lookbehind to ensure it's not part of a wiki-link
-  doc.content.gsub!(/(?<!\[)!\[(.*?)\]\((.*?)\)/) do |match|
+  # Use the same improved regex here to handle links in captions
+  doc.content.gsub!(/(?<!\[)!\[((?:\[(?:[^\[\]]|\[.*?\])*?\]\([^()]*?\)|.)*?)\]\((.*?)\)/) do |match|
     caption = $1.empty? ? 'Imagine a caption' : $1
     image_path = $2.sub(/^\//, '')
     "{% maincolumn '#{image_path}' \"#{caption}\" %}"

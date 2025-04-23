@@ -50,13 +50,13 @@ From this vantage point, it is quite clear that the architectural bottleneck is 
 From 1959 till 1962, NASA Langley explored various architectures to accelerate towards von Braun's vision. A former Director of Aeronautical Research at NASA Langley, Larry Loftin, saw these stations as essential to crewed exploration of our Moon and planets following the success of Project Mercury. In keeping with this, he instigated a conference in 1959 to explore ideas at Langley, two of which were taken to the prototype stage. These early concepts are notable not only for their ambition in directly pursuing von Braun's vision but also for what now feels like a very counterintuitive way of realising large stations as "unitised" structures i.e., a single structure that eliminates or reduces the need for in-orbit assembly. An approach at odds with the space IKEA philosophy used to assemble the ISS in-orbit.
 
 The first unitised station idea explored inflating large tyre tubes (obviously made by Goodyear!) into wheel-shaped space stations — this is what James Webb, the then NASA Administrator, is standing under in the opening image of this essay; the image below shows engineers walking within this tube.
-![Engineers walking inside the Goodyear torus. source: https://archive.org/details/1962-L-00312](assets/imgs/WiP1/1962-L-00312.jpg)
+![[Engineers walking inside the Goodyear torus](https://archive.org/details/1962-L-00312)](assets/imgs/WiP1/1962-L-00312.jpg)
 
 Made from soft materials, like rubber and nylon, there were concerns that collisions with micrometeorites could puncture the station with fatal outcomes. So, a six-month contract was awarded in 1961 to North American Aviation to look into hexagonal space stations, one of Rene Berglund's many station concepts, made from six hinge-connected rigid pipes. A 15-foot prototype of this system was developed, based on the table-top concept shown below.
 
-![The packed version of the North American deployable hexagonal space station  _source_: https://archive.org/details/1962-L-08732](assets/imgs/WiP1/1962-L-08732.jpg)
+![[The packed version of the North American deployable hexagonal space station](https://archive.org/details/1962-L-08732)](assets/imgs/WiP1/1962-L-08732.jpg)
 
-![The hexagonal space station when fully deployed. _source_: https://archive.org/details/1962-L-08730](assets/imgs/WiP1/1962-L-08730.jpg)
+![[The hexagonal space station when fully deployed](https://archive.org/details/1962-L-08730)](assets/imgs/WiP1/1962-L-08730.jpg)
 
 This design also folded neatly into a rocket for launch to later deploy in-orbit automatically; the rigidity of its habitable elements also ensured better protection to micrometeorite collisions than Goodyear's rubber donut. Further, another three inflatable pipes connected the rigid peripheral habitats to a central hub via air-lock doors, which could be sealed in case of rupture. Loftin’s Langley team estimated that either system could be realised for $100 million (approximately a billion dollars in 2025) but, over time, the hexagonal station emerged as the most promising concept in Langley's Manned Space Laboratory Research Group.
 
