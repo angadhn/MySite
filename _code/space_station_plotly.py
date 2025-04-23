@@ -73,7 +73,7 @@ def get_station_colors(data):
 
 def create_multidimensional_bubble_chart():
     # Filter out the mega-stations and Salyut-1 for plotting
-    excluded_stations = ['MORL', 'LORL']  # Now excluding MORL and LORL
+    excluded_stations = []  # Now excluding MORL and LORL
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
@@ -225,10 +225,12 @@ def create_multidimensional_bubble_chart():
         'von Braun': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=15),
         'Hexagonal Station': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
         'ISS': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
-        'Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=5),
+        'Gateway': dict(xanchor='right', yanchor='bottom', xshift=-15, yshift=12),
         'Tiangong': dict(xanchor='left', yanchor='middle', xshift=25, yshift=0),
         'Skylab': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
-        'Haven-1': dict(xanchor='center', yanchor='bottom', xshift=0, yshift=15)
+        'Haven-1': dict(xanchor='center', yanchor='bottom', xshift=0, yshift=15),
+        'LORL': dict(xanchor='left', yanchor='top', xshift=15, yshift=-10),
+        'MORL': dict(xanchor='left', yanchor='top', xshift=15, yshift=-10)
     }
     
     # Create text labels with the same legend groups
@@ -254,7 +256,7 @@ def create_multidimensional_bubble_chart():
         
         # Adjust position based on the station name
         if name == 'Gateway':
-            text_position = 'top center'  # Changed to top center
+            text_position = 'top left'  # Changed to top center
             text_y += 4  # Move up even more
         elif name == 'Haven-1':
             text_position = 'top center'  # Keep top center
@@ -263,6 +265,14 @@ def create_multidimensional_bubble_chart():
             text_position = 'top right'
             text_y += 3  # Move up slightly
             text_x += 3  # Move right slightly
+        elif name == 'LORL':
+            text_position = 'middle right'
+            text_x += 4  # Move right more
+            text_y -= 3  # Move down slightly
+        elif name == 'MORL':
+            text_position = 'top center'
+            text_x += 0  # No horizontal shift
+            text_y += 5  # Move up more to place it above the circle
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
