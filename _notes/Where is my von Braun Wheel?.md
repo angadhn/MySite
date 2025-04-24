@@ -78,8 +78,8 @@ Eventually Skylab — America's first space station — would launch in 1973 on 
 Post-Apollo, NASA dropped the parallelised program strategy instead adopting an incremental approach to space development. As a result, the Space Shuttle became the 'logical successor' and parallel pursuits of ambitious space station programs were abandoned. Meanwhile, the Soviet Union, having shifted focus from lunar landings, launched their Salyut program followed by Mir—conceptually similar to NASA's scaled-down Manned Orbiting Research Laboratory rather than the ambitious rotating stations.
 
 The early visions of large crews living in rotating structures with artificial gravity now appear as relics relegated to a more optimistic era—one where space architecture was designed for repeatability and scale that could have yielded greater scientific output while answering fundamental questions about artificial gravity's effects on human health that remain unstudied to this day.
-
 ## Closing Remarks
+
 This is probably a good time to note that I am quite critical of Apollo and it is also in fashion to NASA-bash right now. But, I do actually maintain the view that just like it’s better to have loved and lost than to not have loved at all, it’s also better to have Apollo’d and stopped than to never have Apollo’d at all.
 
 If one thinks of 1960s NASA as a presidential project to "put man on the Moon" then it's easy to compare it to SpaceX — an organisation that excels at solving complex engineering challenges when given a focus, whether it was Apollo's lunar landings or the Space Shuttle's reusable orbiter development. More recently, this capability is perhaps best exemplified by JPL's remarkable track record with Mars missions: their evolution from early Viking landers to the sophisticated Curiosity and Perseverance rovers demonstrates an ability to build on experience and consistently execute challenging interplanetary missions.
