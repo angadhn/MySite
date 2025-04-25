@@ -3,8 +3,7 @@ layout: page
 title: Anecdotes
 permalink: /anecdotes/
 ---
-
-The below are random personal anecdotes.
+## Personal Anecdotes
 
 <div class="essays-list" style="font-size: 0.9em;">
 {% assign notes_with_anecdotes = site.notes | where_exp: "note", "note.tags contains 'anecdotes'" | sort: "published" | reverse %}
