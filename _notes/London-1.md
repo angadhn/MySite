@@ -3,7 +3,7 @@ title: My first week in London
 created: 2025-04-23
 published: 2025-04-23
 tags:
-  - personal
+  - anecdotes
 permalink: London-1
 top_of_mind: "false"
 completion_score: 100
