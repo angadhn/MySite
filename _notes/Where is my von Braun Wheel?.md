@@ -75,6 +75,8 @@ The competition for Saturn V rockets further limited station development. NASA A
 
 Eventually Skylab — America's first space station — would launch in 1973 on the last ever Saturn V launch. It fell far short of the grand rotating wheel stations previously envisioned and utilized only a fraction of the Saturn V's lifting capacity. It was an embodiment of the shrinking visions to come.
 
+![The final crew on Skylab's parting shot of the first (whimpers of an) American space station.](assets/imgs/WiP1/Skylab.jpg)
+
 Post-Apollo, NASA dropped the parallelised program strategy instead adopting an incremental approach to space development. As a result, the Space Shuttle became the 'logical successor' and parallel pursuits of ambitious space station programs were abandoned. Meanwhile, the Soviet Union, having shifted focus from lunar landings, launched their Salyut program followed by Mir—conceptually similar to NASA's scaled-down Manned Orbiting Research Laboratory rather than the ambitious rotating stations.
 
 The early visions of large crews living in rotating structures with artificial gravity now appear as relics relegated to a more optimistic era—one where space architecture was designed for repeatability and scale that could have yielded greater scientific output while answering fundamental questions about artificial gravity's effects on human health that remain unstudied to this day.
