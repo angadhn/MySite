@@ -3,7 +3,6 @@ title: Where is my von Braun wheel?
 created: 2025-03-25
 published: 2025-03-25
 tags:
-  - space
   - stations
   - essays
 permalink: /whereVonBraunWheel
@@ -32,12 +31,6 @@ Early space visionaries, such as Werner von Braun, strongly believed that settli
 This elegant solution to generate artificial gravity, however, comes with a major engineering challenge. Much like a ferris wheel, the wheel's rotation could disorient astronauts if spun too fast. If the wheel spins slowly then its physics dictates it must be quite large. For example, one of von Braun's designs called for a massive 75 metre diameter wheel that generated lunar gravity if spun at 3 rpm and Earth-like gravity at 5 rpm — this range is considered [reasonable for astronauts](https://nss.org/wp-content/uploads/2017/07/Space-Settlement-Population-Rotation-Tolerance-Globus.pdf).
 
 However, the physics of rockets presents a different obstacle as it must be slender, like an arrow, to escape Earth's gravity well and reach orbit. This defines the main upstream engineering challenge: how can we fit enormous space structures into slender rockets? For context, even Starship's [upper-stage](https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)), which is about 9 metres wide and 22 metres tall cannot fit von Braun's conceptual station in a straightforward manner.
-
-<!--
-{% marginfigure 'Stanford-1' "assets/imgs/WiP1/StanfordTorus.jpg" "The Stanford Torus concept for 10,000 space settlers was proposed during the 1975 NASA Summer Study." %}
-
-{% marginfigure 'ONeill-1' "assets/imgs/WiP1/ONeillCylinder.jpg" ""The O'Neill cylinder proposed in 1976 by Gerard O'Neill."" %}
--->
 
 Architects of the International Space Station (ISS), the largest space structure ever built, tackled a similar packing problem using multiple smaller spacecraft which connect, like space Ikea, into a structure greater than its parts. Such in-space assembly involves spacecraft either gently crashing into each other at specific connection points (a manoeuvre called [rendezvous and docking](https://www.nasa.gov/reference/jsc-rendezvous-prox-ops-docking-subsystems/)) as well as [astronauts and space cranes](https://en.wikipedia.org/wiki/Mobile_Servicing_System) supporting finer assembly tasks. While this works great in theory, the ISS's assembly needed over 40 rocket launches spanning several years (and even more launches for cargo resupply and repairs). More damning is the typical ISS crew size of 7, which is a little over twice that of the first ever space station, Salyut, from 1972. Clearly 50 years of space station development does not indicate that such modular in-orbit assembly will scale to von Braun’s [anticipated 80 humans](https://en.wikipedia.org/wiki/Rotating_wheel_space_station#:~:text=It%20was%20envisaged%20as%20having%20a%20crew%20of%C2%A080) or, more relevant today, Starship’s [100](https://www.spacex.com/media/starship_users_guide_v1.pdf) any time soon. Civilisation-scale megastructures like the Stanford Torus and O'Neill cylinders appear even more outlandish to discuss today than when they were first proposed in the 70s.
 
@@ -121,6 +114,8 @@ For the first time since the Saturn rockets, we are on the cusp of having a laun
 It’s not all about engineering but also about loosening prohibitive regulations — such as the [International Traffic in Arms Regulations](https://en.wikipedia.org/wiki/International_Traffic_in_Arms_Regulations) — which ensure only a select few nations can collaborate on widening our species’ presence in Earth orbit and beyond. New organisational models (such as [Focused Research Organisations](https://www.nature.com/articles/d41586-022-00018-5#explore)) should also be explored — backed by a combination of government or philanthropists — that have a mandate to focus on developing artificial gravity space station technologies.
 
 So, let’s get back to building rotating wheel space stations again.
+
+_Thanks to Ben Southwood and Eli Dourado for reading early drafts of this and providing feedback. All errors are my own._
 ## Further Reading
 - [NASA’s Space Settlements Study](https://ntrs.nasa.gov/api/citations/19770014162/downloads/19770014162_update.pdf) from the 1970s; the infamous Stanford Torus study.
 - James Hansens’s “[Spaceflight revolution: NASA Langley Research Center from Sputnik to Apollo](https://ntrs.nasa.gov/citations/19950021264)”
