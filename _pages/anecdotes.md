@@ -15,4 +15,4 @@ permalink: /anecdotes/
     </div>
   </article>
 {% endfor %}
-</div> 
+</div>
