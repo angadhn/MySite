@@ -3,8 +3,8 @@ title: Where is my von Braun wheel?
 created: 2025-03-25
 published: 2025-03-25
 tags:
-  - stations
   - essays
+  - space-stations
 permalink: /whereVonBraunWheel
 top_of_mind: "true"
 completion_score: 95
