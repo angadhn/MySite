@@ -2,7 +2,7 @@
 title: He wishes for the Cloths of Heaven
 source: https://www.scottishpoetrylibrary.org.uk/poem/he-wishes-cloths-heaven/
 author:
-  - "[[Scottish Poetry Library]]"
+  - W B Yeats
 published: ""
 created: 2025-05-01
 description: 
