@@ -3,10 +3,15 @@ title: He wishes for the Cloths of Heaven
 source: https://www.scottishpoetrylibrary.org.uk/poem/he-wishes-cloths-heaven/
 author:
   - "[[Scottish Poetry Library]]"
-published: 
+published: ""
 created: 2025-05-01
 description: 
-tags: []
+tags:
+  - great-poems
+permalink: /yeats-1
+top_of_mind: "false"
+completion_score: 
+image:
 ---
 #### W.B. Yeats
 Had I the heavens’ embroidered cloths,  
