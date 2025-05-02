@@ -187,7 +187,7 @@ def create_multidimensional_bubble_chart():
     
     fig.add_trace(go.Scatter(
         x=[110],  # Changed to 110
-        y=[110],
+        y=[120],
         mode='markers',
         name='Megastructure',
         legendgroup='megastructure',
@@ -212,7 +212,7 @@ def create_multidimensional_bubble_chart():
     
     fig.add_trace(go.Scatter(
         x=[120],  # Changed to 120
-        y=[120],
+        y=[130],
         mode='markers',
         name='Megastructure',
         legendgroup='megastructure',
@@ -237,8 +237,8 @@ def create_multidimensional_bubble_chart():
     gateway_vb_formatted = f"{gateway_vb_per_person/1000:.1f}K"  # Format as K for thousands
     
     fig.add_trace(go.Scatter(
-        x=[95],  # Position between the other megastructures
-        y=[95],
+        x=[115],  # Position between the other megastructures
+        y=[110],
         mode='markers',
         name='Megastructure',
         legendgroup='megastructure',
@@ -423,17 +423,17 @@ def create_multidimensional_bubble_chart():
     # Add text for megastructure stations  
     for i, name in enumerate(megastructure_station_names):
         # Calculate positioning based on the station name
-        if name == 'Stanford Torus':
+        if name == "Gateway's von Braun":
             text_x = 98  # Position to the left of the star
-            text_y = 91
+            text_y = 103
             text_position = 'middle right'
         elif name == "O'Neill Cylinder":
             text_x = 94  # Position to the left of the star
-            text_y = 122  # Above the star
+            text_y = 132  # Above the star
             text_position = 'middle right'
-        elif name == "Gateway's von Braun":
-            text_x = 77  # Position to the left
-            text_y = 110  # Middle
+        elif name == "Stanford Torus":
+            text_x = 87  # Position to the left
+            text_y = 114  # Middle
             text_position = 'middle right'
         else:
             # Default positioning if we add more megastructures in the future
@@ -474,10 +474,10 @@ def create_multidimensional_bubble_chart():
             title="Crew Capacity (number of astronauts)",
             gridcolor='rgba(0,0,0,0)',
             zerolinecolor='rgba(0,0,0,0)',
-            range=[-2, 130],
+            range=[-2, 140],  # Increased upper limit to 140
             dtick=10,
-            ticktext=["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "10,000", "1M"],
-            tickvals=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120]
+            ticktext=["0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100", "1,000", "10,000", "1M"],
+            tickvals=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130]
         ),
         plot_bgcolor='rgba(0,0,0,0)',
         paper_bgcolor='rgba(0,0,0,0)',
