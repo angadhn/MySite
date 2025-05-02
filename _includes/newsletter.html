@@ -1,6 +1,6 @@
-<div class="newsletter-container">
-    <h3>Receive my updates</h3>
-    <p>Follow me by signing up for my newsletter or on X <a href="https://x.com/angadhn" target="_blank" rel="noopener noreferrer">@angadhn</a>, and <a href="https://bsky.app/profile/angadh.com" target="_blank" rel="noopener noreferrer">Bluesky</a>.</p>
+<div class="newsletter-container" style="margin: 0.5em 0 1em 0;">
+    <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5em;">Subscribe</h3>
+    <p style="text-align: center; margin-bottom: 0.5em;">Sign up to my newsletter with your email below or follow me on X <a href="https://x.com/angadhn" target="_blank" rel="noopener noreferrer">@angadhn</a> and <a href="https://bsky.app/profile/angadh.com" target="_blank" rel="noopener noreferrer">Bluesky</a>.</p>
     
     <form
       name="newsletter"
@@ -8,11 +8,12 @@
       action="/success/"
       netlify-honeypot="bot-field"
       data-netlify="true"
+      style="text-align: center; margin-bottom: 0;"
     >
       <label class="hidden">Don't fill this out:</label>
       <input class="hidden" name="bot-field" />
       
-      <div class="input-group">
+      <div class="input-group" style="display: inline-flex; justify-content: center;">
         <input type="email" name="email" required placeholder="Enter your email" />
         <button type="submit">Sign up</button>
       </div>

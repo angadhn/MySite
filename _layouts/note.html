@@ -18,7 +18,35 @@ layout: default
 
   <div id="notes-entry-container">
     <content>
-      {{ content }}
+      {% assign words = content | number_of_words %}
+      
+      {% if words > 150 %}
+        {% assign content_parts = content | split: '</p>' %}
+        {% assign word_count = 0 %}
+        {% assign displayed_paragraphs = 0 %}
+        
+        {% for part in content_parts %}
+          {% assign paragraph_words = part | append: '</p>' | strip_html | number_of_words %}
+          {% assign next_count = word_count | plus: paragraph_words %}
+          
+          {% if word_count < 150 and next_count >= 150 %}
+            {{ part }}</p>
+            {% include newsletter.html %}
+            {% assign displayed_paragraphs = forloop.index %}
+            {% break %}
+          {% else %}
+            {{ part }}</p>
+            {% assign word_count = next_count %}
+            {% assign displayed_paragraphs = forloop.index %}
+          {% endif %}
+        {% endfor %}
+        
+        {% for part in content_parts offset:displayed_paragraphs %}
+          {{ part }}</p>
+        {% endfor %}
+      {% else %}
+        {{ content }}
+      {% endif %}
       
       {% unless page.tags contains 'essays' %}
       <hr>
