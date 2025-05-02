@@ -31,6 +31,15 @@ SPACE_STATIONS = [
         'has_gravity': True
     },
     {
+        'name': 'Gateway\'s von Braun',
+        'total_volume': 12000,
+        'pressurised_volume': 11906250,
+        'habitable_volume': 8000000,
+        'crew': 1400,
+        'is_real': False,
+        'has_gravity': True
+    },
+    {
     'name': 'Stanford Torus',
     'total_volume': 69220470,  # Correct volume in cubic meters
     'pressurised_volume': 69220470,  # Assuming entire torus is pressurized
@@ -111,7 +120,7 @@ def create_multidimensional_bubble_chart():
     
     # 4. Megastructures (purple star)
     megastructure_indices = [i for i, station in enumerate(SPACE_STATIONS) 
-                           if station['name'] in ['Stanford Torus', "O'Neill Cylinder"]]
+                           if station['name'] in ['Stanford Torus', "O'Neill Cylinder", "Gateway's von Braun"]]
     
     # Add real stations (green)
     fig.add_trace(go.Scatter(
@@ -217,6 +226,32 @@ def create_multidimensional_bubble_chart():
         ),
         hoverinfo='text',
         hovertext=f"{oneill_cylinder['name']}<br>Habitable Volume per Astronaut: {oneill_formatted} m³<br>Total Volume: {oneill_cylinder['total_volume']:,.2f} m³<br>Habitable Volume: {oneill_cylinder['habitable_volume']:,.2f} m³<br>Pressurised Volume: {oneill_cylinder['pressurised_volume']:,.2f} m³<br>Crew: {oneill_cylinder['crew']:,}"
+    ))
+    
+    # Add Gateway's von Braun as a megastructure
+    gateway_vb_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == "Gateway's von Braun")
+    gateway_vb = SPACE_STATIONS[gateway_vb_index]
+    gateway_vb_per_person = gateway_vb['habitable_volume'] / gateway_vb['crew']
+    
+    # Format values with appropriate significant figures
+    gateway_vb_formatted = f"{gateway_vb_per_person/1000:.1f}K"  # Format as K for thousands
+    
+    fig.add_trace(go.Scatter(
+        x=[95],  # Position between the other megastructures
+        y=[95],
+        mode='markers',
+        name='Megastructure',
+        legendgroup='megastructure',
+        showlegend=False,  # Hide this trace from the legend
+        marker=dict(
+            size=30,
+            color='#9C27B0',
+            line=dict(width=3, color='black'),
+            opacity=0.9,
+            symbol='star'
+        ),
+        hoverinfo='text',
+        hovertext=f"{gateway_vb['name']}<br>Habitable Volume per Astronaut: {gateway_vb_formatted} m³<br>Total Volume: {gateway_vb['total_volume']:,.2f} m³<br>Habitable Volume: {gateway_vb['habitable_volume']:,.2f} m³<br>Pressurised Volume: {gateway_vb['pressurised_volume']:,.2f} m³<br>Crew: {gateway_vb['crew']:,}"
     ))
     
     # Add station name labels with improved positioning
@@ -389,12 +424,16 @@ def create_multidimensional_bubble_chart():
     for i, name in enumerate(megastructure_station_names):
         # Calculate positioning based on the station name
         if name == 'Stanford Torus':
-            text_x = 102  # Position to the left of the star
-            text_y = 101
+            text_x = 98  # Position to the left of the star
+            text_y = 91
             text_position = 'middle right'
         elif name == "O'Neill Cylinder":
             text_x = 94  # Position to the left of the star
             text_y = 122  # Above the star
+            text_position = 'middle right'
+        elif name == "Gateway's von Braun":
+            text_x = 77  # Position to the left
+            text_y = 110  # Middle
             text_position = 'middle right'
         else:
             # Default positioning if we add more megastructures in the future
@@ -476,6 +515,9 @@ def create_multidimensional_bubble_chart():
         include_plotlyjs=True,
         full_html=False
     )
+    
+    # Save as PNG
+    fig.write_image('assets/imgs/WiP1/space_station_multidimensional.png', width=800, height=600, scale=2)
     
     return fig
 
