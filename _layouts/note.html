@@ -20,29 +20,54 @@ layout: default
     <content>
       {% assign words = content | number_of_words %}
       
-      {% if words > 150 %}
+      {% if words > 150 and page.tags contains 'essays' %}
         {% assign content_parts = content | split: '</p>' %}
         {% assign word_count = 0 %}
-        {% assign displayed_paragraphs = 0 %}
+        {% assign second_newsletter_threshold = words | times: 0.75 | round %}
+        {% assign show_second_newsletter = words > 2000 %}
+        {% assign first_newsletter_shown = false %}
+        {% assign second_newsletter_shown = false %}
+        {% assign in_blockquote = false %}
         
         {% for part in content_parts %}
           {% assign paragraph_words = part | append: '</p>' | strip_html | number_of_words %}
           {% assign next_count = word_count | plus: paragraph_words %}
           
-          {% if word_count < 150 and next_count >= 150 %}
+          {% if part contains '<blockquote>' %}
+            {% assign in_blockquote = true %}
+          {% endif %}
+          
+          {% if part contains '</blockquote>' %}
+            {% assign in_blockquote = false %}
+          {% endif %}
+          
+          {% if first_newsletter_shown == false and word_count < 150 and next_count >= 150 %}
             {{ part }}</p>
+            {% if in_blockquote %}
+              </blockquote>
+              {% assign in_blockquote = false %}
+            {% endif %}
             {% include newsletter.html %}
-            {% assign displayed_paragraphs = forloop.index %}
-            {% break %}
+            {% if in_blockquote %}
+              <blockquote>
+            {% endif %}
+            {% assign first_newsletter_shown = true %}
+          {% elsif show_second_newsletter and second_newsletter_shown == false and word_count < second_newsletter_threshold and next_count >= second_newsletter_threshold %}
+            {{ part }}</p>
+            {% if in_blockquote %}
+              </blockquote>
+              {% assign in_blockquote = false %}
+            {% endif %}
+            {% include newsletter.html %}
+            {% if in_blockquote %}
+              <blockquote>
+            {% endif %}
+            {% assign second_newsletter_shown = true %}
           {% else %}
             {{ part }}</p>
-            {% assign word_count = next_count %}
-            {% assign displayed_paragraphs = forloop.index %}
           {% endif %}
-        {% endfor %}
-        
-        {% for part in content_parts offset:displayed_paragraphs %}
-          {{ part }}</p>
+          
+          {% assign word_count = next_count %}
         {% endfor %}
       {% else %}
         {{ content }}

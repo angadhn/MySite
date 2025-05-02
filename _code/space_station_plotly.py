@@ -461,7 +461,7 @@ def create_multidimensional_bubble_chart():
     # Update layout with improved spacing and fixed axis range
     fig.update_layout(
         xaxis=dict(
-            title="Habitable Volume per Astronaut (cubic meters)",
+            title="Habitable Volume per Astronaut (cubic meters per person)",
             type="linear",  # Using linear scale
             gridcolor='rgba(0,0,0,0)',
             zerolinecolor='rgba(0,0,0,0)',
