@@ -9,7 +9,7 @@
         <a href="{{ site.baseurl }}/anecdotes" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">·Anecdotes·</a>
         <!-- <a href="{{ site.baseurl }}/jobs" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">·Jobs·</a> -->
         <!-- <a href="{{ site.baseurl }}/news" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">·Updates·</a> -->
-        <!-- <a href="{{ site.baseurl }}/about" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">About</a> -->
+        <a href="{{ site.baseurl }}/about" class="nav-link link-page link-annotated" style="font-family: 'Aniron', serif; font-weight: bold;">About</a>
     </div>
     <div class="floating-theme-switch">
         <div class="theme-switch-wrapper">
@@ -29,5 +29,45 @@
         const navContainer = document.querySelector('.nav-wrapper > div:first-child');
         const menuItems = navContainer.querySelectorAll('.nav-link.link-page:not(:first-child)');
         navContainer.style.setProperty('--item-count', menuItems.length);
+        
+        // Make sure the logo doesn't trigger mobile menu
+        const logoWrapper = document.querySelector('.logo-wrapper');
+        if (logoWrapper) {
+            logoWrapper.addEventListener('mouseenter', function(e) {
+                // Prevent event bubbling to parent
+                e.stopPropagation();
+            });
+            
+            // For touch devices
+            logoWrapper.addEventListener('touchstart', function(e) {
+                // Prevent event bubbling to parent
+                e.stopPropagation();
+            });
+        }
+        
+        // Optional: Add hamburger menu functionality for mobile
+        if (window.innerWidth <= 768 && menuItems.length > 0) {
+            // Create a visible hamburger button
+            const hamburger = document.createElement('button');
+            hamburger.className = 'mobile-hamburger';
+            hamburger.setAttribute('aria-label', 'Toggle navigation menu');
+            hamburger.innerHTML = '<span></span><span></span><span></span>';
+            
+            // Add click handler for hamburger
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navContainer.classList.toggle('menu-open');
+            });
+            
+            // Insert hamburger at the end of the container
+            navContainer.appendChild(hamburger);
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navContainer.contains(e.target)) {
+                    navContainer.classList.remove('menu-open');
+                }
+            });
+        }
     });
 </script>
