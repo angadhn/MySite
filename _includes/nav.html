@@ -45,29 +45,57 @@
             });
         }
         
-        // Optional: Add hamburger menu functionality for mobile
-        if (window.innerWidth <= 768 && menuItems.length > 0) {
-            // Create a visible hamburger button
+        // Add hamburger menu for mobile view
+        function handleHamburgerToggle() {
+            // Create a visible hamburger button with three spans
             const hamburger = document.createElement('button');
             hamburger.className = 'mobile-hamburger';
             hamburger.setAttribute('aria-label', 'Toggle navigation menu');
-            hamburger.innerHTML = '<span></span><span></span><span></span>';
+            
+            // Create three spans for the hamburger icon
+            for (let i = 0; i < 3; i++) {
+                const span = document.createElement('span');
+                hamburger.appendChild(span);
+            }
             
             // Add click handler for hamburger
             hamburger.addEventListener('click', function(e) {
                 e.stopPropagation();
+                this.classList.toggle('open');
                 navContainer.classList.toggle('menu-open');
+                console.log('Hamburger clicked, open state:', this.classList.contains('open'));
             });
             
             // Insert hamburger at the end of the container
             navContainer.appendChild(hamburger);
+            console.log('Mobile hamburger menu added');
             
             // Close menu when clicking outside
             document.addEventListener('click', function(e) {
                 if (!navContainer.contains(e.target)) {
                     navContainer.classList.remove('menu-open');
+                    hamburger.classList.remove('open');
+                    console.log('Menu closed by outside click');
                 }
             });
         }
+        
+        // Initialize hamburger for mobile
+        if (window.innerWidth <= 768 && menuItems.length > 0) {
+            handleHamburgerToggle();
+        }
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const existingHamburger = navContainer.querySelector('.mobile-hamburger');
+            
+            if (window.innerWidth <= 768 && menuItems.length > 0 && !existingHamburger) {
+                handleHamburgerToggle();
+            } else if (window.innerWidth > 768 && existingHamburger) {
+                existingHamburger.remove();
+                navContainer.classList.remove('menu-open');
+                console.log('Hamburger removed on desktop view');
+            }
+        });
     });
 </script>

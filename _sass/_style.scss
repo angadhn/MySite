@@ -856,6 +856,11 @@ input:checked + .slider {
     body, p, li, span:not(nav span) {
         color: #eaeaea;
     }
+    
+    // Ensure hamburger menu is crimson in dark mode
+    .mobile-hamburger span {
+        background-color: crimson !important;
+    }
 
     .tooltip {
         background-color: #1f232b;
