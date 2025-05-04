@@ -850,7 +850,7 @@ input:checked + .slider {
 
 // Dark theme styles
 [data-theme="dark"] {
-    background-color: #252a34;
+    background-color: #000000;
     color: #eaeaea;
 
     body, p, li, span:not(nav span) {
@@ -1157,7 +1157,7 @@ input:checked + .slider {
 }
 
 [data-theme="dark"] .nav-wrapper {
-  background: #252a34;
+  background: #000000;
 }
 
 .tag-list {
