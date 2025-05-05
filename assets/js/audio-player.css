@@ -78,7 +78,7 @@
 
 /* Special handling for SoundCloud in dark mode */
 .audio-player.dark-theme.soundcloud-dark .player-container {
-  filter: brightness(0.5) contrast(1.05);
+  filter: brightness(0.9) contrast(1.05);
 }
 
 .player-container {
@@ -228,5 +228,5 @@ body.has-audio-player {
 
 /* When scrolling down, make player more transparent */
 .audio-player.scrolled-down {
-  opacity: 0.6;
+  opacity: 0.2;
 } 
