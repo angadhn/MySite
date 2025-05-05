@@ -1580,3 +1580,13 @@ article {
     }
   }
 }
+
+// Style for palatino content on home page
+.palatino-content {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !important;
+  
+  // Apply to all direct children paragraphs
+  > p {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !important;
+  }
+}

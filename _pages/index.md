@@ -7,7 +7,13 @@ permalink: /
 
 # Welcome!
 
-> [[This site]] belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). It is an attempt to construct an aesthetic home for displaying my written wares. As it’s with my physical home, I shall be the primary visitor of my digital one- and so it’s for this reader’s consumption that this place is being crafted. That said, the occasional visitor from the web might accidentally pop in- much like a house guest does. For you, I share a bunch of my digital notes, some of them worked into essay opining on things. Though you might want to start by exploring what's top of mind or looking at one my recently updated notes, both of which are below. A [[all notes|complete archive]] of [[this site]]'s content is also available though you may be better served filtering by topic- this can also be found below. I also maintain another [site](https://angadhn.com), which was my first attempt at making an aesthetic digital home. Alas, it was an unfateful match as working with overloaded templates was too painful when it came to adapting it to capture my taste. That said, it will continue to exist (and maybe even evolve) as the domain is linked to my online teaching resources, a list of which can also be seen [[My teaching content|here]]. I genuinely like the novelty of having secured the current domain, which is “my_first_name(dot)com”. An improbable privilege.
+_[[This site]] belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). It is an attempt to construct an aesthetic home for displaying my written wares._
+
+_As it’s with my physical home, I expect to be the most frequent visitor here- and so it’s for this reader’s satisfaction that this place is being tuned, over time. That said, the occasional visitor from the web might pop in, accidentally but more likely upon invitation. For this reader, I recommend going through the [[essays|essays]], which are more fully formed thinkpieces. However, you might also wish to pick out one of the items that is top of mind or one a more recently updated notes- both of which are below._
+
+_A [[all notes|complete archive of writing]] in [[this site]] is also available. I also maintain [another site](https://angadhn.com), which was my first attempt at creating an aesthetic digital home. Alas, it was an unfateful match as working with the overloaded [Academic Pages template site](https://academicpages.github.io/)  was no longer for me; I found it too painful to adapt or write on. That site will, however, continue to exist as a link to my online teaching resources, a list of which can also be seen [[My teaching content|here]]._
+
+
 <div class="notes-grid">
   <div class="notes-column">
     <h5>Top of Mind</h5>
