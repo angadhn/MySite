@@ -124,32 +124,36 @@ document.addEventListener('DOMContentLoaded', function() {
           playerContainer.dataset.autoplayEmbedUrl = autoplayEmbedUrl;
           
           // Display the link text with hyperlink styling
-          companionMusicLink.innerHTML = `I think <span class="companion-music-title" tabindex="0" role="button">${artistName}'s "${trackName}"</span> pairs really well with this essay.`;
+          companionMusicLink.innerHTML = `I feel that <span class="companion-music-title" tabindex="0" role="button">${artistName}'s "${trackName}"</span> pairs nicely with this essay.`;
           companionMusicLink.style.display = 'block';
-          companionMusicLink.style.cursor = 'pointer';
+          companionMusicLink.style.cursor = 'default';
           
-          // Make link accessible
-          companionMusicLink.setAttribute('role', 'button');
-          companionMusicLink.setAttribute('tabindex', '0');
+          // Remove role and tabindex from the parent
+          companionMusicLink.removeAttribute('role');
+          companionMusicLink.removeAttribute('tabindex');
           companionMusicLink.setAttribute('aria-expanded', 'false');
           companionMusicLink.setAttribute('aria-controls', 'audio-player');
           
           // Insert the player after the link
           companionMusicLink.parentNode.insertBefore(playerContainer, companionMusicLink.nextSibling);
           
-          // Add click event to the link to toggle player
-          companionMusicLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            togglePlayer(playerContainer, companionMusicLink);
-          });
-          
-          // Add keyboard support
-          companionMusicLink.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
+          // Add click event to the SPAN instead of the parent link
+          const musicTitleSpan = companionMusicLink.querySelector('.companion-music-title');
+          if (musicTitleSpan) {
+            musicTitleSpan.addEventListener('click', function(e) {
               e.preventDefault();
+              e.stopPropagation(); // Prevent event from bubbling to parent
               togglePlayer(playerContainer, companionMusicLink);
-            }
-          });
+            });
+            
+            // Add keyboard support to the SPAN
+            musicTitleSpan.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                togglePlayer(playerContainer, companionMusicLink);
+              }
+            });
+          }
         } else {
           // Generic fallback for other music services
           companionMusicLink.innerHTML = `I think this piece is best paired with <a href="${url}" target="_blank" class="music-link">this music</a>`;
