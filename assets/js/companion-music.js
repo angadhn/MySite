@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const urlParts = urlObj.pathname.split('/').filter(part => part);
           
           if (urlParts.length >= 2) {
+            // Extract initial values from URL
             artistName = urlParts[0].replace(/-/g, ' ');
             trackName = urlParts[1].replace(/-/g, ' ');
             
@@ -63,6 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Store the platform for special handling in the player creation
             platform = 'soundcloud';
+            
+            // Try to fetch actual metadata from SoundCloud's OEmbed API
+            fetchSoundCloudMetadata(url).then(metadata => {
+              if (metadata) {
+                updateMusicInfo(playerContainer, companionMusicLink, metadata.artist, metadata.title);
+              }
+            }).catch(err => {
+              console.warn('Could not fetch SoundCloud metadata:', err);
+            });
           }
         }
         // Handle Spotify links
@@ -75,9 +85,18 @@ document.addEventListener('DOMContentLoaded', function() {
             autoplayEmbedUrl = `https://open.spotify.com/embed/track/${trackId}?autoplay=1`;
             isValid = true;
             
-            // For Spotify, we'll just use a generic message
+            // Set initial generic values
             artistName = "this artist";
             trackName = "this track";
+            
+            // Try to fetch actual metadata from Spotify's OEmbed API
+            fetchSpotifyMetadata(url).then(metadata => {
+              if (metadata) {
+                updateMusicInfo(playerContainer, companionMusicLink, metadata.artist, metadata.title);
+              }
+            }).catch(err => {
+              console.warn('Could not fetch Spotify metadata:', err);
+            });
           }
         }
         // Handle YouTube links
@@ -96,24 +115,29 @@ document.addEventListener('DOMContentLoaded', function() {
             autoplayEmbedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
             isValid = true;
             
-            // For YouTube, we'll use a generic message
+            // Set initial generic values
             artistName = "this creator";
             trackName = "this track";
+            
+            // Try to fetch actual metadata from YouTube's OEmbed API
+            fetchYouTubeMetadata(videoId).then(metadata => {
+              if (metadata) {
+                updateMusicInfo(playerContainer, companionMusicLink, metadata.artist, metadata.title);
+              }
+            }).catch(err => {
+              console.warn('Could not fetch YouTube metadata:', err);
+            });
           }
         }
         
         if (isValid) {
           // Convert to title case if we have specific artist/track
           if (artistName && artistName !== "this artist" && artistName !== "this creator") {
-            artistName = artistName.split(' ')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ');
+            artistName = toTitleCase(artistName);
           }
           
           if (trackName && trackName !== "this track") {
-            trackName = trackName.split(' ')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ');
+            trackName = toTitleCase(trackName);
           }
           
           // Store player data but don't create it yet
@@ -173,6 +197,138 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add scroll event listener to handle player opacity
   handlePlayerScrollOpacity();
 });
+
+// Helper function to convert text to title case
+function toTitleCase(text) {
+  return text.split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+// Helper function to update music info in the DOM
+function updateMusicInfo(playerContainer, linkElement, artist, title) {
+  if (!artist || !title) return;
+  
+  // Update the stored data attributes
+  playerContainer.dataset.artistName = artist;
+  playerContainer.dataset.trackName = title;
+  
+  // Update the displayed text
+  linkElement.innerHTML = `I feel that <span class="companion-music-title" tabindex="0" role="button">${artist}'s "${title}"</span> pairs nicely with this essay.`;
+  
+  // Reattach event listeners
+  const musicTitleSpan = linkElement.querySelector('.companion-music-title');
+  if (musicTitleSpan) {
+    musicTitleSpan.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      togglePlayer(playerContainer, linkElement);
+    });
+    
+    musicTitleSpan.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        togglePlayer(playerContainer, linkElement);
+      }
+    });
+  }
+}
+
+// Fetch metadata for SoundCloud tracks
+async function fetchSoundCloudMetadata(url) {
+  try {
+    // Use SoundCloud's oEmbed API to get track info
+    const response = await fetch(`https://soundcloud.com/oembed?url=${encodeURIComponent(url)}&format=json`);
+    if (!response.ok) throw new Error('Failed to fetch from SoundCloud');
+    
+    const data = await response.json();
+    
+    // Extract artist and title from the title field which typically has format "Title by Artist"
+    const titleParts = data.title.split(' by ');
+    if (titleParts.length >= 2) {
+      return {
+        title: titleParts[0].trim(),
+        artist: titleParts[1].trim()
+      };
+    } else {
+      // Fallback to just using the title as-is
+      return {
+        title: data.title,
+        artist: data.author_name
+      };
+    }
+  } catch (error) {
+    console.warn('Error fetching SoundCloud metadata:', error);
+    return null;
+  }
+}
+
+// Fetch metadata for Spotify tracks
+async function fetchSpotifyMetadata(url) {
+  try {
+    // Use Spotify's oEmbed API to get track info
+    const response = await fetch(`https://open.spotify.com/oembed?url=${encodeURIComponent(url)}`);
+    if (!response.ok) throw new Error('Failed to fetch from Spotify');
+    
+    const data = await response.json();
+    
+    // Parse artist and title from the title field (format usually "Track - Artist")
+    const titleParts = data.title.split(' - ');
+    if (titleParts.length >= 2) {
+      return {
+        title: titleParts[0].trim(),
+        artist: titleParts[1].trim()
+      };
+    } else {
+      // Fallback to title as-is
+      return {
+        title: data.title,
+        artist: data.provider_name !== 'Spotify' ? data.provider_name : 'the artist'
+      };
+    }
+  } catch (error) {
+    console.warn('Error fetching Spotify metadata:', error);
+    return null;
+  }
+}
+
+// Fetch metadata for YouTube videos
+async function fetchYouTubeMetadata(videoId) {
+  try {
+    // Use YouTube's oEmbed API to get video info
+    const response = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
+    if (!response.ok) throw new Error('Failed to fetch from YouTube');
+    
+    const data = await response.json();
+    
+    // For YouTube, we typically don't have a clear distinction between artist and title
+    // Try to parse common music video formats like "Artist - Title" or "Title by Artist"
+    let artist = 'this creator';
+    let title = data.title;
+    
+    // Try to parse "Artist - Title" format
+    const dashParts = data.title.split(' - ');
+    if (dashParts.length >= 2) {
+      artist = dashParts[0].trim();
+      title = dashParts.slice(1).join(' - ').trim();
+    } else {
+      // Try to parse "Title by Artist" format
+      const byParts = data.title.split(' by ');
+      if (byParts.length >= 2) {
+        title = byParts[0].trim();
+        artist = byParts[1].trim();
+      } else {
+        // Use the channel name as artist if we couldn't parse the title
+        artist = data.author_name || 'this creator';
+      }
+    }
+    
+    return { title, artist };
+  } catch (error) {
+    console.warn('Error fetching YouTube metadata:', error);
+    return null;
+  }
+}
 
 function togglePlayer(playerContainer, linkElement) {
   const isVisible = playerContainer.style.display === 'block';
