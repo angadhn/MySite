@@ -5,11 +5,18 @@ layout: default
 <article>
   <div>
     <h1>{{ page.title }}</h1>
+    
+    {% if page["companion music"] %}
+    <div id="companion-music-link" data-url="{{ page["companion music"] }}" style="display: none; margin: 1.5em auto; font-style: italic; color: var(--color-subtext); font-family: 'Palatino', 'Palatino Linotype', serif; text-align: center;"></div>
+    <script src="{{ site.baseurl }}/assets/js/companion-music.js"></script>
+    {% endif %}
+    
     {% if page.completion_score %}
     <div style="margin-bottom: 0.5em; color: var(--color-subtext);">
       <time>Completion: {{ page.completion_score }}%</time>
     </div>
     {% endif %}
+    
     <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{% if page.type != 'pages' %}
       {{ content | number_of_words }} words • {% if page.created %}Essay first planted on: {{ page.created | date: "%B %-d, %Y" }} • {% endif %}Last updated on {{ page.last_modified_at | date: "%B %-d, %Y" }}
       {% endif %}
