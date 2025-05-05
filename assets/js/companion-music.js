@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Check for dark mode to customize SoundCloud colors
             const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-            const colorParam = isDarkMode ? '%23999999' : '%23ff5500'; // Darker gray for dark mode text
+            const colorParam = isDarkMode ? '%23ff5500' : '%23ff5500'; // Use orange (%23ff5500) for both themes
             
             // Use visual=false for a more minimal player, auto_play will be set on reveal
             embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=${colorParam}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false&single_active=false`;
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
           playerContainer.dataset.autoplayEmbedUrl = autoplayEmbedUrl;
           
           // Display the link text with hyperlink styling
-          companionMusicLink.innerHTML = `I think this piece is best paired with <span class="companion-music-title">${artistName}'s "${trackName}"</span>`;
+          companionMusicLink.innerHTML = `I think this piece is best paired with <span class="companion-music-title" tabindex="0" role="button">${artistName}'s "${trackName}"</span>`;
           companionMusicLink.style.display = 'block';
           companionMusicLink.style.cursor = 'pointer';
           
@@ -310,12 +310,12 @@ function updateSoundCloudTheme(container) {
   if (iframe) {
     let src = iframe.src;
     
-    // Update color based on theme
+    // Always use orange color
+    src = src.replace(/color=%23[a-fA-F0-9]{6}/, 'color=%23ff5500');
+    
     if (isDarkMode) {
-      src = src.replace(/color=%23[a-fA-F0-9]{6}/, 'color=%23999999');
       container.classList.add('soundcloud-dark');
     } else {
-      src = src.replace(/color=%23[a-fA-F0-9]{6}/, 'color=%23ff5500');
       container.classList.remove('soundcloud-dark');
     }
     
@@ -369,23 +369,52 @@ function loadStyles() {
           color: inherit !important;
           cursor: pointer;
           font-weight: inherit;
-          transition: opacity 0.2s ease;
-          border-bottom: 1px dotted rgba(127,127,127,0.5);
-          text-decoration: none !important;
-          padding-bottom: 1px;
+          transition: all 0.2s ease;
+          text-decoration: underline !important;
+          text-decoration-style: dotted !important;
+          text-decoration-thickness: 1px !important;
+          text-underline-offset: 2px !important;
+          background: transparent !important;
+          display: inline-block;
+          padding: 0 !important;
+          border: none !important;
+          outline: none !important;
+          -webkit-tap-highlight-color: transparent !important;
         }
         
-        .companion-music-title:hover {
+        .companion-music-title:hover,
+        .companion-music-title:active,
+        .companion-music-title:focus,
+        .companion-music-title:visited {
           opacity: 0.85;
-          border-bottom: 1px solid rgba(127,127,127,0.8);
+          background: transparent !important;
+          color: inherit !important;
+          text-decoration: underline !important;
+          text-decoration-style: solid !important;
+          border: none !important;
+          outline: none !important;
+          box-shadow: none !important;
+        }
+        
+        .dark-theme .companion-music-title,
+        .dark-theme .companion-music-title:hover,
+        .dark-theme .companion-music-title:active,
+        .dark-theme .companion-music-title:focus,
+        .dark-theme .companion-music-title:visited {
+          background: transparent !important;
+          color: inherit !important;
+          text-decoration: underline !important;
+          border: none !important;
+          outline: none !important;
+          box-shadow: none !important;
         }
         
         .dark-theme .companion-music-title {
-          border-bottom: 1px dotted rgba(200,200,200,0.3);
+          text-decoration-style: dotted !important;
         }
         
         .dark-theme .companion-music-title:hover {
-          border-bottom: 1px solid rgba(200,200,200,0.6);
+          text-decoration-style: solid !important;
         }
         
         .player-container {

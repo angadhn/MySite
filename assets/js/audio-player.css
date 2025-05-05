@@ -26,29 +26,58 @@
   color: inherit !important;
   cursor: pointer;
   font-weight: inherit;
-  transition: opacity 0.2s ease;
-  border-bottom: 1px dotted rgba(127,127,127,0.5);
-  text-decoration: none !important;
-  padding-bottom: 1px;
+  transition: all 0.2s ease;
+  text-decoration: underline !important;
+  text-decoration-style: dotted !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 2px !important;
+  background: transparent !important;
+  display: inline-block;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
-.companion-music-title:hover {
+.companion-music-title:hover,
+.companion-music-title:active,
+.companion-music-title:focus,
+.companion-music-title:visited {
   opacity: 0.85;
-  border-bottom: 1px solid rgba(127,127,127,0.8);
+  background: transparent !important;
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-style: solid !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* For dark mode */
+.dark-theme .companion-music-title,
+.dark-theme .companion-music-title:hover,
+.dark-theme .companion-music-title:active,
+.dark-theme .companion-music-title:focus,
+.dark-theme .companion-music-title:visited {
+  background: transparent !important;
+  color: inherit !important;
+  text-decoration: underline !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .dark-theme .companion-music-title {
-  border-bottom: 1px dotted rgba(200,200,200,0.3);
+  text-decoration-style: dotted !important;
 }
 
 .dark-theme .companion-music-title:hover {
-  border-bottom: 1px solid rgba(200,200,200,0.6);
+  text-decoration-style: solid !important;
 }
 
 /* Special handling for SoundCloud in dark mode */
 .audio-player.dark-theme.soundcloud-dark .player-container {
-  filter: brightness(0.9) contrast(1.05);
+  filter: brightness(0.5) contrast(1.05);
 }
 
 .player-container {
