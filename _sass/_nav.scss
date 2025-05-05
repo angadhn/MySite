@@ -143,7 +143,9 @@
     border: none;
     padding: 0;
     margin-left: auto;
+    margin-right: 60px; /* Add space to the right for the theme switcher */
     cursor: pointer;
+    z-index: 999; /* One less than theme switcher to ensure proper layering */
     
     span {
         display: block;
@@ -223,7 +225,7 @@
                     background: none;
                     
                     &:hover {
-                        background: none;
+                        background: rgba(0, 0, 0, 0.05);
                         color: crimson;
                     }
 
@@ -260,7 +262,8 @@
         .mobile-hamburger {
             display: flex;
             margin-left: auto;
-            z-index: 1001;
+            margin-right: 60px; /* Add space to the right for the theme switcher */
+            z-index: 999; /* One less than theme switcher to ensure proper layering */
         }
         
         // Remove the old menu-open styles as we'll use the mobile-hamburger.open class
@@ -295,7 +298,7 @@
                 background: none;
                 
                 &:hover {
-                    background: none;
+                    background: rgba(0, 0, 0, 0.05);
                     color: crimson;
                 }
                 
@@ -363,6 +366,22 @@
                 .nav-link.link-page:nth-child(n+3) {
                     &:hover {
                         background: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+
+        &:has(.nav-link.link-page:nth-of-type(2)) {
+            &.menu-open {
+                &:before {
+                    background: #1f232b;
+                    border: 1px solid #3d434d;
+                }
+                
+                .nav-link.link-page {
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.1);
+                        color: crimson;
                     }
                 }
             }
