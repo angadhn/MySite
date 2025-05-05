@@ -8,10 +8,41 @@ document.addEventListener('DOMContentLoaded', function() {
       try {
         const urlObj = new URL(url);
         
+        // Create audio player container
+        const playerContainer = document.createElement('div');
+        playerContainer.className = 'audio-player';
+        playerContainer.id = 'audio-player';
+        playerContainer.setAttribute('aria-hidden', 'true'); // Hide from screen readers when not visible
+        
+        // Check the current theme
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+          playerContainer.classList.add('dark-theme');
+        }
+        
+        // Listen for theme changes
+        const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.attributeName === 'data-theme') {
+              const newTheme = document.documentElement.getAttribute('data-theme');
+              if (newTheme === 'dark') {
+                playerContainer.classList.add('dark-theme');
+              } else {
+                playerContainer.classList.remove('dark-theme');
+              }
+            }
+          });
+        });
+        
+        observer.observe(document.documentElement, { attributes: true });
+
         // Initialize variables
         let artistName = '';
         let trackName = '';
         let isValid = false;
+        let embedUrl = '';
+        let autoplayEmbedUrl = '';
+        let platform = '';
         
         // Handle SoundCloud links
         if (urlObj.hostname.includes('soundcloud.com')) {
@@ -20,41 +51,105 @@ document.addEventListener('DOMContentLoaded', function() {
           if (urlParts.length >= 2) {
             artistName = urlParts[0].replace(/-/g, ' ');
             trackName = urlParts[1].replace(/-/g, ' ');
+            
+            // Check for dark mode to customize SoundCloud colors
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            const colorParam = isDarkMode ? '%23999999' : '%23ff5500'; // Darker gray for dark mode text
+            
+            // Use visual=false for a more minimal player, auto_play will be set on reveal
+            embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=${colorParam}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false&single_active=false`;
+            autoplayEmbedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=${colorParam}&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false&single_active=false`;
             isValid = true;
+            
+            // Store the platform for special handling in the player creation
+            platform = 'soundcloud';
           }
         }
         // Handle Spotify links
         else if (urlObj.hostname.includes('spotify.com')) {
-          // Example: https://open.spotify.com/track/1234567890
-          if (urlObj.pathname.includes('/track/')) {
-            // For Spotify, we can't easily get artist and track from URL
-            // Instead, use a generic message
-            companionMusicLink.innerHTML = `I think this piece is best paired with <a href="${url}" target="_blank" class="music-link">this track on Spotify</a>`;
-            companionMusicLink.style.display = 'block';
-            return;
+          // Extract Spotify track ID
+          const match = urlObj.pathname.match(/\/track\/([a-zA-Z0-9]+)/);
+          if (match && match[1]) {
+            const trackId = match[1];
+            embedUrl = `https://open.spotify.com/embed/track/${trackId}`;
+            autoplayEmbedUrl = `https://open.spotify.com/embed/track/${trackId}?autoplay=1`;
+            isValid = true;
+            
+            // For Spotify, we'll just use a generic message
+            artistName = "this artist";
+            trackName = "this track";
           }
         }
         // Handle YouTube links
         else if (urlObj.hostname.includes('youtube.com') || urlObj.hostname.includes('youtu.be')) {
-          // For YouTube, we can't easily get artist and track from URL
-          companionMusicLink.innerHTML = `I think this piece is best paired with <a href="${url}" target="_blank" class="music-link">this track on YouTube</a>`;
-          companionMusicLink.style.display = 'block';
-          return;
+          let videoId = '';
+          
+          if (urlObj.hostname.includes('youtube.com')) {
+            videoId = new URLSearchParams(urlObj.search).get('v');
+          } else if (urlObj.hostname.includes('youtu.be')) {
+            videoId = urlObj.pathname.substring(1);
+          }
+          
+          if (videoId) {
+            // Use privacy-enhanced mode with no cookies
+            embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+            autoplayEmbedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+            isValid = true;
+            
+            // For YouTube, we'll use a generic message
+            artistName = "this creator";
+            trackName = "this track";
+          }
         }
         
         if (isValid) {
-          // Convert to title case
-          const formattedArtist = artistName.split(' ')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-            
-          const formattedTrack = trackName.split(' ')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
+          // Convert to title case if we have specific artist/track
+          if (artistName && artistName !== "this artist" && artistName !== "this creator") {
+            artistName = artistName.split(' ')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          }
           
-          // Display the message
-          companionMusicLink.innerHTML = `I think this piece is best paired with <a href="${url}" target="_blank" class="music-link">${formattedArtist}'s "${formattedTrack}"</a>`;
+          if (trackName && trackName !== "this track") {
+            trackName = trackName.split(' ')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          }
+          
+          // Store player data but don't create it yet
+          playerContainer.dataset.artistName = artistName;
+          playerContainer.dataset.trackName = trackName;
+          playerContainer.dataset.originalUrl = url;
+          playerContainer.dataset.embedUrl = embedUrl;
+          playerContainer.dataset.autoplayEmbedUrl = autoplayEmbedUrl;
+          
+          // Display the link text with hyperlink styling
+          companionMusicLink.innerHTML = `I think this piece is best paired with <span class="companion-music-title">${artistName}'s "${trackName}"</span>`;
           companionMusicLink.style.display = 'block';
+          companionMusicLink.style.cursor = 'pointer';
+          
+          // Make link accessible
+          companionMusicLink.setAttribute('role', 'button');
+          companionMusicLink.setAttribute('tabindex', '0');
+          companionMusicLink.setAttribute('aria-expanded', 'false');
+          companionMusicLink.setAttribute('aria-controls', 'audio-player');
+          
+          // Insert the player after the link
+          companionMusicLink.parentNode.insertBefore(playerContainer, companionMusicLink.nextSibling);
+          
+          // Add click event to the link to toggle player
+          companionMusicLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            togglePlayer(playerContainer, companionMusicLink);
+          });
+          
+          // Add keyboard support
+          companionMusicLink.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              togglePlayer(playerContainer, companionMusicLink);
+            }
+          });
         } else {
           // Generic fallback for other music services
           companionMusicLink.innerHTML = `I think this piece is best paired with <a href="${url}" target="_blank" class="music-link">this music</a>`;
@@ -68,18 +163,281 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Add styling for music links
-  const style = document.createElement('style');
-  style.textContent = `
-    .music-link {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px dotted;
-      padding-bottom: 1px;
+  // Add styling for music links and player
+  loadStyles();
+});
+
+function togglePlayer(playerContainer, linkElement) {
+  const isVisible = playerContainer.style.display === 'block';
+  
+  if (isVisible) {
+    hidePlayer(playerContainer, linkElement);
+  } else {
+    showPlayer(playerContainer, linkElement);
+  }
+}
+
+function showPlayer(playerContainer, linkElement) {
+  // Extract data from the container
+  const artistName = playerContainer.dataset.artistName;
+  const trackName = playerContainer.dataset.trackName;
+  const originalUrl = playerContainer.dataset.originalUrl;
+  const embedUrl = playerContainer.dataset.embedUrl;
+  const autoplayEmbedUrl = playerContainer.dataset.autoplayEmbedUrl;
+  
+  // Create player with autoplay enabled when revealing
+  createCustomAudioPlayer(
+    playerContainer, 
+    artistName, 
+    trackName, 
+    originalUrl, 
+    autoplayEmbedUrl || (embedUrl + (embedUrl.includes('?') ? '&' : '?') + 'autoplay=1')
+  );
+  
+  playerContainer.style.display = 'block';
+  playerContainer.setAttribute('aria-hidden', 'false');
+  linkElement.setAttribute('aria-expanded', 'true');
+  
+  // Add padding to the body to accommodate the fixed player
+  document.body.classList.add('has-audio-player');
+}
+
+function hidePlayer(playerContainer, linkElement) {
+  playerContainer.style.display = 'none';
+  playerContainer.setAttribute('aria-hidden', 'true');
+  linkElement.setAttribute('aria-expanded', 'false');
+  
+  // Remove body padding when player is hidden
+  document.body.classList.remove('has-audio-player');
+}
+
+function createCustomAudioPlayer(container, artistName, trackName, originalUrl, embedUrl) {
+  // Default player styling
+  let playerStyle = `width: 100%; border: none; transition: opacity 0.2s ease; opacity: 0.95;`;
+  let embedHtml = '';
+  
+  // Special handling for SoundCloud to better match the site theme
+  if (originalUrl.includes('soundcloud.com')) {
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+    
+    // Add class to container for additional styling
+    if (isDarkMode) {
+      container.classList.add('soundcloud-dark');
     }
-    .music-link:hover {
-      border-bottom: 1px solid;
-    }
+    
+    // Use a more compact SoundCloud embed (visual=false, smaller height)
+    embedHtml = `
+      <iframe 
+        src="${embedUrl}"
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen
+        style="${playerStyle}; height: 80px;"
+        title="Music player for ${artistName}'s ${trackName}"
+        onload="this.style.opacity='1'"
+        class="soundcloud-embed"
+      ></iframe>
+    `;
+  } else {
+    // Default embed for other platforms
+    embedHtml = `
+      <iframe 
+        src="${embedUrl}" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen
+        style="${playerStyle}; height: 80px;"
+        title="Music player for ${artistName}'s ${trackName}"
+        onload="this.style.opacity='1'"
+      ></iframe>
+    `;
+  }
+  
+  // Add close button to the player
+  const playerHtml = `
+    <div class="close-player" aria-label="Close player" role="button" tabindex="0">&times;</div>
+    <div class="player-container">
+      ${embedHtml}
+    </div>
   `;
-  document.head.appendChild(style);
-}); 
+  
+  container.innerHTML = playerHtml;
+  
+  // Add click event to close button
+  const closeButton = container.querySelector('.close-player');
+  if (closeButton) {
+    closeButton.addEventListener('click', function() {
+      const companionMusicLink = document.getElementById('companion-music-link');
+      hidePlayer(container, companionMusicLink);
+    });
+    
+    // Add keyboard support for the close button
+    closeButton.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const companionMusicLink = document.getElementById('companion-music-link');
+        hidePlayer(container, companionMusicLink);
+      }
+    });
+  }
+  
+  // Add event listener to update dark mode for SoundCloud iframes
+  if (originalUrl.includes('soundcloud.com')) {
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === 'data-theme') {
+          updateSoundCloudTheme(container);
+        }
+      });
+    });
+    
+    observer.observe(document.documentElement, { attributes: true });
+  }
+  
+  // Add keyboard event for Escape key to close the player
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && container.style.display === 'block') {
+      const companionMusicLink = document.getElementById('companion-music-link');
+      hidePlayer(container, companionMusicLink);
+    }
+  });
+}
+
+function updateSoundCloudTheme(container) {
+  const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+  const iframe = container.querySelector('iframe.soundcloud-embed');
+  
+  if (iframe) {
+    let src = iframe.src;
+    
+    // Update color based on theme
+    if (isDarkMode) {
+      src = src.replace(/color=%23[a-fA-F0-9]{6}/, 'color=%23999999');
+      container.classList.add('soundcloud-dark');
+    } else {
+      src = src.replace(/color=%23[a-fA-F0-9]{6}/, 'color=%23ff5500');
+      container.classList.remove('soundcloud-dark');
+    }
+    
+    iframe.src = src;
+  }
+}
+
+function loadStyles() {
+  // Check if our styles are already loaded
+  if (!document.getElementById('audio-player-styles')) {
+    // First try to load the CSS file
+    const link = document.createElement('link');
+    link.id = 'audio-player-styles';
+    link.rel = 'stylesheet';
+    
+    // Use the location origin to determine the base path
+    const baseUrl = document.querySelector('meta[name="baseurl"]')?.getAttribute('content') || '';
+    link.href = baseUrl + '/assets/js/audio-player.css';
+    
+    document.head.appendChild(link);
+    
+    // Fallback inline styles in case the CSS file fails to load
+    link.onerror = function() {
+      const style = document.createElement('style');
+      style.id = 'audio-player-styles';
+      style.textContent = `
+        .audio-player {
+          display: none;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          background: rgba(245, 245, 245, 0.95);
+          backdrop-filter: blur(10px);
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 5px 5%;
+          z-index: 1000;
+          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+          transition: transform 0.3s ease;
+          box-sizing: border-box;
+        }
+        
+        .audio-player.dark-theme {
+          background: rgba(30, 30, 30, 0.95);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .companion-music-title {
+          color: inherit !important;
+          cursor: pointer;
+          font-weight: inherit;
+          transition: opacity 0.2s ease;
+          border-bottom: 1px dotted rgba(127,127,127,0.5);
+          text-decoration: none !important;
+          padding-bottom: 1px;
+        }
+        
+        .companion-music-title:hover {
+          opacity: 0.85;
+          border-bottom: 1px solid rgba(127,127,127,0.8);
+        }
+        
+        .dark-theme .companion-music-title {
+          border-bottom: 1px dotted rgba(200,200,200,0.3);
+        }
+        
+        .dark-theme .companion-music-title:hover {
+          border-bottom: 1px solid rgba(200,200,200,0.6);
+        }
+        
+        .player-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          margin: 0 auto;
+          max-width: 100%;
+          width: 100%;
+        }
+        
+        .close-player {
+          position: absolute;
+          top: 5px;
+          right: 15px;
+          cursor: pointer;
+          font-size: 18px;
+          line-height: 1;
+          color: rgba(0, 0, 0, 0.5);
+          transition: color 0.2s ease;
+          z-index: 1001;
+        }
+        
+        .close-player:hover {
+          color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .dark-theme .close-player {
+          color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .dark-theme .close-player:hover {
+          color: rgba(255, 255, 255, 0.8);
+        }
+        
+        body.has-audio-player {
+          padding-bottom: 100px;
+        }
+        
+        .music-link {
+          color: inherit;
+          text-decoration: none;
+          border-bottom: 1px dotted;
+          padding-bottom: 1px;
+        }
+        .music-link:hover {
+          border-bottom: 1px solid;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+  }
+} 
