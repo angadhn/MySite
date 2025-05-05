@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
           playerContainer.dataset.autoplayEmbedUrl = autoplayEmbedUrl;
           
           // Display the link text with hyperlink styling
-          companionMusicLink.innerHTML = `I think this piece is best paired with <span class="companion-music-title" tabindex="0" role="button">${artistName}'s "${trackName}"</span>`;
+          companionMusicLink.innerHTML = `I think <span class="companion-music-title" tabindex="0" role="button">${artistName}'s "${trackName}"</span> pairs really well with this essay.`;
           companionMusicLink.style.display = 'block';
           companionMusicLink.style.cursor = 'pointer';
           
@@ -165,6 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add styling for music links and player
   loadStyles();
+
+  // Add scroll event listener to handle player opacity
+  handlePlayerScrollOpacity();
 });
 
 function togglePlayer(playerContainer, linkElement) {
@@ -355,14 +358,20 @@ function loadStyles() {
           padding: 5px 5%;
           z-index: 1000;
           box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-          transition: transform 0.3s ease;
+          transition: transform 0.3s ease, opacity 0.3s ease;
           box-sizing: border-box;
+          opacity: 1;
         }
         
         .audio-player.dark-theme {
           background: rgba(30, 30, 30, 0.95);
           border-top: 1px solid rgba(255, 255, 255, 0.1);
           box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* When scrolling down, make player more transparent */
+        .audio-player.scrolled-down {
+          opacity: 0.6;
         }
         
         .companion-music-title {
@@ -469,4 +478,27 @@ function loadStyles() {
       document.head.appendChild(style);
     };
   }
+}
+
+function handlePlayerScrollOpacity() {
+  let lastScrollTop = 0;
+  const audioPlayer = document.getElementById('audio-player');
+  
+  // Skip if no audio player is present
+  if (!audioPlayer) return;
+  
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Determine scroll direction
+    if (scrollTop > lastScrollTop) {
+      // Scrolling down - make more transparent
+      audioPlayer.classList.add('scrolled-down');
+    } else {
+      // Scrolling up - reset opacity
+      audioPlayer.classList.remove('scrolled-down');
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+  }, { passive: true }); // Use passive listener for better scroll performance
 } 
