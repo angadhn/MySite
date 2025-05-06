@@ -13,7 +13,6 @@ _As it’s with my physical home, I expect to be the most frequent visitor here-
 
 _A [[all notes|complete archive of writing]] in [[this site]] is also available. I also maintain [another site](https://angadhn.com) — my first attempt at creating an aesthetic digital home. The overloaded [Academic Pages template site](https://academicpages.github.io/)  did not match my taste and desired writing-to-publication workflow. That site will, however, continue to exist as the primary link to my online teaching resources- this list of is also [[My teaching content|here]]._
 
-
 <div class="notes-grid">
   <div class="notes-column">
     <h5>Top of Mind</h5>
