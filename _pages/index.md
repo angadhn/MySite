@@ -11,7 +11,7 @@ _[[This site]] belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/st
 
 _As it’s with my physical home, I expect to be the most frequent visitor here- and so it’s for this reader’s satisfaction that this place is being tuned, over time. That said, the occasional visitor from the web might pop in, accidentally (but more likely upon invitation). For this reader, I recommend going through the [[essays|essays]], which are more fully formed thinkpieces. However, you might also wish to pick out one of the items that is top of mind or a more recently updated notes from below._
 
-_A [[all notes|complete archive of writing]] in [[this site]] is also available. I also maintain [another site](https://angadhn.com) — my first attempt at creating an aesthetic digital home. The overloaded [Academic Pages template site](https://academicpages.github.io/)  did not match my taste and desired writing-to-publication workflow. That site will, however, continue to exist as the primary link to my online teaching resources, a list of which can also be seen [[My teaching content|here]]._
+_A [[all notes|complete archive of writing]] in [[this site]] is also available. I also maintain [another site](https://angadhn.com) — my first attempt at creating an aesthetic digital home. The overloaded [Academic Pages template site](https://academicpages.github.io/)  did not match my taste and desired writing-to-publication workflow. That site will, however, continue to exist as the primary link to my online teaching resources- this list of is also [[My teaching content|here]]._
 
 
 <div class="notes-grid">
