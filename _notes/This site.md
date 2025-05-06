@@ -6,18 +6,31 @@ tags:
   - aesthetics
 permalink: ObsidianToTufteWorkflow
 top_of_mind: "true"
+created: 2025-01-22
+completion_score: 80
+image: 
+companion music:
 ---
-I am a big-time and longtime fan of [Obsidian](https://obsidian.md)- it is my note-taking tool of choice both for its usability and, just as importantly, its [ethos](https://stephango.com/file-over-app) of avoiding the travails of lock-in. However, my use of it recently plateaued- perhaps, even dropped off a cliff- when I started working on creating a personal static website using Jekyll. This seemed absurd to me as the reason to build the website was that it generated pages from Markdown.
+I am a big-time and longtime fan of [Obsidian](https://obsidian.md)- it is my note-taking tool of choice both for its usability and, just as importantly, its [ethos](https://stephango.com/file-over-app) of avoiding the travails of lock-in. However, my use of it recently plateaued — nay, it dropped off a cliff — when I started working on creating a personal static website using Jekyll. This seemed absurd to me as the reason to build the website was that it generated pages from Markdown.
 
-Part of the reason was that I was a novice website builder who had the tools but not the wisdom to integrate them. To move fast at getting a website running that wasn't merely Obsidian Publish (which is excellent[^1]!), I used the [Academic Pages](https://academicpages.github.io/) template- again, a great open source template to get oneself out there. I then started working with ChatGPT and Claude to start tweaking that template to get it to have more of a Tufte-style using the excellent example of [clayh53's Jekyll site](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog). Merging this work into my template continued to drive my Obsidian use and, more generally, my writing as my focused turned to battling CSS and HTML in Vim with LLMs. I had never been further from my vision of  a seamless writing and publication workflow that integrated Obsidian to Jekyll- all of that code wrangling had also not got me closer to a site whose appearance matched my taste [^3]. I was lamenting the loss of Obsidian and knew deep down that I had to embark on a second disparate journey that let go of this template. The current site is the result of this effort.
+Part of the reason was that I was a novice website builder who had the tools but not the wisdom to integrate them to create a result greater than the sum of its parts. To move fast at getting a website running that wasn't built only using Obsidian Publish (which is excellent[^1]!), I used the [Academic Pages](https://academicpages.github.io/) template- again, a great open source template to get oneself out there. Looking back, I can say that it's a great toe-dipper for those foraying into quickly setting up a static personal website with minimal fuss but, over time, I realised that I just didn't have the chops to customise its appearance. More important, it did not match my desired writing-to-publication workflow either.
 
-In January 2025, I happened to stumble into a tweet that linked to [this post by Steph Ango](https://stephango.com/vault) on how he had was building his website from Obsidian leveraging Obsidian's Git plugin, Jekyll, Github, and Netlify- this sounds like a lot but believe me, reader, the initial setup is worth it and can be done under one hour[^4]. I also like thinkg that one day, what I write could be circulated- I saw Steph Ango uses ButtonDown to send out newsletters of some posts so thought why not put in the overhead now to get the potential for circulation out even if I never use it. This [blogpost](https://michaelsoolee.com/buttondown-newsletter-5-reasons/) made ButtonDown sound like a nice alternative to other options and [used the guidance for integration into Jekyll is here](https://buttondown.com/blog/netlify).
+# Teething Issues
+I began working with ChatGPT and Claude to see if I could the AP template to my taste — a site with the Tufte layout and editing it in Obsidian. To achieve the former, I worked with [clayh53's Jekyll site](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog) and [repo](https://github.com/clayh53/tufte-jekyll). It was a bit of a pain, without Cursor, to merge that into Academic Pages but I kinda got there (see [example](https://angadhn.com)). But this had not yet helped re-ramp up my Obsidian use and, more generally, nurtured my writing habit as battling CSS and HTML in Vim using LLMs was quite consuming.
 
-With the site built and ready for publication, I can officially say that my writing to publication workflow matches the friction-free vision I had. I am currently writing this post in markdown in Obsidian- no more use of Vim or Cursor for editing Markdown[^5]. Anyone who has written notes in Obsidian for a while knows why it's a desirable tool to work with. I can't place my finger on it but I think it is fantastic as a place to think, even without all the bells and whistles- an IDE-style writing vibes that's also minimal is criminally undervalued.
+I had never been further from my vision of  a seamless writing-to-publication workflow that integrated Obsidian to Jekyll with minimal terminal use. All of that code wrangling had also not got me closer to a site whose appearance matched my taste [^3]. I was lamenting the loss of Obsidian because it has a [large stash of my notes](https://theinformationspace.angadhn.com/). Anyone who has written notes in Obsidian for a while knows why some of us prefer it. My reasons have little to do with its plugins and more for the nostalgia of choosing it after experiments with Notion in early 2020. I can't place my finger on why I still stick with it or why I continue to enjoy it but I continue to find it a place to think and write rapidly — even without all the bells-and-whistles of plugins.
+
+So, I knew, deep down, that a second disparate journey to let go of Academic Pages was on the cards to bring Obsidian back into my life. The current site is the result of this effort.
+
+# A Site Reborn through Vibe Coding
+In January 2025, I stumbled upon a tweet linking to [Steph Ango's post](https://stephango.com/vault) on how he was publishing to his site from Obsidian by leveraging its Git plugin, Jekyll, Github, and Netlify — this sounds like a lot but believe me, reader, the initial setup is worth it and can be done in well under one hour[^4]. Maybe even lesser with Cursor.
+
+I also liked thinking that one day, what I write could be circulated and saw that Steph uses ButtonDown to send out newsletters of some posts. I thought "why not put in the overhead now to setup the potential for circulation even if I never use it". This [blogpost](https://michaelsoolee.com/buttondown-newsletter-5-reasons/) made ButtonDown sound like a nice alternative to other options — like Substack, which  has correctly been panned by [Applied Divinity Studies](https://nintil.com/substack-milquetoast) — and [used the guidance for integration into Jekyll is here](https://buttondown.com/blog/netlify). Again, Cursor was crazy helpful.
+
+With the site built and ready for publication, I can officially say that my writing-to-publication workflow matches the friction-free vision I had. This post was written from Obsidian but I continue to use Cursor to tweak and tune the bits-and-bobs on the site.
 
 [^1]: I am a paying user for Obsidian Publish to host my notes at this time but it is likely that I will cancel that subscription eventually and reallocate the moeny to paying for Sync.
 # Tufte customizations
-
 The Jekyll customisations of the Tufte theme of this site is an attempt to create a design with the look and feel of Edward Tufte's books and handouts but with my own twist. My core philosophy is to get the good parts of Tufte by maximising the use of Markdown while minimising the use of Liquid tags which are really irritating to work with for fast writing. However, I am not directly lifting the Tufte style as I think there are things it could do better; instead, I am working with Cursor to adapt [clayh53's SCSS](https://github.com/clayh53/tufte-jekyll/blob/master/css/tufte.scss)[^6] to meet my needs.
 ## Fundamentals
 ### Headings
@@ -337,8 +350,6 @@ Enclose the code block in three backticks, followed by a space and then the lang
 [^3]: Unsure if this site is there yet but I think it will eventually get there as the template I started with was far more minimal.
 
 [^4]: All the bells and whistles of this site is just a consequence of excessive use of [Cursor](https://cursor.ai) to build something that aligns with my aesthetics of what a website against my name ought to be/feel/look like.
-
-[^5]: Though these tools will forever be a part of my life. Cursor is super useful because it is still helping me tweak the site's appearance with LLMs faster than I ever could.
 
 [^6]: I am no expert on why people work with SCSS and [SASS](http://sass-lang.com) file (the .scss type) but this is articulated by clayh53 on their website. The short version is that you can easily handle font changes etc. quite easily.
 
