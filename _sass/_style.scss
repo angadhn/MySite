@@ -564,7 +564,7 @@ figure {
 // Full-width figures
 .fullwidth {
   position: relative;
-  width: 160%;        // Increased width to extend further
+  width: 140%;        // Increased width to extend further
   margin-left: 0;     // Align with left edge of content
   margin-right: -60%; // Push into right margin
   clear: both;
@@ -577,6 +577,7 @@ figure {
 }
 
 figcaption {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-size: 1rem;
   line-height: 1.4;
   color: $color-text;
