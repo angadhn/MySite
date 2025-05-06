@@ -9,7 +9,7 @@ permalink: /
 
 _[[This site]] belongs to  [[about|me]], [Angadh](https://www.sems.qmul.ac.uk/staff/a.nanjangud). It is an attempt to construct an aesthetic home for displaying my written wares._
 
-_As it’s with my physical home, I expect to be the most frequent visitor here- and so it’s for this reader’s satisfaction that this place is being tuned, over time. That said, the occasional visitor from the web might pop in, accidentally but more likely upon invitation. For this reader, I recommend going through the [[essays|essays]], which are more fully formed thinkpieces. However, you might also wish to pick out one of the items that is top of mind or one a more recently updated notes- both of which are below._
+_As it’s with my physical home, I expect to be the most frequent visitor here- and so it’s for this reader’s satisfaction that this place is being tuned, over time. That said, the occasional visitor from the web might pop in, accidentally (but more likely upon invitation). For this reader, I recommend going through the [[essays|essays]], which are more fully formed thinkpieces. However, you might also wish to pick out one of the items that is top of mind or a more recently updated notes from below._
 
 _A [[all notes|complete archive of writing]] in [[this site]] is also available. I also maintain [another site](https://angadhn.com), which was my first attempt at creating an aesthetic digital home. Alas, it was an unfateful match as working with the overloaded [Academic Pages template site](https://academicpages.github.io/)  was no longer for me; I found it too painful to adapt or write on. That site will, however, continue to exist as a link to my online teaching resources, a list of which can also be seen [[My teaching content|here]]._
 
