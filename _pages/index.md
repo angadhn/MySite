@@ -13,7 +13,7 @@ _As it’s with my physical home, I expect to be the most regular user of this s
 
 _That said, the occasional visitor from the web might pop in, accidentally (or, more likely, upon my invitation). For this reader, I recommend going through the [[essays|essays]], which are more fully formed thinkpieces. However, you might also wish to pick out one of the items that is top of mind or a more recently updated notes from below. A [[all notes|full archive]] also contains other random notes that might be useful to me (or you?) at some point._
 
-_I also maintain [another site](https://angadhn.com) — my first attempt at creating an aesthetic digital home — using the [[Academic Pages was too overloaded|overloaded]] [Academic Pages template site](https://academicpages.github.io/). That site will, however, continue to exist as the primary link to my online teaching resources- this list of is also [[My teaching content|here]]. _
+_I also maintain [another site](https://angadhn.com) — my first attempt at creating an aesthetic digital home — built using the [Academic Pages](https://academicpages.github.io/) that I [[This site#Teething Issues|was displeased with]]. That site will, however, continue to exist as the primary link to my online teaching resources- this list of is also [[My teaching content|here]]. _
 
 <div class="notes-grid">
   <div class="notes-column">
