@@ -345,7 +345,7 @@ Enclose the code block in three backticks, followed by a space and then the lang
     blah, blah...
    ```</code> </pre>
 
-[^2]: [[My Jekyll Site had ButtonDown Integration Issues|This note]] tells you of some issues I had with integrating ButtonDown in my Jekyll+Netlify site. Hope it helps someone.
+[^2]: [[Jekyll ButtonDown Issues|This note]] tells you of some issues I had with integrating ButtonDown in my Jekyll+Netlify site. Hope it helps someone.
 
 [^3]: Unsure if this site is there yet but I think it will eventually get there as the template I started with was far more minimal.
 
