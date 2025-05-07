@@ -1,5 +1,9 @@
 <div class="newsletter-container" style="margin: 0.5em 0 1em 0;">
+    {% if page.layout == "note" %}
     <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5em;">Enjoying this article? Subscribe to stay updated</h3>
+    {% else %}
+    <h3 style="text-align: center; margin-top: 0; margin-bottom: 0.5em;">Newsletter Subscription</h3>
+    {% endif %}
     
     <form
       name="newsletter"
@@ -17,6 +21,6 @@
         <button type="submit">Sign up</button>
       </div>
     </form>
-    <p style="text-align: center; margin-bottom: 0.5em; font-style: italic; font-family: 'Palatino', 'Palatino Linotype', serif;">You can also follow me on X <a href="https://x.com/angadhn" target="_blank" rel="noopener noreferrer">@angadhn</a> and <a href="https://bsky.app/profile/angadh.com" target="_blank" rel="noopener noreferrer">Bluesky</a>.</p>
+    <p style="text-align: center; margin-bottom: 0.5em; font-style: italic; font-family: 'Palatino', 'Palatino Linotype', serif;">I am also on X <a href="https://x.com/angadhn" target="_blank" rel="noopener noreferrer">@angadhn</a> and <a href="https://bsky.app/profile/angadh.com" target="_blank" rel="noopener noreferrer">Bluesky</a>.</p>
 
   </div>
