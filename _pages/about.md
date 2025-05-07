@@ -2,6 +2,13 @@
 layout: note
 title: About Me
 permalink: /about
+created: 2023-10-01
+published: 2023-10-01
+tags: 
+top_of_mind: "false"
+completion_score: 50
+image: assets/OldSite/MeAndTilly.jpg
+companion music: https://soundcloud.com/max-cooper/resynthesis
 ---
 
 ![Matilda — my second favourite laptop — chilling in my previous home in Stockwell. At 6 years, this was the longest dwell-space I continuously inhabited in 37 orbits around the Sun. Sweet Tilly!](assets/OldSite/MeAndTilly.jpg)
