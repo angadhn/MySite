@@ -4,7 +4,7 @@ title: About Me
 permalink: /about
 ---
 
-![Matilda, on a typical lap repose, in my previous home in Stockwell. At 6 years, this was the longest dwell-space I continuously inhabited in 37 orbits around the Sun. Sweet Tilly!](assets/OldSite/MeAndTilly.jpg)
+![Matilda — my second favourite laptop — chilling in my previous home in Stockwell. At 6 years, this was the longest dwell-space I continuously inhabited in 37 orbits around the Sun. Sweet Tilly!](assets/OldSite/MeAndTilly.jpg)
 
 At present, I am a Lecturer in Spacecraft Engineering at Queen Mary University of
 London in the UK {% sidenote 'One' '[My QMUL page](https://www.seresearch.qmul.ac.uk/robotics/people/ananjangud/)' %}.
