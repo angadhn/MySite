@@ -11,7 +11,7 @@ top_of_mind: "true"
 memorable phrases: Peaceable revolution, Civil disobedience
 completion_score: 80
 image: /assets/imgs/Thoreau-1/Thoreau.jpg
-companion music: https://soundcloud.com/daftside-2/sets/psychic-live-july-17-2014
+companion music: https://soundcloud.com/captain-mandrake/authoritarianism-dj-set?si=40ef0e5438624ca88ac18f233ff87faa&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing
 ---
 > When I meet a government which says to me, "Your money or your life," why should I be in haste to give it my money? It may be in a great strait, and not know what to do: I cannot help that. It must help itself; do as I do.
 
