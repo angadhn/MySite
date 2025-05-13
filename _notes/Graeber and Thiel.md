@@ -7,6 +7,8 @@ tags:
   - technology
   - essays
 permalink: /graeberAndThiel
+completion_score: 80
+image: /assets/imgs/GraeberAndThiel/Graeber.jpeg
 ---
 My friends are big fans of David Graeber's _Bullshit Jobs_ and _Debt_.
 Having been more a listener of his, I find his candor amusing and cutting.
