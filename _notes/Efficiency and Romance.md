@@ -11,6 +11,10 @@ completion_score:
 image: 
 companion music:
 ---
+Current Claude Chats:
+- [[Efficiency vs. Romance in Ancient Wisdom-Part 1]]
+- [[Efficiency vs. Romance in Ancient Wisdom-Part 2]]
+
 Most serious and profound problems/questions/issues can only be discussed only in the form of jokes.
 
 Far too many people fantasise about quitting their jobs—even if it is well paid but not rewarding. The romantic imaginings of how one’s newly found time will be spent or the rush from uncertainty all inspire a kind of purpose or urgency that efficiency just cannot create. 
