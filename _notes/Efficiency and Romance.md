@@ -11,7 +11,7 @@ completion_score:
 image: 
 companion music:
 ---
-Current Claude Chats:
+Claude Chats:
 - [[Efficiency vs. Romance in Ancient Wisdom-Part 1]]
 - [[Efficiency vs. Romance in Ancient Wisdom-Part 2]]
 
