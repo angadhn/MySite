@@ -4,6 +4,7 @@ created: 28-01-2025
 published: 2025-01-28
 tags:
   - writing
+  - WiP
 permalink: /futureEssays
 top_of_mind: "false"
 ---

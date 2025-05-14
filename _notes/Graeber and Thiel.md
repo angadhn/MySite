@@ -1,6 +1,6 @@
 ---
 title: Graeber and Thiel on Stagnation
-created: 09-12-2024
+created: 2024-12-20
 published: 2024-12-11
 tags:
   - stagnation
@@ -10,10 +10,7 @@ permalink: /graeberAndThiel
 completion_score: 80
 image: /assets/imgs/GraeberAndThiel/Graeber.jpeg
 ---
-My friends are big fans of David Graeber's _Bullshit Jobs_ and _Debt_.
-Having been more a listener of his, I find his candor amusing and cutting.
-So when I happened upon him and Peter Thiel talking, I wasn't
-going to miss it despite knowing little  about what it was actually
+My friends are big fans of David Graeber's _Bullshit Jobs_ and _Debt_. Having been more a listener of his, I find his candor amusing and cutting. So when I happened upon him and Peter Thiel talking, I wasn't going to miss it despite knowing little  about what it was actually
 on{% sidenote 'zeroone' "Turns out this is from the book launch of _Zero to One_." %}.
 Going into it, I anticipated an alignment in their values - moreso than one
 might think purely because the comparably less famous Graeber is anarchist and Thiel is

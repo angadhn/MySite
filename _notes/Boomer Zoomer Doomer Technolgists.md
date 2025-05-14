@@ -2,7 +2,8 @@
 title: 
 created: 
 published: ""
-tags: 
+tags:
+  - WiP
 permalink: 
 top_of_mind: "false"
 completion_score: 

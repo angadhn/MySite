@@ -34,12 +34,19 @@ _My [other site](https://angadhn.com) is the primary link to my teaching resourc
     <h5>Updated</h5>
     <ul>
       {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
-      {% for note in recent_notes limit: 5 %}
-      {% unless note.tags contains 'WiP' %}
-        <li>
-          • <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}" style="font-family: 'Futura', serif;">{{ note.title }}</a>
-        </li>
-      {% endunless %}
+      {% assign count = 0 %}
+      {% for note in recent_notes %}
+        {% unless note.tags contains 'WiP' %}
+          {% if count < 5 %}
+            <li>
+              • <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}" style="font-family: 'Futura', serif;">{{ note.title }}</a>
+            </li>
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endunless %}
+        {% if count >= 5 %}
+          {% break %}
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

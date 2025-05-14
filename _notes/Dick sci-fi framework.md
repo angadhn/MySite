@@ -4,6 +4,7 @@ created: 2025-04-20
 published: 2025-04-21
 tags:
   - sci-fi
+  - WiP
 permalink: DickFramework
 top_of_mind: "false"
 completion_score: 45
