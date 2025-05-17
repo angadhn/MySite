@@ -16,7 +16,7 @@ completion_score:
 image: 
 companion music:
 ---
-Jurassic Park is a movie that has aged so confusingly. Still awe-inspiring and hilariously cringey dialogue. Also, the dangling of Hammond’s philanthropic carrot feels prescient but also thoughtless in its portrayal of scientists.
+Jurassic Park has aged so confusingly. Undoubtedly awe-inspiring visually—not just for the effects but the vivid shots of the dinosaurs in the fields and the stampedes that remind me of Hieronymous Bosch—but also hilariously cringey dialogue from characters with complex personalities only as complex as the dinosaurs. And its prescience on the nature of scientific funding, with the dangling of Hammond’s philanthropic carrot to convince the paleontologists to vet Jurassic Park, is cancelled out by the portrayal of scientists as a thoughtless bunch.
 
 In the WWE, he’d definitely go by Steven “The Spectacle” Spielberg.
 
