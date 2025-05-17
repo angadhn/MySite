@@ -3,7 +3,7 @@ title: Observations On Writing
 created: 2025-05-16
 published: 2025-05-16
 tags:
-  - essays
+  - WiP
 permalink: /on-writing-1
 top_of_mind: "false"
 completion_score: 10

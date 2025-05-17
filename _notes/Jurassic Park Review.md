@@ -9,6 +9,7 @@ description:
 tags:
   - review
   - mindslop
+  - WiP
 permalink: /jurassic-park-review
 top_of_mind: "false"
 completion_score: 
