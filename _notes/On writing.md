@@ -26,7 +26,7 @@ The mind has two roles in writing: it’s a container for words you personally k
 
 However, humour has not organically emerged in my writing as yet[^3]. Such taste-related objectives, I think, provide personality elevate writing above standard LLM garble{% sidenote 'slop' "A less technical term for AI slop." %} in the wild because it is something few humans are effective at.
 
-But the heart’s role is less easy—maybe even impossible—to relegate to a machine as ensuring the child picks up the bowl and is prepared to run into the storm is the kind of desire that one cannot mechanize. So the persistent challenge then, for me, is to stay attentive; to observe the heart sufficiently and from it the world, to notice when a storm of thoughts is brewing. The most intense _writing desires_ hit me whilst reading an activity I seem to commit most of my attention and time towards these days, or watching a movie.
+But the heart’s role is less easy—maybe even impossible—to relegate to a machine as ensuring the child picks up the bowl and is prepared to run into the storm is the kind of desire that one cannot mechanize. So the persistent challenge then, for me, is to stay attentive; to observe the heart sufficiently and from it the world, to notice when a storm of thoughts is brewing. The most intense _writing desires_ hit me whilst reading, an activity I seem to commit most of my attention and time towards these days, or watching a movie[^2].
 
 In a sense, I don’t see writing too differently from long-form meditation as both can train the mind to surrender control to another region of the body, allowing it to lead observations of reality. For example, during Vipassana meditation{% sidenote  'vip1' "If this is an incorrect interpretation of instructions, that‘s on me." %}, my mind learned to cede control to the skin—specifically, by observing the region around the nose in the early days followed by other parts during scanning—and progressing towards observing something far broader while simultaneously deeper. And through this I feel like, sometimes, I reached a more fundamental kernel of understanding of reality as it is- an objective or a point which is not always guaranteed. And it’s fine if it’s not because process matters, not just achievements. Achievements don’t lead to process but process leads to achievements.
 
@@ -39,3 +39,5 @@ The parallel between such meditation and writing, then, lies in observing the se
 [^2]: Conversations with friends should rank up there but few seem interested in writing or reading.
 
 [^3]: I wrote this sentence a few hours before [live-tweeting](https://x.com/angadhn/status/1923452612453560732) my [[Jurassic Park Review]] so this is not wholly true anymore. But that insta-writing helped reinforce the thesis of this piece on noticing the desire (in this case irritation at the movie) to instantly catch thought-drops in some form.
+
+[^4]: 
