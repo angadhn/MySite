@@ -38,4 +38,4 @@ The parallel between such meditation and writing, then, lies in observing the se
 
 [^2]: Other activities that trigger this are conversations with friends, who are similarly engaged in dialogue with themselves, or even in conversation with Claude about mundane things.
 
-[^3]: I wrote this sentence a few hours before live-tweeting my [[Jurassic Park Review]] so this is not wholly true anymore. But that writing helped reinforce my thesis on instantly catching thought-drops when desire to write arises.
+[^3]: I wrote this sentence a few hours before [live-tweeting](https://x.com/angadhn/status/1923452612453560732) my [[Jurassic Park Review]] so this is not wholly true anymore. But that insta-writing helped reinforce the thesis of this piece on noticing the desire (in this case irritation at the movie) to instantly catch thought-drops in some form.
