@@ -10,7 +10,7 @@ completion_score: 10
 image: 
 companion music:
 ---
-With increasing frequency of writing creatively[^1], I can see that “trying to write” is easier than “trying to write with wit”. With regular effort, the idea of “trying to write” has become trivial but when I slip, I easily forget that all I must do is “pick up a fucking pen and try to write again”! Here, the fountain pen is important for me because it makes the act of writing more pleasurable; it lends a ritualistic air to what is mundane. I find the mechanical pencil to be enjoyable but more useful in idea-sketching.
+With greater frequency of creative writing[^1], I have learned that “trying to write” is easier than “trying to write with wit”. With regular effort, the idea of “trying to write” has become trivial but when I slip up, I tend to forget that all I must do is “pick up a darn pen and start writing again”! Here, the fountain pen is important for me because it makes the act of writing more pleasurable; it lends a ritualistic air to what is mundane. I find the mechanical pencil to be enjoyable but more useful in idea-sketching.
 
 > You must stay drunk on writing so reality cannot destroy you.
 > 
