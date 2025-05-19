@@ -10,13 +10,13 @@ completion_score: 10
 image: 
 companion music:
 ---
-With greater frequency of creative writing[^1], I have learned that “trying to write” is easier than “trying to write with wit”. With regular effort, the idea of “trying to write” has become trivial but when I slip up, I tend to forget that all I must do is “pick up a darn pen and start writing again”! Especially in such scenarios, the fountain pen is important as it makes the act of writing itselfs feel more pleasurable, lending a solemn air to what is mundane. I find the mechanical pencil to also be enjoyable but more useful in idea-sketching.
+With greater frequency of creative writing[^1], I have learned that “trying to write” is easier than “trying to write with wit”. With regular effort, the idea of “trying to write” has become trivial but when I slip up, I tend to forget that all I must do is “pick up a darn pen and start writing again”! Especially in such scenarios, the fountain pen is important as it makes the act of writing itself feel more pleasurable, lending a solemn air to what is mundane. I find the mechanical pencil to also be enjoyable but more useful in idea-sketching.
 
 > You must stay drunk on writing so reality cannot destroy you.
 > 
 > Ray Bradbury, _Zen in the Art of Writing_
 
-Armed with a pen, writing then becomes merely the act of making a sentence—no lofty ambitions of being funny or meaningful or anything of that sort. After one sentence, make one more. And then another. And if a sentence seems to be in conversation with another over the span of a few mins, I seem to be able to go on for a while longer. The hope is that, at some point, such a routine might permit a point to emerge! And, heck, who knows, maybe it'll even have funnily phrasing!
+Armed with a pen, writing then becomes merely the act of making a sentence—no lofty ambitions of being funny or meaningful or anything of that sort. After one sentence, make one more. And then another. And if a sentence seems to be in conversation with another over the span of a few mins, I seem to be able to go on for a while longer. The hope is that, at some point, such a routine might permit a point to emerge. And, heck, who knows, maybe it'll even be funnily phrased!
 
 If it so happens that a point emerges—and I feel it has in [[inflatable von Braun Stations|some]] of [[Where is my von Braun Wheel?|my writing]], albeit [[Thoreau|sometimes it's only clear to me]]—it’s because there is a personal value that is taking voice from within the writer’s heart, where desire lives, which can manifest as words and other creations. Writing in public can lead to admonition or admiration but betwixt these live more personal emotions of fear and fulfilment—being concerned, affected or driven by any of these has been counterproductive to my writing{% sidenote `actions` "Or any action, really." %}.
 
