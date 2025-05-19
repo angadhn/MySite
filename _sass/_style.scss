@@ -1357,9 +1357,6 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   }
 
   // Improved text wrapping and hyphenation
-  text-align: justify;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -1367,13 +1364,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   
   // Add language hint for better hyphenation
   lang: "en";
-  
-  // Prevent orphans and widows
-  text-wrap: balance;
-  
-  // Fine-tune spacing
-  letter-spacing: -0.01em;
-  word-spacing: 0.01em;
+
 
   // Responsive adjustments
   @media (max-width: 760px) {
