@@ -7,7 +7,7 @@ tags:
 permalink: /on-writing-1
 top_of_mind: "false"
 completion_score: 10
-image: /assets/imgs/On-Writing-1/WritingTilly.jpg
+image: /assets/imgs/On-Writing-1/WritingTilly-low.jpg
 companion music:
 ---
 With greater frequency of creative writing[^1], I have learned that "trying to write" is easier than "trying to write with wit". With regular effort, the idea of "trying to write" has become trivial but when I falter, I tend to forget that all I must do is "pick up a darn pen and start writing again"! Especially in such scenarios, the fountain pen is important as it makes the act of writing itself feel more pleasurable, lending a solemn air to what is mundane. I find the mechanical pencil to also be enjoyable but more useful in idea-sketching.
@@ -16,7 +16,7 @@ With greater frequency of creative writing[^1], I have learned that "trying to w
 > 
 > Ray Bradbury, _Zen in the Art of Writing_
 
-Armed with a pen, writing then becomes merely the act of making a sentence—no lofty ambitions of being funny or meaningful or anything of that sort. After one sentence, make one more. And then another. And if a sentence seems to be in conversation with another over the span of a few minutes, I seem to be able to go on for a while longer. The hope is that, at some point, such a routine might permit a point to emerge. And, heck, who knows, maybe it'll even turn out funny!
+Armed with a pen, writing then becomes merely the act of making a sentence—no lofty ambitions of being funny or meaningful or anything of that sort. After one sentence, make one more. And then another. And if a sentence seems to converse with another over the span of a few minutes, I seem to be able to go on for a while longer. The hope is that, at some point, such a routine might permit a point to emerge. And, heck, who knows, maybe it'll even turn out funny!
 
 If it so happens that a point emerges—and I feel it has in [[inflatable von Braun Stations|some]] of [[Where is my von Braun Wheel?|my writing]], albeit [[Thoreau|sometimes it's only clear to me]]—it’s because there is a personal value that is taking voice from within the writer’s heart, where desire lives, which can manifest as words and other creations. Writing in public can lead to admonition or admiration but betwixt these live more personal emotions of fear and fulfilment—being concerned, affected or driven by any of these has been counterproductive to my writing{% sidenote `actions` "Or any action, really." %}.
 
@@ -40,7 +40,7 @@ The parallel between such meditation and writing, then, lies in observing the se
 
 *TBC*
 
-![](assets/imgs/On-Writing-1/Writing-1.jpg)
+![](assets/imgs/On-Writing-1/WritingTilly.jpg)
 
 [^1]: This is quite different from the _academic scientific writing_ I do for work, which is more about proposals and articles. While both class of documents tend to be less stream-of-consciousness (which I class as creative writing), when it comes to proposals, newer funders request two-pagers with little room for references or make use of "forms". These bring it closer to creative writing but is still roughly 25%-30% made up of crisp summaries of past ideas to motivate your own. Over time, it can become less "original" writing as you have ready to go answers.
 
