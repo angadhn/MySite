@@ -1,5 +1,5 @@
 ---
-title: Observing the Parallels between Writing and Meditation
+title: My Observations on Writing from Doing it
 created: 2025-05-16
 published: 2025-05-16
 tags:
