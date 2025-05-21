@@ -7,7 +7,7 @@ tags:
 permalink: /on-writing-1
 top_of_mind: "false"
 completion_score: 10
-image: 
+image: /assets/imgs/On-Writing-1/Writing-1.jpg
 companion music:
 ---
 With greater frequency of creative writing[^1], I have learned that "trying to write" is easier than "trying to write with wit". With regular effort, the idea of "trying to write" has become trivial but when I falter, I tend to forget that all I must do is "pick up a darn pen and start writing again"! Especially in such scenarios, the fountain pen is important as it makes the act of writing itself feel more pleasurable, lending a solemn air to what is mundane. I find the mechanical pencil to also be enjoyable but more useful in idea-sketching.
@@ -39,6 +39,8 @@ In a sense, I don’t see writing too differently from long-form meditation as b
 The parallel between such meditation and writing, then, lies in observing the sensations of one's heart and ceding control to it, in that moment. Sometimes, a fundamental point might be reached but writing must happen without this expectation. I continue to write with pen on paper—even if it is for just half a page—as I find it easier to let go of pursuing a point and, instead, enjoy seeing ink flow onto paper.
 
 *TBC*
+
+![](assets/imgs/On-Writing-1/Writing-1.jpg)
 
 [^1]: This is quite different from the _academic scientific writing_ I do for work, which is more about proposals and articles. While both class of documents tend to be less stream-of-consciousness (which I class as creative writing), when it comes to proposals, newer funders request two-pagers with little room for references or make use of "forms". These bring it closer to creative writing but is still roughly 25%-30% made up of crisp summaries of past ideas to motivate your own. Over time, it can become less "original" writing as you have ready to go answers.
 
