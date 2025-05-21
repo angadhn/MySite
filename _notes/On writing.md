@@ -7,7 +7,7 @@ tags:
 permalink: /on-writing-1
 top_of_mind: "false"
 completion_score: 10
-image: /assets/imgs/On-Writing-1/Writing-1.jpg
+image: /assets/imgs/On-Writing-1/WritingTilly.jpg
 companion music:
 ---
 With greater frequency of creative writing[^1], I have learned that "trying to write" is easier than "trying to write with wit". With regular effort, the idea of "trying to write" has become trivial but when I falter, I tend to forget that all I must do is "pick up a darn pen and start writing again"! Especially in such scenarios, the fountain pen is important as it makes the act of writing itself feel more pleasurable, lending a solemn air to what is mundane. I find the mechanical pencil to also be enjoyable but more useful in idea-sketching.
