@@ -6,7 +6,7 @@ tags:
   - WiP
 permalink: /on-writing-1
 top_of_mind: "false"
-completion_score: 10
+completion_score: 40
 image: /assets/imgs/On-Writing-1/WritingTilly-low.jpg
 companion music:
 ---
