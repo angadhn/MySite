@@ -136,9 +136,16 @@
         const paragraphs = content.querySelectorAll('p');
         console.log('Found paragraphs:', paragraphs.length);
         
-        // Find first text paragraph (not just image)
+        // Find first text paragraph (not just image), and not inside epigraph or blockquote
         let firstTextP = null;
         for (const p of paragraphs) {
+          // Skip if paragraph is inside an epigraph or blockquote
+          if (
+            p.closest('.epigraph, blockquote') ||
+            (p.parentElement && (p.parentElement.classList.contains('epigraph') || p.parentElement.tagName.toLowerCase() === 'blockquote'))
+          ) {
+            continue;
+          }
           // Skip if paragraph only contains an image
           if (!p.querySelector('img') && p.textContent.trim().length > 0) {
             firstTextP = p;
