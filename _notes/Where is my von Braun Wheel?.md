@@ -31,6 +31,16 @@ Early space visionaries, such as Werner von Braun, strongly believed that settli
 ## The difficulty of building large stations
 This elegant solution to generate artificial gravity, however, comes with a major engineering challenge. Much like a ferris wheel, the wheel's rotation could disorient astronauts if spun too fast. If the wheel spins slowly then its physics dictates it must be quite large. For example, one of von Braun's designs called for a massive 75 metre diameter wheel that generated lunar gravity if spun at 3 rpm and Earth-like gravity at 5 rpm — this range is considered [reasonable for astronauts](https://nss.org/wp-content/uploads/2017/07/Space-Settlement-Population-Rotation-Tolerance-Globus.pdf).
 
+<label for="wine-video-marginnote" class="margin-toggle">&#8853;</label>
+
+<input type="checkbox" id="wine-video-marginnote" class="margin-toggle"/>
+<span class="marginnote"><video width="220" controls muted>
+    <source src="/assets/imgs/WiP1/rotating_wine.mp4" type="video/mp4">
+  </video>
+  <br>
+  <a href="https://x.com/Rainmaker1973/status/1926575386919383080" target="_blank" rel="noopener">Rotational forces applied to wine tasting.</a>
+</span>
+
 However, the physics of rockets presents a different obstacle as it must be slender, like an arrow, to escape Earth's gravity well and reach orbit. This defines the main upstream engineering challenge: how can we fit enormous space structures into slender rockets? For context, even Starship's [upper-stage](https://en.wikipedia.org/wiki/SpaceX_Starship_(spacecraft)), which is about 9 metres wide and 22 metres tall cannot fit von Braun's conceptual station in a straightforward manner.
 
 Architects of the International Space Station (ISS), the largest space structure ever built, tackled a similar packing problem using multiple smaller spacecraft which connect, like space Ikea, into a structure greater than its parts. Such in-space assembly involves spacecraft either gently crashing into each other at specific connection points (a manoeuvre called [rendezvous and docking](https://www.nasa.gov/reference/jsc-rendezvous-prox-ops-docking-subsystems/)) as well as [astronauts and space cranes](https://en.wikipedia.org/wiki/Mobile_Servicing_System) supporting finer assembly tasks. While this works great in theory, the ISS's assembly needed over 40 rocket launches spanning several years (and even more launches for cargo resupply and repairs). More damning is the typical ISS crew size of 7, which is a little over twice that of the first ever space station, Salyut, from 1972. Clearly 50 years of space station development does not indicate that such modular in-orbit assembly will scale to von Braun’s [anticipated 80 humans](https://en.wikipedia.org/wiki/Rotating_wheel_space_station#:~:text=It%20was%20envisaged%20as%20having%20a%20crew%20of%C2%A080) or, more relevant today, Starship’s [100](https://www.spacex.com/media/starship_users_guide_v1.pdf) any time soon. Civilisation-scale megastructures like the Stanford Torus and O'Neill cylinders appear even more outlandish to discuss today than when they were first proposed in the 70s.
