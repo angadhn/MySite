@@ -14,7 +14,8 @@ SPACE_STATIONS = [
     {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'has_gravity': False},
     {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'has_gravity': False},
     # Starship (SpaceX)
-    {'name': 'Starship', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 100, 'is_real': False, 'has_gravity': False},
+    {'name': 'Starship-100', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 100, 'is_real': False, 'has_gravity': False},
+    {'name': 'Starship-10', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 10, 'is_real': False, 'has_gravity': False},
     
     # Planned station
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
@@ -128,7 +129,7 @@ def create_multidimensional_bubble_chart():
     fig.add_shape(
         type="rect",
         x0=0, y0=0,
-        x1=100, y1=50,
+        x1=100, y1=25,
         fillcolor="rgba(0, 255, 0, 0.1)",
         line=dict(color="green", width=2),
         layer="below"
@@ -136,7 +137,7 @@ def create_multidimensional_bubble_chart():
 
     # Add region labels
     fig.add_annotation(
-        x=11.5, y=35,
+        x=11.5, y=25,
         text="Space<br>Stations",
         showarrow=False,
         font=dict(color="green", size=12),
@@ -372,7 +373,7 @@ def create_multidimensional_bubble_chart():
             text_position = 'top center'
             text_x += 0  # No horizontal shift
             text_y += 5  # Move up more to place it above the circle
-        elif name == 'Starship':
+        elif name == 'Starship-100' or name == 'Starship-10':
             text_position = 'top right'
             text_x += 4  # Move right more
             text_y += -5  # Move up more
