@@ -13,6 +13,8 @@ SPACE_STATIONS = [
     {'name': 'Skylab', 'total_volume': 499, 'pressurised_volume': 351.6, 'habitable_volume': 270, 'crew': 3, 'is_real': True, 'has_gravity': False},
     {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'has_gravity': False},
     {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'has_gravity': False},
+    # Starship (SpaceX)
+    {'name': 'Starship', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 10, 'is_real': False, 'has_gravity': False},
     
     # Planned station
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
@@ -102,6 +104,68 @@ def create_multidimensional_bubble_chart():
     
     # Create figure
     fig = go.Figure()
+    
+    # Add rectangular regions for different space structure categories
+    # Superstructures region (130+ m³/person, 140+ crew)
+    fig.add_shape(
+        type="rect",
+        x0=0, y0=0,
+        x1=130, y1=140,
+        fillcolor="rgba(128, 0, 128, 0.08)",
+        line=dict(color="purple", width=2),
+        layer="below"
+    )
+    # Spaceships region (100-130 m³/person, 50-140 crew)
+    fig.add_shape(
+        type="rect",
+        x0=0, y0=0,
+        x1=110, y1=110,
+        fillcolor="rgba(0, 0, 255, 0.08)",
+        line=dict(color="blue", width=2),
+        layer="below"
+    )
+    # Space Stations region (0-100 m³/person, 0-50 crew)
+    fig.add_shape(
+        type="rect",
+        x0=0, y0=0,
+        x1=100, y1=50,
+        fillcolor="rgba(0, 255, 0, 0.1)",
+        line=dict(color="green", width=2),
+        layer="below"
+    )
+
+    # Add region labels
+    fig.add_annotation(
+        x=11.5, y=25,
+        text="Space<br>Stations",
+        showarrow=False,
+        font=dict(color="green", size=12),
+        bgcolor="rgba(255, 255, 255, 0.8)",
+        bordercolor="green",
+        borderwidth=1,
+        borderpad=4
+    )
+
+    fig.add_annotation(
+        x=13, y=95,
+        text="Spaceships",
+        showarrow=False,
+        font=dict(color="blue", size=12),
+        bgcolor="rgba(255, 255, 255, 0.8)",
+        bordercolor="blue",
+        borderwidth=1,
+        borderpad=4
+    )
+    fig.add_annotation(
+        x=15, y=135,
+        text="Superstructures",
+        showarrow=False,
+        font=dict(color="purple", size=12),
+        bgcolor="rgba(255, 255, 255, 0.8)",
+        bordercolor="purple",
+        borderwidth=1,
+        borderpad=4
+    )
     
     # Separate indices for each category (using filtered indices)
     # 1. Real stations (green)
@@ -424,9 +488,10 @@ def create_multidimensional_bubble_chart():
     for i, name in enumerate(megastructure_station_names):
         # Calculate positioning based on the station name
         if name == "Gateway's von Braun":
-            text_x = 98  # Position to the left of the star
-            text_y = 103
+            text_x = 115  # Position to the left of the star
+            text_y = 100
             text_position = 'middle right'
+            name = "Gateway's<br>von Braun"
         elif name == "O'Neill Cylinder":
             text_x = 94  # Position to the left of the star
             text_y = 132  # Above the star
