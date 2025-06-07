@@ -14,7 +14,7 @@ SPACE_STATIONS = [
     {'name': 'Tiangong', 'total_volume': 726.6 , 'pressurised_volume': 340, 'habitable_volume': 121, 'crew': 3, 'is_real': True, 'has_gravity': False},
     {'name': 'ISS', 'total_volume': 1200, 'pressurised_volume': 1005, 'habitable_volume': 388, 'crew': 7, 'is_real': True, 'has_gravity': False},
     # Starship (SpaceX)
-    {'name': 'Starship', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 10, 'is_real': False, 'has_gravity': False},
+    {'name': 'Starship', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 100, 'is_real': False, 'has_gravity': False},
     
     # Planned station
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
@@ -136,7 +136,7 @@ def create_multidimensional_bubble_chart():
 
     # Add region labels
     fig.add_annotation(
-        x=11.5, y=25,
+        x=11.5, y=35,
         text="Space<br>Stations",
         showarrow=False,
         font=dict(color="green", size=12),
@@ -147,7 +147,7 @@ def create_multidimensional_bubble_chart():
     )
 
     fig.add_annotation(
-        x=13, y=95,
+        x=13, y=55,
         text="Spaceships",
         showarrow=False,
         font=dict(color="blue", size=12),
@@ -157,7 +157,7 @@ def create_multidimensional_bubble_chart():
         borderpad=4
     )
     fig.add_annotation(
-        x=15, y=135,
+        x=15, y=115,
         text="Superstructures",
         showarrow=False,
         font=dict(color="purple", size=12),
@@ -372,6 +372,10 @@ def create_multidimensional_bubble_chart():
             text_position = 'top center'
             text_x += 0  # No horizontal shift
             text_y += 5  # Move up more to place it above the circle
+        elif name == 'Starship':
+            text_position = 'top right'
+            text_x += 4  # Move right more
+            text_y += -5  # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
