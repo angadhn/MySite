@@ -16,7 +16,7 @@ SPACE_STATIONS = [
     # Starship (SpaceX)
     {'name': 'Starship-100', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 100, 'is_real': False, 'has_gravity': False},
     {'name': 'Starship-10', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 10, 'is_real': False, 'has_gravity': False},
-    
+    # {'name': 'Starship-50/50', 'total_volume': 1000, 'pressurised_volume': 1000, 'habitable_volume': 1000, 'crew': 30, 'is_real': False, 'has_gravity': False},
     # Planned station
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
     
@@ -137,8 +137,8 @@ def create_multidimensional_bubble_chart():
 
     # Add region labels
     fig.add_annotation(
-        x=11.5, y=25,
-        text="Space<br>Stations",
+        x=15, y=20,
+        text="Space Stations",
         showarrow=False,
         font=dict(color="green", size=12),
         bgcolor="rgba(255, 255, 255, 0.8)",
@@ -366,17 +366,21 @@ def create_multidimensional_bubble_chart():
             text_y += 3  # Move up slightly
             text_x += 3  # Move right slightly
         elif name == 'LORL':
-            text_position = 'middle right'
-            text_x += 4  # Move right more
+            text_position = 'middle left'
+            text_x += -4  # Move right more
             text_y -= 3  # Move down slightly
         elif name == 'MORL':
             text_position = 'top center'
             text_x += 0  # No horizontal shift
             text_y += 5  # Move up more to place it above the circle
-        elif name == 'Starship-100' or name == 'Starship-10':
+        elif name == 'Starship-100' or name == 'Starship-50/50':
             text_position = 'top right'
             text_x += 4  # Move right more
             text_y += -5  # Move up more
+        elif name == 'Starship-10':
+            text_position = 'top left'
+            text_x +=-1  # Move right more
+            text_y += 5  # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
@@ -410,14 +414,16 @@ def create_multidimensional_bubble_chart():
             text_x += 4  # Move right more
         elif name == 'Skylab':
             text_position = 'bottom right'
-            text_x += 4  # Move right slightly
+            text_x += -10.5  # Move right slightly
+            text_y += 1  # Move up more
         elif name == 'Tiangong':
             text_position = 'middle right'  # Changed to middle right
-            text_x += 3.5  # Move right more
-            text_y += -2  # Move up more
+            text_x += 3.2  # Move right more
+            text_y += -1  # Move up more
         elif name == 'Salyut-1':
             text_position = 'bottom left'
             text_x -= 3  # Move left slightly
+            text_y += 1  # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
