@@ -35,7 +35,7 @@ SPACE_STATIONS = [
     },
     {
         'name': 'Gateway\'s von Braun',
-        'total_volume': 12000,
+        'total_volume': 11906250,
         'pressurised_volume': 11906250,
         'habitable_volume': 8000000,
         'crew': 1400,
@@ -74,6 +74,7 @@ SPACE_STATIONS = [
     {'name': 'LIFE-5000', 'total_volume': 5000, 'pressurised_volume': 5000, 'habitable_volume': 2800, 'crew': 32, 'is_real': False, 'has_gravity': False},
     {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
     {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
+    {'name': 'Ideal Station', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': False},
 ]
 
 def get_station_colors(data):
@@ -432,6 +433,10 @@ def create_multidimensional_bubble_chart():
             text_position = 'top left'
             text_x +=-1  # Move right more
             text_y += 5  # Move up more
+        elif name == 'Ideal Station':
+            text_position = 'top right'
+            text_x += 4.5  # Move right more
+            text_y += -5  # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
@@ -658,3 +663,13 @@ def create_multidimensional_bubble_chart():
 
 if __name__ == "__main__":
     create_multidimensional_bubble_chart()
+    print('\nHabitable Volume / Total Volume ratios for conceptual stations:')
+    ratios = []
+    for s in SPACE_STATIONS:
+        if not s['is_real']:
+            ratio = s['habitable_volume'] / s['total_volume'] if s['total_volume'] else float('nan')
+            print(f"{s['name']}: {ratio:.2f}")
+            ratios.append(ratio)
+    if ratios:
+        avg_ratio = sum(ratios) / len(ratios)
+        print(f"Average ratio: {avg_ratio:.2f} of {len(ratios)} conceptual stations")

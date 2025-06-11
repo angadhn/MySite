@@ -1,14 +1,14 @@
 ---
-title: 
-created: 
-published: ""
+title: Love studies and WEIRD immigrants
+created:
+published: 2025-06-11
 tags:
   - WiP
-permalink: 
+permalink:
 top_of_mind: "false"
-completion_score: 
-image: 
-companion music:
+completion_score:
+image:
+companion music: https://soundcloud.com/max-cooper/resynthesis
 ---
 Claude chats:
 - 
