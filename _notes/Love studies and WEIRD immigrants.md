@@ -1,6 +1,6 @@
 ---
 title: Love studies and WEIRD immigrants
-created:
+created: 2025-05-14
 published: 2025-06-11
 tags:
   - WiP
