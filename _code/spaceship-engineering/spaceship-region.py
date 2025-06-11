@@ -68,7 +68,12 @@ SPACE_STATIONS = [
     'crew': 2000000,  # Doubled crew estimate
     'is_real': False,
     'has_gravity': True  # Via rotation
-    }
+    },
+    # Sierra Nevada LIFE modules
+    # {'name': 'LIFE-285', 'total_volume': 285, 'pressurised_volume': 285, 'habitable_volume': 160, 'crew': 6, 'is_real': False, 'has_gravity': False},
+    {'name': 'LIFE-5000', 'total_volume': 5000, 'pressurised_volume': 5000, 'habitable_volume': 2800, 'crew': 32, 'is_real': False, 'has_gravity': False},
+    {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
+    {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
 ]
 
 def get_station_colors(data):
@@ -185,7 +190,7 @@ def create_multidimensional_bubble_chart():
     
     # 4. Megastructures (purple star)
     megastructure_indices = [i for i, station in enumerate(SPACE_STATIONS) 
-                           if station['name'] in ['Stanford Torus', "O'Neill Cylinder", "Gateway's von Braun"]]
+                           if station['name'] in ['Stanford Torus', "O'Neill Cylinder", "Gateway's von Braun", "Kalpana-1", "Bernal Sphere"]]
     
     # Add real stations (green)
     fig.add_trace(go.Scatter(
@@ -257,7 +262,7 @@ def create_multidimensional_bubble_chart():
         name='Megastructure',
         legendgroup='megastructure',
         marker=dict(
-            size=30,
+            size=20,
             color='#9C27B0',
             line=dict(width=3, color='black'),
             opacity=0.9,
@@ -283,7 +288,7 @@ def create_multidimensional_bubble_chart():
         legendgroup='megastructure',
         showlegend=False,  # Hide this trace from the legend
         marker=dict(
-            size=35,
+            size=23,
             color='#9C27B0',
             line=dict(width=3, color='black'),
             opacity=0.9,
@@ -309,7 +314,7 @@ def create_multidimensional_bubble_chart():
         legendgroup='megastructure',
         showlegend=False,  # Hide this trace from the legend
         marker=dict(
-            size=30,
+            size=20,
             color='#9C27B0',
             line=dict(width=3, color='black'),
             opacity=0.9,
@@ -317,6 +322,52 @@ def create_multidimensional_bubble_chart():
         ),
         hoverinfo='text',
         hovertext=f"{gateway_vb['name']}<br>Habitable Volume per Astronaut: {gateway_vb_formatted} m³<br>Total Volume: {gateway_vb['total_volume']:,.2f} m³<br>Habitable Volume: {gateway_vb['habitable_volume']:,.2f} m³<br>Pressurised Volume: {gateway_vb['pressurised_volume']:,.2f} m³<br>Crew: {gateway_vb['crew']:,}"
+    ))
+    
+    # Add Kalpana-1 as a megastructure
+    kalpana1_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Kalpana-1')
+    kalpana1 = SPACE_STATIONS[kalpana1_index]
+    kalpana1_per_person = kalpana1['habitable_volume'] / kalpana1['crew']
+    
+    fig.add_trace(go.Scatter(
+        x=[kalpana1_per_person],
+        y=[113],
+        mode='markers',
+        name='Megastructure',
+        legendgroup='megastructure',
+        showlegend=False,
+        marker=dict(
+            size=22,
+            color='#9C27B0',
+            line=dict(width=3, color='black'),
+            opacity=0.9,
+            symbol='star'
+        ),
+        hoverinfo='text',
+        hovertext=f"Kalpana-1<br>Habitable Volume per Astronaut: {kalpana1_per_person:,.2f} m³<br>Total Volume: {kalpana1['total_volume']:,.2f} m³<br>Habitable Volume: {kalpana1['habitable_volume']:,.2f} m³<br>Pressurised Volume: {kalpana1['pressurised_volume']:,.2f} m³<br>Crew: {kalpana1['crew']:,}"
+    ))
+    
+    # Add Bernal Sphere as a megastructure at y=120
+    bernal_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Bernal Sphere')
+    bernal = SPACE_STATIONS[bernal_index]
+    bernal_per_person = bernal['habitable_volume'] / bernal['crew']
+
+    fig.add_trace(go.Scatter(
+        x=[bernal_per_person],
+        y=[120],
+        mode='markers',
+        name='Megastructure',
+        legendgroup='megastructure',
+        showlegend=False,
+        marker=dict(
+            size=22,
+            color='#9C27B0',
+            line=dict(width=3, color='black'),
+            opacity=0.9,
+            symbol='star'
+        ),
+        hoverinfo='text',
+        hovertext=f"Bernal Sphere<br>Habitable Volume per Astronaut: {bernal_per_person:,.2f} m³<br>Total Volume: {bernal['total_volume']:,.2f} m³<br>Habitable Volume: {bernal['habitable_volume']:,.2f} m³<br>Pressurised Volume: {bernal['pressurised_volume']:,.2f} m³<br>Crew: {bernal['crew']:,}"
     ))
     
     # Add station name labels with improved positioning
@@ -373,7 +424,7 @@ def create_multidimensional_bubble_chart():
             text_position = 'top center'
             text_x += 0  # No horizontal shift
             text_y += 5  # Move up more to place it above the circle
-        elif name == 'Starship-100' or name == 'Starship-50/50':
+        elif name == 'Starship-100' or name == 'Starship-50/50' or name == 'LIFE-5000':
             text_position = 'top right'
             text_x += 4  # Move right more
             text_y += -5  # Move up more
@@ -471,8 +522,8 @@ def create_multidimensional_bubble_chart():
             text_x += 2  # Move right slightly
         elif name == 'Space Base':
             text_position = 'top left'
-            text_x -= 3  # Move left more
-            text_y += 5  # Move up more
+            text_x -= 2.5  # Move left more
+            text_y += 3  # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
@@ -499,18 +550,26 @@ def create_multidimensional_bubble_chart():
     for i, name in enumerate(megastructure_station_names):
         # Calculate positioning based on the station name
         if name == "Gateway's von Braun":
-            text_x = 115  # Position to the left of the star
-            text_y = 100
+            text_x = 112  # Position to the left of the star
+            text_y = 101
             text_position = 'middle right'
             name = "Gateway's<br>von Braun"
         elif name == "O'Neill Cylinder":
-            text_x = 94  # Position to the left of the star
+            text_x = 95.5  # Position to the left of the star
             text_y = 132  # Above the star
             text_position = 'middle right'
         elif name == "Stanford Torus":
-            text_x = 87  # Position to the left
-            text_y = 114  # Middle
+            text_x = 88  # Position to the left
+            text_y = 115  # Middle
             text_position = 'middle right'
+        elif name == "Kalpana-1":
+            text_x = 31  # Left of the star
+            text_y = 110  # Below the star
+            text_position = 'top right'
+        elif name == "Bernal Sphere":
+            text_x = 18  # Right of the star
+            text_y = 124  # Above the star
+            text_position = 'top right'
         else:
             # Default positioning if we add more megastructures in the future
             text_x = 110
