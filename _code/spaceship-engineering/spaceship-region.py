@@ -90,7 +90,7 @@ def get_station_colors(data):
     return colors
 
 def create_multidimensional_bubble_chart():
-    # Filter out the mega-stations and Salyut-1 for plotting
+    # Filter out the superstructures and Salyut-1 for plotting
     excluded_stations = []  # Now excluding MORL and LORL
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
@@ -189,8 +189,8 @@ def create_multidimensional_bubble_chart():
                  and station['name'] not in excluded_stations 
                  and station['name'] not in ['Stanford Torus', "O'Neill Cylinder"]]
     
-    # 4. Megastructures (purple star)
-    megastructure_indices = [i for i, station in enumerate(SPACE_STATIONS) 
+    # 4. Superstructures (purple star)
+    superstructure_indices = [i for i, station in enumerate(SPACE_STATIONS) 
                            if station['name'] in ['Stanford Torus', "O'Neill Cylinder", "Gateway's von Braun", "Kalpana-1", "Bernal Sphere"]]
     
     # Add real stations (green)
@@ -248,7 +248,7 @@ def create_multidimensional_bubble_chart():
                   for i in ag_indices]
     ))
     
-    # Add Stanford Torus as a megastructure
+    # Add Stanford Torus as a superstructure
     stanford_torus_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Stanford Torus')
     stanford_torus = SPACE_STATIONS[stanford_torus_index]
     stanford_torus_per_person = stanford_torus['habitable_volume'] / stanford_torus['crew']
@@ -260,8 +260,8 @@ def create_multidimensional_bubble_chart():
         x=[110],  # Changed to 110
         y=[120],
         mode='markers',
-        name='Megastructure',
-        legendgroup='megastructure',
+        name='Superstructure',
+        legendgroup='superstructure',
         marker=dict(
             size=20,
             color='#9C27B0',
@@ -273,7 +273,7 @@ def create_multidimensional_bubble_chart():
         hovertext=f"{stanford_torus['name']}<br>Habitable Volume per Astronaut: {stanford_formatted} m³<br>Total Volume: {stanford_torus['total_volume']:,.2f} m³<br>Habitable Volume: {stanford_torus['habitable_volume']:,.2f} m³<br>Pressurised Volume: {stanford_torus['pressurised_volume']:,.2f} m³<br>Crew: {stanford_torus['crew']:,}"
     ))
     
-    # Add O'Neill Cylinder as a megastructure with fixed position
+    # Add O'Neill Cylinder as a superstructure with fixed position
     oneill_cylinder_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == "O'Neill Cylinder")
     oneill_cylinder = SPACE_STATIONS[oneill_cylinder_index]
     oneill_cylinder_per_person = oneill_cylinder['habitable_volume'] / oneill_cylinder['crew']
@@ -285,8 +285,8 @@ def create_multidimensional_bubble_chart():
         x=[120],  # Changed to 120
         y=[130],
         mode='markers',
-        name='Megastructure',
-        legendgroup='megastructure',
+        name='Superstructure',
+        legendgroup='superstructure',
         showlegend=False,  # Hide this trace from the legend
         marker=dict(
             size=23,
@@ -299,7 +299,7 @@ def create_multidimensional_bubble_chart():
         hovertext=f"{oneill_cylinder['name']}<br>Habitable Volume per Astronaut: {oneill_formatted} m³<br>Total Volume: {oneill_cylinder['total_volume']:,.2f} m³<br>Habitable Volume: {oneill_cylinder['habitable_volume']:,.2f} m³<br>Pressurised Volume: {oneill_cylinder['pressurised_volume']:,.2f} m³<br>Crew: {oneill_cylinder['crew']:,}"
     ))
     
-    # Add Gateway's von Braun as a megastructure
+    # Add Gateway's von Braun as a superstructure
     gateway_vb_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == "Gateway's von Braun")
     gateway_vb = SPACE_STATIONS[gateway_vb_index]
     gateway_vb_per_person = gateway_vb['habitable_volume'] / gateway_vb['crew']
@@ -308,11 +308,11 @@ def create_multidimensional_bubble_chart():
     gateway_vb_formatted = f"{gateway_vb_per_person/1000:.1f}K"  # Format as K for thousands
     
     fig.add_trace(go.Scatter(
-        x=[115],  # Position between the other megastructures
+        x=[115],  # Position between the other superstructures
         y=[110],
         mode='markers',
-        name='Megastructure',
-        legendgroup='megastructure',
+        name='Superstructure',
+        legendgroup='superstructure',
         showlegend=False,  # Hide this trace from the legend
         marker=dict(
             size=20,
@@ -325,7 +325,7 @@ def create_multidimensional_bubble_chart():
         hovertext=f"{gateway_vb['name']}<br>Habitable Volume per Astronaut: {gateway_vb_formatted} m³<br>Total Volume: {gateway_vb['total_volume']:,.2f} m³<br>Habitable Volume: {gateway_vb['habitable_volume']:,.2f} m³<br>Pressurised Volume: {gateway_vb['pressurised_volume']:,.2f} m³<br>Crew: {gateway_vb['crew']:,}"
     ))
     
-    # Add Kalpana-1 as a megastructure
+    # Add Kalpana-1 as a superstructure
     kalpana1_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Kalpana-1')
     kalpana1 = SPACE_STATIONS[kalpana1_index]
     kalpana1_per_person = kalpana1['habitable_volume'] / kalpana1['crew']
@@ -334,8 +334,8 @@ def create_multidimensional_bubble_chart():
         x=[kalpana1_per_person],
         y=[113],
         mode='markers',
-        name='Megastructure',
-        legendgroup='megastructure',
+        name='Superstructure',
+        legendgroup='superstructure',
         showlegend=False,
         marker=dict(
             size=22,
@@ -348,7 +348,7 @@ def create_multidimensional_bubble_chart():
         hovertext=f"Kalpana-1<br>Habitable Volume per Astronaut: {kalpana1_per_person:,.2f} m³<br>Total Volume: {kalpana1['total_volume']:,.2f} m³<br>Habitable Volume: {kalpana1['habitable_volume']:,.2f} m³<br>Pressurised Volume: {kalpana1['pressurised_volume']:,.2f} m³<br>Crew: {kalpana1['crew']:,}"
     ))
     
-    # Add Bernal Sphere as a megastructure at y=120
+    # Add Bernal Sphere as a superstructure at y=120
     bernal_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == 'Bernal Sphere')
     bernal = SPACE_STATIONS[bernal_index]
     bernal_per_person = bernal['habitable_volume'] / bernal['crew']
@@ -357,8 +357,8 @@ def create_multidimensional_bubble_chart():
         x=[bernal_per_person],
         y=[120],
         mode='markers',
-        name='Megastructure',
-        legendgroup='megastructure',
+        name='Superstructure',
+        legendgroup='superstructure',
         showlegend=False,
         marker=dict(
             size=22,
@@ -433,7 +433,7 @@ def create_multidimensional_bubble_chart():
             text_position = 'top left'
             text_x +=-1  # Move right more
             text_y += 5  # Move up more
-        elif name == 'Ideal Station':
+        elif name == 'Ideal Spaceship':
             text_position = 'top right'
             text_x += 4.5  # Move right more
             text_y += -5  # Move up more
@@ -548,11 +548,11 @@ def create_multidimensional_bubble_chart():
             texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
         ))
 
-    # Add megastructure stations text
-    megastructure_station_names = [SPACE_STATIONS[i]['name'] for i in megastructure_indices]
+    # Add superstructure stations text
+    superstructure_station_names = [SPACE_STATIONS[i]['name'] for i in superstructure_indices]
 
-    # Add text for megastructure stations  
-    for i, name in enumerate(megastructure_station_names):
+    # Add text for superstructure stations  
+    for i, name in enumerate(superstructure_station_names):
         # Calculate positioning based on the station name
         if name == "Gateway's von Braun":
             text_x = 112  # Position to the left of the star
@@ -576,7 +576,7 @@ def create_multidimensional_bubble_chart():
             text_y = 124  # Above the star
             text_position = 'top right'
         else:
-            # Default positioning if we add more megastructures in the future
+            # Default positioning if we add more superstructures in the future
             text_x = 110
             text_y = 110
             text_position = 'middle right'
@@ -587,7 +587,7 @@ def create_multidimensional_bubble_chart():
             text=[name],
             mode='text',
             showlegend=False,
-            legendgroup='megastructure',
+            legendgroup='superstructure',
             textposition=text_position,
             textfont=dict(
                 color='#9C27B0',
