@@ -74,7 +74,7 @@ SPACE_STATIONS = [
     {'name': 'LIFE-5000', 'total_volume': 5000, 'pressurised_volume': 5000, 'habitable_volume': 2800, 'crew': 32, 'is_real': False, 'has_gravity': False},
     {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
     {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
-    {'name': 'Ideal Station', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': False},
+    {'name': 'Ideal Spaceship', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': False},
 ]
 
 def get_station_colors(data):
