@@ -75,6 +75,7 @@ SPACE_STATIONS = [
     {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
     {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
     {'name': 'Ideal Spaceship', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': False},
+    {'name': '10 Ideal Spaceships', 'total_volume': 10*2*6300, 'pressurised_volume': 10*1.5*6300, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': False}
 ]
 
 def get_station_colors(data):
@@ -227,6 +228,28 @@ def create_multidimensional_bubble_chart():
         hoverinfo='text',
         hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
                   for i in planned_0g_indices]
+    ))
+    
+    # Add 10 Ideal Spaceships separately with manual positioning
+    ten_ideal_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == '10 Ideal Spaceships')
+    ten_ideal = SPACE_STATIONS[ten_ideal_index]
+    ten_ideal_per_person = ten_ideal['habitable_volume'] / ten_ideal['crew']
+    
+    fig.add_trace(go.Scatter(
+        x=[ten_ideal_per_person],
+        y=[107],  # Manually set y position to 107
+        mode='markers',
+        name='Planned 0-g Stations',
+        legendgroup='planned_0g_stations',
+        showlegend=False,  # Hide from legend since it's part of planned 0-g stations
+        marker=dict(
+            size=marker_sizes[plot_indices.index(ten_ideal_index)],
+            color='#F44336',
+            line=dict(width=1, color='black'),
+            opacity=0.8
+        ),
+        hoverinfo='text',
+        hovertext=f"10 Ideal Spaceships<br>Habitable Volume per Astronaut: {ten_ideal_per_person:,.2f} m³<br>Total Volume: {ten_ideal['total_volume']:,.2f} m³<br>Habitable Volume: {ten_ideal['habitable_volume']:,.2f} m³<br>Pressurised Volume: {ten_ideal['pressurised_volume']:,.2f} m³<br>Crew: {ten_ideal['crew']:,}"
     ))
     
     # Add artificial gravity stations (blue donut)
@@ -456,6 +479,26 @@ def create_multidimensional_bubble_chart():
             texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
         ))
 
+    # Add label for 10 Ideal Spaceships
+    ten_ideal_index = next(i for i, station in enumerate(SPACE_STATIONS) if station['name'] == '10 Ideal Spaceships')
+    ten_ideal_per_person = SPACE_STATIONS[ten_ideal_index]['habitable_volume'] / SPACE_STATIONS[ten_ideal_index]['crew']
+    
+    fig.add_trace(go.Scatter(
+        x=[ten_ideal_per_person],
+        y=[116],  # Position above the data point (y=107 + 10)
+        text=['10 Ideal Spaceships'],
+        mode='text',
+        showlegend=False,
+        legendgroup='planned_0g_stations',
+        textposition='top left',
+        textfont=dict(
+            color='#F44336',
+            size=12
+        ),
+        hoverinfo='skip',
+        texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
+    ))
+
     # Add text for real stations
     for i, name in enumerate(real_station_names):
         xanchor = real_text_positions[i].get('xanchor', 'left')
@@ -565,7 +608,7 @@ def create_multidimensional_bubble_chart():
             text_position = 'middle right'
         elif name == "Stanford Torus":
             text_x = 88  # Position to the left
-            text_y = 115  # Middle
+            text_y = 123  # Middle
             text_position = 'middle right'
         elif name == "Kalpana-1":
             text_x = 31  # Left of the star
