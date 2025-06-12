@@ -74,8 +74,8 @@ SPACE_STATIONS = [
     {'name': 'LIFE-5000', 'total_volume': 5000, 'pressurised_volume': 5000, 'habitable_volume': 2800, 'crew': 32, 'is_real': False, 'has_gravity': False},
     {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
     {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
-    {'name': 'Ideal Spaceship', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': False},
-    {'name': '10 Ideal Spaceships', 'total_volume': 10*2*6300, 'pressurised_volume': 10*1.5*6300, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': False}
+    {'name': 'Ideal Spaceship', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': True},
+    {'name': '10 Ideal Spaceships', 'total_volume': 10*2*6300, 'pressurised_volume': 10*1.5*6300, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': True}
 ]
 
 def get_station_colors(data):
@@ -182,7 +182,8 @@ def create_multidimensional_bubble_chart():
     # 2. Planned 0-g stations (red)
     planned_0g_indices = [i for i, station in enumerate(SPACE_STATIONS) 
                          if not station['is_real'] and not station['has_gravity'] 
-                         and station['name'] not in excluded_stations]
+                         and station['name'] not in excluded_stations
+                         ]
     
     # 3. Artificial gravity stations (blue donut)
     ag_indices = [i for i, station in enumerate(SPACE_STATIONS) 
@@ -239,14 +240,15 @@ def create_multidimensional_bubble_chart():
         x=[ten_ideal_per_person],
         y=[107],  # Manually set y position to 107
         mode='markers',
-        name='Planned 0-g Stations',
-        legendgroup='planned_0g_stations',
-        showlegend=False,  # Hide from legend since it's part of planned 0-g stations
+        name='Artificial Gravity Concepts',
+        legendgroup='ag_stations',
+        showlegend=False,  # Hide from legend since it's part of ag stations
         marker=dict(
             size=marker_sizes[plot_indices.index(ten_ideal_index)],
-            color='#F44336',
-            line=dict(width=1, color='black'),
-            opacity=0.8
+            color='#2979FF',
+            line=dict(width=2, color='black'),
+            opacity=0.8,
+            symbol='circle-open'
         ),
         hoverinfo='text',
         hovertext=f"10 Ideal Spaceships<br>Habitable Volume per Astronaut: {ten_ideal_per_person:,.2f} m³<br>Total Volume: {ten_ideal['total_volume']:,.2f} m³<br>Habitable Volume: {ten_ideal['habitable_volume']:,.2f} m³<br>Pressurised Volume: {ten_ideal['pressurised_volume']:,.2f} m³<br>Crew: {ten_ideal['crew']:,}"
@@ -456,10 +458,6 @@ def create_multidimensional_bubble_chart():
             text_position = 'top left'
             text_x +=-1  # Move right more
             text_y += 5  # Move up more
-        elif name == 'Ideal Spaceship':
-            text_position = 'top right'
-            text_x += 4.5  # Move right more
-            text_y += -5  # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
@@ -485,14 +483,14 @@ def create_multidimensional_bubble_chart():
     
     fig.add_trace(go.Scatter(
         x=[ten_ideal_per_person],
-        y=[116],  # Position above the data point (y=107 + 10)
+        y=[94],  # Position above the data point (y=107 + 10)
         text=['10 Ideal Spaceships'],
         mode='text',
         showlegend=False,
-        legendgroup='planned_0g_stations',
+        legendgroup='ag_stations',
         textposition='top left',
         textfont=dict(
-            color='#F44336',
+            color='#2979FF',
             size=12
         ),
         hoverinfo='skip',
@@ -570,8 +568,16 @@ def create_multidimensional_bubble_chart():
             text_x += 2  # Move right slightly
         elif name == 'Space Base':
             text_position = 'top left'
-            text_x -= 2.5  # Move left more
+            text_x -= 4  # Move left more
             text_y += 3  # Move up more
+        elif name == 'Ideal Spaceship':
+            text_position = 'top center'
+            text_x += 0  # Move right more
+            text_y += 8.5  # Move up more
+        elif name == '10 Ideal Spaceships':
+            text_position = 'bottom right'
+            text_x += 2  # No horizontal shift
+            text_y -= 1  # Move up more to place it above the circle
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
