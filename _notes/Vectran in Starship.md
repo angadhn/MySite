@@ -10,7 +10,7 @@
 - This helps frame the first challenge, which is:
 
 > [!Challenge 1: Material Density Optimization]
-  Find an optimised material that halves the pressurised density of TransHab materials so the mass fits within one Starship launch. Given that TransHab was less dense than BEAM, this doesn't sound as outrageous on paper.
+> Find an optimised material that halves the pressurised density of TransHab materials so the mass fits within one Starship launch. Given that TransHab was less dense than BEAM, this doesn't sound as outrageous on paper.
 
 ### **Possible approaches:**
 - **Lighter MMOD shielding:** MMOD was 68% of TransHab's mass in LEO, only 14% in deep space. While our chosen orbit is initially LEO—to take maximal mass to orbit using Starship—there may be need for in-orbit assembly of Whipple Shield panels around the restraint layer. If this is the case, then perhaps operating in a higher orbit might be preferable. The study should reveal this.

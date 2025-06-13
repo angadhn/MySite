@@ -17,7 +17,7 @@ module Jekyll
       # Convert Obsidian-style callouts to HTML
       doc.content.gsub!(/> \[!([^\]]+)\](.*?)(?=\n\n|\Z)/m) do |match|
         type = $1.strip
-        content = $2.strip
+        content = $2.strip.gsub(/^>\s*/, '') # Remove leading '>' and any whitespace
         
         # Create HTML for the callout
         <<~HTML
