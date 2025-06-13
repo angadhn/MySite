@@ -1594,3 +1594,88 @@ blockquote {
 .marginnote video {
   border-radius: 12px;
 }
+
+/* Callout styles */
+.callout {
+  margin: 1.5em auto;  // Changed to auto for horizontal centering
+  padding: 1em;
+  border-left: 4px solid #666;
+  background-color: $color-box-background;
+  border-radius: $border-radius;
+  font-family: $font-family;
+  width: 70%;  // Match epigraph/blockquote width
+  max-width: 700px;  // Match epigraph/blockquote max-width
+
+  .callout-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: $color-text;
+  }
+
+  .callout-content {
+    margin: 0;
+    color: $color-text;
+  }
+
+  &.challenge {
+    border-left-color: #e74c3c;
+    .callout-title { color: #e74c3c; }
+  }
+
+  &.note {
+    border-left-color: #3498db;
+    .callout-title { color: #3498db; }
+  }
+
+  &.warning {
+    border-left-color: #f1c40f;
+    .callout-title { color: #f1c40f; }
+  }
+
+  &.tip {
+    border-left-color: #2ecc71;
+    .callout-title { color: #2ecc71; }
+  }
+}
+
+// Mobile adjustments for callouts
+@media (max-width: 760px) {
+  .callout {
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+// Dark theme support for callouts
+[data-theme="dark"] {
+  .callout {
+    background-color: #1f232b;
+    border-left-color: #3d434d;
+
+    .callout-title,
+    .callout-content {
+      color: #eaeaea;
+    }
+
+    &.challenge {
+      border-left-color: #e74c3c;
+      .callout-title { color: #e74c3c; }
+    }
+
+    &.note {
+      border-left-color: #3498db;
+      .callout-title { color: #3498db; }
+    }
+
+    &.warning {
+      border-left-color: #f1c40f;
+      .callout-title { color: #f1c40f; }
+    }
+
+    &.tip {
+      border-left-color: #2ecc71;
+      .callout-title { color: #2ecc71; }
+    }
+  }
+}
