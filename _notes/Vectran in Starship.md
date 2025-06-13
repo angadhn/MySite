@@ -31,7 +31,7 @@
 	- **Middle:** Combined restraint systems
 	- **TransHab sits here:** "Bladder + Close Proximity Restraint" at ~20 ft diameter
 - **Right side:** "Novel Restraint System" for very large structures (BA 2100)
-![[Restraint-Loading.jpg]]
+![](assets/imgs/spaceship-engineering/Restraint-Loading.jpg)
 
 > [!Challenge 3: Scale-Up to 75m Diameter]
 > Find a material that allows more restraint layer loads and larger diameters at the design pressure.
