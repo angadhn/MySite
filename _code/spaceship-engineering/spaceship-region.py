@@ -70,12 +70,16 @@ SPACE_STATIONS = [
     'has_gravity': True  # Via rotation
     },
     # Sierra Nevada LIFE modules
-    # {'name': 'LIFE-285', 'total_volume': 285, 'pressurised_volume': 285, 'habitable_volume': 160, 'crew': 6, 'is_real': False, 'has_gravity': False},
+    {'name': 'LIFE-285', 'total_volume': 285, 'pressurised_volume': 285, 'habitable_volume': 160, 'crew': 4, 'is_real': False, 'has_gravity': False},
     {'name': 'LIFE-5000', 'total_volume': 5000, 'pressurised_volume': 5000, 'habitable_volume': 2800, 'crew': 32, 'is_real': False, 'has_gravity': False},
     {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
     {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
     {'name': 'Ideal Spaceship', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': True},
-    {'name': '10 Ideal Spaceships', 'total_volume': 10*2*6300, 'pressurised_volume': 10*1.5*6300, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': True}
+    {'name': '10 Ideal Spaceships', 'total_volume': 10*2*6300, 'pressurised_volume': 10*1.5*6300, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': True},
+    # BA 2100 (Bigelow Olympus) - conceptual 0g station
+    {'name': 'BA 2100', 'total_volume': 2250, 'pressurised_volume': 2250, 'habitable_volume': 1800, 'crew': 16, 'is_real': False, 'has_gravity': False},
+    # TransHab (NASA inflatable module concept)
+    {'name': 'TransHab', 'total_volume': 340, 'pressurised_volume': 340, 'habitable_volume': 340, 'crew': 6, 'is_real': False, 'has_gravity': False},
 ]
 
 def get_station_colors(data):
@@ -92,7 +96,7 @@ def get_station_colors(data):
 
 def create_multidimensional_bubble_chart():
     # Filter out the superstructures and Salyut-1 for plotting
-    excluded_stations = []  # Now excluding MORL and LORL
+    excluded_stations = ['BA 2100']  # Now excluding BA 2100 as well
     plot_indices = [i for i, station in enumerate(SPACE_STATIONS) if station['name'] not in excluded_stations]
     
     # Extract data for plotting (only for included stations)
@@ -229,6 +233,42 @@ def create_multidimensional_bubble_chart():
         hoverinfo='text',
         hovertext=[f"{SPACE_STATIONS[i]['name']}<br>Habitable Volume per Astronaut: {habitable_volumes[plot_indices.index(i)]/crews[plot_indices.index(i)]:,.2f} m³<br>Total Volume: {total_volumes[plot_indices.index(i)]:,.2f} m³<br>Habitable Volume: {habitable_volumes[plot_indices.index(i)]:,.2f} m³<br>Pressurised Volume: {SPACE_STATIONS[i]['pressurised_volume']:,.2f} m³<br>Crew: {crews[plot_indices.index(i)]}" 
                   for i in planned_0g_indices]
+    ))
+    
+    # Add BA 2100 data point at x=105, y=16
+    fig.add_trace(go.Scatter(
+        x=[105],
+        y=[16],
+        mode='markers',
+        name='Planned 0-g Stations',
+        legendgroup='planned_0g_stations',
+        showlegend=False,
+        marker=dict(
+            size=[np.log10(2250) * 12],
+            color='#F44336',
+            line=dict(width=1, color='black'),
+            opacity=0.8
+        ),
+        hoverinfo='text',
+        hovertext=[
+            'BA 2100<br>Habitable Volume per Astronaut: {:.2f} m³<br>Total Volume: 2,250 m³<br>Habitable Volume: 1,800 m³<br>Pressurised Volume: 2,250 m³<br>Crew: 16'.format(1800/16)
+        ]
+    ))
+    # Add BA 2100 label at x=105, y=21
+    fig.add_trace(go.Scatter(
+        x=[105],
+        y=[22],
+        text=['BA 2100'],
+        mode='text',
+        showlegend=False,
+        legendgroup='planned_0g_stations',
+        textposition='top center',
+        textfont=dict(
+            color='#F44336',
+            size=12
+        ),
+        hoverinfo='skip',
+        texttemplate='<span style="background-color: rgba(255,255,255,0.7); padding: 2px 4px; border-radius: 2px;">%{text}</span>'
     ))
     
     # Add 10 Ideal Spaceships separately with manual positioning
@@ -407,7 +447,8 @@ def create_multidimensional_bubble_chart():
         'Skylab': dict(xanchor='left', yanchor='bottom', xshift=15, yshift=5),
         'Haven-1': dict(xanchor='center', yanchor='bottom', xshift=0, yshift=15),
         'LORL': dict(xanchor='left', yanchor='top', xshift=15, yshift=-10),
-        'MORL': dict(xanchor='left', yanchor='top', xshift=15, yshift=-10)
+        'MORL': dict(xanchor='left', yanchor='top', xshift=15, yshift=-10),
+        # 'TransHab': dict(xanchor='left', yanchor='bottom', xshift=25, yshift=0)
     }
     
     # Create text labels with the same legend groups
@@ -458,6 +499,14 @@ def create_multidimensional_bubble_chart():
             text_position = 'top left'
             text_x +=-1  # Move right more
             text_y += 5  # Move up more
+        elif name == 'LIFE-285':
+            text_position = 'top right'
+            text_x += 4.5  # Move right more
+            text_y += 1.5  # Move up more
+        elif name == 'TransHab':
+            text_position = 'bottom right'
+            text_x += 3  # Move right more
+            text_y += -1 # Move up more
         else:
             text_position = 'middle right' if xanchor == 'left' else 'middle left'
         
@@ -508,7 +557,8 @@ def create_multidimensional_bubble_chart():
         # Adjust position based on the station name
         if name == 'ISS':
             text_position = 'middle right'  # Changed to middle right
-            text_x += 4  # Move right more
+            text_x += 2  # Move right more
+            text_y += 6  # Move up more
         elif name == 'Skylab':
             text_position = 'bottom right'
             text_x += -10.5  # Move right slightly
