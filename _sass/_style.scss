@@ -1605,19 +1605,24 @@ blockquote {
   font-family: $font-family;
   width: 70%;  // Match epigraph/blockquote width
   max-width: 700px;  // Match epigraph/blockquote max-width
+  background-color: #1f232b;
+  border-left-color: #3d434d;
 
   .callout-title {
     font-weight: normal;
     margin-bottom: 0.5em;
-    color: $color-text;
   }
 
   .callout-content {
     margin: 0;
-    color: $color-text;
   }
 
-  &.challenge {
+  .callout-title,
+  .callout-content {
+      color: #eaeaea;
+  }
+
+  &.warning {
     border-left-color: #e74c3c;
     .callout-title { color: #e74c3c; }
   }
@@ -1627,7 +1632,7 @@ blockquote {
     .callout-title { color: #3498db; }
   }
 
-  &.warning {
+  &.challenge {
     border-left-color: #f1c40f;
     .callout-title { color: #f1c40f; }
   }
@@ -1644,38 +1649,5 @@ blockquote {
     width: 80%;
     padding-left: 5%;
     padding-right: 5%;
-  }
-}
-
-// Dark theme support for callouts
-[data-theme="dark"] {
-  .callout {
-    background-color: #1f232b;
-    border-left-color: #3d434d;
-
-    .callout-title,
-    .callout-content {
-      color: #eaeaea;
-    }
-
-    &.challenge {
-      border-left-color: #e74c3c;
-      .callout-title { color: #e74c3c; }
-    }
-
-    &.note {
-      border-left-color: #3498db;
-      .callout-title { color: #3498db; }
-    }
-
-    &.warning {
-      border-left-color: #f1c40f;
-      .callout-title { color: #f1c40f; }
-    }
-
-    &.tip {
-      border-left-color: #2ecc71;
-      .callout-title { color: #2ecc71; }
-    }
   }
 }

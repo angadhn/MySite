@@ -17,9 +17,9 @@ module Jekyll
       case type.downcase
       when "tip"
         '<i class="fa-solid fa-fire"></i>'
-      when "challenge"
-        '<i class="fa-solid fa-pen-to-square"></i>'
       when "note"
+        '<i class="fa-solid fa-pen-to-square"></i>'
+      when "challenge"
         '<i class="fa-solid fa-circle-info"></i>'
       when "warning"
         '<i class="fa-solid fa-triangle-exclamation"></i>'

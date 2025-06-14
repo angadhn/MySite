@@ -44,3 +44,11 @@
 
 > [!Tip] MMOD Shield
 > Should this be assembled as a panel or be a monolithic system similar to TransHab?
+
+
+> [!Note] MMOD Shield
+> Should this be assembled as a panel or be a monolithic system similar to TransHab?
+
+
+> [!Warning] MMOD Shield
+> Should this be assembled as a panel or be a monolithic system similar to TransHab?
