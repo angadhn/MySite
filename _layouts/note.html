@@ -110,16 +110,20 @@ layout: default
       {% endunless %}
     </content>
   </div>
+  <hr>
 </article>
 
-<hr>
+<!-- Commenting out graph visualization as it's not being used
 
+<hr>
 {% unless page.tags contains 'essays' %}
 <div style="margin-bottom: 1em;">
   <a class="internal-link" href="{{ site.baseurl }}/tags"> See all notes by topic </a>
 </div>
 
+
 <p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
 
 {% include notes_graph.html %}
+-->
 {% endunless %}
