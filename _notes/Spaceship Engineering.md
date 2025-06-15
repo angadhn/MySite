@@ -10,24 +10,20 @@ top_of_mind: "false"
 completion_score: 30
 image:
 companion music: https://soundcloud.com/adamfreeland/adam-freeland-pale-blue-dot-dj
-subtitle: And how to make them
+subtitle: And (maybe) how to make them.
 ---
 
-Even over a millenium ago, Vikings did not build longships by cobbling together a bunch of smaller boats. In principle, this is how we have built the ISS—by joining several smaller "space boats" together to get something bigger than its parts. This architectural issue is why we are stuck with single-digit occupancy space stations[^1]. The crew sizes of these 11th-century longships were also double-digit—ranging from 30-40.
+Even over a millenium ago, Vikings did not build longships by cobbling together a bunch of smaller boats yet, in principle, this is how we have built the ISS. By joining several smaller "space boats" together over several years, we managed to get a long-duration habitable vessel greater than its parts. But its modular architecture, dictated by the reusable (and, compared to the Saturn V, drastically less capable) Space Shuttle , is also why we have been stuck with single-digit occupancy space stations since the first space station [^1]. Contrasting again to the crew sizes of 11th-century longships, which were double-digit occupancy—ranging from 30-40—it's hard to not think that something was fundamentally mistaken about this approach.
 
-These fundamental facts made me revisit a plot{% sidenote `plot` 'Recreated below with clearer categories and more examples.'%} from [[Where is my von Braun Wheel?]], where I examine  real, planned, and conceptual space stations. This time ,I saw more than the architectural/technical issues with modular construction, crew sizes, and comfort.
-
-I saw issues with terminology. For far too long I had used the *space station* misnomer for all of these systems too. This is common, where too often we tend to refer to any of these pressure vessels by other loosely defined terms like spacecraft or satellites. These are all correct terms but there is something imprecise about them.
+With this ship-building analogue, when I revisited a chart{% sidenote `plot` 'Recreated below with clearer categories and more examples.'%} visualising crew sizes against comfort for real, planned, and conceptual space stations while answering [[Where is my von Braun Wheel?]] I now saw more than the architectural/technical issues with modular construction. I now saw issues with terminology.
 
 After all, a boat is not also called a ship.
 
-A kayak is also not mistaken for a ship even if some classify them (correctly) as boats.
+A kayak is also not mistaken for a ship, even if some classify them (not incorrectly) as boats.
 
-It was time to stop cringing when using the word "spaceship" and instead better define these systems {%sidenote `spaceship` "The term is implied in science fiction but again, I am not sure what it actually conveys in my limited reading. Maybe someone has been more precise and I am poorly read—let me know, if so." %} that I want to (and we should) be engineering.
+For far too long I, like much of the community, had lazily used the *space station* misnomer as a catch-all for all of these clearly different orbital pressure vessels. Sometimes, we also call them *spacecraft* and *satellites*. These are all correct terms but simultaneously imprecise, not just in terms of their scales and capacity but also in how we imagine them being manufactured/constructed.
 
-The more I examined this plot and reflected on Langley's work as an activity similar to ship-building—covered in [[Where is my von Braun Wheel?]]—it was increasingly apparent that these engineers should have referred to their creations as *spaceships* and eschewed calling them _[[Where is my von Braun Wheel?#A pre-Apollo solution unitised stations|unitised space stations]]_.
-
-Their non-modular approaches for making spaceships, well before Apollo, also leads into recognising a field of _spaceship engineering_ {% sidenote `spaceship-engineering` "Much like how naval architecture covers shipbuilding but not boat-building." %}as one distinct from _spacecraft_ or _satellite engineering_ to convey the difference building approaches compared to what followed Apollo alongside the scale of their prototypes.
+Now, as I revisited the work of these engineers at Langley, it was increasingly evident that these engineers should have called their creations as *spaceships*{%sidenote `spaceship` "The term is implied in science fiction but again, I am not sure what it actually conveys in my limited reading. Maybe someone has been more precise and I am poorly read—let me know, if so." %} instead of calling them _[[Where is my von Braun Wheel?#A pre-Apollo solution unitised stations|unitised space stations]]_. These non-modular vessels are perhaps the first (and dare I say only) foray into _spaceship engineering_{% sidenote `spaceship-engineering` "Much like how naval architecture covers shipbuilding but not boat-building." %}. It is distinct to _spacecraft_ or _satellite engineering_ as I suspect it will help us look at the problem of building them with a fresh set of eyes—not falling into the trap of starting with modularity but introducing its need as and when necessary. It is completely possible that this distinction is only useful to me at this point but I hope that, by the end of this post, I have made a stronger case for *spaceship engineering* as a field/subfield. It is something I suspect we will need as try to build towards a future with Starship.
 # What is a Spaceship?
 
 To help you see what I did, I present an updated plot with three regions classifying space pressure vessels as *space stations* (what we have built so far), *superstructures* (what we wish to build), and *spaceships* (what we need to build next) as the step between. To me, this is also now allowing a first-order conceptualisation of how we might build spaceships in the near-term; indeed, I am hoping to bias more people away from the modular architectures we have seen so far and migrate towards the "unitised" philosophy of Langley (which we have clearly lost). So let's look at the plot.
