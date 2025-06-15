@@ -15,7 +15,7 @@ subtitle: And how to make them
 
 Even over a millenium ago, Vikings did not build longships by cobbling together a bunch of smaller boats. In principle, this is how we have built the ISS—by joining several smaller "space boats" together to get something bigger than its parts. This architectural issue is why we are stuck with single-digit occupancy space stations[^1]. The crew sizes of these 11th-century longships were also double-digit—ranging from 30-40.
 
-These fundamental facts made me revisit a plot{% sidenote `plot` 'Recreated below with clearer categories and more example systems'%} from [[Where is my von Braun Wheel?]], where I examine  real, planned, and conceptual space stations. This time ,I saw more than the architectural/technical issues with modular construction, crew sizes, and comfort.
+These fundamental facts made me revisit a plot{% sidenote `plot` 'Recreated below with clearer categories and more examples.'%} from [[Where is my von Braun Wheel?]], where I examine  real, planned, and conceptual space stations. This time ,I saw more than the architectural/technical issues with modular construction, crew sizes, and comfort.
 
 I saw issues with terminology. For far too long I had used the *space station* misnomer for all of these systems too. This is common, where too often we tend to refer to any of these pressure vessels by other loosely defined terms like spacecraft or satellites. These are all correct terms but there is something imprecise about them.
 
@@ -23,11 +23,11 @@ After all, a boat is not also called a ship.
 
 A kayak is also not mistaken for a ship even if some classify them (correctly) as boats.
 
-It was time to stop cringing when using the word "spaceship" and instead better define these systems {%sidenote `spaceship` "The term is implied in science fiction but again, I am not sure what it actually conveys in my limited reading. Maybe someone has been more precise and I am poorly read—let me know, if so.' %} that I want to (and we should) be engineering.
+It was time to stop cringing when using the word "spaceship" and instead better define these systems {%sidenote `spaceship` "The term is implied in science fiction but again, I am not sure what it actually conveys in my limited reading. Maybe someone has been more precise and I am poorly read—let me know, if so." %} that I want to (and we should) be engineering.
 
 The more I examined this plot and reflected on Langley's work as an activity similar to ship-building—covered in [[Where is my von Braun Wheel?]]—it was increasingly apparent that these engineers should have referred to their creations as *spaceships* and eschewed calling them _[[Where is my von Braun Wheel?#A pre-Apollo solution unitised stations|unitised space stations]]_.
 
-Their non-modular approaches for making spaceships, well before Apollo, also leads into recognising a field of _spaceship engineering_ {% sidenote 'spaceship-engineering' 'Much like how naval architecture covers shipbuilding but not boat-building.' %}as one distinct from _spacecraft_ or _satellite engineering_ to convey the difference building approaches compared to what followed Apollo alongside the scale of their prototypes.
+Their non-modular approaches for making spaceships, well before Apollo, also leads into recognising a field of _spaceship engineering_ {% sidenote `spaceship-engineering` "Much like how naval architecture covers shipbuilding but not boat-building." %}as one distinct from _spacecraft_ or _satellite engineering_ to convey the difference building approaches compared to what followed Apollo alongside the scale of their prototypes.
 # What is a Spaceship?
 
 To help you see what I did, I present an updated plot with three regions classifying space pressure vessels as *space stations* (what we have built so far), *superstructures* (what we wish to build), and *spaceships* (what we need to build next) as the step between. To me, this is also now allowing a first-order conceptualisation of how we might build spaceships in the near-term; indeed, I am hoping to bias more people away from the modular architectures we have seen so far and migrate towards the "unitised" philosophy of Langley (which we have clearly lost). So let's look at the plot.
