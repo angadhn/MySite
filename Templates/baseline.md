@@ -1,11 +1,12 @@
 ---
-title: 
-created: 
+title:
+created:
 published: ""
-tags: 
-permalink: 
+tags:
+permalink:
 top_of_mind: "false"
-completion_score: 
-image: 
+completion_score:
+image:
 companion music:
+subtitle:
 ---

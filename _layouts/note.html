@@ -6,6 +6,10 @@ layout: default
   <div>
     <h1>{{ page.title }}</h1>
     
+    {% if page.subtitle %}
+    <div class="subtitle">{{ page.subtitle }}</div>
+    {% endif %}
+    
     {% if page["companion music"] %}
     <div id="companion-music-link" data-url="{{ page["companion music"] }}" style="display: none; margin: 1.5em auto; font-style: italic; color: var(--color-subtext); font-family: 'Palatino', 'Palatino Linotype', serif; text-align: center;"></div>
     <script src="{{ site.baseurl }}/assets/js/companion-music.js"></script>
