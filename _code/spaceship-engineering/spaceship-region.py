@@ -21,7 +21,7 @@ SPACE_STATIONS = [
     {'name': 'Gateway', 'total_volume': 183, 'pressurised_volume': 183, 'habitable_volume': 125, 'crew': 4, 'is_real': False, 'has_gravity': False},
     
     # Conceptual designs
-    {'name': 'von Braun wheel', 'total_volume': 6217.85, 'pressurised_volume': 4800, 'habitable_volume': 3600, 'crew': 80, 'is_real': False, 'has_gravity': True},
+    {'name': 'von Braun wheel', 'total_volume': 6217.85, 'pressurised_volume': 6217.85, 'habitable_volume': 0.8*6217.85, 'crew': 80, 'is_real': False, 'has_gravity': True},
     {'name': 'Space Base', 'total_volume': 5921, 'pressurised_volume': 3600, 'habitable_volume': 3600, 'crew': 100, 'is_real': False, 'has_gravity': True},
     {'name': 'Hexagonal Station', 'total_volume': 1274.3, 'pressurised_volume': 980, 'habitable_volume': 980, 'crew': 36, 'is_real': False, 'has_gravity': True},
     {
@@ -74,8 +74,8 @@ SPACE_STATIONS = [
     {'name': 'LIFE-5000', 'total_volume': 5000, 'pressurised_volume': 5000, 'habitable_volume': 2800, 'crew': 32, 'is_real': False, 'has_gravity': False},
     {'name': 'Kalpana-1', 'total_volume': 167000, 'pressurised_volume': 167000, 'habitable_volume': 85000, 'crew': 3000, 'is_real': False, 'has_gravity': True},
     {'name': 'Bernal Sphere', 'total_volume': 500000, 'pressurised_volume': 500000, 'habitable_volume': 250000, 'crew': 10000, 'is_real': False, 'has_gravity': True},
-    {'name': 'Ideal Spaceship', 'total_volume': 2*6300, 'pressurised_volume': 1.5*6300, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': True},
-    {'name': '10 Ideal Spaceships', 'total_volume': 10*2*6300, 'pressurised_volume': 10*1.5*6300, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': True},
+    {'name': 'Ideal Spaceship', 'total_volume': 8000, 'pressurised_volume': 8000, 'habitable_volume': 6300, 'crew': 70, 'is_real': False, 'has_gravity': True},
+    {'name': '10 Ideal Spaceships', 'total_volume': 10*8000, 'pressurised_volume': 10*8000, 'habitable_volume': 10*6300, 'crew': 10*70, 'is_real': False, 'has_gravity': True},
     # BA 2100 (Bigelow Olympus) - conceptual 0g station
     {'name': 'BA 2100', 'total_volume': 2250, 'pressurised_volume': 2250, 'habitable_volume': 1800, 'crew': 16, 'is_real': False, 'has_gravity': False},
     # TransHab (NASA inflatable module concept)
