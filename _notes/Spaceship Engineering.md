@@ -86,13 +86,13 @@ Note that cylindrical hoop stress is calculated using pressure ($$P$$), diameter
 
 $$\sigma_{hoop} = \frac{PD}{2t}$$
 
-where restraint layer load is given by
+where restraint layer load per unit length is given by
 
 $$\frac{F}{L} = \frac{PD}{2}$$
 
-which means that
+or
 
-$$\sigma_{hoop}t = \frac{F}{L}$$.
+$$\sigma_{hoop}t = \frac{F}{L}$$
 
 
 
