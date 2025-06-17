@@ -81,11 +81,18 @@ This post uses a summary of somewhat recent work on inflatable stations to ident
 	- **Middle:** Combined restraint systems
 	- **TransHab sits here:** "Bladder + Close Proximity Restraint" at ~20 ft diameter
 - **Right side:** "Novel Restraint System" for very large structures (BA 2100)
+
+
+> [!warning] Load per inch increases linearly!
+> Note that the relationship between the load/inch between BA-2100 and TransHab/BEAM-class systems appear to be nonlinear. **This is not the case!** It's merely the truncation of the x-axis (which I also missed in my notes eaerlier). I clarified this to myself.
+
 ![](assets/imgs/spaceship-engineering/Restraint-Loading.jpg)
 
-> [!Challenge] Challenge 3: Scaling Restraint Materials towards 75m-100m Diameter
-> Find a material that allows more restraint layer loads and larger diameters at the design pressure.
+> [!Challenge] Challenge 3: Restraint Design and potentially new materials needed for Toruses
+> Find new restraint layer designs and maybe even materials for other geometries as the chart above shows only cylindrical (or nearly so) structures.
 
+> [!Challenge] Challenge 4: Scaling Restraint Materials for toroidal (and cylindrical?) geometries towards 75m-100m Diameter
+> Find materials that allow greater restraint layer loads at even larger diameters at the design pressure.
 ### MMOD layer
 - This layer is 68% of TransHab's mass for LEO applications, given the higher debris density, but drops to 14% in deep space (what is it for higher Earth orbits?).
 - Our chosen orbit is initially assumed to be LEO—to take maximal mass to orbit using Starship's current specs—there may be a need for in-orbit assembly of Whipple Shield panels around the restraint layer. If this is the case, then perhaps operating in a higher orbit might be preferable. The study should reveal this.
