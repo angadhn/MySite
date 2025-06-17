@@ -96,4 +96,8 @@ This post uses a summary of somewhat recent work on inflatable stations to ident
 > [!Challenge] Challenge 4: MMOD Shield Assembly
 > Should this be assembled as a panel from a separate launch or can it be unitised to the main restraint structure system similar to TransHab and existing designs?
 
+## Comments on Propulsion Systems
+I skimmed several papers on rotating habitats and other literature on inflatable structures and saw that there is not really much work explaining how these problems can be solved. So I summarised some of my own ideas/perspectives and fed that into [[Claude to generate a Research Report on Propulsion and AOCS]] using the new deep research feature. I still need to read this report but then got Claude to synthesise both my ideas and its findings into another document, which is here [[propulsion and orbit control for rotating wheel stations]].
+
+
 [^1]: A different analogue might have been with aircraft construction—we don't build an Airbus A380 by stitching together several Cessnas—but I sense there is something more evocative about comparing to a 1000-year old approach to building. Also, several boats are more likely to float but several Cessnas will never leave the tarmac.
