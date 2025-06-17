@@ -82,17 +82,48 @@ This post uses a summary of somewhat recent work on inflatable stations to ident
 	- **TransHab sits here:** "Bladder + Close Proximity Restraint" at ~20 ft diameter
 - **Right side:** "Novel Restraint System" for very large structures (BA 2100)
 
+Note that cylindrical hoop stress is calculated using pressure ($$P$$), diameter $$D$$, and thickness of the habitat $$t$$.
 
-> [!warning] Load per inch increases linearly!
-> Note that the relationship between the load/inch between BA-2100 and TransHab/BEAM-class systems appear to be nonlinear. **This is not the case!** It's merely the truncation of the x-axis (which I also missed in my notes eaerlier). I clarified this to myself.
+$$\sigma_{hoop} = \frac{PD}{2t}$$
+
+where restraint layer load is given by
+
+$$\frac{F}{L} = \frac{PD}{2}$$
+
+which means that
+
+$$\sigma_{hoop}t = \frac{F}{L}$$.
+
+
+
+> [!NOTE] Implications to be completed later of working with this approach
+> Contents
+
+
+
+> [!warning] Cylindrical structures load per inch
+> The load/inch v/s diameter relationship between BA-2100 and TransHab/BEAM-class systems appears nonlinear—this is not the case! It's merely the truncation of the x-axis. I missed this in earlier examinations of this plot but clarified it later using the above formula.
 
 ![](assets/imgs/spaceship-engineering/Restraint-Loading.jpg)
 
-> [!Challenge] Challenge 3: Restraint Design and potentially new materials needed for Toruses
+Now this chart above tells us that the loads experienced per unit length of the restraint layer increases with the diameter of the cylindrical shell—the loads on something larger than TransHab can be calculated but we see that the restraint system for it was "novel" (unclear what that means as I haven't yet searched for/found information on it).
+
+Further, how this behaviour looks like for a toroidal structure in practice is not known—I haven't done my research to determine this for toroids. But this might mean that we are now not only dealing with scaling issues but also with material issues—what works on cylinders at a specific diameter might not necessarily work on toruses. So I separate this into two challenges below (based on scale, as well as geometry).
+
+> [!Challenge] Challenge 3: Restraint Layer Designs and maybe novel materials for 75m-100m length cylinders
+> 
+> Find materials that allow greater restraint layer loads at even larger diameters at the design pressure.
+
+
+> [!Challenge] Challenge 4: Restraint layer design and (potentially) new materials needed for 75m major diameter toruses
+> 
 > Find new restraint layer designs and maybe even materials for other geometries as the chart above shows only cylindrical (or nearly so) structures.
 
-> [!Challenge] Challenge 4: Scaling Restraint Materials for toroidal (and cylindrical?) geometries towards 75m-100m Diameter
-> Find materials that allow greater restraint layer loads at even larger diameters at the design pressure.
+
+> [!tip] Goodyear data should be on this chart!
+> 
+> Might be super useful to look at testing data from the Goodyear experiments to get some understanding of what's happening here.
+
 ### MMOD layer
 - This layer is 68% of TransHab's mass for LEO applications, given the higher debris density, but drops to 14% in deep space (what is it for higher Earth orbits?).
 - Our chosen orbit is initially assumed to be LEO—to take maximal mass to orbit using Starship's current specs—there may be a need for in-orbit assembly of Whipple Shield panels around the restraint layer. If this is the case, then perhaps operating in a higher orbit might be preferable. The study should reveal this.
