@@ -17,6 +17,10 @@ TL; DR: Three points:
 - The launch cost of $30/kg is insane; that alone makes the comparative economic analysis nuts.
 - That is not to say that space data centers have no value—the answer for space commercialisation will not be found through economic analysis.
 
+
+== This will be removed once I migrate my analysis from code into write-up so treat everything below as inaccurate in math but principled in reasoning. ==
+
+
 On Earth, data centers run off the existing electricity grid that, crudely put, run off fossil fuels or terrestrial solar. So, people like Sam Altman and Eric Schmidt have  recently talked up data centres in space for, as I see it, three main reasons:
 1. They need a lot of energy to run, which is plentiful and "free" in space: 24/7 solar power unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
 2. A lot of waste heat is generated running data centers terrestrially, which drives climate change—so why not put these in space so the waste heat doesn't contribute to Earth's thermal budget. This seems like a compelling environmental argument as ==data centers already consume about 1% of global electricity==, and it's safe to assume that this will only grow.
@@ -65,7 +69,6 @@ So, the updated total cost is now at $86.7M.
 - For a 5 GW system, they state that 4km × 4km solar arrays are needed; this is a power density of 312 W/m². For the smaller 40 MW that they benchmarked, they would need approximately 128,000 m² of solar panels. If arranged as a large square, this would be roughly 357 m × 357 m. Now, as they suggest, one can go with either Z-fold or roll-out arrays{%sidenote 'picframe' 'The report also mentions picture frame panels but roll-outs are were added recently to the ISS. [Z-folds have also been used before via the Solar Alpha Rotary Joints (SARJs)](https://x.com/raffaeledipalma/status/1368672410522820612).'%}. I suspect that the former alludes to something similar to the [Solar Array Wings (SAW)](https://en.wikipedia.org/wiki/Electrical_system_of_the_International_Space_Station#Solar_array_wing) of the ISS, which works by panels that can fold up (and unfold) like an accordion, whereas the latter is probably based on the [Roll Out Solar Array (ROSA](https://en.wikipedia.org/wiki/Roll_Out_Solar_Array) that augment to the oldest wings. Data and calculations of the SAW and ROSA in an ISS context can be found [[|here]], which shows that iROSA are 1.7x better for power density than the SAWs.
   ![basic ROSA](assets/imgs/space-data-centers/Rosa-SAW.png)
 ![](assets/imgs/space-data-centers/irosa.png)
-- 
 - Whichever option is used must fit in Starship's fairing, whose diameter is ~9 meters. So let's get some sizing estimates:
 	- **Z-folds**: To fit within Starship’s 9-meter fairing, solar panels must be modular. Allowing for a 0.125-meter clearance on each side, the largest practical square tile is **8.75 m × 8.75 m**, or **76.56 m²**. To reach the full **127,449 m²** required for 40 MW, we need approximately **1,665 tiles**.
 	  The International Space Station’s legacy solar arrays follow a Z-fold architecture. Each array “wing” consists of **two solar blankets**, with an estimated deployed width of **4.5 m** each and a **3 m gap** between them, totalling ~**315 m²** of effective solar collecting area per wing. Each wing folds into a cuboidal stowage volume of **4.57 m × 4.57 m × 0.51 m = ~10.65 m³**.
