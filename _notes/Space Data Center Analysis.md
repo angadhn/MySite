@@ -13,8 +13,9 @@ companion music:
 subtitle:
 ---
 TL; DR: Three points:
-- There is no case for single launch 40 MW data center let alone 5 GW.
-- roll out arrays with their optimistic power density—which doesn't yet exist in space, I think. The launch cost of $30/kg is insane.
+- Even with their assumed power density, there is no chance of a single launch 40 MW data center let alone 5 GW.
+- The launch cost of $30/kg is insane; that alone makes the comparative economic analysis nuts.
+- That is not to say that space data centers have no value—the answer for space commercialisation will not be found through economic analysis.
 
 On Earth, data centers run off the existing electricity grid that, crudely put, run off fossil fuels or terrestrial solar. So, people like Sam Altman and Eric Schmidt have  recently talked up data centres in space for, as I see it, three main reasons:
 1. They need a lot of energy to run, which is plentiful and "free" in space: 24/7 solar power unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
