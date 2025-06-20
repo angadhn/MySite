@@ -7,7 +7,7 @@ tags:
   - WiP
 permalink: /space-data-centers-1
 top_of_mind: "true"
-completion_score: 50
+completion_score: 25
 image:
 companion music:
 subtitle:

@@ -12,6 +12,7 @@ image:
 companion music: https://soundcloud.com/adamfreeland/adam-freeland-pale-blue-dot-dj
 subtitle: And (maybe) how to make them.
 ---
+== This will be removed when I feel the write-up is no longer a work in progress. So treat everything below as inaccurate in math but principled in reasoning. ==
 
 Even over a millenium ago, Vikings did not build longships by cobbling together a bunch of smaller boats yet, in principle, this is how we have built the ISS. By joining several smaller "space boats" together over several years, we managed to get a long-duration habitable vessel greater than its parts. But its modular architecture, dictated by the reusable (and, compared to the Saturn V, drastically less capable) Space Shuttle , is also why we have been stuck with single-digit occupancy space stations since the first space station [^1]. Contrasting again to the crew sizes of 11th-century longships, which were double-digit occupancy—ranging from 30-40—it's hard to not think that something was fundamentally mistaken about this approach.
 
