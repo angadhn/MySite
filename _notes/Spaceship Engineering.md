@@ -5,10 +5,11 @@ published: 2025-06-15
 tags:
   - spaceships
   - essays
+  - WiP
 permalink: /spaceship-1
 top_of_mind: "false"
 completion_score: 30
-image:
+image: 
 companion music: https://soundcloud.com/adamfreeland/adam-freeland-pale-blue-dot-dj
 subtitle: And (maybe) how to make them.
 ---
