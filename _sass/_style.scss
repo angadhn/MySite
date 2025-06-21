@@ -1581,6 +1581,46 @@ article {
   }
 }
 
+/* MathJax v3 equation styling */
+mjx-container {
+  font-size: 1em !important;  // Match body text size
+  line-height: 1.4;
+  margin: 0.5em 0;
+}
+
+// Display equations (block-level)
+mjx-container[display="true"] {
+  font-size: 1em !important;  // Match body text for consistency
+  margin: 1em 0;
+  text-align: center;
+}
+
+// Inline equations
+mjx-container[display="false"] {
+  font-size: 1em !important;  // Match body text for consistency
+  margin: 0 0.1em;
+  vertical-align: baseline;
+}
+
+// Responsive adjustments for math
+@media (max-width: 760px) {
+  mjx-container {
+    font-size: 1em !important;  // Match body text on mobile
+  }
+  
+  mjx-container[display="true"] {
+    font-size: 1.05em !important;  // Slightly larger for display on mobile
+    margin: 0.8em 0;
+  }
+}
+
+// Dark theme adjustments for math
+[data-theme="dark"] {
+  mjx-container {
+    color: #eaeaea;
+  }
+}
+
 // Add responsive adjustment for blockquotes on mobile
 @media (max-width: 760px) {
   blockquote,
