@@ -168,8 +168,8 @@ Our calculations thus far are summarised below:
 
 | Array Design | Launches | Cost ($5M/launch) | Cost ($.1B/launch) |
 | ------------ | -------- | ----------------- | ------------------ |
-| **SAW**      | 7 to 9   | 35M-45M           | 700M-900M          |
-| **iROSA**    | 1 to 3   | 5M-15M            | 100M-300M          |
+| **Z-fold**   | 7 to 9   | 35M-45M           | 700M-900M          |
+| **Roll-out** | 1 to 3   | 5M-15M            | 100M-300M          |
 
 So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirements. This will be explored in the future.
 
