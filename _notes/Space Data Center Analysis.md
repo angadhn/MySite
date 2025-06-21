@@ -13,9 +13,9 @@ companion music:
 subtitle:
 ---
 # Abstract
-Starcloud have claimed that a single 100-ton Starship launch could create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds, even with their assumed power density of 312 W/m², there is a slim chance this could be achieved within a single launch. The math shows that this needs at minimum two 100-ton Starship launches to get roll-out solar panels into orbit. I haven't looked at sizing the radiator, MMOD and radiation shielding, or in-space assembly fuel requirements yet.
+Starcloud have claimed that a single 100-ton Starship launch could create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that there is a slim chance this could be achieved within a single launch. The math currently shows that their solar panels could be achieved for in one 100-ton Starship launch with existing roll-out solar panels used on the ISS. **This could change as I haven't looked at sizing the radiator, MMOD/radiation shielding, or in-space assembly fuel requirements yet.**
 
-Their (erroneous) envisioned launch cost of $30/kg makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), Falcon-9 launches cost $2600/kg and a Falcon Heavy's at $1500/kg. So, $500/kg is also a fairly optimistic estimate."%}, five launches would result in an overall cost of $253.2M, not the purported $8.2M.
+However, their whitepaper's (erroneous) envisioned launch cost of $30/kg makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), Falcon-9 launches cost $2600/kg and a Falcon Heavy's at $1500/kg. So, $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC). 
 
 This is not to say that SDCs have no value—the answer for space commercialisation will not be found through their economic analysis.
 
@@ -119,39 +119,35 @@ The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 an
 - and iROSA 6 was added in front of Old 1B solar array on S6 truss in June 2023.
 The seventh and eighth, are planned to be installed on the 2A and 3B power channels on the P4 and S6 truss segments in 2025.
 #### Power Density
-Each iROSA generates nearly 28 kilowatts (kW) of direct current power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets is not in the public domain but appears to be more negligible than between a pair of SAW blankets; the specifications of the solar cells and their arrangement are also known. So, the power density here is based purely on the wing span, which works out to about 255 W/m² from:
+Each iROSA generates nearly 20 kilowatts (kW) of direct current power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets is not in the public domain but appears to be more negligible than between a pair of SAW blankets; the specifications of the solar cells and their arrangement are also known. So, the power density here is based purely on the wing span, which works out to about 255 W/m² from:
 
 $$
-iROSA \quad Power \quad Density = \frac{Power}{Light \quad collecting \quad area} = \frac{28000W}{18.3m*6m} = 255 W/m^2
+iROSA \quad Power \quad Density = \frac{Power}{Light \quad collecting \quad area} = \frac{20000W}{18.3m*6m} = 182.1 W/m^2
 $$
 
-
-> [!warning] Sanity check
-> Need to find the article that compared iROSA performance to SAW. That will allow to compare the power density but this should't be too far from the truth, I suspect.
-
-So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **1.22x more efficient** than iROSA's 255 W/m².
+So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **1.71x more efficient** than iROSA's 255 W/m².
 #### Packing Density
 
 {% marginfigure 'mf-id-1' 'assets/imgs/space-data-centers/iROSA-dragon.jpg' 'Stowed canisters.'  %}
 
-As done with the SAW module analysis (i.e., a pair of deployable blankets), we can use the stowed volume of an iROSA module to compute the number of launches. Sadly, this data is also not public but estimates can be made by examining its imagers stowed in a cargo Dragon as well as alongside humans for scale. The iROSAs packed into a cargo Dragon trunk and each blanket packed into a canister; the length of this canister can be assumed to be 3 m, a dimension that remains unchanged for either blanket as it rolls out. Each blanket's 18.3 m deployed span can be assumed to pack into a canister of diameter of 0.5 m. So two such canisters per iROSA leads to a packing density of 
+As done with the SAW module analysis (i.e., a pair of deployable blankets), we can use the stowed volume of an iROSA module to compute the number of launches. Sadly, this data is also not public but estimates can be made by examining its imagers stowed in a cargo Dragon as well as alongside humans for scale. The iROSAs packed into a cargo Dragon trunk and each blanket packed into a canister; the length of this canister can be assumed to be 3 m, a dimension that remains unchanged for either blanket as it rolls out. Each blanket's 18.3 m deployed span can be assumed to pack into a canister of diameter of 0.3 m. So two such canisters per iROSA leads to a packing density of 
 
 $$
-iROSA \quad areal \quad packing \quad density = \frac{18.3m*6m}{2(\pi*(0.25m)^2*3m)} = 74.53 m²/m³
+iROSA \quad areal \quad packing \quad density = \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} = 258.78 m²/m³
 $$
 
-Again, one can determine the number of launches needed by Starcloud by computing the ratio of the Starcloud and iROSA packing densities. At 1.71, the implication is a need for 2 launches with iROSA packing density but assuming that 80% of Starship could be used for Starcloud, we get 2.14 (or 3 launches).
+Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, 2 launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
 
-However, it is important to note that dropping the canister diameter down to 0.3 m, which might be closer to the diameter of the iROSA canisters, brings the areal density to 207  m²/m³ results in 0.618—this is well under a single launch.
-
-So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirments. This will be explored in the future.
+Our calculations thus far are summarised below:
 
 {%marginnote 'table' "Imprveoment on preceding solar technologies and related launch numbers" %}
 
-|       | Power  density | Launch numbers |
-| ----- | -------------- | -------------- |
-| SAW   | 2.1x           | 7 to 9         |
-| iROSA | 1.22x          | 1 to 3         |
+|       | Power  density | Launch numbers | Launch Cost ($5M/launch) | Launch Cost ($50M/launch) | Launch Cost ($100M/launch) |
+| ----- | -------------- | -------------- | ------------------------ | ------------------------- | -------------------------- |
+| SAW   | 2.1x           | 7 to 9         | 35M-45M                  | 350M-450M                 | 700M-900M                  |
+| iROSA | 1.71x          | 1 to 3         | 5M-15M                   | 50M-150M                  | 100M-750M                  |
+
+So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirements. This will be explored in the future.
 
 
 > [!warning]This is a work-in-progress
