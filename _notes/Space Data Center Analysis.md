@@ -90,7 +90,7 @@ To estimate if this is feasible based on current technologies, I will examine th
 
 The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
 
-![ISS SAW is a LOT larger than the early ROSA.](assets/imgs/space-data-centers/Rosa-SAW.png)
+{% fullwidth 'assets/imgs/space-data-centers/Rosa-SAW.png' "ISS's SAW is a LOT larger than the early ROSA." %}
 
 The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
@@ -122,7 +122,9 @@ $$
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
 # Analysis of ISS Roll-Out Solar Array (iROSA)
 
-![iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions.](assets/imgs/space-data-centers/irosa.png)
+{% fullwidth 'assets/imgs/space-data-centers/irosa.png' "iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions." %}
+
+![](assets/imgs/space-data-centers/irosa.png)
 
 The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 and November 2022 to augment to the first SAWs, launched in 2000 and 2006 and attached to the P6 and P4 Trusses. These SAWs were noticeably degrading towards the end of their 15-year life. Six of the intended 8 iROSAs have been added in [following sequence](https://en.wikipedia.org/wiki/Integrated_Truss_Structure#Solar_arrays):
 - iROSA 1 and 2 was added in front of Old 4B and 2B solar arrays on P6 truss in June 2021;
