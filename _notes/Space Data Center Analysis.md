@@ -81,7 +81,7 @@ This means that we would need to fit 128 m² into a  m³ of Starship. This is a 
 
 To estimate if this is feasible based on current technologies, I will examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAW's and are set to become its next-generation replacements; this ISS variant is called iROSA.
 
-### Solar Array Wings (SAW)
+# Analysis of Solar Array Wings (SAW)
 
 The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
 
@@ -90,7 +90,7 @@ The image below shows a ROSA and against one wing of the ISS Solar Array Win (SA
 The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
  Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
-#### Power Density
+## Power Density
 
  So the power density of a wing with two blankets works out to 147.7  W/m² from:
 
@@ -104,7 +104,7 @@ $$
 
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **2.1x more efficient** than SAW's 147.7 W/m².
 
-#### Packing Density
+## Packing Density
 
 To determine the packing density of one SAW module (i.e., a pair of deployable blankets), we use the stowed volume of this single module that fit within a launched vehicle. The data suggest that this is a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
 
@@ -115,7 +115,7 @@ $$
 $$
 
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
-### ISS Roll-Out Solar Array (iROSA)
+# Analysis of ISS Roll-Out Solar Array (iROSA)
 
 ![iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions.](assets/imgs/space-data-centers/irosa.png)
 
@@ -126,7 +126,7 @@ The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 an
 - and iROSA 6 was added in front of Old 1B solar array on S6 truss in June 2023.
 The seventh and eighth, are planned to be installed on the 2A and 3B power channels on the P4 and S6 truss segments in 2025.
 
-#### Power Density
+## Power Density
 
 Each iROSA generates nearly 20 kilowatts (kW) of direct current power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets is not in the public domain but appears to be more negligible than between a pair of SAW blankets; the specifications of the solar cells and their arrangement are also known. So, the power density here is based purely on the wing span, which works out to about 255 W/m² from:
 
@@ -138,7 +138,7 @@ $$
 
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **1.71x more efficient** than iROSA's 255 W/m².
 
-#### Packing Density
+## Packing Density
 
 {% marginfigure 'mf-id-1' 'assets/imgs/space-data-centers/iROSA-dragon.jpg' 'Stowed canisters.'  %}
 
