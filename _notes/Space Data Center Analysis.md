@@ -83,7 +83,7 @@ Their long-term goal is to build a 5 GW system which they state needs solar arra
 
 $$
 \begin{align}
-Starcloud \quad areal \quad packing \quad density &=\frac{128,000 m²}{1000 m³}\\ &= 128 m²/m³
+{(Areal \, density)}_{desired} &=\frac{128,000 m²}{1000 m³}\\ &= 128 m²/m³
 \end{align}
 $$
 
@@ -106,7 +106,7 @@ The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboa
 
 $$
 \begin{align}
-SAW \quad Power \quad Density &= \frac{Power}{Light \quad collecting \quad area} \\
+{(Power \, Density)}_{SAW} &= \frac{Power}{Area} \\
 &= \frac{31000W}{32800 \times 8cm \times 8cm} \\
 &= 147.7 \, W/m^2
 \end{align}
@@ -120,7 +120,7 @@ To determine the packing density of one SAW module (i.e., a pair of deployable b
 
 $$
 \begin{align}
-SAW \quad areal \quad packing \quad density &= \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m}\\ &= 19.7 m²/m³
+{(Areal \, density)}_{SAW} &= \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m}\\ &= 19.7 m²/m³
 \end{align}
 $$
 
@@ -142,7 +142,7 @@ Each iROSA generates nearly 20 kilowatts (kW) of direct current power from two r
 
 $$
 \begin{align}
-iROSA \quad Power \quad Density &= \frac{Power}{Light \quad collecting \quad area}\\ &= \frac{20000W}{18.3m*6m}\\ &= 182.1 W/m^2
+{(Power \, Density)}_{iROSA} &= \frac{Power}{Area}\\ &= \frac{20000W}{18.3m*6m}\\ &= 182.1 W/m^2
 \end{align}
 $$
 
@@ -156,7 +156,7 @@ As done with the SAW module analysis (i.e., a pair of deployable blankets), we c
 
 $$
 \begin{align}
-iROSA \quad areal \quad packing \quad density &= \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} \\&= 258.78 m²/m³
+{(Areal \, Density)}_{iROSA} &= \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} \\&= 258.78 m²/m³
 \end{align}
 $$
 
