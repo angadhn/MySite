@@ -22,10 +22,10 @@ This is not to say that SDCs have no value—the answer for space commercialisat
 # Introduction
 On Earth, data centers run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. So, technologists and entrepreneurs have recently talked up data centres in space to resolve three issues with terrestrial data centers (TDC):
 1. Data centers require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
-2. A lot of waste heat is generated running TDCs, which bodes poorly for climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. ==TDCs already consume about 1% of global electricity {%sidenote 'verified-1' "TBV."%} ==, and it's safe to assume that this will only grow in the pursuit of AGI.
+2. A lot of waste heat is generated running TDCs, which bodes poorly for climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
 3. Real estate for data centers is a massive bottleneck and this land could be used for other purposes.
 
-Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe an easier technological solution from an energy and climate angle but the regulatory barriers need resolution. So, space, in theory, sounds like a speedier answer too—as a space person, I'd love nothing more than for there to be a strong economic case for space. My only gripe is that SDC remains data-related, which we know is proven to work well with GPSand satellite communications.
+Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need resolution. So, space, in theory, sounds like a speedier answer from a regulatory framework—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But to deliver GW-scale SDCs require engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, would need a square of side 357m. This would far exceed the span of largest space structure ever built—the ISS is about 100 m.
 
 So, there's now at least one YCombinator-backed company, Starcloud Inc., working on building SDCs—they released a white paper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe. They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
 
@@ -57,7 +57,7 @@ The costs for TDCs and SDCs are broken down as follows:
 	- Radiation shielding: $1.2M
 	- **Total: $8.2M**
 
- Now this means their projected energy cost is $0.002/kWh in space versus $0.045-0.17/kWh terrestrially—this is between 22 to 85 times cheaper. Remarkable! Is this realistic?
+ Now this means their projected energy cost is $0.002/kWh in space versus $0.045-0.17/kWh terrestrially—this is between 22 to 85 times cheaper. This raises questions about feasibility.
 ## Calculating Launch Costs from First Principles
 To determine the cost of launch requires knowledge of number of launches. There are number of ways we can go about doing this: the traditional approach would involve determining the mass of the SDC—this assumes to be how Starcloud make their single launch claim but there is no clarity on how their system could be 100 tonnes which requires some initial SDC design.
 
@@ -65,7 +65,7 @@ After a mass-based estimate of launches, one can further refine the first-order 
 
 As Starcloud haven't publicly shared their mass breakdown or component-level design documentation—could either be proprietary information or they are still figuring this out—it is hard to verify their mass claims. I hope to derive this in a future update to this post{%sidenote 'telescope-assembly-overlap' "I see many overlapping architectural challenges here based on my earlier work into in-space assembly of space telescopes"%}. But there is another way for us to determine the number of launches- from their SDC's assumed power density (i.e., power output by a solar array per unit area). I will present that after a short detour to illustrate an issue with the math in their whitepaper.
 ###  Whitepaper Math is Incongruous
-The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a (measly) $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}.
+The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}.
 
 
 
@@ -80,7 +80,7 @@ Their long-term goal is to build a 5 GW system which they state needs solar arra
 $$
 Starcloud \quad areal \quad packing \quad density =\frac{128,000 m²}{1000 m³} = 128 m²/m³
 $$
-This means that we would need to fit 128 m² into a  m³ of Starship. This is a quite optimistic estimate as every little bit of volume is being used; but such efficiency is impractical. A more realistic estimate would be that we use 80% of the available 1000 m³; the areal packing density then becomes **160 m²/m³**.
+This means that we would need to fit 128 m² into a  m³ of Starship. This is a quite optimistic estimate as every little bit of volume is being used; but such efficiency is impractical. A more realistic estimate would be that 80% of the available 1000 m³ can be used; the areal packing density then becomes **160 m²/m³**.
 
 To estimate if this is feasible based on current technologies, I will examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAW's and are set to become its next-generation replacements; this ISS variant is called iROSA.
 
@@ -164,3 +164,6 @@ The three reasons I have stated above are issues that we face on space. But chal
 
 
 Are these omissions are intentional optimism or genuine blindspots?
+
+[^1]: 
+	As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.
