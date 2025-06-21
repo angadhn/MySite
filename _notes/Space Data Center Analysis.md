@@ -12,15 +12,13 @@ image:
 companion music:
 subtitle:
 ---
-TL; DR: Three points:
-- Even with their assumed power density, there is no chance of a single launch 40 MW data center let alone 5 GW.
-- The launch cost of $30/kg is insane; that alone makes the comparative economic analysis nuts.
-- That is not to say that space data centers have no value—the answer for space commercialisation will not be found through economic analysis.
-
+# Abstract
+- Starcloud have claimed that a single 100-ton Starship launch could create a 40 MW space data centre for $8.2 M. My analysis shows that, even with their assumed power density of 312 W/m², there is no chance this could be achieved in a single launch. The math shows that this needs five 100-ton Starship launches, at least. This is only to get the solar panels int orbit—I haven't even looked at sizing the radiator, MMOD and radiation shielding, or in-space assembly fuel requirements yet!
+- Further, their (erroneously calculated) envisioned launch cost of $30/kg makes their comparative economic analysis to terrestrial data centers unmoored from reality; even if launch comes down to $500/kg, five launches would result in an overall cost of $253.2M, not the purported $8.2M.
+- This is not to say that space data centers have no value—the answer for space commercialisation will not be found through their economic analysis.
 
 == This will be removed once I migrate my analysis from code into write-up so treat everything below as inaccurate in math but principled in reasoning. ==
-
-
+# Introduction
 On Earth, data centers run off the existing electricity grid that, crudely put, run off fossil fuels or terrestrial solar. So, people like Sam Altman and Eric Schmidt have  recently talked up data centres in space for, as I see it, three main reasons:
 1. They need a lot of energy to run, which is plentiful and "free" in space: 24/7 solar power unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
 2. A lot of waste heat is generated running data centers terrestrially, which drives climate change—so why not put these in space so the waste heat doesn't contribute to Earth's thermal budget. This seems like a compelling environmental argument as ==data centers already consume about 1% of global electricity==, and it's safe to assume that this will only grow.
@@ -38,11 +36,12 @@ Now, from my time working on that project, I have come to understand that space 
 3. Finally, we could also think about if/when the carbon footprint of launches offset the benefits of a space data center. But the report suggests that achieving AGI could need 1 GW centers but large hyperscale Earth-based data centers today reach 100 megawatts (MW) meaning they "do not scale well or sustainably to gigawatt (GW) sizes".
 
 Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centers) but by examining the first two aspects, I imagine we will know how well the business case of this company adds up.
-# Diving into a proposal for space data centers
-One could begin by asking how much compute workload should be moved to space to make a meaningful dent on the climate—a really good reason to do it—but, at the end of the day, the economic incentives are what appeal to private investors. So, a better starting point is examining [[starcloud-wp.pdf|Starcloud]]'s business case numbers justifying space data centres. After examining their numbers, I will try to unpack a very simple architecture to building such data centers—I have done something similar for large aperture space telescopes in the past.
-## Economic analysis
-### Assumptions
-They present a table that presents the total costs of running a 40MW data centre cluster over ten years as $167M on Earth versus $8.2M for space, which I summarise for you:
+
+%% After examining their numbers, I will try to unpack a very simple architecture to building such data centers—I have done something similar for large aperture space telescopes in the past. %%
+# Analysis of Starcloud's whitepaper
+While one could begin by asking how much compute workload should be moved to space to make a meaningful dent on the climate—a really good reason to do so—economic incentives that lead to large returns on investment are what appeal to private at the end of the day which is why Starcloud exist but space agencies haven't invested here. So, my analysis begins by examining [[starcloud-wp.pdf|Starcloud]]'s numbers to justify their business case for space data centres.
+### Core assumptions
+Their whitepaper presents a table where the total costs of running a 40MW data centre cluster over ten years is determined to be $167M on Earth versus $8.2M for space. This is broken down as follows:
 **Terrestrial:**
 	- Energy: $140M (@ $0.04/kWh)
 	- Cooling: $7M (@ 5% of power usage)
