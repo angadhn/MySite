@@ -124,8 +124,6 @@ This density is far lower than the packing density needed by Starcloud. Therefor
 
 {% fullwidth 'assets/imgs/space-data-centers/irosa.png' "iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions." %}
 
-![](assets/imgs/space-data-centers/irosa.png)
-
 The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 and November 2022 to augment to the first SAWs, launched in 2000 and 2006 and attached to the P6 and P4 Trusses. These SAWs were noticeably degrading towards the end of their 15-year life. Six of the intended 8 iROSAs have been added in [following sequence](https://en.wikipedia.org/wiki/Integrated_Truss_Structure#Solar_arrays):
 - iROSA 1 and 2 was added in front of Old 4B and 2B solar arrays on P6 truss in June 2021;
 - iROSA 3 and 4 was added in front of Old 3A and 4A solar arrays on S4 and P4 truss in December 2022;
