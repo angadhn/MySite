@@ -16,6 +16,10 @@ subtitle:
 Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this could be feasibly within a single launch with existing roll-out solar panels used on the ISS. However, this is based on speculative numbers on the iROSA's stowed volume. This single launch feasiblity could change as sizing radiators and MMOD/radiation shielding is pending. Considerations for fuel requirements for in-space assembly will also significantly affect launch numbers—this requires specifications and mission architectures that are not publicly availble.
 
 On the note of launch costs, the whitepaper's (erroneous) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
+
+
+> [!warning]This is a work-in-progress
+> This block is to warn you that everything below should be considered a draft as there is more analysis to be completed. This block will be removed once I feel my analysis is complete and fully documented below. So, please treat everything below as potentially inaccurate as this is just my explorations of working in public.
 # Introduction
 On Earth, data centers run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. So, technologists and entrepreneurs have recently talked up data centres in space to resolve three issues with terrestrial data centers (TDC):
 1. Data centers require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
@@ -165,8 +169,6 @@ The above is not to say that SDCs have no value but the answer for space commerc
 
 So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirements. This will be explored in the future.
 
-> [!warning]This is a work-in-progress
-> This block is to warn you that everything below is in draft mode. This block will be removed once my analysis is complete and documented below. So, if you have reached this far, treat everything below as inaccurate explorations for myself.
 
 
 [[Cooling stuff]]
