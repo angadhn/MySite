@@ -13,6 +13,7 @@ companion music:
 subtitle:
 ---
 # Abstract
+
 Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this could be feasibly within a single launch with existing roll-out solar panels used on the ISS. However, this is based on speculative numbers on the iROSA's stowed volume. This single launch feasiblity could change as sizing radiators and MMOD/radiation shielding is pending. Considerations for fuel requirements for in-space assembly will also significantly affect launch numbers—this requires specifications and mission architectures that are not publicly available. On the note of launch costs, the whitepaper's (erroneous) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
 
 
@@ -20,6 +21,7 @@ Starcloud have claimed that a single 100-ton Starship launch could suffice to cr
 > This block is to warn you that everything below should be considered a draft as there is more analysis to be completed. This block will be removed once I feel my analysis is complete and fully documented below. So, please treat everything below as potentially inaccurate as this is just my explorations of working in public.
 
 # Introduction
+
 On Earth, data centers run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. So, technologists and entrepreneurs have recently talked up data centres in space to resolve three issues with terrestrial data centers (TDC):
 1. Data centers require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
 2. A lot of waste heat is generated running TDCs, which bodes poorly for climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
@@ -27,13 +29,14 @@ On Earth, data centers run on the existing electricity grid that, crudely put, u
 
 Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need resolution. So, space, in theory, sounds like a speedier answer from a regulatory framework—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But to deliver GW-scale SDCs require engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, would need a square of side 357m. This would far exceed the span of largest space structure ever built—the ISS is about 100 m.
 
-So, there's now at least one YCombinator-backed company, Starcloud Inc., working on building SDCs—they released a white paper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe. They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
+So, there's now at least one YCombinator-backed company, Starcloud Inc., working on building SDCs—they released a white paper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe). They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
 
 ## My qualifications
 
 If I can claim a bit of domain expertise, it's on the space side. Reading Starcloud's whitepaper, I felt I could use my limited expertise from [designing mission for in-space assembled large space telescopes and analysing them](https://www.sciencedirect.com/science/article/pii/S0094576524004612) to understand their techno-economic analysis.
 
 ## Space challenges
+
 Now, in-space assembly of large space structures, like large aperture telescopes, comes with its own challenges. For the sake of this analysis, I will classify them in the same three categories as I did at the start for TDCs but present them in reverse order:
 1. Real estate: Starcloud's target is to achieve a 5 GW cluster spanning, with solar arrays spanning 4 km by 4 km—this would comfortably become the largest structure in space—which will need in-space assembly. This is, in some sense, equivalent to real estate.
 2. Cooling (aka Thermal Management): On Earth, data centers use air (convection) and water cooling (conduction) but in space, thermal management requires radiation, which is less efficient—convection is impossible in a vacuum and while water could extract heat from the center, cooling that heated up water would then pose another problem.
@@ -60,8 +63,10 @@ The costs for TDCs and SDCs are broken down as follows:
 - Radiation shielding: $1.2M
 - **Total: $8.2M**
 
- Now this means their projected energy cost is $0.002/kWh in space versus $0.045-0.17/kWh terrestrially—this is between 22 to 85 times cheaper. This raises questions about feasibility.
+Now this means their projected energy cost is $0.002/kWh in space versus $0.045-0.17/kWh terrestrially—this is between 22 to 85 times cheaper. This raises questions about feasibility.
+
 ## Calculating Launch Costs from First Principles
+
 To determine the cost of launch requires knowledge of number of launches. There are number of ways we can go about doing this: the traditional approach would involve determining the mass of the SDC—this assumes to be how Starcloud make their single launch claim but there is no clarity on how their system could be 100 tonnes which requires some initial SDC design.
 
 After a mass-based estimate of launches, one can further refine the first-order designs to determine revised launch numbers that account for how the SDC structure fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its parts might not necessarily be as accommodating."%}.
@@ -72,11 +77,12 @@ As Starcloud haven't publicly shared their mass breakdown or component-level des
 > The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}.
 
 ## Desired Packaging Densities
+
 Their long-term goal is to build a 5 GW system which they state needs solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m². Using the same power density, their smaller 40 MW SDC needs 128,000 m² of solar panels. This would need to be packed into a single launch Starship, which has a fairing volume of 1000 m³. We now define areal packing density, which is the area of these arrays divided by the Starship's fairing volume; this works out to 128 m²/m³.
 
 $$
 \begin{align}
-{(Packing \, density)}_{desired} &=\frac{128,000 m²}{1000 m³}\\ &= 128 m²/m³
+{(Packing \, density)}_{desired} &=\frac{128,000}{1000}\\ &= 128 \, m^2/m^3
 \end{align}
 $$
 
@@ -92,15 +98,15 @@ The image below shows a ROSA and against one wing of the ISS Solar Array Win (SA
 
 The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
- Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
+Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
 ## Power Density
 
- So the power density of a wing with two blankets works out to 147.7  W/m² from:
+So the power density of a wing with two blankets works out to 147.7  W/m² from:
 
 $$
 \begin{align}
 {(Power \, Density)}_{SAW} &= \frac{Power}{Area} \\
-&= \frac{31000W}{32800 \times 8cm \times 8cm} \\
+&= \frac{31000W}{32800 \times .08^2} \\
 &= 147.7 \, W/m^2
 \end{align}
 $$
@@ -113,7 +119,7 @@ To determine the packing density of one SAW module (i.e., a pair of deployable b
 
 $$
 \begin{align}
-{(Packing \, density)}_{SAW} &= \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m}\\ &= 19.7 m²/m³
+{(Packing \, density)}_{SAW} &= \frac{32800 \times .08^2}{4.57^2 \times 0.51}\\ &= 19.7 \, m^2/m^3
 \end{align}
 $$
 
@@ -135,7 +141,7 @@ Each iROSA generates nearly 20 kilowatts (kW) of direct current power from two r
 
 $$
 \begin{align}
-{(Power \, Density)}_{iROSA} &= \frac{Power}{Area}\\ &= \frac{20000W}{18.3m*6m}\\ &= 182.1 W/m^2
+{(Power \, Density)}_{iROSA} &= \frac{Power}{Area}\\ &= \frac{20000}{18.3 \times 6}\\ &= 182.1 \, W/m^2
 \end{align}
 $$
 
@@ -149,7 +155,7 @@ As done with the SAW module analysis (i.e., a pair of deployable blankets), we c
 
 $$
 \begin{align}
-{(Packing \, Density)}_{iROSA} &= \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} \\&= 258.78 m²/m³
+{(Packing \, Density)}_{iROSA} &= \frac{18.3 \times 6}{2(\pi \times (0.15)^2 \times 3)} \\&= 258.78 \, m^2/m^3
 \end{align}
 $$
 
@@ -159,7 +165,10 @@ Our calculations thus far are summarised below:
 
 {%marginnote 'table' "Improvement on preceding solar technologies and related launch numbers" %}
 
-
+| Array Design | Launches | Optimistic cost ($)   | Pessimisitic cost ($)  |
+| ------------ | -------- | --------------------- | ---------------------- |
+| **Z-fold**   | 7 to 9   | 35M-45M               | 700M-900M              |
+| **Roll-out** | 1 to 3   | 5M-15M                | 100M-300M              |
 
 The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
 
