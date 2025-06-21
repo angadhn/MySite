@@ -90,7 +90,7 @@ To estimate if this is feasible based on current technologies, I will examine th
 ### SAW
 The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
 
-![basic ROSA](assets/imgs/space-data-centers/Rosa-SAW.png)
+![ISS SAW is a LOT larger than the early ROSA.](assets/imgs/space-data-centers/Rosa-SAW.png)
 
 The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
@@ -119,7 +119,7 @@ $$
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
 #### iROSA
 
-![iROSA compared to tech demo ROSAs that were built prior.](assets/imgs/space-data-centers/irosa.png)
+![iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions.](assets/imgs/space-data-centers/irosa.png)
 
 The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 and November 2022 to augment to the first SAWs, launched in 2000 and 2006 and attached to the P6 and P4 Trusses. These SAWs were noticeably degrading towards the end of their 15-year life. Six of the intended 8 iROSAs have been added in [following sequence](https://en.wikipedia.org/wiki/Integrated_Truss_Structure#Solar_arrays):
 - iROSA 1 and 2 was added in front of Old 4B and 2B solar arrays on P6 truss in June 2021;
@@ -153,12 +153,12 @@ Again, one can determine the number of launches for the SDC's solar panels by co
 
 Our calculations thus far are summarised below:
 
-{%marginnote 'table' "Imprveoment on preceding solar technologies and related launch numbers" %}
+{%marginnote 'table' "Improvement on preceding solar technologies and related launch numbers" %}
 
-|       | Power  density | Launch numbers | Launch Cost ($5M/launch) | Launch Cost ($50M/launch) | Launch Cost ($100M/launch) |
-| ----- | -------------- | -------------- | ------------------------ | ------------------------- | -------------------------- |
-| SAW   | 2.1x           | 7 to 9         | 35M-45M                  | 350M-450M                 | 700M-900M                  |
-| iROSA | 1.71x          | 1 to 3         | 5M-15M                   | 50M-150M                  | 100M-750M                  |
+|       | Power  density | Launch numbers | Launch Cost ($5M/launch) | Launch Cost ($100M/launch) |
+| ----- | -------------- | -------------- | ------------------------ | -------------------------- |
+| SAW   | 2.1x           | 7 to 9         | 35M-45M                  | 700M-900M                  |
+| iROSA | 1.71x          | 1 to 3         | 5M-15M                   | 100M-750M                  |
 
 So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirements. This will be explored in the future.
 
