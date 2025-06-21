@@ -12,8 +12,6 @@ image:
 companion music:
 subtitle:
 ---
-# Abstract
-
 Starcloud have claimed that a single 100-ton Starship launch could create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that there is a slim chance this could be achieved within a single launch. The math currently shows that their solar panels could be achieved for in one 100-ton Starship launch with existing roll-out solar panels used on the ISS. **This could change as I haven't looked at sizing the radiator, MMOD/radiation shielding, or in-space assembly fuel requirements yet.**
 
 However, their whitepaper's (erroneous) envisioned launch cost of $30/kg makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), Falcon-9 launches cost $2600/kg and a Falcon Heavy's at $1500/kg. So, $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC). 
