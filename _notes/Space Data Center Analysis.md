@@ -13,7 +13,7 @@ companion music:
 subtitle:
 ---
 # Abstract
-Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this could be feasibly within a single launch with existing roll-out solar panels used on the ISS. However, this is based on speculative numbers on the iROSA's stowed volume. This single launch feasiblity could change as sizing radiators and MMOD/radiation shielding is pending. Considerations for fuel requirements for in-space assembly will also significantly affect launch numbers—this requires specifications and mission architectures that are not publicly availble. On the note of launch costs, the whitepaper's (erroneous) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
+Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this could be feasibly within a single launch with existing roll-out solar panels used on the ISS. However, this is based on speculative numbers on the iROSA's stowed volume. This single launch feasiblity could change as sizing radiators and MMOD/radiation shielding is pending. Considerations for fuel requirements for in-space assembly will also significantly affect launch numbers—this requires specifications and mission architectures that are not publicly available. On the note of launch costs, the whitepaper's (erroneous) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
 
 
 > [!warning]This is a work-in-progress
@@ -88,6 +88,8 @@ To estimate if this is feasible based on current technologies, I will examine th
 
 The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
 
+![ISS SAW is a LOT larger than the early ROSA.](assets/imgs/space-data-centers/Rosa-SAW.png)
+
 The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
  Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
@@ -117,6 +119,8 @@ $$
 
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
 # Analysis of ISS Roll-Out Solar Array (iROSA)
+
+![iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions.](assets/imgs/space-data-centers/irosa.png)
 
 The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 and November 2022 to augment to the first SAWs, launched in 2000 and 2006 and attached to the P6 and P4 Trusses. These SAWs were noticeably degrading towards the end of their 15-year life. Six of the intended 8 iROSAs have been added in [following sequence](https://en.wikipedia.org/wiki/Integrated_Truss_Structure#Solar_arrays):
 - iROSA 1 and 2 was added in front of Old 4B and 2B solar arrays on P6 truss in June 2021;
