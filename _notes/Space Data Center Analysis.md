@@ -12,6 +12,7 @@ image:
 companion music:
 subtitle:
 ---
+# Abstract
 Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this could be feasibly within a single launch with existing roll-out solar panels used on the ISS. However, this is based on speculative numbers on the iROSA's stowed volume. This single launch feasiblity could change as sizing radiators and MMOD/radiation shielding is pending. Considerations for fuel requirements for in-space assembly will also significantly affect launch numbers—this requires specifications and mission architectures that are not publicly availble.
 
 On the note of launch costs, the whitepaper's (erroneous) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
@@ -63,22 +64,16 @@ To determine the cost of launch requires knowledge of number of launches. There 
 After a mass-based estimate of launches, one can further refine the first-order designs to determine revised launch numbers that account for how the SDC structure fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its parts might not necessarily be as accommodating."%}.
 
 As Starcloud haven't publicly shared their mass breakdown or component-level design documentation—could either be proprietary information or they are still figuring this out—it is hard to verify their mass claims. I hope to derive this in a future update to this post{%sidenote 'telescope-assembly-overlap' "I see many overlapping architectural challenges here based on my earlier work into in-space assembly of space telescopes"%}. But there is another way for us to determine the number of launches- from their SDC's assumed power density (i.e., power output by a solar array per unit area). I will present that after a short detour to illustrate an issue with the math in their whitepaper.
-###  Whitepaper Math is Incongruous
-The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}.
 
+> [!warning]White paper math is incongruous
+> The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}.
 
-
-%% After examining their numbers, I will try to unpack a very simple architecture to building such data centers—I have done something similar for large aperture space telescopes in the past. %%
-
-
-
-
-## Deriving Number of launches from Packing Densities
+## Desired Packaging Densities
 Their long-term goal is to build a 5 GW system which they state needs solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m². Using the same power density, their smaller 40 MW SDC needs 128,000 m² of solar panels. This would need to be packed into a single launch Starship, which has a fairing volume of 1000 m³. We now define areal packing density, which is the area of these arrays divided by the Starship's fairing volume; this works out to 128 m²/m³.
 
 $$
 \begin{align}
-{(Areal \, density)}_{desired} &=\frac{128,000 m²}{1000 m³}\\ &= 128 m²/m³
+{(Packing \, density)}_{desired} &=\frac{128,000 m²}{1000 m³}\\ &= 128 m²/m³
 \end{align}
 $$
 
@@ -115,7 +110,7 @@ To determine the packing density of one SAW module (i.e., a pair of deployable b
 
 $$
 \begin{align}
-{(Areal \, density)}_{SAW} &= \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m}\\ &= 19.7 m²/m³
+{(Packing \, density)}_{SAW} &= \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m}\\ &= 19.7 m²/m³
 \end{align}
 $$
 
@@ -151,7 +146,7 @@ As done with the SAW module analysis (i.e., a pair of deployable blankets), we c
 
 $$
 \begin{align}
-{(Areal \, Density)}_{iROSA} &= \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} \\&= 258.78 m²/m³
+{(Packing \, Density)}_{iROSA} &= \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} \\&= 258.78 m²/m³
 \end{align}
 $$
 
