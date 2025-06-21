@@ -262,14 +262,14 @@ I like this style of table, so I have made it the default for unstyled tables. T
 
 {% marginnote 'tableID-3' 'Table 3: a table created with *Markdown Extra* markup using only the default table styling' %}
 
-|                 |mpg  | cyl  |  disp  |   hp   |  drat  | wt  |
-|:----------------|----:|-----:|-------:|-------:|-------:|----:|
-|Mazda RX4        |21   |6     |160     |110     |3.90    |2.62 |
-|Mazda RX4 Wag    |21   |6     |160     |110     |3.90    |2.88 |
-|Datsun 710       |22.8 |4     |108     |93      |3.85    |2.32 |
-|Hornet 4 Drive   |21.4 |6     |258     |110     |3.08    |3.21 |
-|Hornet Sportabout|18.7 |8     |360     |175     |3.15    |3.44 |
-|Valiant          |18.1 |6     |160     |105     |2.76    |3.46 |
+|                   |  mpg | cyl | disp |  hp | drat |   wt |
+| :---------------- | ---: | --: | ---: | --: | ---: | ---: |
+| Mazda RX4         |   21 |   6 |  160 | 110 | 3.90 | 2.62 |
+| Mazda RX4 Wag     |   21 |   6 |  160 | 110 | 3.90 | 2.88 |
+| Datsun 710        | 22.8 |   4 |  108 |  93 | 3.85 | 2.32 |
+| Hornet 4 Drive    | 21.4 |   6 |  258 | 110 | 3.08 | 3.21 |
+| Hornet Sportabout | 18.7 |   8 |  360 | 175 | 3.15 | 3.44 |
+| Valiant           | 18.1 |   6 |  160 | 105 | 2.76 | 3.46 |
 
 
 Using the following Markdown formatting:
