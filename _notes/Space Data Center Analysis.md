@@ -137,7 +137,7 @@ As done with the SAW module analysis (i.e., a pair of deployable blankets), we c
 
 
 > [!warning]This is a work-in-progress
-> This block is to warn you that everything below is in draft mode. This block will be removed once my analysis is complete and documented below. This involves migrating my analysis into this write-up. So, if you stumble on this, treat everything below as inaccurate in math but principled in reasoning. The numbers in the abstract are accurate.
+> This block is to warn you that everything below is in draft mode. This block will be removed once my analysis is complete and documented below. So, if you have reached this far, treat everything below as inaccurate explorations for myself.
 
 
 ### Other stuff
