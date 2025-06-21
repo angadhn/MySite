@@ -74,11 +74,7 @@ As Starcloud haven't publicly shared their mass breakdown or component-level des
 ## Desired Packaging Densities
 Their long-term goal is to build a 5 GW system which they state needs solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m². Using the same power density, their smaller 40 MW SDC needs 128,000 m² of solar panels. This would need to be packed into a single launch Starship, which has a fairing volume of 1000 m³. We now define areal packing density, which is the area of these arrays divided by the Starship's fairing volume; this works out to 128 m²/m³.
 
-$$
-\begin{align}
-{(Packing \, density)}_{desired} &=\frac{128,000 m²}{1000 m³}\\ &= 128 m²/m³
-\end{align}
-$$
+
 
 This means that we would need to fit 128 m² into a  m³ of Starship. This is a quite optimistic estimate as every little bit of volume is being used; but such efficiency is impractical. A more realistic estimate would be that 80% of the available 1000 m³ can be used; the areal packing density then becomes **160 m²/m³**.
 
@@ -97,13 +93,7 @@ The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboa
 
  So the power density of a wing with two blankets works out to 147.7  W/m² from:
 
-$$
-\begin{align}
-{(Power \, Density)}_{SAW} &= \frac{Power}{Area} \\
-&= \frac{31000W}{32800 \times 8cm \times 8cm} \\
-&= 147.7 \, W/m^2
-\end{align}
-$$
+
 
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **2.1x more efficient** than SAW's 147.7 W/m².
 
@@ -111,11 +101,7 @@ So, to achieve Starcloud's assumed power density of 312 W/m², solar technology 
 
 To determine the packing density of one SAW module (i.e., a pair of deployable blankets), we use the stowed volume of this single module that fit within a launched vehicle. The data suggest that this is a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
 
-$$
-\begin{align}
-{(Packing \, density)}_{SAW} &= \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m}\\ &= 19.7 m²/m³
-\end{align}
-$$
+
 
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
 # Analysis of ISS Roll-Out Solar Array (iROSA)
@@ -133,11 +119,7 @@ The seventh and eighth, are planned to be installed on the 2A and 3B power chann
 
 Each iROSA generates nearly 20 kilowatts (kW) of direct current power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets is not in the public domain but appears to be more negligible than between a pair of SAW blankets; the specifications of the solar cells and their arrangement are also known. So, the power density here is based purely on the wing span, which works out to about 255 W/m² from:
 
-$$
-\begin{align}
-{(Power \, Density)}_{iROSA} &= \frac{Power}{Area}\\ &= \frac{20000W}{18.3m*6m}\\ &= 182.1 W/m^2
-\end{align}
-$$
+
 
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **1.71x more efficient** than iROSA's 255 W/m².
 
@@ -147,11 +129,7 @@ So, to achieve Starcloud's assumed power density of 312 W/m², solar technology 
 
 As done with the SAW module analysis (i.e., a pair of deployable blankets), we can use the stowed volume of an iROSA module to compute the number of launches. Sadly, this data is also not public but estimates can be made by examining its imagers stowed in a cargo Dragon as well as alongside humans for scale. The iROSAs packed into a cargo Dragon trunk and each blanket packed into a canister; the length of this canister can be assumed to be 3 m, a dimension that remains unchanged for either blanket as it rolls out. Each blanket's 18.3 m deployed span can be assumed to pack into a canister of diameter of 0.3 m. So two such canisters per iROSA leads to a packing density of 
 
-$$
-\begin{align}
-{(Packing \, Density)}_{iROSA} &= \frac{18.3m*6m}{2(\pi*(0.15m)^2*3m)} \\&= 258.78 m²/m³
-\end{align}
-$$
+
 
 Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, 2 launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
 
