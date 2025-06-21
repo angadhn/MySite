@@ -1605,11 +1605,30 @@ mjx-container[display="false"] {
 // Responsive adjustments for math
 @media (max-width: 760px) {
   mjx-container {
-    font-size: 1em !important;  // Match body text on mobile
+    font-size: 0.9em !important;  // Slightly smaller on mobile
+    max-width: 100%;
+    overflow-x: auto;  // Allow horizontal scrolling if needed
   }
   
   mjx-container[display="true"] {
+    font-size: 0.85em !important;  // Smaller for display equations on mobile
     margin: 0.8em 0;
+    max-width: 100%;
+    overflow-x: auto;  // Allow horizontal scrolling for wide equations
+    padding: 0.5em;
+    background-color: rgba(0,0,0,0.02);  // Subtle background to show scrollable area
+    border-radius: 4px;
+  }
+  
+  // Specific handling for very small screens (iPhone SE, etc.)
+  @media (max-width: 375px) {
+    mjx-container {
+      font-size: 0.8em !important;
+    }
+    
+    mjx-container[display="true"] {
+      font-size: 0.75em !important;
+    }
   }
 }
 
