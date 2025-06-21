@@ -102,6 +102,7 @@ $$
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **2.1x more efficient** than SAW's 147.7 W/m².
 #### Packing Density
 To determine the packing density of one SAW module (i.e., a pair of deployable blankets), we use the stowed volume of this single module that fit within a launched vehicle. The data suggest that this is a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
+
 $$
 SAW \quad areal \quad packing \quad density = \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m} = 19.7 m²/m³
 $$
