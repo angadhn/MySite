@@ -155,7 +155,7 @@ As done with the SAW module analysis (i.e., a pair of deployable blankets), we c
 
 $$
 \begin{align}
-{(Packing \, Density)}_{iROSA} &= \frac{18.3 \times 6}{2(\pi \times (0.15)^2 \times 3)} \\&= 258.78 \, m^2/m^3
+{(Packing \, Density)}_{iROSA} &= \frac{18.3 \times 6}{2\pi \times 0.15^2 \times 3} \\&= 258.78 \, m^2/m^3
 \end{align}
 $$
 
