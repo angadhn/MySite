@@ -29,9 +29,12 @@ Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect
 
 So, there's now at least one YCombinator-backed company, Starcloud Inc., working on building SDCs—they released a white paper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe. They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
 
-If I can claim a bit of domain expertise, it's on the space side. Reading Starcloud's whitepaper, I felt I could use my limited expertise from [designing mission for in-space assembled large space telescopes and analysing them]() to understand their techno-economic analysis.
+## My qualifications
 
-Now, from my time working on that project, I have come to understand that space has its own challenges. For the sake of this analysis, I will classify them in the same three categories as I did at the start for Earth data centers but present them in reverse order:
+If I can claim a bit of domain expertise, it's on the space side. Reading Starcloud's whitepaper, I felt I could use my limited expertise from [designing mission for in-space assembled large space telescopes and analysing them](https://www.sciencedirect.com/science/article/pii/S0094576524004612) to understand their techno-economic analysis.
+
+## Space challenges
+Now, in-space assembly of large space structures, like large aperture telescopes, comes with its own challenges. For the sake of this analysis, I will classify them in the same three categories as I did at the start for TDCs but present them in reverse order:
 1. Real estate: Starcloud's target is to achieve a 5 GW cluster spanning, with solar arrays spanning 4 km by 4 km—this would comfortably become the largest structure in space—which will need in-space assembly. This is, in some sense, equivalent to real estate.
 2. Cooling (aka Thermal Management): On Earth, data centers use air (convection) and water cooling (conduction) but in space, thermal management requires radiation, which is less efficient—convection is impossible in a vacuum and while water could extract heat from the center, cooling that heated up water would then pose another problem.
 3. Finally, we could also think about if/when the carbon footprint of launches offset the benefits of a SDC. But the report suggests that achieving AGI could need 1 GW centers but large hyperscale Earth-based data centers today reach 100 megawatts (MW) meaning they "do not scale well or sustainably to gigawatt (GW) sizes".
@@ -154,16 +157,8 @@ So this begs the question if it is possible to build the radiators in the remain
 > This block is to warn you that everything below is in draft mode. This block will be removed once my analysis is complete and documented below. So, if you have reached this far, treat everything below as inaccurate explorations for myself.
 
 
-[[Other stuff]]
-# Space challenges
-The three reasons I have stated above are issues that we face on space. But challenges in space also fall under the same three categories. These are best worked backwards:
-1. Real estate: Large solar panels need to be assembled in space for energy collection; this is equivalent to real estate. One company is saying they would need 4 km by 4 km—easily the largest structure we would have ever built. 
-2. Cooling (aka Thermal Management): On Earth, data centers use air (convection) and water cooling (conduction). In space, thermal management is a bigger engineering challenge as we can only rely on radiation, which is less efficient.
-3. And does the carbon footprint of launches offset the benefits?
+[[Cooling stuff]]
 
-
-
-Are these omissions are intentional optimism or genuine blindspots?
 
 [^1]: 
 	As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.
