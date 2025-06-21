@@ -173,7 +173,6 @@ Our calculations thus far are summarised below:
 
 So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirements. This will be explored in the future.
 
-
 > [!warning]This is a work-in-progress
 > This block is to warn you that everything below is in draft mode. This block will be removed once my analysis is complete and documented below. So, if you have reached this far, treat everything below as inaccurate explorations for myself.
 
