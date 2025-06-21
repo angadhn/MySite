@@ -88,8 +88,6 @@ To estimate if this is feasible based on current technologies, I will examine th
 
 The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
 
-{% fullwidth 'assets/imgs/space-data-centers/Rosa-SAW.png' "ISS's SAW is a LOT larger than the early ROSA." %}
-
 The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
  Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
@@ -119,8 +117,6 @@ $$
 
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
 # Analysis of ISS Roll-Out Solar Array (iROSA)
-
-{% fullwidth 'assets/imgs/space-data-centers/irosa.png' "iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions." %}
 
 The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 and November 2022 to augment to the first SAWs, launched in 2000 and 2006 and attached to the P6 and P4 Trusses. These SAWs were noticeably degrading towards the end of their 15-year life. Six of the intended 8 iROSAs have been added in [following sequence](https://en.wikipedia.org/wiki/Integrated_Truss_Structure#Solar_arrays):
 - iROSA 1 and 2 was added in front of Old 4B and 2B solar arrays on P6 truss in June 2021;
