@@ -18,10 +18,6 @@ Starcloud have claimed that a single 100-ton Starship launch could create a 40 M
 Further, their (erroneously calculated) envisioned launch cost of $30/kg makes their comparative economic analysis to terrestrial data centers unmoored from reality; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), Falcon-9 launches cost $2600/kg and a Falcon Heavy's at $1500/kg. So, I'd say even $500/kg is an optimistic estimate."%}, five launches would result in an overall cost of $253.2M, not the purported $8.2M.
 
 This is not to say that SDCs have no value—the answer for space commercialisation will not be found through their economic analysis.
-
-> [!warning]This is a work-in-progress
-> This block is to warn you that this is a draft article. This block will be removed once I my analysis and comments are complete. This involves migrating my analysis into this write-up. So, if you stumble on this, treat everything below as inaccurate in math but principled in reasoning. The numbers in the abstract are accurate.
-
 # Introduction
 On Earth, data centers run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. So, technologists and entrepreneurs have recently talked up data centres in space to resolve three issues with terrestrial data centers (TDC):
 1. Data centers require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
@@ -45,7 +41,9 @@ Now, I will treat that last item as speculative mostly because it is out of my w
 # Analysis of Starcloud's whitepaper
 While one could begin by asking how much compute workload should be moved to space to make a meaningful dent on the climate—a really good reason to do so—economic incentives that lead to large returns on investment are what appeal to private at the end of the day which is why Starcloud exist but space agencies haven't invested here. So, my analysis begins by examining [[starcloud-wp.pdf|Starcloud]]'s numbers to justify their business case for SDC.
 
-Their whitepaper presents a table where the total costs of running a 40MW data centre cluster over ten years is determined to be $167M on Earth versus $8.2M for space. This is broken down as follows:
+Their whitepaper presents a table where the total costs of running a 40MW data centre cluster over ten years is determined to be $167M on Earth versus $8.2M for space; launch is the largest contributor to Starcloud's total costs and they presume that one launch shall be enough, which I was skeptical about.
+
+The costs for TDCs and SDCs are broken down as follows:
 **Terrestrial:**
 	- Energy: $140M (@ $0.04/kWh)
 	- Cooling: $7M (@ 5% of power usage)
@@ -70,11 +68,89 @@ As Starcloud haven't publicly shared their mass breakdown or component-level des
 ###  Whitepaper Math is Incongruous
 The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a (measly) $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}. 
 
+### Deriving Number of launches from Power Densities
+Their long-term goal is to build a 5 GW system which they state needs solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m². Using the same power density, their smaller 40 MW SDC needs 128,000 m² of solar panels. This would need to be packed into a single launch Starship, which has a fairing volume of 1000 m³. We now define areal packing density, which is the area of these arrays divided by the Starship's fairing volume; this works out to 128 m²/m³.
+
+$$
+Starcloud \quad areal \quad packing \quad density =\frac{128,000 m²}{1000 m³} = 128 m²/m³
+$$
+This means that we would need to fit 128 m² into a  m³ of Starship. This is a quite optimistic estimate as every little bit of volume is being used; but such efficiency is impractical. A more realistic estimate would be that we use 80% of the available 1000 m³; the areal packing density then becomes **160 m²/m³**.
+
+To estimate if this is feasible based on current technologies, I will examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAW's and are set to become its next-generation replacements; this ISS variant is called iROSA.
+
+### SAW Power Density
+The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
+
+![basic ROSA](assets/imgs/space-data-centers/Rosa-SAW.png)
+
+The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
+
+ Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
+#### Power Density
+ So the power density of a wing with two blankets works out to 147.7  W/m² from:
+
+$$
+Single \quad SAW \quad Power \quad Density = \frac{Power \quad per \quad wing}{Actual \quad light \quad collecting \quad area \quad of \quad Wing} = \frac{31000W}{32800*8cm*8cm} = 147.7 W/m^2
+$$
+
+One could determine the number of launches for Starcloud by computing the ratio of the Starcloud and SAW power densities—a dimensionless number. This is 2.11 which means we would need nearly 3 launches with SAW power density. This is not too bad but not a single launch system.
+#### Power Density
+To determine the packing density of one SAW module (i.e., a pair of deployable blankets), we use the stowed volume of this single module that fit within a launched vehicle. The data suggest that this is a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
+$$
+SAW \quad areal \quad packing \quad density = \frac{32800*8cm*8cm}{4.57m*4.57m*0.51m} = 19.7 m²/m³
+$$
+
+This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
+#### iROSA
+
+![iROSA compared to tech demo ROSAs that were built prior.](assets/imgs/space-data-centers/irosa.png)
+
+The ISS Roll Out Solar Arrays (iROSA) were launched in two pairs in June 2021 and November 2022 to augment to the first SAWs, launched in 2000 and 2006 and attached to the P6 and P4 Trusses. These SAWs were noticeably degrading towards the end of their 15-year life. Six of the intended 8 iROSAs have been added in [following sequence](https://en.wikipedia.org/wiki/Integrated_Truss_Structure#Solar_arrays):
+- iROSA 1 and 2 was added in front of Old 4B and 2B solar arrays on P6 truss in June 2021;
+- iROSA 3 and 4 was added in front of Old 3A and 4A solar arrays on S4 and P4 truss in December 2022;
+- iROSA 5 was added in front of Old 1A solar array on S4 truss in June 2023; and
+- and iROSA 6 was added in front of Old 1B solar array on S6 truss in June 2023.
+The seventh and eighth, are planned to be installed on the 2A and 3B power channels on the P4 and S6 truss segments in 2025.
+#### Power Density
+Each iROSA generates nearly 28 kilowatts (kW) of direct current power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets is not in the public domain but appears to be more negligible than between a pair of SAW blankets; the specifications of the solar cells and their arrangement are also known. So, the power density here is based purely on the wing span, which works out to about 255 W/m² from:
+
+$$
+Single \quad iROSA \quad Power \quad Density = \frac{Power \quad per \quad iROSA}{Actual \quad light \quad collecting \quad area \quad of \quad Wing} = \frac{28000W}{18.3m*6m} = 255 W/m^2
+$$
+
+
+> [!warning] Sanity check
+> Need to find the article that compared iROSA performance to SAW. That will allow to compare the power density but this should't be too far from the truth, I suspect.
+
+Again, one can determine the number of launches needed by Starcloud by computing the ratio of the Starcloud and iROSA power densities. At 1.22, the implication is a need for 2 launches with iROSA power density. This is not too bad but still not a single launch system though with advancements in iROSA cells, a power density-based launch number of 1 seems feasible.
+#### Packing Density
+As done with the SAW module analysis (i.e., a pair of deployable blankets), we can use the stowed volume of an iROSA module to compute the number of launches. Sadly, this data is also not public but estimates can be made by examinig imagery with humans for scale.
+
+{%marginnote 'table' "Launch numbers" %}
+
+|       | Power  density | Packing density |
+| ----- | -------------- | --------------- |
+| SAW   | 3              | 7 to 9          |
+| iROSA | 3              |                 |
+
+
+
+
+> [!warning]This is a work-in-progress
+> This block is to warn you that everything below is in draft mode. This block will be removed once my analysis is complete and documented below. This involves migrating my analysis into this write-up. So, if you stumble on this, treat everything below as inaccurate in math but principled in reasoning. The numbers in the abstract are accurate.
+
+
+### Other stuff
+
+Assuming a similar square arrangement leads to a roughly 357 m × 357 m. Now, as they suggest, one can go with either Z-fold or roll-out arrays{%sidenote 'picframe' 'The report also mentions picture frame panels but roll-outs are were added recently to the ISS. [Z-folds have also been used before via the Solar Alpha Rotary Joints (SARJs)](https://x.com/raffaeledipalma/status/1368672410522820612).'%}. I suspect that the former alludes to something similar to the [Solar Array Wings (SAW)](https://en.wikipedia.org/wiki/Electrical_system_of_the_International_Space_Station#Solar_array_wing) of the ISS, which works by panels that can fold up (and unfold) like an accordion, whereas the latter is probably based on the [Roll Out Solar Array (ROSA](https://en.wikipedia.org/wiki/Roll_Out_Solar_Array) that augment to the oldest wings. Data and calculations of the SAW and ROSA in an ISS context can be found [[|here]], which shows that iROSA are 1.7x better for power density than the SAWs.
+
+
+
+
+
 #### Number of launches
-- Launch is the largest contributor to Starcloud's total costs and they presume that one launch shall be enough—for me, these ring some alarm bells. Can we really pack everything into one Starship launch for even the 40 MW system? Let's see if I can work this out.
+- Can we really pack everything into one Starship launch for even the 40 MW system? Let's see if I can work this out.
 - For a 5 GW system, they state that 4km × 4km solar arrays are needed; this is a power density of 312 W/m². For the smaller 40 MW that they benchmarked, they would need approximately 128,000 m² of solar panels. If arranged as a large square, this would be roughly 357 m × 357 m. Now, as they suggest, one can go with either Z-fold or roll-out arrays{%sidenote 'picframe' 'The report also mentions picture frame panels but roll-outs are were added recently to the ISS. [Z-folds have also been used before via the Solar Alpha Rotary Joints (SARJs)](https://x.com/raffaeledipalma/status/1368672410522820612).'%}. I suspect that the former alludes to something similar to the [Solar Array Wings (SAW)](https://en.wikipedia.org/wiki/Electrical_system_of_the_International_Space_Station#Solar_array_wing) of the ISS, which works by panels that can fold up (and unfold) like an accordion, whereas the latter is probably based on the [Roll Out Solar Array (ROSA](https://en.wikipedia.org/wiki/Roll_Out_Solar_Array) that augment to the oldest wings. Data and calculations of the SAW and ROSA in an ISS context can be found [[|here]], which shows that iROSA are 1.7x better for power density than the SAWs.
-  ![basic ROSA](assets/imgs/space-data-centers/Rosa-SAW.png)
-![](assets/imgs/space-data-centers/irosa.png)
 - Whichever option is used must fit in Starship's fairing, whose diameter is ~9 meters. So let's get some sizing estimates:
 	- **Z-folds**: To fit within Starship’s 9-meter fairing, solar panels must be modular. Allowing for a 0.125-meter clearance on each side, the largest practical square tile is **8.75 m × 8.75 m**, or **76.56 m²**. To reach the full **127,449 m²** required for 40 MW, we need approximately **1,665 tiles**.
 	  The International Space Station’s legacy solar arrays follow a Z-fold architecture. Each array “wing” consists of **two solar blankets**, with an estimated deployed width of **4.5 m** each and a **3 m gap** between them, totalling ~**315 m²** of effective solar collecting area per wing. Each wing folds into a cuboidal stowage volume of **4.57 m × 4.57 m × 0.51 m = ~10.65 m³**.
