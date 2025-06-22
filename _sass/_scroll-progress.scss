@@ -14,16 +14,6 @@
     width: 2.5rem; // Fixed width since no text
     height: 100%; // Fill the full height
     
-    // Scale down for smaller screens
-    @media (max-width: 1024px) {
-      width: 2rem;
-      padding: 0.75rem 0.25rem;
-    }
-    
-    @media (max-width: 768px) {
-      width: 1.5rem;
-      padding: 0.5rem 0.15rem;
-    }
   }
 
   .progress-sections {
