@@ -16,43 +16,31 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Handle standalone markdown tables (not in table-wrapper)
+    // Handle standalone markdown tables by wrapping them like booktabs tables
     const standaloneTables = document.querySelectorAll('table:not(.table-wrapper table)');
     
     standaloneTables.forEach(table => {
-      // Check if table content is wider than viewport on mobile
-      if (window.innerWidth <= 480 && table.scrollWidth > table.clientWidth) {
-        table.classList.add('show-scroll-hint');
-        
-        // Add scroll hint if it doesn't exist
-        if (!table.hasAttribute('data-scroll-hint-added')) {
-          const hint = document.createElement('div');
-          hint.className = 'table-scroll-hint';
-          hint.textContent = '← Scroll to view full table →';
-          hint.style.cssText = `
-            text-align: center;
-            font-size: 0.8em;
-            color: #666;
-            padding: 0.5em;
-            background: rgba(0,0,0,0.02);
-            margin-bottom: 0;
-            display: block;
-          `;
-          table.parentNode.insertBefore(hint, table);
-          table.setAttribute('data-scroll-hint-added', 'true');
+      // Check if we're on mobile and table needs scrolling
+      const isMobile = window.innerWidth <= 414;
+      const needsScrolling = table.scrollWidth > (isMobile ? window.innerWidth : table.clientWidth);
+      
+      if (isMobile && needsScrolling) {
+        // Wrap table in table-wrapper if not already wrapped
+        if (!table.parentElement.classList.contains('table-wrapper')) {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'table-wrapper';
+          table.parentNode.insertBefore(wrapper, table);
+          wrapper.appendChild(table);
+          
+          // Now check if the wrapped table overflows
+          if (table.scrollWidth > wrapper.clientWidth) {
+            wrapper.classList.add('show-scroll-hint');
+          }
           
           // Remove hint after user scrolls
-          table.addEventListener('scroll', function() {
-            hint.remove();
+          wrapper.addEventListener('scroll', function() {
+            wrapper.classList.remove('show-scroll-hint');
           }, { once: true });
-        }
-      } else {
-        table.classList.remove('show-scroll-hint');
-        // Remove existing hint if table fits
-        const existingHint = table.previousElementSibling;
-        if (existingHint && existingHint.classList.contains('table-scroll-hint')) {
-          existingHint.remove();
-          table.removeAttribute('data-scroll-hint-added');
         }
       }
     });

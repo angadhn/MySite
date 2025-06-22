@@ -634,17 +634,21 @@ table, table.booktabs {
   border-bottom: 2px solid $color-text;
 }
 
-/* Handle markdown tables that aren't wrapped in table-wrapper */
-table:not(.table-wrapper table) {
-  overflow-x: auto;
-  display: block;
-  white-space: nowrap;
-  
-  @media (max-width: 480px) {
+/* Handle markdown tables that aren't wrapped in table-wrapper - mobile only */
+@media (max-width: 414px) {
+  table:not(.table-wrapper table) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
     width: 100%;
     margin: 1rem -20px;
     border-radius: 0;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    
+    // Ensure table cells don't wrap
+    th, td {
+      white-space: nowrap;
+    }
   }
 }
 
@@ -670,11 +674,29 @@ td {
   text-align: center;
   margin: 1rem 0;
   
+  // Mobile-specific improvements - iPhone and smaller
+  @media (max-width: 414px) {
+    margin: 1rem -20px;  // Extend to screen edges on mobile
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    
+    // Remove the scroll hint after user starts scrolling
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
+      pointer-events: none;
+    }
+  }
 }
 
 // Only show scroll hint when table actually overflows
 .table-wrapper.show-scroll-hint {
-  @media (max-width: 480px) {
+  @media (max-width: 414px) {
     &:before {
       content: "← Scroll to view full table →";
       display: block;
