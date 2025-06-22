@@ -220,16 +220,28 @@
   }
 }
 
+// Prevent horizontal scrollbar on mobile (Safari fix)
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 // Mobile horizontal progress bar
 .mobile-scroll-progress {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100vw; // Use viewport width instead of right: 0
   height: 3px;
   background: rgba(128, 128, 128, 0.2);
   z-index: 1000;
   display: none;
+  
+  // Safari-specific fixes
+  -webkit-transform: translateZ(0); // Force hardware acceleration
+  transform: translateZ(0);
+  overflow: hidden; // Prevent any overflow
 
   // Only show on mobile
   @media (max-width: 480px) {
@@ -241,5 +253,7 @@
     background: crimson;
     width: 0%;
     transition: width 0.1s ease;
+    -webkit-transform: translateZ(0); // Force hardware acceleration
+    transform: translateZ(0);
   }
 } 
