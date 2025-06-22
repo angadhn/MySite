@@ -8,7 +8,7 @@
   height: 100vh;
   overflow-y: auto;
   
-  // Hide the progress bar entirely on mobile for cleaner experience
+  // Hide the sidebar version on mobile, we'll show a different mobile version
   @media (max-width: 480px) {
     display: none;
   }
@@ -227,7 +227,33 @@
   }
 }
 
-// Mobile horizontal progress bar - DISABLED since we're using left sidebar on mobile
+// Mobile horizontal progress bar
 .mobile-scroll-progress {
-  display: none !important; // Hide mobile horizontal bar since we're using sidebar version
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; // Use viewport width instead of right: 0
+  height: 3px;
+  background: rgba(128, 128, 128, 0.2);
+  z-index: 1000;
+  display: none;
+  
+  // Safari-specific fixes
+  -webkit-transform: translateZ(0); // Force hardware acceleration
+  transform: translateZ(0);
+  overflow: hidden; // Prevent any overflow
+
+  // Only show on mobile
+  @media (max-width: 480px) {
+    display: block;
+  }
+
+  .mobile-progress-bar {
+    height: 100%;
+    background: crimson;
+    width: 0%;
+    transition: width 0.1s ease;
+    -webkit-transform: translateZ(0); // Force hardware acceleration
+    transform: translateZ(0);
+  }
 } 
