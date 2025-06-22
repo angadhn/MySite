@@ -45,11 +45,6 @@ body {
   @media (min-width: 820px) {
     font-size: 1.3rem;
   }
-  
-  // Account for progress bar on mobile
-  @media (max-width: 480px) {
-    margin-left: 1rem; // Match progress bar width
-  }
 }
 
 // Base content width
