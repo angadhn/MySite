@@ -161,7 +161,7 @@ $$
 
 Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, 2 launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
 
-Our calculations thus far are summarised below:
+Our calculations thus far are summarised below, where the pessimistic launch cost is based on a $100M Starship launch and an optimistic cost uses Starcloud's $5M launch cost assumption:
 
 {%marginnote 'table' "Improvement on preceding solar technologies and related launch numbers" %}
 
