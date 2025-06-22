@@ -7,6 +7,12 @@ class ScrollProgress {
   }
 
   init() {
+    // Don't show on home/index page
+    const isHomePage = window.location.pathname === '/' || 
+                       window.location.pathname === '/index.html' ||
+                       window.location.pathname.endsWith('/');
+    if (isHomePage) return;
+    
     // Only initialize if we're on a page with substantial content
     const content = document.querySelector('content');
     if (!content) return;
