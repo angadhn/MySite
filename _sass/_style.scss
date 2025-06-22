@@ -45,6 +45,13 @@ body {
   @media (min-width: 820px) {
     font-size: 1.3rem;
   }
+  
+  // Ensure no horizontal overflow on mobile
+  @media (max-width: 760px) {
+    padding: 2vh 4vw;  // Reduce padding slightly on mobile
+    overflow-x: hidden;
+    max-width: 100vw;  // Ensure we don't exceed viewport width
+  }
 }
 
 // Base content width
@@ -435,7 +442,7 @@ input.margin-toggle {
 // Mobile adjustments
 @media (max-width: 760px) {
   article {
-    width: 105%;
+    width: 100%;  // Changed from 105% to prevent horizontal overflow
   }
   
   label.margin-toggle.sidenote-number {
@@ -641,7 +648,7 @@ table, table.booktabs {
     overflow-x: auto;
     white-space: nowrap;
     width: 100%;
-    margin: 1rem -20px;
+    margin: 1rem 0;  // Remove negative margins to prevent horizontal overflow
     border-radius: 0;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
     
@@ -676,7 +683,7 @@ td {
   
   // Mobile-specific improvements - iPhone and smaller
   @media (max-width: 414px) {
-    margin: 1rem -20px;  // Extend to screen edges on mobile
+    margin: 1rem 0;  // Remove negative margins to prevent horizontal overflow
     border-radius: 0;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
     
@@ -1596,8 +1603,8 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
       height: 500px;  // Slightly reduced height for mobile but still taller than before
       min-height: 450px;  // Added minimum height for mobile
       min-width: 300px;
-      margin: 0 -20px;
-      width: calc(100% + 40px);
+      margin: 0;  // Remove negative margins to prevent horizontal overflow
+      width: 100%;  // Use full available width without extending beyond
     }
   }
 }
