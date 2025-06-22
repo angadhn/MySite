@@ -149,56 +149,9 @@ All of the standard <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> equat
 
 Clearly much room for improvement here- my main gripe being the handling of inline math.
 ## Tables
-Tables can be done in many ways so I have lifted the below directly from [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog)
-Tables are, frankly,  a pain in the ass to create. That said, they often are one of the best methods for presenting data. Tabular data are normally presented with right-aligned numbers, left-aligned text, and minimal grid lines.
+Tables can be done in many ways and I'd lifted the best parts from [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog). However, the introduction of scroll-based progress indicators on the left margin made tables an even bigger pain in the ass to render than they already were. That said, they often are one of the best methods for presenting data or summarising section's findings.
 
-Note that when writing Jekyll Markdown content, there will often be a need to get some dirt under your fingernails and stoop to writing a little honest-to-god html. Yes, all that hideous ```<table>..<thead>..<th>``` nonsense. *And* you must wrap the unholy mess in a ```<div class="table-wrapper">``` tag to ensure that the table stays centered in the main content column.
-
-Tables are designed with an ```overflow:scroll``` property to create slider bars when the viewport is narrow. This is so that you do not collapse all your beautiful data into a jumble of letters and numbers when you view it on your smartphone.
-
-This is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as “the table style to use”, but rather as “a table style to start from”. From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio (“within reason”, as Tufte says), and “mobilize every graphical element, perhaps several times over, to show the data.{% sidenote 'table-id' 'Page 139, *The Visual Display of Quantitative Information*, Edward Tufte 2001.'%} Furthermore, one must know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.
-
-As an example of alternative table styles, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the ```booktabs``` package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the ```booktabs``` class, as demonstrated in this table:
-
-{% marginnote 'table-2-id' '*Table 2*: A table with booktabs style formatting' %}
-<div class="table-wrapper">
-<table class="booktabs">
-          <thead>
-            <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
-            <tr><th class="l">Animal</th><th>Description</th><th class="r">Price ($)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
-            <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
-            <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
-            <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
-            <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
-          </tbody>
-</table>
-</div>
-
-The table above was written in HTML as follows:
-
-```
-<div class="table-wrapper">
-<table class="booktabs">
-          <thead>
-            <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
-            <tr><th class="l">Animal</th><th>Description</th class="r"><th>Price ($)</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
-            <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
-            <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
-            <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
-            <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
-          </tbody>
-</table>
-</div>
-```
-
-
-I like this style of table, so I have made it the default for unstyled tables. This allows use of the [*Markdown Extra*](https://michelf.ca/projects/php-markdown/extra/) features built into the [*Kramdown*](http://kramdown.gettalong.org/parser/kramdown.html) parser. Here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:
+[[I previously used of HTML to write tables]] as it is more flexible than markdown tables but that has since broken—I will have to find a way to get that to play nicely with these progress indicators. For now, here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:
 
 {% marginnote 'tableID-3' 'Table 3: a table created with *Markdown Extra* markup using only the default table styling' %}
 
@@ -210,8 +163,6 @@ I like this style of table, so I have made it the default for unstyled tables. T
 | Hornet 4 Drive    | 21.4 |   6 |  258 | 110 | 3.08 | 3.21 |
 | Hornet Sportabout | 18.7 |   8 |  360 | 175 | 3.15 | 3.44 |
 | Valiant           | 18.1 |   6 |  160 | 105 | 2.76 | 3.46 |
-
-
 Using the following Markdown formatting:
 
 ```
