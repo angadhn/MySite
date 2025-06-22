@@ -7,10 +7,11 @@
   z-index: 1000;
   height: 100vh;
   overflow-y: auto;
+  pointer-events: none; // Prevent interference with text selection
   
-  // Hide the sidebar version on mobile, we'll show a different mobile version
+  // Keep the sidebar version on mobile, just make it smaller
   @media (max-width: 480px) {
-    display: none;
+    // Keep visible but make it even more compact for mobile
   }
 
   .scroll-progress-content {
@@ -29,6 +30,12 @@
       width: 1.5rem;
       padding: 0.5rem 0.15rem;
     }
+    
+    // Even more compact for mobile phones
+    @media (max-width: 480px) {
+      width: 1rem;
+      padding: 0.25rem 0.1rem;
+    }
   }
 
   .progress-sections {
@@ -44,6 +51,7 @@
     align-items: center;
     gap: 0;
     cursor: pointer;
+    pointer-events: all; // Re-enable pointer events for individual progress sections
     transition: all 0.2s ease;
     padding: 0.25rem 0;
     position: relative;
@@ -86,6 +94,11 @@
         width: 1rem;
         height: 1px;
       }
+      
+      @media (max-width: 480px) {
+        width: 0.8rem;
+        height: 1px;
+      }
     }
     
     &[data-level="3"] .progress-line {
@@ -104,6 +117,12 @@
         height: 1px;
         margin-left: 0.1rem;
       }
+      
+      @media (max-width: 480px) {
+        width: 0.6rem;
+        height: 1px;
+        margin-left: 0.05rem;
+      }
     }
     
     &[data-level="4"] .progress-line {
@@ -119,6 +138,11 @@
       @media (max-width: 768px) {
         width: 0.6rem;
         margin-left: 0.15rem;
+      }
+      
+      @media (max-width: 480px) {
+        width: 0.5rem;
+        margin-left: 0.1rem;
       }
     }
     
@@ -136,6 +160,11 @@
         width: 0.5rem;
         margin-left: 0.2rem;
       }
+      
+      @media (max-width: 480px) {
+        width: 0.4rem;
+        margin-left: 0.15rem;
+      }
     }
     
     &[data-level="6"] .progress-line {
@@ -151,6 +180,11 @@
       @media (max-width: 768px) {
         width: 0.4rem;
         margin-left: 0.25rem;
+      }
+      
+      @media (max-width: 480px) {
+        width: 0.3rem;
+        margin-left: 0.2rem;
       }
     }
   }
@@ -170,29 +204,27 @@
 }
 
 // Dark theme support
-@media (prefers-color-scheme: dark) {
-  .scroll-progress {
-    .progress-line {
-      background-color: rgba(128, 128, 128, 0.4); // Same grey for unfilled in dark mode
+[data-theme="dark"] .scroll-progress {
+  .progress-line {
+    background-color: rgba(128, 128, 128, 0.4); // Same grey for unfilled in dark mode
+  }
+
+  .progress-section {
+    &:hover .progress-line {
+      background-color: rgba(220, 20, 60, 0.7); // Same crimson on hover
     }
 
-    .progress-section {
-      &:hover .progress-line {
-        background-color: rgba(220, 20, 60, 0.7); // Same crimson on hover
-      }
+    &.active .progress-line {
+      background-color: crimson; // Same crimson for active
+      background-image: linear-gradient(
+        to right,
+        crimson calc(var(--progress, 0) * 100%),
+        rgba(128, 128, 128, 0.5) calc(var(--progress, 0) * 100%)
+      );
+    }
 
-      &.active .progress-line {
-        background-color: crimson; // Same crimson for active
-        background-image: linear-gradient(
-          to right,
-          crimson calc(var(--progress, 0) * 100%),
-          rgba(128, 128, 128, 0.5) calc(var(--progress, 0) * 100%)
-        );
-      }
-
-      &.passed .progress-line {
-        background-color: crimson; // Same crimson for passed
-      }
+    &.passed .progress-line {
+      background-color: crimson; // Same crimson for passed
     }
   }
 }
@@ -227,33 +259,4 @@
   }
 }
 
-// Mobile horizontal progress bar
-.mobile-scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw; // Use viewport width instead of right: 0
-  height: 3px;
-  background: rgba(128, 128, 128, 0.2);
-  z-index: 1000;
-  display: none;
-  
-  // Safari-specific fixes
-  -webkit-transform: translateZ(0); // Force hardware acceleration
-  transform: translateZ(0);
-  overflow: hidden; // Prevent any overflow
-
-  // Only show on mobile
-  @media (max-width: 480px) {
-    display: block;
-  }
-
-  .mobile-progress-bar {
-    height: 100%;
-    background: crimson;
-    width: 0%;
-    transition: width 0.1s ease;
-    -webkit-transform: translateZ(0); // Force hardware acceleration
-    transform: translateZ(0);
-  }
-} 
+// Remove mobile horizontal progress bar - we use left margin approach for all screen sizes

@@ -21,7 +21,6 @@ class ScrollProgress {
     if (this.headings.length < 2) return; // Don't show for short content
 
     this.createProgressIndicator();
-    this.createMobileProgressBar();
     this.attachScrollListener();
     this.updateProgress();
   }
@@ -89,17 +88,7 @@ class ScrollProgress {
     });
   }
 
-  createMobileProgressBar() {
-    // Create mobile progress bar
-    this.mobileProgressContainer = document.createElement('div');
-    this.mobileProgressContainer.className = 'mobile-scroll-progress';
-    this.mobileProgressContainer.innerHTML = `
-      <div class="mobile-progress-bar"></div>
-    `;
-
-    // Insert into the page
-    document.body.appendChild(this.mobileProgressContainer);
-  }
+  // Remove mobile progress bar method - using left margin approach for all screen sizes
 
   createProgressSection(heading) {
     return `
@@ -138,16 +127,9 @@ class ScrollProgress {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
     
-    // Update mobile progress bar (overall page progress)
-    if (this.mobileProgressContainer) {
-      const overallProgress = Math.min(scrollTop / (documentHeight - windowHeight), 1);
-      const mobileBar = this.mobileProgressContainer.querySelector('.mobile-progress-bar');
-      if (mobileBar) {
-        mobileBar.style.width = `${overallProgress * 100}%`;
-      }
-    }
+    // Remove mobile progress bar update - using left margin approach for all screen sizes
     
-    // Find current active section for desktop progress
+    // Find current active section for left margin progress (all screen sizes)
     let activeIndex = 0;
     for (let i = 0; i < this.headings.length; i++) {
       if (scrollTop >= this.headings[i].offsetTop - 100) {
@@ -155,7 +137,7 @@ class ScrollProgress {
       }
     }
 
-    // Update desktop progress indicators
+    // Update left margin progress indicators (all screen sizes)
     if (this.progressContainer) {
       const progressSections = this.progressContainer.querySelectorAll('.progress-section');
       progressSections.forEach((section, index) => {
