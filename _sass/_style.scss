@@ -634,6 +634,20 @@ table, table.booktabs {
   border-bottom: 2px solid $color-text;
 }
 
+/* Handle markdown tables that aren't wrapped in table-wrapper */
+table:not(.table-wrapper table) {
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+  
+  @media (max-width: 480px) {
+    width: 100%;
+    margin: 1rem -20px;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  }
+}
+
 // Header styling with bottom border
 th {
   padding: 0.4em 0.5em;
