@@ -119,11 +119,11 @@ To determine the packing density of one SAW module (i.e., a pair of deployable b
 
 $$
 \begin{align}
-{(Packing \, density)}_{SAW} &= \frac{32800 \times .08^2}{4.57^2 \times 0.51}\\ &= 19.7 \, m^2/m^3
+{(Packing \, density)}_{SAW} &= \frac{35 \times 12}{4.57^2 \times 0.51}\\ &= 39.43 \, m^2/m^3
 \end{align}
 $$
 
-This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 6.49 which means we would need nearly 7 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), we need about 9 launches.
+This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 3.24 which means we would need nearly 4 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), it might need 5 launches.
 # Analysis of ISS Roll-Out Solar Array (iROSA)
 
 ![iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions.](assets/imgs/space-data-centers/irosa.png)
@@ -165,10 +165,10 @@ Our calculations thus far are summarised below, where the pessimistic launch cos
 
 {%marginnote 'table' "Improvement on preceding solar technologies and related launch numbers" %}
 
-| Array Design | Launches | Optimistic cost ($)   | Pessimisitic cost ($)  |
-| ------------ | -------- | --------------------- | ---------------------- |
-| **Z-fold**   | 7 to 9   | 35M-45M               | 700M-900M              |
-| **Roll-out** | 1 to 3   | 5M-15M                | 100M-300M              |
+| Array Design | Launches | Optimistic cost ($) | Pessimisitic cost ($) |
+| ------------ | -------- | ------------------- | --------------------- |
+| **Z-fold**   | 4 to 5   | 20M-25M             | 400M-500M             |
+| **Roll-out** | 1 to 3   | 5M-15M              | 100M-300M             |
 
 The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
 
