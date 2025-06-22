@@ -170,15 +170,6 @@ Our calculations thus far are summarised below, where the pessimistic launch cos
 | **Z-fold**   | 4 to 5   | 20M-25M             | 400M-500M             |
 | **Roll-out** | 1 to 3   | 5M-15M              | 100M-300M             |
 
-|                   |  mpg | cyl | disp |  hp | drat |   wt |
-| :---------------- | ---: | --: | ---: | --: | ---: | ---: |
-| Mazda RX4         |   21 |   6 |  160 | 110 | 3.90 | 2.62 |
-| Mazda RX4 Wag     |   21 |   6 |  160 | 110 | 3.90 | 2.88 |
-| Datsun 710        | 22.8 |   4 |  108 |  93 | 3.85 | 2.32 |
-| Hornet 4 Drive    | 21.4 |   6 |  258 | 110 | 3.08 | 3.21 |
-| Hornet Sportabout | 18.7 |   8 |  360 | 175 | 3.15 | 3.44 |
-| Valiant           | 18.1 |   6 |  160 | 105 | 2.76 | 3.46 |
-
 The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
 
 So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density—this will need to be repeated for the in-space assembly requirements. This will be explored in the future.
