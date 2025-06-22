@@ -190,8 +190,8 @@ Yields this table:
 
 {% marginnote 'Table-ID4' 'Table 4: a simple table showing left, center, and right alignment of table headings and data' %}
 
-|**Left** |**Center**|**Right**|
-|:--------|:--------:|--------:|
+| **Left** | **Center** | **Right** |
+| :------- | :--------: | --------: |
  Aardvarks|         1|$3.50
        Cat|   5      |$4.23
   Dogs    |3         |$5.29
