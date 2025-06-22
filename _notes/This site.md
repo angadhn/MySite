@@ -163,6 +163,7 @@ Tables can be done in many ways and I'd lifted the best parts from [clayh53](htt
 | Hornet 4 Drive    | 21.4 |   6 |  258 | 110 | 3.08 | 3.21 |
 | Hornet Sportabout | 18.7 |   8 |  360 | 175 | 3.15 | 3.44 |
 | Valiant           | 18.1 |   6 |  160 | 105 | 2.76 | 3.46 |
+
 Using the following Markdown formatting:
 
 ```
