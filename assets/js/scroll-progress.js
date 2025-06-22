@@ -21,7 +21,6 @@ class ScrollProgress {
     if (this.headings.length < 2) return; // Don't show for short content
 
     this.createProgressIndicator();
-    this.createMobileProgressBar();
     this.attachScrollListener();
     this.updateProgress();
   }
@@ -89,18 +88,6 @@ class ScrollProgress {
     });
   }
 
-  createMobileProgressBar() {
-    // Create mobile progress bar
-    this.mobileProgressContainer = document.createElement('div');
-    this.mobileProgressContainer.className = 'mobile-scroll-progress';
-    this.mobileProgressContainer.innerHTML = `
-      <div class="mobile-progress-bar"></div>
-    `;
-
-    // Insert into the page
-    document.body.appendChild(this.mobileProgressContainer);
-  }
-
   createProgressSection(heading) {
     return `
       <div class="progress-section" data-target="${heading.id}" data-level="${heading.level}">
@@ -138,16 +125,7 @@ class ScrollProgress {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
     
-    // Update mobile progress bar (overall page progress)
-    if (this.mobileProgressContainer) {
-      const overallProgress = Math.min(scrollTop / (documentHeight - windowHeight), 1);
-      const mobileBar = this.mobileProgressContainer.querySelector('.mobile-progress-bar');
-      if (mobileBar) {
-        mobileBar.style.width = `${overallProgress * 100}%`;
-      }
-    }
-    
-    // Find current active section for desktop progress
+    // Find current active section
     let activeIndex = 0;
     for (let i = 0; i < this.headings.length; i++) {
       if (scrollTop >= this.headings[i].offsetTop - 100) {
@@ -155,39 +133,37 @@ class ScrollProgress {
       }
     }
 
-    // Update desktop progress indicators
-    if (this.progressContainer) {
-      const progressSections = this.progressContainer.querySelectorAll('.progress-section');
-      progressSections.forEach((section, index) => {
-        const isActive = index === activeIndex;
-        const isPassed = index < activeIndex;
+    // Update progress indicators
+    const progressSections = this.progressContainer.querySelectorAll('.progress-section');
+    progressSections.forEach((section, index) => {
+      const isActive = index === activeIndex;
+      const isPassed = index < activeIndex;
+      
+      section.classList.toggle('active', isActive);
+      section.classList.toggle('passed', isPassed);
+      
+      // Calculate progress for current section
+      if (isActive) {
+        const currentHeading = this.headings[index];
+        const nextHeading = this.headings[index + 1];
         
-        section.classList.toggle('active', isActive);
-        section.classList.toggle('passed', isPassed);
-        
-        // Calculate progress for current section
-        if (isActive) {
-          const currentHeading = this.headings[index];
-          const nextHeading = this.headings[index + 1];
-          
-          let progress = 0;
-          if (nextHeading) {
-            const sectionHeight = nextHeading.offsetTop - currentHeading.offsetTop;
-            const scrollInSection = scrollTop - currentHeading.offsetTop + 100;
-            progress = Math.min(Math.max(scrollInSection / sectionHeight, 0), 1);
-          } else {
-            // Last section - calculate based on remaining document
-            const remainingHeight = documentHeight - currentHeading.offsetTop;
-            const scrollInSection = scrollTop - currentHeading.offsetTop + 100;
-            progress = Math.min(Math.max(scrollInSection / remainingHeight, 0), 1);
-          }
-          
-          section.style.setProperty('--progress', progress);
+        let progress = 0;
+        if (nextHeading) {
+          const sectionHeight = nextHeading.offsetTop - currentHeading.offsetTop;
+          const scrollInSection = scrollTop - currentHeading.offsetTop + 100;
+          progress = Math.min(Math.max(scrollInSection / sectionHeight, 0), 1);
         } else {
-          section.style.setProperty('--progress', isPassed ? 1 : 0);
+          // Last section - calculate based on remaining document
+          const remainingHeight = documentHeight - currentHeading.offsetTop;
+          const scrollInSection = scrollTop - currentHeading.offsetTop + 100;
+          progress = Math.min(Math.max(scrollInSection / remainingHeight, 0), 1);
         }
-      });
-    }
+        
+        section.style.setProperty('--progress', progress);
+      } else {
+        section.style.setProperty('--progress', isPassed ? 1 : 0);
+      }
+    });
   }
 }
 

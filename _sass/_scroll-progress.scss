@@ -8,7 +8,7 @@
   height: 100vh;
   overflow-y: auto;
   
-  // Hide the sidebar version on mobile, we'll show a different mobile version
+  // Hide on mobile/very small screens
   @media (max-width: 480px) {
     display: none;
   }
@@ -217,29 +217,5 @@
 
   &::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.3);
-  }
-}
-
-// Mobile horizontal progress bar
-.mobile-scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: rgba(128, 128, 128, 0.2);
-  z-index: 1000;
-  display: none;
-
-  // Only show on mobile
-  @media (max-width: 480px) {
-    display: block;
-  }
-
-  .mobile-progress-bar {
-    height: 100%;
-    background: crimson;
-    width: 0%;
-    transition: width 0.1s ease;
   }
 } 
