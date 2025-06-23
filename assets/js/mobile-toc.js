@@ -6,6 +6,7 @@ class MobileTOC {
     this.isOpen = false;
     this.lastScrollY = 0;
     this.scrollDirection = 'up';
+    this.currentActiveIndex = 0;
     this.init();
   }
 
@@ -202,6 +203,9 @@ class MobileTOC {
     this.tocButton.classList.add('open');
     this.showTOCButton(); // Ensure button is visible when opening
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    
+    // Update active section when opening to show current position
+    this.updateActiveSection();
   }
 
   closeTOC() {
@@ -244,8 +248,6 @@ class MobileTOC {
   }
 
   updateActiveSection() {
-    if (!this.isOpen) return;
-
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     // Find current active section
@@ -256,11 +258,16 @@ class MobileTOC {
       }
     }
 
-    // Update active state in mobile TOC
-    const tocItems = this.tocPopup.querySelectorAll('.mobile-toc-item');
-    tocItems.forEach((item, index) => {
-      item.classList.toggle('active', index === activeIndex);
-    });
+    // Store the current active index
+    this.currentActiveIndex = activeIndex;
+
+    // Update active state in mobile TOC if it exists and is open
+    if (this.tocPopup) {
+      const tocItems = this.tocPopup.querySelectorAll('.mobile-toc-item');
+      tocItems.forEach((item, index) => {
+        item.classList.toggle('active', index === activeIndex);
+      });
+    }
   }
 
   destroy() {
