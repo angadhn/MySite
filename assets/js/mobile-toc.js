@@ -6,7 +6,6 @@ class MobileTOC {
     this.isOpen = false;
     this.lastScrollY = 0;
     this.scrollDirection = 'up';
-    this.scrollTimeout = null;
     this.init();
   }
 
@@ -221,15 +220,6 @@ class MobileTOC {
     }
     
     this.lastScrollY = currentScrollY;
-    
-    // Clear any existing timeout and set a new one to show button after scrolling stops
-    if (this.scrollTimeout) {
-      clearTimeout(this.scrollTimeout);
-    }
-    
-    this.scrollTimeout = setTimeout(() => {
-      this.showTOCButton();
-    }, 1000); // Show button 1 second after scrolling stops
   }
 
   hideTOCButton() {
