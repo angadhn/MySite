@@ -33,7 +33,8 @@ class ScrollProgress {
       // Skip "Notes mentioning this note" section and other backlink-related content
       const headingText = heading.textContent.trim().toLowerCase();
       if (headingText.includes('notes mentioning') || 
-          heading.closest('side')) {
+          heading.closest('side') ||
+          heading.closest('.newsletter-container')) {
         return;
       }
       
