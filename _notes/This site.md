@@ -149,7 +149,114 @@ All of the standard <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> equat
 
 Clearly much room for improvement here- my main gripe being the handling of inline math.
 ## Tables
-Tables can be done in many ways and I'd lifted the best parts from [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog). However, the introduction of scroll-based progress indicators on the left margin made tables an even bigger pain in the ass to render than they already were. That said, they often are one of the best methods for presenting data or summarising section's findings.
+Tables can be done in many ways and I'd lifted the best parts from [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog). They often are one of the best methods for presenting data or summarising section's findings.
+
+Note that when writing Jekyll Markdown content, there will often be a need to get some dirt under your fingernails and stoop to writing a little honest-to-god html. Yes, all that hideous ```<table>..<thead>..<th>``` nonsense. *And* you must wrap the unholy mess in a ```<div class="table-wrapper">``` tag to ensure that the table stays centered in the main content column.
+
+Tables are designed with an ```overflow:scroll``` property to create slider bars when the viewport is narrow. This is so that you do not collapse all your beautiful data into a jumble of letters and numbers when you view it on your smartphone.
+
+{% marginnote 'table-1-id' '*Table 1*: A table with default style formatting' %}
+<div class="table-wrapper">
+  <table class="table-alpha" id="newspaper-tone">
+    <thead>
+      <tr>
+        <th class="left">Content and tone of front-page articles in 94 U.S. newspapers, October and November, 1974</th>
+        <th class="left">Number of articles</th>
+        <th>Percent of articles with negative criticism of specific person or policy</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text">Watergate: defendants and prosecutors, Ford’s pardon of Nixon</td>
+        <td><div class="number">537</div></td>
+        <td class="c"><div class="number">49%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Inflation, high cost of living</td>
+        <td><div class="number">415</div></td>
+        <td class="c"><div class="number">28%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Government competence: costs, quality, salaries of public employees</td>
+        <td><div class="number">322</div></td>
+        <td class="c"><div class="number">30%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Confidence in government: power of special interests, trust in political leaders, dishonesty in politics</td>
+        <td><div class="number">266</div></td>
+        <td class="c"><div class="number">52%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Government power: regulation of business, secrecy, control of CIA and FBI</td>
+        <td><div class="number">154</div></td>
+        <td class="c"><div class="number">42%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Crime</td>
+        <td><div class="number">123</div></td>
+        <td class="c"><div class="number r">30%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Race</td>
+        <td><div class="number">103</div></td>
+        <td class="c"><div class="number">25%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Unemployment</td>
+        <td><div class="number">100</div></td>
+        <td class="c"><div class="number">13%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Shortages: energy, food</td>
+        <td><div class="number">68</div></td>
+        <td class="c"><div class="number">16%</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+This is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as “the table style to use”, but rather as “a table style to start from”. From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio (“within reason”, as Tufte says), and “mobilize every graphical element, perhaps several times over, to show the data.{% sidenote 'table-id' 'Page 139, *The Visual Display of Quantitative Information*, Edward Tufte 2001.'%} Furthermore, one must know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.
+
+As an example of alternative table styles, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the ```booktabs``` package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the ```booktabs``` class, as demonstrated in this table:
+
+{% marginnote 'table-2-id' '*Table 2*: A table with booktabs style formatting' %}
+<div class="table-wrapper">
+<table class="booktabs">
+          <thead>
+            <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
+            <tr><th class="l">Animal</th><th>Description</th><th class="r">Price ($)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
+            <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
+            <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
+            <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
+            <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
+          </tbody>
+</table>
+</div>
+
+The table above was written in HTML as follows:
+
+```
+<div class="table-wrapper">
+<table class="booktabs">
+          <thead>
+            <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
+            <tr><th class="l">Animal</th><th>Description</th class="r"><th>Price ($)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
+            <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
+            <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
+            <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
+            <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
+          </tbody>
+</table>
+</div>
+```
+
+I like this style of table, so have made it the default for unstyled tables (this is pretty much a direct adaption of [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog)'s work). This allows use of the [*Markdown Extra*](https://michelf.ca/projects/php-markdown/extra/) features built into the [*Kramdown*](http://kramdown.gettalong.org/parser/kramdown.html) parser.
 
 [[I previously used of HTML to write tables]] as it is more flexible than markdown tables but that has since broken—I will have to find a way to get that to play nicely with these progress indicators. For now, here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:
 
