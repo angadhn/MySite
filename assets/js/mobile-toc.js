@@ -48,6 +48,10 @@ class MobileTOC {
     return isMobileSize || isTabletSize || isMobileUA;
   }
 
+  isLandscapeMode() {
+    return window.innerHeight <= 600 && window.innerWidth > window.innerHeight;
+  }
+
   gatherHeadings() {
     const content = document.querySelector('content');
     const headingElements = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -171,6 +175,16 @@ class MobileTOC {
       } else if (this.isMobileDevice() && !this.tocButton) {
         this.init();
       }
+      
+      // If TOC is open during orientation change, close and reopen for proper positioning
+      if (this.isOpen) {
+        setTimeout(() => {
+          this.closeTOC();
+          setTimeout(() => {
+            this.openTOC();
+          }, 100);
+        }, 100);
+      }
     });
 
     // Update active section and handle scroll direction
@@ -202,7 +216,12 @@ class MobileTOC {
     this.tocPopup.classList.add('show');
     this.tocButton.classList.add('open');
     this.showTOCButton(); // Ensure button is visible when opening
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    
+    // In landscape mode with limited height, don't prevent background scrolling
+    // to allow better interaction with the page
+    if (!this.isLandscapeMode()) {
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
     
     // Update active section when opening to show current position
     this.updateActiveSection();
