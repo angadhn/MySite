@@ -316,9 +316,83 @@
         }
       }
     }
+    
+    .mobile-toc-toggle {
+      background: rgba(0, 0, 0, 0.9);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      
+      &:before {
+        color: #eaeaea;
+      }
+      
+      &:hover {
+        background: rgba(0, 0, 0, 1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      }
+    }
   }
 
-  // Only show table of contents on hover-capable devices
+  // Mobile toggle button for table of contents
+  .mobile-toc-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    &:before {
+      content: "☰";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      color: #333;
+      transition: transform 0.3s ease;
+    }
+    
+    &.active:before {
+      content: "✕";
+      transform: rotate(180deg);
+    }
+    
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  // Show mobile toggle only on touch devices
+  @media (hover: none) and (pointer: coarse) {
+    .mobile-toc-toggle {
+      display: flex;
+    }
+    
+    .scroll-progress-toc {
+      top: 70px; // Position below the toggle button
+      bottom: 20px;
+      max-height: calc(100vh - 100px);
+      
+      &.mobile-show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  // Desktop hover behavior (existing)
   @media (hover: hover) and (pointer: fine) {
     &:hover .scroll-progress-toc {
       opacity: 1;
