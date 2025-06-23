@@ -67,6 +67,11 @@ class ScrollProgress {
     this.progressContainer.className = 'scroll-progress';
     this.progressContainer.innerHTML = `
       <div class="scroll-progress-content">
+        <div class="mobile-chevron" aria-label="Toggle table of contents">
+          <svg viewBox="0 0 24 24" width="16" height="16">
+            <path d="M7 10l5 5 5-5z" fill="currentColor"/>
+          </svg>
+        </div>
         <div class="progress-sections">
           ${this.headings.map(heading => this.createProgressSection(heading)).join('')}
         </div>
@@ -84,6 +89,9 @@ class ScrollProgress {
 
     // Add table of contents functionality for desktop/laptop devices
     this.addTableOfContents();
+
+    // Add mobile chevron functionality
+    this.addMobileChevronHandler();
 
     // Add click handlers
     this.progressContainer.addEventListener('click', (e) => {
@@ -123,6 +131,51 @@ class ScrollProgress {
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    });
+  }
+
+  addMobileChevronHandler() {
+    // Only add mobile chevron functionality on touch devices
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      return;
+    }
+
+    const chevron = this.progressContainer.querySelector('.mobile-chevron');
+    const tocContainer = this.progressContainer.querySelector('.scroll-progress-toc');
+    
+    if (!chevron || !tocContainer) return;
+
+    // Add click handlers to table of contents items for mobile
+    const tocItems = this.progressContainer.querySelectorAll('.toc-item');
+    tocItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(item.dataset.target);
+        if (targetElement) {
+          // Close the ToC first
+          this.progressContainer.classList.remove('toc-open');
+          
+          // Update URL hash with the section ID
+          const sectionId = item.dataset.target;
+          history.pushState(null, null, `#${sectionId}`);
+          
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Handle chevron tap
+    chevron.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      this.progressContainer.classList.toggle('toc-open');
+    });
+
+    // Close ToC when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!this.progressContainer.contains(e.target)) {
+        this.progressContainer.classList.remove('toc-open');
+      }
     });
   }
 

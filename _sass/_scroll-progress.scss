@@ -26,6 +26,48 @@
     }
   }
 
+  // Mobile chevron button
+  .mobile-chevron {
+    display: none; // Hidden by default (desktop)
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 auto 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    svg {
+      transition: transform 0.3s ease;
+      color: #666;
+    }
+    
+    &:hover {
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    // Show only on touch devices (mobile/tablet)
+    @media (hover: none) and (pointer: coarse) {
+      display: flex;
+    }
+    
+    // Scale for smaller screens
+    @media (max-width: 768px) {
+      width: 1.2rem;
+      height: 1.2rem;
+      
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
   .progress-sections {
     display: flex;
     flex-direction: column;
@@ -326,6 +368,35 @@
       transform: translateX(0);
     }
   }
+
+  // Mobile ToC behavior
+  @media (hover: none) and (pointer: coarse) {
+    .scroll-progress-toc {
+      left: 2rem; // Adjust position for mobile
+      top: 3rem; // Leave space for chevron
+      min-width: 220px;
+      max-width: 280px;
+      
+      @media (max-width: 768px) {
+        left: 1.8rem;
+        top: 2.5rem;
+        min-width: 200px;
+        max-width: 260px;
+      }
+    }
+    
+    &.toc-open {
+      .scroll-progress-toc {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+      
+      .mobile-chevron svg {
+        transform: rotate(-90deg); // Point towards the ToC card
+      }
+    }
+  }
 }
 
 // Dark theme support
@@ -351,6 +422,21 @@
 
       &.passed .progress-line {
         background-color: crimson; // Same crimson for passed
+      }
+    }
+
+    .mobile-chevron {
+      background: rgba(0, 0, 0, 0.9);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      
+      svg {
+        color: #eaeaea;
+      }
+      
+      &:hover {
+        background: rgba(0, 0, 0, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
       }
     }
   }
