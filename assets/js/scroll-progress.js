@@ -69,11 +69,20 @@ class ScrollProgress {
         <div class="progress-sections">
           ${this.headings.map(heading => this.createProgressSection(heading)).join('')}
         </div>
+        <div class="scroll-progress-toc">
+          <div class="toc-header">Table of Contents</div>
+          <div class="toc-sections">
+            ${this.headings.map(heading => this.createTocItem(heading)).join('')}
+          </div>
+        </div>
       </div>
     `;
 
     // Insert into the page
     document.body.appendChild(this.progressContainer);
+
+    // Add table of contents functionality for desktop/laptop devices
+    this.addTableOfContents();
 
     // Add click handlers
     this.progressContainer.addEventListener('click', (e) => {
@@ -90,6 +99,39 @@ class ScrollProgress {
         }
       }
     });
+  }
+
+  addTableOfContents() {
+    // Only add table of contents on devices that support precise pointing (mouse)
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      return;
+    }
+
+    const tocItems = this.progressContainer.querySelectorAll('.toc-item');
+
+    // Add click handlers to table of contents items
+    tocItems.forEach((item, index) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(item.dataset.target);
+        if (targetElement) {
+          // Update URL hash with the section ID
+          const sectionId = item.dataset.target;
+          history.pushState(null, null, `#${sectionId}`);
+          
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  createTocItem(heading) {
+    return `
+      <div class="toc-item" data-target="${heading.id}" data-level="${heading.level}">
+        <div class="toc-indicator"></div>
+        <div class="toc-title" data-level="${heading.level}">${heading.text}</div>
+      </div>
+    `;
   }
 
   createProgressSection(heading) {
@@ -139,6 +181,8 @@ class ScrollProgress {
 
     // Update progress indicators
     const progressSections = this.progressContainer.querySelectorAll('.progress-section');
+    const tocItems = this.progressContainer.querySelectorAll('.toc-item');
+    
     progressSections.forEach((section, index) => {
       const isActive = index === activeIndex;
       const isPassed = index < activeIndex;
@@ -166,6 +210,22 @@ class ScrollProgress {
         section.style.setProperty('--progress', progress);
       } else {
         section.style.setProperty('--progress', isPassed ? 1 : 0);
+      }
+    });
+
+    // Update table of contents items to match progress bars
+    tocItems.forEach((item, index) => {
+      const isActive = index === activeIndex;
+      const isPassed = index < activeIndex;
+      
+      item.classList.toggle('active', isActive);
+      item.classList.toggle('passed', isPassed);
+      
+      // Sync progress with the corresponding progress bar
+      const correspondingSection = progressSections[index];
+      if (correspondingSection) {
+        const progress = correspondingSection.style.getPropertyValue('--progress') || (isPassed ? 1 : 0);
+        item.style.setProperty('--progress', progress);
       }
     });
   }
