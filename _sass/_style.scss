@@ -846,8 +846,8 @@ div.epigraph > blockquote > footer > cite {
         pointer-events: none;
     }
     
-    // Only show on mobile devices
-    @media (min-width: 769px) {
+    // Only show on mobile and tablet devices
+    @media (min-width: 1025px) {
         display: none;
     }
     
@@ -895,8 +895,8 @@ div.epigraph > blockquote > footer > cite {
     transition: all 0.3s ease;
     backdrop-filter: blur(15px);
     
-    // Only show on mobile devices
-    @media (min-width: 769px) {
+    // Only show on mobile and tablet devices
+    @media (min-width: 1025px) {
         display: none;
     }
     
