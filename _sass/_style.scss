@@ -668,7 +668,7 @@ th, td {
   margin-right: -60%;
   width: 50%;
   margin-top: 0;
-  margin-bottom: 0;
+      margin-bottom: 0;
   font-size: 1.0rem;
   line-height: 1.96; }
 /* -- End of Table Styling section --*/
@@ -1231,6 +1231,33 @@ input:checked + .slider {
 
     h1, h2, h3, h4, h5, h6,
     p, li, span {
+        color: #eaeaea;
+    }
+
+    // Dark theme table borders - white lines
+    table, table.booktabs {
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .booktabs th, th {
+        border-bottom: 1px solid #ffffff;
+        color: #eaeaea;
+    }
+
+    .booktabs th.cmid {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+    }
+
+    .booktabs td, td {
+        color: #eaeaea;
+    }
+
+    .booktabs caption, caption {
+        color: #eaeaea;
+    }
+
+    .table-caption {
         color: #eaeaea;
     }
 
