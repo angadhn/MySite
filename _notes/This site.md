@@ -258,7 +258,7 @@ The table above was written in HTML as follows:
 
 I like this style of table, so have made it the default for unstyled tables (this is pretty much a direct adaption of [clayh53](https://clayh53.github.io/tufte-jekyll/articles/20/tufte-style-jekyll-blog)'s work). This allows use of the [*Markdown Extra*](https://michelf.ca/projects/php-markdown/extra/) features built into the [*Kramdown*](http://kramdown.gettalong.org/parser/kramdown.html) parser.
 
-[[I previously used of HTML to write tables]] as it is more flexible than markdown tables but that has since broken—I will have to find a way to get that to play nicely with these progress indicators. For now, here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:
+Such HTML-based tables are more flexible in appearance than Markdown Extra tables—e.g., they allow multi-column headings—but they have a simpler syntax to make a nice table with the side benefit of being human readable in the raw Markdown file (which is pretty clutch with Obsidian):
 
 {% marginnote 'tableID-3' 'Table 3: a table created with *Markdown Extra* markup using only the default table styling' %}
 
