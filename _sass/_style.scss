@@ -862,7 +862,7 @@ div.epigraph > blockquote > footer > cite {
         align-items: center;
         justify-content: center;
         
-        .chevron-up {
+        .chevron {
             font-size: 16px;
             color: crimson;
             transition: transform 0.3s ease;
@@ -873,7 +873,7 @@ div.epigraph > blockquote > footer > cite {
         }
     }
     
-    &.open .mobile-toc-toggle .chevron-up {
+    &.open .mobile-toc-toggle .chevron {
         transform: rotate(180deg);
     }
 }

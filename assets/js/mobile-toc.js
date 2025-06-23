@@ -78,7 +78,7 @@ class MobileTOC {
     this.tocButton.className = 'floating-mobile-toc-button';
     this.tocButton.innerHTML = `
       <button class="mobile-toc-toggle" aria-label="Toggle table of contents">
-        <span class="chevron-up">▲</span>
+        <span class="chevron">⌄</span>
       </button>
     `;
     
