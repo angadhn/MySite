@@ -287,14 +287,14 @@
   }
 
   // Dark theme support for table of contents
-  @media (prefers-color-scheme: dark) {
+  [data-theme="dark"] & {
     .scroll-progress-toc {
-      background: rgba(40, 40, 40, 0.95);
+      background: rgba(0, 0, 0, 0.95);
       border-color: rgba(255, 255, 255, 0.2);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       
       .toc-header {
-        color: #999;
+        color: #eaeaea;
         border-bottom-color: rgba(255, 255, 255, 0.2);
       }
       
@@ -304,15 +304,15 @@
         }
         
         &.active {
-          background-color: rgba(220, 20, 60, 0.2);
+          background-color: rgba(0, 173, 181, 0.2);
         }
         
         .toc-title {
-          color: #f0f0f0;
+          color: #eaeaea;
         }
         
         &.active .toc-title {
-          color: #ff6b85;
+          color: #00adb5;
         }
       }
     }
@@ -329,7 +329,7 @@
 }
 
 // Dark theme support
-@media (prefers-color-scheme: dark) {
+[data-theme="dark"] {
   .scroll-progress {
     .progress-line {
       background-color: rgba(128, 128, 128, 0.4); // Same grey for unfilled in dark mode
@@ -379,7 +379,7 @@
   }
   
   // Dark theme scrollbar
-  @media (prefers-color-scheme: dark) {
+  [data-theme="dark"] & {
     scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
 
     &::-webkit-scrollbar-thumb {
