@@ -850,8 +850,8 @@ div.epigraph > blockquote > footer > cite {
         pointer-events: none;
     }
     
-    // Only show on mobile and tablet devices
-    @media (min-width: 1025px) {
+    // Hide on desktop (but show on landscape tablets)
+    @media (min-width: 1367px) {
         display: none;
     }
     
@@ -900,8 +900,8 @@ div.epigraph > blockquote > footer > cite {
     transition: all 0.3s ease;
     backdrop-filter: blur(15px);
     
-    // Only show on mobile and tablet devices
-    @media (min-width: 1025px) {
+    // Hide on desktop (but show on landscape tablets)
+    @media (min-width: 1367px) {
         display: none;
     }
     

@@ -32,8 +32,19 @@ class MobileTOC {
   }
 
   isMobileDevice() {
-    return window.innerWidth <= 1024 || 
-           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // Check if it's a touch device first
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    // For tablets in landscape (up to iPad Pro 12.9" landscape: 1366px)
+    const isTabletSize = window.innerWidth <= 1366 && isTouchDevice;
+    
+    // For phones and smaller tablets
+    const isMobileSize = window.innerWidth <= 1024;
+    
+    // Device detection fallback
+    const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    return isMobileSize || isTabletSize || isMobileUA;
   }
 
   gatherHeadings() {
