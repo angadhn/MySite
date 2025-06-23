@@ -628,6 +628,7 @@ figcaption {
   overflow-x: auto;
   margin: 1em 0;
   width: 100%;
+  max-width: 100%;  // Ensure wrapper never exceeds container width
   
   // Add subtle background on mobile to indicate scrollable area
   @media (max-width: 760px) {
