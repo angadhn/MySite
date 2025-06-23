@@ -390,9 +390,9 @@
       max-height: calc(100vh - 6rem);
       
       &.mobile-show {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0);
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateX(0) !important;
       }
     }
   }

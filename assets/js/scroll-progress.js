@@ -132,7 +132,10 @@ class ScrollProgress {
 
   addMobileToggle() {
     // Only add mobile toggle on touch devices
-    if (!window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+    const isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+    console.log('Is mobile device:', isMobile); // Debug log
+    
+    if (!isMobile) {
       return;
     }
 
@@ -144,12 +147,16 @@ class ScrollProgress {
       e.stopPropagation();
       isOpen = !isOpen;
       
+      console.log('Mobile toggle clicked, isOpen:', isOpen); // Debug log
+      
       if (isOpen) {
         toc.classList.add('mobile-show');
         mobileToggle.classList.add('active');
+        console.log('Added mobile-show class'); // Debug log
       } else {
         toc.classList.remove('mobile-show');
         mobileToggle.classList.remove('active');
+        console.log('Removed mobile-show class'); // Debug log
       }
     });
 
