@@ -165,10 +165,10 @@ Our calculations thus far are summarised below, where the pessimistic launch cos
 
 {%marginnote 'table' "Improvement on preceding solar technologies and related launch numbers" %}
 
-| Array Design | PDIF | Launches | Optimistic cost ($) | Pessimisitic cost ($) |
-| ------------ | ---- | -------- | ------------------- | --------------------- |
-| **Z-fold**   | 2.1x | 4 to 5   | 20M-25M             | 400M-500M             |
-| **Roll-out** | 1.7x | 1 to 3   | 5M-15M              | 100M-300M             |
+| Array Design | Launches | Optimistic cost ($) | Pessimisitic cost ($) |
+| ------------ | -------- | ------------------- | --------------------- |
+| **Z-fold**   | 4 to 5   | 20M-25M             | 400M-500M             |
+| **Roll-out** | 1 to 3   | 5M-15M              | 100M-300M             |
 
 The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
 
