@@ -44,7 +44,7 @@ to if these
    - [BioOrbit](https://www.bioorbit.space/) was still nascent when I wrote this in 
    October 2024.
 
-### Large Space Stations (Modular or Monolithic)
+### Large Space Stations (Modular and Monolithic)
 **<u>Domain</u>**: National space agencies have built space stations so far.
 Commercial entities are now trying to get a piece of the pie.
 
@@ -192,11 +192,6 @@ Commercial entities are now trying to get a piece of the pie.
         <td><a href="https://en.wikipedia.org/wiki/Voyager_Station">Voyager Station</a> (conceptual)</td>
         <td class="c">400</td>
         <td class="r">Rotating wheel design, highly speculative</td>
-      </tr>
-      <tr>
-        <td><a href="https://en.wikipedia.org/wiki/Orbital_Reef">Orbital Reef</a> (planned 2027)</td>
-        <td class="c">10</td>
-        <td class="r">Duplicate entry, remove</td>
       </tr>
     </tbody>
   </table>
