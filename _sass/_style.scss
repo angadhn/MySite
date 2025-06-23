@@ -1197,24 +1197,18 @@ input:checked + .slider {
     .epigraph,
     blockquote {
         background-color: #1f232b;
-        margin: 1.5em auto;
-        padding: 1em;
-        border-radius: 12px;
         border-left: 4px solid #00adb5;
-        width: 70%;
-        font-family: "Playfair Display", serif;
 
-        p {
+        p:first-child {
             color: #eaeaea;
-            margin: 0;
+        }
+
+        p + p:last-child {
+            color: #6c7a89;
         }
 
         cite {
             color: #6c7a89;
-            display: block;
-            margin-top: 0.5em;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
     }
 
