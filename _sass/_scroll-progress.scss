@@ -4,7 +4,7 @@
   left: 0;
   top: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 1002;
   height: 100vh;
   overflow-y: auto;
   
@@ -224,7 +224,7 @@
     min-width: 250px;
     max-width: 350px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    z-index: 1001;
+    z-index: 1002;
     opacity: 0;
     visibility: hidden;
     transform: translateX(-15px);
