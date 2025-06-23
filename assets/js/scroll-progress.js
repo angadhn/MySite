@@ -76,12 +76,6 @@ class ScrollProgress {
             ${this.headings.map(heading => this.createTocItem(heading)).join('')}
           </div>
         </div>
-        <div class="scroll-progress-toc mobile-toc">
-          <div class="toc-header">Table of Contents</div>
-          <div class="toc-sections">
-            ${this.headings.map(heading => this.createTocItem(heading)).join('')}
-          </div>
-        </div>
       </div>
     `;
 
@@ -90,9 +84,6 @@ class ScrollProgress {
 
     // Add table of contents functionality for desktop/laptop devices
     this.addTableOfContents();
-
-    // Add mobile ToC functionality
-    this.addMobileToC();
 
     // Add click handlers
     this.progressContainer.addEventListener('click', (e) => {
@@ -117,7 +108,7 @@ class ScrollProgress {
       return;
     }
 
-    const tocItems = this.progressContainer.querySelectorAll('.scroll-progress-toc:not(.mobile-toc) .toc-item');
+    const tocItems = this.progressContainer.querySelectorAll('.toc-item');
 
     // Add click handlers to table of contents items
     tocItems.forEach((item, index) => {
@@ -132,78 +123,6 @@ class ScrollProgress {
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
-    });
-  }
-
-  addMobileToC() {
-    // Only add mobile ToC functionality on touch/mobile devices
-    const isMobileDevice = window.matchMedia('(max-width: 1024px), (hover: none), (pointer: coarse)').matches;
-    if (!isMobileDevice) {
-      return;
-    }
-
-    // Create mobile ToC button
-    const mobileTocButton = document.createElement('div');
-    mobileTocButton.className = 'mobile-toc-button';
-    mobileTocButton.innerHTML = '<div class="chevron-icon"></div>';
-    mobileTocButton.setAttribute('aria-label', 'Toggle Table of Contents');
-    
-    // Insert the button
-    document.body.appendChild(mobileTocButton);
-
-    // Get the mobile ToC overlay
-    const mobileToc = this.progressContainer.querySelector('.mobile-toc');
-    const mobileTocItems = mobileToc.querySelectorAll('.toc-item');
-
-    // Add click handlers to mobile ToC items
-    mobileTocItems.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetElement = document.getElementById(item.dataset.target);
-        if (targetElement) {
-          // Update URL hash with the section ID
-          const sectionId = item.dataset.target;
-          history.pushState(null, null, `#${sectionId}`);
-          
-          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          
-          // Close the mobile ToC after navigation
-          mobileToc.classList.remove('show');
-          mobileTocButton.classList.remove('active');
-        }
-      });
-    });
-
-    // Toggle mobile ToC on button click
-    mobileTocButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      const isActive = mobileTocButton.classList.contains('active');
-      
-      if (isActive) {
-        mobileToc.classList.remove('show');
-        mobileTocButton.classList.remove('active');
-      } else {
-        mobileToc.classList.add('show');
-        mobileTocButton.classList.add('active');
-      }
-    });
-
-    // Close mobile ToC when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileToc.contains(e.target) && !mobileTocButton.contains(e.target)) {
-        mobileToc.classList.remove('show');
-        mobileTocButton.classList.remove('active');
-      }
-    });
-
-    // Close mobile ToC on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileToc.classList.contains('show')) {
-        mobileToc.classList.remove('show');
-        mobileTocButton.classList.remove('active');
-      }
     });
   }
 
@@ -295,7 +214,7 @@ class ScrollProgress {
       }
     });
 
-    // Update table of contents items to match progress bars (both desktop and mobile)
+    // Update table of contents items to match progress bars
     tocItems.forEach((item, index) => {
       const isActive = index === activeIndex;
       const isPassed = index < activeIndex;
