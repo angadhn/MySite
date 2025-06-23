@@ -837,6 +837,14 @@ div.epigraph > blockquote > footer > cite {
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    
+    &.hidden {
+        opacity: 0;
+        transform: translateY(100px);
+        pointer-events: none;
+    }
     
     // Only show on mobile devices
     @media (min-width: 769px) {

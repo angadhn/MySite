@@ -4,6 +4,9 @@ class MobileTOC {
     this.tocButton = null;
     this.tocPopup = null;
     this.isOpen = false;
+    this.lastScrollY = 0;
+    this.scrollDirection = 'up';
+    this.scrollTimeout = null;
     this.init();
   }
 
@@ -159,11 +162,12 @@ class MobileTOC {
       }
     });
 
-    // Update active section on scroll
+    // Update active section and handle scroll direction
     let ticking = false;
     const updateOnScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
+          this.handleScroll();
           this.updateActiveSection();
           ticking = false;
         });
@@ -186,6 +190,7 @@ class MobileTOC {
     this.isOpen = true;
     this.tocPopup.classList.add('show');
     this.tocButton.classList.add('open');
+    this.showTOCButton(); // Ensure button is visible when opening
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
 
@@ -194,6 +199,47 @@ class MobileTOC {
     this.tocPopup.classList.remove('show');
     this.tocButton.classList.remove('open');
     document.body.style.overflow = ''; // Restore scrolling
+    
+    // Resume normal scroll-based hiding behavior
+    if (this.scrollDirection === 'down' && this.lastScrollY > 100) {
+      this.hideTOCButton();
+    }
+  }
+
+  handleScroll() {
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Determine scroll direction
+    if (currentScrollY > this.lastScrollY && currentScrollY > 100) {
+      // Scrolling down and past initial scroll threshold
+      this.scrollDirection = 'down';
+      this.hideTOCButton();
+    } else if (currentScrollY < this.lastScrollY) {
+      // Scrolling up
+      this.scrollDirection = 'up';
+      this.showTOCButton();
+    }
+    
+    this.lastScrollY = currentScrollY;
+    
+    // Clear any existing timeout and set a new one to show button after scrolling stops
+    if (this.scrollTimeout) {
+      clearTimeout(this.scrollTimeout);
+    }
+    
+    this.scrollTimeout = setTimeout(() => {
+      this.showTOCButton();
+    }, 1000); // Show button 1 second after scrolling stops
+  }
+
+  hideTOCButton() {
+    if (!this.isOpen) { // Only hide if TOC popup is not open
+      this.tocButton.classList.add('hidden');
+    }
+  }
+
+  showTOCButton() {
+    this.tocButton.classList.remove('hidden');
   }
 
   updateActiveSection() {
