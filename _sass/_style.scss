@@ -627,12 +627,24 @@ figcaption {
 .table-wrapper {
   overflow-x: auto;
   margin: 1em 0;
+  width: 100%;
   
   // Add subtle background on mobile to indicate scrollable area
   @media (max-width: 760px) {
     background-color: rgba(0,0,0,0.02);
     padding: 0.5em;
     border-radius: 4px;
+  }
+  
+  // Ensure tables inside wrapper scroll properly
+  table {
+    width: auto;
+    min-width: 100%;
+    
+    // Prevent text wrapping to maintain column structure
+    td, th {
+      white-space: nowrap;
+    }
   }
 }
 
