@@ -77,7 +77,6 @@ class ScrollProgress {
           </div>
         </div>
       </div>
-      <div class="mobile-toc-toggle"></div>
     `;
 
     // Insert into the page
@@ -85,9 +84,6 @@ class ScrollProgress {
 
     // Add table of contents functionality for desktop/laptop devices
     this.addTableOfContents();
-    
-    // Add mobile toggle functionality
-    this.addMobileToggle();
 
     // Add click handlers
     this.progressContainer.addEventListener('click', (e) => {
@@ -126,58 +122,6 @@ class ScrollProgress {
           
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      });
-    });
-  }
-
-  addMobileToggle() {
-    // Only add mobile toggle on touch devices
-    const isMobile = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-    console.log('Is mobile device:', isMobile); // Debug log
-    
-    if (!isMobile) {
-      return;
-    }
-
-    const mobileToggle = this.progressContainer.querySelector('.mobile-toc-toggle');
-    const toc = this.progressContainer.querySelector('.scroll-progress-toc');
-    let isOpen = false;
-
-    mobileToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      isOpen = !isOpen;
-      
-      console.log('Mobile toggle clicked, isOpen:', isOpen); // Debug log
-      
-      if (isOpen) {
-        toc.classList.add('mobile-show');
-        mobileToggle.classList.add('active');
-        console.log('Added mobile-show class'); // Debug log
-      } else {
-        toc.classList.remove('mobile-show');
-        mobileToggle.classList.remove('active');
-        console.log('Removed mobile-show class'); // Debug log
-      }
-    });
-
-    // Close ToC when clicking outside or on a ToC item
-    document.addEventListener('click', (e) => {
-      if (isOpen && !this.progressContainer.contains(e.target)) {
-        isOpen = false;
-        toc.classList.remove('mobile-show');
-        mobileToggle.classList.remove('active');
-      }
-    });
-
-    // Close ToC when clicking on a ToC item (after navigation)
-    const tocItems = this.progressContainer.querySelectorAll('.toc-item');
-    tocItems.forEach(item => {
-      item.addEventListener('click', () => {
-        setTimeout(() => {
-          isOpen = false;
-          toc.classList.remove('mobile-show');
-          mobileToggle.classList.remove('active');
-        }, 100); // Small delay to allow smooth scroll to start
       });
     });
   }
