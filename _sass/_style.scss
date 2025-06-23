@@ -623,11 +623,52 @@ figcaption {
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 
+// Table wrapper for horizontal scrolling on mobile
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1em 0;
+  
+  // Add subtle background on mobile to indicate scrollable area
+  @media (max-width: 760px) {
+    background-color: rgba(0,0,0,0.02);
+    padding: 0.5em;
+    border-radius: 4px;
+  }
+}
+
+[data-theme="dark"] .table-wrapper {
+  @media (max-width: 760px) {
+    background-color: rgba(255,255,255,0.02);
+  }
+}
+
 table, table.booktabs { width: auto;  //making booktabs style tables the unstyled default in case someone uses Markdown styling
   //margin: 0 auto;
   border-spacing: 0px;
   border-top: 2px solid  #333333;
-  border-bottom: 2px solid  #333333; }
+  border-bottom: 2px solid  #333333; 
+  min-width: 100%;  // Ensure tables take full width of their container
+}
+
+// Auto-wrap all markdown tables with horizontal scrolling
+table:not(.table-wrapper table) {
+  overflow-x: auto;
+  display: block;
+  
+  // Add subtle background on mobile to indicate scrollable area
+  @media (max-width: 760px) {
+    background-color: rgba(0,0,0,0.02);
+    padding: 0.5em;
+    border-radius: 4px;
+    margin: 1em 0;
+  }
+}
+
+[data-theme="dark"] table:not(.table-wrapper table) {
+  @media (max-width: 760px) {
+    background-color: rgba(255,255,255,0.02);
+  }
+}
 
 .booktabs th, th { border-bottom: 1px solid  #333333;
 padding: 0.65ex 0.5em 0.4ex 0.5em;
