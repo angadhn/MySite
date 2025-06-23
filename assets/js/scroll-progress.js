@@ -3,10 +3,6 @@ class ScrollProgress {
     this.headings = [];
     this.progressContainer = null;
     this.currentSection = null;
-    this.tocVisible = false;
-    this.chevronButton = null;
-    this.lastScrollY = 0;
-    this.scrollDirection = 'up';
     this.init();
   }
 
@@ -89,9 +85,6 @@ class ScrollProgress {
     // Add table of contents functionality for desktop/laptop devices
     this.addTableOfContents();
 
-    // Add mobile chevron button for touch devices
-    this.addMobileChevron();
-
     // Add click handlers
     this.progressContainer.addEventListener('click', (e) => {
       const sectionLink = e.target.closest('.progress-section');
@@ -151,48 +144,6 @@ class ScrollProgress {
     `;
   }
 
-  addMobileChevron() {
-    // Only add chevron for touch devices (mobile/tablet)
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      return;
-    }
-
-    // Create chevron button
-    this.chevronButton = document.createElement('div');
-    this.chevronButton.className = 'mobile-toc-chevron';
-    this.chevronButton.innerHTML = `
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="6,9 12,15 18,9"></polyline>
-      </svg>
-    `;
-
-    // Add to document
-    document.body.appendChild(this.chevronButton);
-
-    // Add click handler
-    this.chevronButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      this.toggleMobileToc();
-    });
-
-    // Initially hide ToC on mobile
-    this.progressContainer.classList.add('mobile-hidden');
-  }
-
-  toggleMobileToc() {
-    this.tocVisible = !this.tocVisible;
-    
-    if (this.tocVisible) {
-      this.progressContainer.classList.remove('mobile-hidden');
-      this.progressContainer.classList.add('mobile-visible');
-      this.chevronButton.classList.add('rotated');
-    } else {
-      this.progressContainer.classList.remove('mobile-visible');
-      this.progressContainer.classList.add('mobile-hidden');
-      this.chevronButton.classList.remove('rotated');
-    }
-  }
-
   attachScrollListener() {
     let ticking = false;
     
@@ -200,7 +151,6 @@ class ScrollProgress {
       if (!ticking) {
         requestAnimationFrame(() => {
           this.updateProgress();
-          this.updateChevronVisibility();
           ticking = false;
         });
         ticking = true;
@@ -279,28 +229,6 @@ class ScrollProgress {
         item.style.setProperty('--progress', progress);
       }
     });
-  }
-
-  updateChevronVisibility() {
-    if (!this.chevronButton) return;
-
-    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Determine scroll direction
-    if (currentScrollY > this.lastScrollY) {
-      this.scrollDirection = 'down';
-    } else if (currentScrollY < this.lastScrollY) {
-      this.scrollDirection = 'up';
-    }
-    
-    this.lastScrollY = currentScrollY;
-
-    // Show/hide chevron based on scroll direction
-    if (this.scrollDirection === 'down' && currentScrollY > 100) {
-      this.chevronButton.classList.add('hidden');
-    } else if (this.scrollDirection === 'up' || currentScrollY <= 100) {
-      this.chevronButton.classList.remove('hidden');
-    }
   }
 }
 
