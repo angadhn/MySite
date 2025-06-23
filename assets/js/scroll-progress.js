@@ -82,6 +82,10 @@ class ScrollProgress {
         e.preventDefault();
         const targetElement = document.getElementById(sectionLink.dataset.target);
         if (targetElement) {
+          // Update URL hash with the section ID
+          const sectionId = sectionLink.dataset.target;
+          history.pushState(null, null, `#${sectionId}`);
+          
           targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
