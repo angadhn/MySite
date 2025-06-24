@@ -205,6 +205,7 @@ $$
 One side of the radiator is in direct sunlight so the heat it absorbs is calculated as:
 
 $$ \begin{align} P_{\text{Sun}} &= (\alpha \cdot S) \\ &= 0.09 \cdot 1366 \\ &= 122.94 , \text{W/m}^2 \end{align} $$
+
 , where the plate's absorptivity is $$ \alpha = 0.09 $$, and solar irradiance in space is $$
 S = 1366 \text{W}/\text{m}^2$$.
 
@@ -213,7 +214,7 @@ The thermal energy absorbed by the plate from the Earth’s albedo and blackbody
 $$
 \begin{align}
 P_{\text{Earth}} &= \alpha \cdot F \cdot (Al \cdot S + \sigma \cdot T_{\text{earth}}^4) \\
-&= 0.09 \cdot 0.25 \cdot (0.3 \cdot 1366 + 5.67 \times 10^{-8} \cdot (273.15 - 20)^4) \\
+%%  %%&= 0.09 \cdot 0.25 \cdot (0.3 \cdot 1366 + 5.67 \times 10^{-8} \cdot (273.15 - 20)^4) \\
 &= 14.46 \,\text{W/m}^2 \end{align}
 $$
 
@@ -255,3 +256,8 @@ $$
 $$
 
 which is in agreement with Starcloud's claims that radiator area needed is roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels. For an idealized two-sided blackbody plate's power denity, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity.
+
+
+
+[^1]: 
+	As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.
