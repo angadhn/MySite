@@ -682,28 +682,31 @@ th, td {
       margin: 1rem 0;  // Extend to screen edges on mobile
       border-radius: 0;
       
-      // Add subtle visual cue for scrollability
-      &:before {
-        content: "← Swipe to scroll →";
-        display: block;
-        text-align: center;
-        font-size: 0.8em;
-        color: #666;
-        padding: 0.5em;
-        background: rgba(0,0,0,0.02);
-        margin-bottom: 0;
-      }
-      
-      // Remove the scroll hint after user starts scrolling
-      &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 20px;
-        background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
-        pointer-events: none;
+      // Only show scroll hints when the class is present and table actually overflows
+      &.show-scroll-hint {
+        // Add subtle visual cue for scrollability
+        &:before {
+          content: "← Swipe to scroll →";
+          display: block;
+          text-align: center;
+          font-size: 0.8em;
+          color: #666;
+          padding: 0.5em;
+          background: rgba(0,0,0,0.02);
+          margin-bottom: 0;
+        }
+        
+        // Gradient hint for more content on the right
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 20px;
+          background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
+          pointer-events: none;
+        }
       }
     }
   }
@@ -711,7 +714,7 @@ th, td {
 // Dark theme adjustments for table wrapper
 [data-theme="dark"] {
   @media (max-width: 760px) {
-    div.table-wrapper {
+    div.table-wrapper.show-scroll-hint {
       
       &:before {
         color: #999;
