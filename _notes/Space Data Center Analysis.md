@@ -166,10 +166,7 @@ Our calculations thus far are summarised below, where the pessimistic launch cos
 
 {%marginnote 'table' "Improvement on preceding solar technologies and related launch numbers" %}
 
-| Array Design | Launches | Optimistic cost ($) | Pessimisitic cost ($) |
-| ------------ | -------- | ------------------- | --------------------- |
-| **Z-fold**   | 4 to 5   | 20M-25M             | 400M-500M             |
-| **Roll-out** | 1 to 3   | 5M-15M              | 100M-300M             |
+
 
 The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
 
@@ -216,15 +213,6 @@ This can be used to compute the area needed to radiate 40 MW of waste heat (as
 $$
 A_{\text{rad}} = \frac{40{,}000{,}000}{633.08} \approx \boxed{63{,}190\,\text{m}^2}
 $$
-
-This is roughly **0.063 km²** of radiator surface that their whitepaper claims also needs packing in  the same Starship's fairing volume of 1000 m³. The areal packing density is 63.2 m²/m³.
-
-$$
-\begin{align}
-{(Packing \, density)}_{desired} &=\frac{63{,}190}{1000}\\ &= 63{.}19 \, m^2/m^3
-\end{align}
-$$
-
 
 
 [[Cooling stuff]]
