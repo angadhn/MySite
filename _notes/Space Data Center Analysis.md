@@ -184,18 +184,11 @@ Starcloud propose a passive radiator system operating near **20 °C**, facing 
 $$
 P_{\text{body}} = 2 \cdot \varepsilon \cdot \sigma \cdot T^4
 $$
-where,
-- Emissivity, $$\varepsilon = 1 $$ for a black body and Starcloud assumes this to be 0.92 for their radiators.
-  
-  With the Stefan-Boltzmann constant,
-  
-  $$\sigma=5.67 \times 10^{-8} \, \text{W}\text{m}^{−2}\text{K}^{−4}$$
-  and radiator temperature (20 °C)
-  
-  $$ T = 293.15\,\text{K} $$
-  we can determine
+
+where, Emissivity, $$\varepsilon = 1 $$ for a black body (Starcloud assumes this to be 0.92 for their radiators), the Stefan-Boltzmann constant ($$\sigma=5.67 \times 10^{-8} \, \text{W}\text{m}^{−2}\text{K}^{−4}$$) and radiator temperature ($$ T = 293.15\,\text{K} $$) so we can determine
 
 $$P_{\text{radiator}} = 770.48\,\text{W}$$
+
 as the heat radiated from both sides of a $$1 \text{m}^2$$ plate. So, with practical adjustments for real materials and environmental exposure, the net heat radiated by the plate in practice depends on the heat absorbed from the Sun $$(P_{\text{Sun}})$$ and Earth $$(P_{\text{Earth}})$$and is given by:
 
 $$
