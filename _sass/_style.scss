@@ -695,11 +695,11 @@ th, td {
         word-wrap: break-word;  // Break long words if needed
       }
       
-      // table td, table th {
-      //   white-space: nowrap;  // Prevent text wrapping (better for mobile scrolling)
-      //   padding: 0.5em 0.25em;  // Tighter padding for mobile
-      //   font-size: 0.9em;  // Slightly smaller text
-      // }
+      table td, table th {
+        // white-space: nowrap;  // Prevent text wrapping (better for mobile scrolling)
+        padding: 0.5em 0.25em;  // Tighter padding for mobile
+        font-size: 0.9em;  // Slightly smaller text
+      }
       
       div.table-wrapper {
         // Add subtle visual cue for scrollability (only when needed)
