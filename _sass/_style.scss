@@ -676,15 +676,14 @@ th, td {
 
     // Mobile-specific improvements
     @media (max-width: 760px) {
-      // div.table-wrapper, table, table.booktabs { width: 85%; }
       div.table-wrapper {
         position: relative;
         margin: 1rem 0;
         border-radius: 0;
         width: 100%;
         max-width: 100vw;  // Never exceed viewport width
-        // overflow-x: auto;  // Force horizontal scrolling
-        // box-sizing: border-box;
+        overflow-x: auto;  // Force horizontal scrolling
+        box-sizing: border-box;
       }
       
       table, table.booktabs {
@@ -696,7 +695,6 @@ th, td {
       }
       
       table td, table th {
-        // white-space: nowrap;  // Prevent text wrapping (better for mobile scrolling)
         padding: 0.5em 0.25em;  // Tighter padding for mobile
         font-size: 0.9em;  // Slightly smaller text
       }
