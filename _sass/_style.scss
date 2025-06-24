@@ -672,6 +672,8 @@ th, td {
   font-size: 1.0rem;
   line-height: 1.96; }
 
+  div.table-wrapper, table { overflow-x: auto; }
+
   @media (max-width: 760px) {
     div.table-wrapper, table, table.booktabs { width: 85%; }
     div.table-wrapper { 
