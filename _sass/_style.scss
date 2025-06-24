@@ -2041,20 +2041,3 @@ blockquote {
     padding-right: 5%;
   }
 }
-
-@media (max-width: 760px) {
-  .table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  table {
-    font-size: 0.85rem;  // Scale down text
-    min-width: 100%;     // Prevent tables from being too narrow
-  }
-  
-  th, td {
-    padding: 0.3em 0.25em;  // Reduce cell padding
-  }
-}
