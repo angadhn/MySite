@@ -674,19 +674,52 @@ th, td {
 
   div.table-wrapper, table { overflow-x: auto; }
 
-  @media (max-width: 760px) {
-    div.table-wrapper, table, table.booktabs { width: 85%; }
-    div.table-wrapper { 
-      border-right: 3px solid transparent;
-      border-image: linear-gradient(to bottom, #f5f5f5, #e8e8e8, #f5f5f5) 1;
+    // Mobile-specific improvements
+    @media (max-width: 480px) {
+      div.table-wrapper, table, table.booktabs { width: 85%; }
+      div.table-wrapper { 
+        margin: 1rem 0;  // Extend to screen edges on mobile
+        border-radius: 0;
+        
+        // Add subtle visual cue for scrollability
+        &:before {
+          content: "← Swipe to scroll →";
+          display: block;
+          text-align: center;
+          font-size: 0.8em;
+          color: #666;
+          padding: 0.5em;
+          background: rgba(0,0,0,0.02);
+          margin-bottom: 0;
+        }
+        
+        // Remove the scroll hint after user starts scrolling
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 20px;
+          background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
+          pointer-events: none;
+        }
+      }
     }
-  }
-
-  // Dark mode table gradient
+  
+  // Dark theme adjustments for table wrapper
   [data-theme="dark"] {
     @media (max-width: 760px) {
-      div.table-wrapper { 
-        border-image: linear-gradient(to bottom, #333333, #555555, #333333) 1;
+      div.table-wrapper {
+        
+        &:before {
+          color: #999;
+          background: rgba(255,255,255,0.02);
+        }
+        
+        &:after {
+          background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
+        }
       }
     }
   }
