@@ -696,12 +696,12 @@ th, td {
         
         // Remove the scroll hint after user starts scrolling
         &.show-scroll-hint:after {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          width: 20px;
+          content: "← Swipe to scroll →";
+          display: block;
+          text-align: center;
+          font-size: 0.8em;
+          color: #666;
+          padding: 0.5em;
           background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
           pointer-events: none;
         }
