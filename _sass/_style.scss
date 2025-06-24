@@ -687,28 +687,25 @@ th, td {
         // box-sizing: border-box;
       }
       
-      table, table.booktabs {
-        width: auto;  // Let table size naturally
-        min-width: 100%;  // But at least full container width
-        max-width: none;  // Allow table to be wider than container
-        table-layout: auto;  // Better for content-heavy tables
-        word-wrap: break-word;  // Break long words if needed
-      }
+      // table, table.booktabs {
+      //   width: auto;  // Let table size naturally
+      //   min-width: 100%;  // But at least full container width
+      //   max-width: none;  // Allow table to be wider than container
+      //   table-layout: auto;  // Better for content-heavy tables
+      //   word-wrap: break-word;  // Break long words if needed
+      // }
       
-      table td, table th {
-        // white-space: nowrap;  // Prevent text wrapping (better for mobile scrolling)
-        padding: 0.5em 0.25em;  // Tighter padding for mobile
-        font-size: 0.9em;  // Slightly smaller text
-      }
+      // table td, table th {
+      //   // white-space: nowrap;  // Prevent text wrapping (better for mobile scrolling)
+      //   padding: 0.5em 0.25em;  // Tighter padding for mobile
+      //   font-size: 0.9em;  // Slightly smaller text
+      // }
       
       div.table-wrapper {
         // Add subtle visual cue for scrollability (only when needed)
         &.show-scroll-hint:before {
           content: "← Swipe to scroll →";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
+          display: block;
           text-align: center;
           font-size: 0.8em;
           color: #666;
