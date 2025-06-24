@@ -690,7 +690,8 @@ th, td {
         font-size: 0.8em;
         color: #666;
         padding: 0.5em;
-        background: rgba(0,0,0,0.02);
+        background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
+        // background: rgba(0,0,0,0.02);
         margin-bottom: 0;
       }
       
@@ -715,12 +716,13 @@ th, td {
       
       &:before {
         color: #999;
-        background: rgba(255,255,255,0.02);
+        // background: rgba(255,255,255,0.02);
+        background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
       }
       
-      &:after {
-        // background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
-      }
+      // &:after {
+      //   background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
+      // }
     }
   }
 }
