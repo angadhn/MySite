@@ -675,9 +675,10 @@ th, td {
   div.table-wrapper, table { overflow-x: auto; }
 
     // Mobile-specific improvements
-    @media (max-width: 480px) {
+    @media (max-width: 1024px) {
       div.table-wrapper, table, table.booktabs { width: 85%; }
-      div.table-wrapper { 
+      div.table-wrapper {
+        position: relative;
         margin: 1rem 0;  // Extend to screen edges on mobile
         border-radius: 0;
         
@@ -709,7 +710,7 @@ th, td {
   
   // Dark theme adjustments for table wrapper
   [data-theme="dark"] {
-    @media (max-width: 760px) {
+    @media (max-width: 1024px) {
       div.table-wrapper {
         
         &:before {
