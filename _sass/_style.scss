@@ -671,6 +671,24 @@ th, td {
       margin-bottom: 0;
   font-size: 1.0rem;
   line-height: 1.96; }
+
+  @media (max-width: 760px) {
+    div.table-wrapper, table, table.booktabs { width: 85%; }
+    div.table-wrapper { 
+      border-right: 3px solid transparent;
+      border-image: linear-gradient(to bottom, #f5f5f5, #e8e8e8, #f5f5f5) 1;
+    }
+  }
+
+  // Dark mode table gradient
+  [data-theme="dark"] {
+    @media (max-width: 760px) {
+      div.table-wrapper { 
+        border-image: linear-gradient(to bottom, #333333, #555555, #333333) 1;
+      }
+    }
+  }
+  
 /* -- End of Table Styling section --*/
 
 
