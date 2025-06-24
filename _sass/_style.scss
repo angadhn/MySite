@@ -676,7 +676,8 @@ div.table-wrapper, table { overflow-x: auto; }
 
   // Mobile-specific improvements
   @media (max-width: 760px) {
-    div.table-wrapper, table, table.booktabs { width: 85%; }
+    div.table-wrapper, table, table.booktabs { width: 65%; }
+    
   //   div.table-wrapper { 
   //     margin: 1rem 0;  // Extend to screen edges on mobile
   //     border-radius: 0;
