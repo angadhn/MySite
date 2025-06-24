@@ -262,3 +262,232 @@ The EATCS consists of an internal, non-toxic, water coolant loop used to cool an
 
 ![ISS SAW is a LOT larger than the early ROSA.](assets/imgs/space-data-centers/EATCS.png)
 
+
+> [!warning]This is a work-in-progress
+> This block is to warn you that everything below should be considered a draft and could be facutally incorrect! This block will be removed once I feel my analysis is complete and fully documented below. So, please treat everything below as potentially inaccurate as this is just my explorations of working in public.
+
+- **6 radiator ORUs total** (3 on S1 truss, 3 on P1 truss)
+- **Each ORU**: 76.4 ft × 11.2 ft (23.3 m × 3.4 m) = **79.2 m²**
+- **Total EATCS area**: 6 × 79.2 = **475 m²**
+- **Weight per ORU**: 2,475 lbs (1,122 kg)
+
+### **PVTCS (Photovoltaic Thermal Control System) Radiators**
+
+The Photovoltaic Thermal Control System (PVTCS) consists of ammonia loops that collect excess heat from the Electrical Power System (EPS) components in the Integrated Equipment Assembly (IEA) on P4 and eventually S4 and transport this heat to the PV radiators (located on P4, P6, S4 and S6) where it is rejected to space. The PVTCS consist of ammonia coolant, eleven coldplates, two Pump Flow Control Subassemblies (PFCS) and one Photovoltaic Radiator (PVR).
+
+- **4 PVR radiators total** (on P4, P6, S4, S6 trusses)
+- **Each PVR**: 10.24 ft × 44.62 ft (3.12 m × 13.6 m) = **42.4 m²**
+- **Total PVTCS area**: 4 × 42.4 = **170 m²**
+- **Weight per PVR**: 1,633 lbs (741 kg)
+
+### **Total ISS Radiator Performance:**
+
+- **Combined area**: 475 + 170 = **645 m²**
+- **Combined capacity**: 70 + 56 = **126 kW**
+- **Actual performance**: 126,000W ÷ 645 m² = **195 W/m²**
+
+## Critical Comparison
+
+Your analysis assumes Starcloud's **633 W/m²**, but ISS achieves only **195 W/m²** - that's a **3.2x difference**!
+
+Using realistic ISS performance:
+
+- **Area needed**: 40,000,000W ÷ 195 W/m² = **205,000 m²** (not 63,190 m²)
+- **Packing density required**: 205,000 m² ÷ 1,000 m³ = **205 m²/m³**
+
+This makes Starcloud's single-launch claim even more unrealistic. The ISS data shows they need roughly **3x more radiator area** than their calculations suggest.
+
+I'm still searching for stowed volume data to calculate actual ISS radiator packing density. The fact that these radiators are launched on multiple Shuttle missions already suggests poor packing density compared to Starcloud's requirements.
+
+
+
+## Packing density launch count
+
+To determine launch numbers, we can again compare to the ISS’s radiator truss, which stowed at ~67 m²/m³. This ratio is a little over 1, indicating that the radiator itself would need a single launch of its own with current technology.
+
+Since Starcloud's architecture assumes **dedicated radiator/solar launches**, this packing density is feasible across **1–2 launches** per 40 MW cluster.
+
+## Radiator Mass and Launch Count
+
+The total launch mass depends on the **radiator surface density** (kg/m²). While the Starcloud white paper does not explicitly state this, their architecture assumes a single-launch 40 MW module — including compute, solar, and *radiator* — which implies a **lightweight radiator design**.
+
+We assume a radiator **specific mass** in the **2–5 kg/m²** range, consistent with modern thermal system development targets:
+
+| Radiator Mass Density | Total Mass | Launches (100 t each) |
+|------------------------|------------|------------------------|
+| **2 kg/m²** (ambitious) | 126,380 kg | ~1.3 launches |
+| **3 kg/m²** (likely target) | 189,570 kg | ~1.9 launches |
+| **5 kg/m²** (conservative) | 315,950 kg | ~3.2 launches |
+### Sensitivity to PUE
+
+Even with a low PUE (Power Usage Effectiveness), the radiator area scales linearly with total power:
+
+| PUE | Total Heat Load (MW) | Radiator Area (m²) |
+|-----|-----------------------|---------------------|
+| 1.0 | 40.0 | 63,190 |
+| 1.1 | 44.0 | 69,540 |
+| 1.2 | 48.0 | 75,888 |
+
+This confirms that a ±10% change in overhead adds ±6,000 m² of radiator area, which still fits within the same launch window (1–3 launches).
+### Radiator Mass Density: State of the Art and Targets
+
+| System / Program   | Mass Density (kg/m²) | Status         | Notes                                      |
+| ------------------ | -------------------- | -------------- | ------------------------------------------ |
+| ISS HRSR           | 4.9–5.1              | Deployed       | Robust but heavy                           |
+| Lunar Gateway      | 3.5–4.5              | In development | Modular, two-phase                         |
+| DARPA DRPS         | <3.0                 | In development | Ultralight target                          |
+| NASA future target | <2.0                 | Research goal  | For scalable GW-class systems              |
+| Starcloud assumed  | 2–5                  | Inferred       | Matches current performance + future goals |
+
+The **2–5 kg/m²** range allows compatibility with both conservative near-term designs and more aggressive lightweight systems under development by NASA and DARPA.
+
+### 📦 Packing Density and Deployment Considerations
+
+For reference, 63,000–75,000 m² of radiator must be stowed and deployed. If packaged within a 1000 m³ Starship fairing:
+
+$$
+\text{Packing density} = \frac{70{,}000\,\text{m}^2}{1{,}000\,\text{m}^3} = 70\,\text{m}^2/\text{m}^3
+$$
+
+
+
+### Summary
+
+| Parameter | Value |
+|----------|--------|
+| Radiator temperature | 20 °C |
+| Net heat rejection | 633 W/m² |
+| Radiator area (40 MW) | ~63,190 m² |
+| Solar area (40 MW) | ~128,000 m² |
+| Radiator-to-solar area ratio | ~0.49× |
+| Radiator mass | 126–316 t |
+| Launches required | 1–3 |
+| Radiator mass density assumed | 2–5 kg/m² |
+
+The radiator system is tightly coupled with the power and thermal envelope of the platform. Starcloud’s projected performance is at the **cutting edge of space thermal engineering**, scalable to megawatt and gigawatt-class architectures, and made possible by recent advances in material science and launch economics.
+
+### 🚀 Launch Analysis: Radiators vs. Solar Panels (Area and Mass-Based)
+
+To fully understand the launch requirements for Starcloud’s 40 MW data center, we analyze both **mass-based** and **packing density-based** launch estimates for the two largest surface subsystems: the **solar arrays** and **radiators**.
+
+---
+
+
+
+
+
+# Mass-based Launch Estimate
+
+## Solar Array 
+
+#### 🔧 Power and Area
+
+As previously calculated:
+
+$$
+P_{\text{solar}} = 312.5\ \text{W/m}^2
+$$
+
+To generate 40 MW:
+
+$$
+A_{\text{solar}} = \frac{40 \times 10^6\ \text{W}}{312.5\ \text{W/m}^2} = 128{,}000\ \text{m}^2
+$$
+
+#### ⚖️ Mass-Based Estimate
+
+Assuming modern thin-film solar cells with:
+
+- Power density: 1000–2000 W/kg → 0.5–1.0 kg/m²  
+- Estimated mass:
+
+$$
+M_{\text{solar}} = A_{\text{solar}} \cdot \rho_{\text{solar}} = 128{,}000\ \text{m}^2 \cdot 1.0\ \text{kg/m}^2 = 128{,}000\ \text{kg}
+$$
+
+With a 100 t launcher:
+
+$$
+\text{Launches}_{\text{mass}} = \frac{128{,}000\ \text{kg}}{100{,}000\ \text{kg/launch}} = 1.28\ \text{launches}
+$$
+
+#### 📦 Packing-Density-Based Estimate
+
+If using ROSA (Roll-Out Solar Array) technology, with **packing density**:
+
+$$
+D_{\text{ROSA}} \approx 150\ \text{m}^2/\text{m}^3
+$$
+
+Assuming Starship fairing volume of **1000 m³** per launch:
+
+$$
+\text{Launches}_{\text{volume}} = \frac{128{,}000\ \text{m}^2}{150\ \text{m}^2/\text{m}^3 \cdot 1000\ \text{m}^3} \approx 0.85\ \text{launches}
+$$
+
+So the solar array **can be launched in 1 trip**, even with margin.
+
+---
+
+## ❄️ Radiator Launch Estimate
+
+#### 🔧 Radiator Area
+
+Using net radiative flux at 20 °C:
+
+$$
+P_{\text{rad,net}} = 633.08\ \text{W/m}^2
+$$
+
+To reject 40 MW:
+
+$$
+A_{\text{rad}} = \frac{40 \times 10^6\ \text{W}}{633.08\ \text{W/m}^2} \approx 63{,}190\ \text{m}^2
+$$
+
+#### ⚖️ Mass-Based Estimate
+
+Assuming radiator mass density between 2–5 kg/m²:
+
+$$
+M_{\text{rad}} = A_{\text{rad}} \cdot \rho_{\text{rad}} = 63{,}190\ \text{m}^2 \cdot (2\text{–}5)\ \text{kg/m}^2 = 126{,}000\text{–}316{,}000\ \text{kg}
+$$
+
+Launches:
+
+$$
+\text{Launches}_{\text{mass}} = \frac{M_{\text{rad}}}{100{,}000\ \text{kg/launch}} = 1.26\text{–}3.16\ \text{launches}
+$$
+
+#### 📦 Packing-Density-Based Estimate
+
+If we assume radiator packing density of **70 m²/m³** (comparable to ISS and DRPS estimates):
+
+$$
+\text{Launches}_{\text{volume}} = \frac{63{,}190\ \text{m}^2}{70\ \text{m}^2/\text{m}^3 \cdot 1000\ \text{m}^3} \approx 0.90\ \text{launches}
+$$
+
+So even accounting for volume, **1 launch** may be sufficient assuming a dedicated radiator payload.
+
+---
+
+### 📊 Summary Table
+
+| Subsystem | Area (m²) | Mass (kg) | Launches (Mass) | Launches (Volume) |
+|-----------|-----------|-----------|------------------|-------------------|
+| **Solar** | 128,000 | ~128,000 | ~1.3 | ~0.85 |
+| **Radiator** | 63,190 | 126k–316k | 1.3–3.2 | ~0.90 |
+
+---
+
+### ✅ Conclusion
+
+- Radiators are **heavier per unit area** than solar panels due to embedded coolant loops and structure.
+- Radiators may **match or exceed** solar arrays in total launch mass, despite smaller surface area.
+- Both systems are **packable within 1–2 launches each**, given optimistic but realistic density targets based on ROSA and DRPS heritage.
+- This dual-mode analysis (mass + volume) provides a complete picture of the deployability of Starcloud’s thermal and power systems.
+
+[[Cooling stuff]]
+
+[^1]: 
+	As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.

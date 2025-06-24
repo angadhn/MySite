@@ -433,7 +433,7 @@ input.margin-toggle {
 }
 
 // Mobile adjustments
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   article {
     width: 105%;
   }
@@ -501,7 +501,7 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 // Mobile adjustments for both sidenotes and marginnotes
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
     content: "⊕";
@@ -554,7 +554,7 @@ figure {
   text-align: left;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   figure {
     margin: 1rem 0;  // Slightly less spacing on mobile
   }
@@ -574,7 +574,7 @@ figure {
 [data-theme="dark"] .marginal-caption {
   color: #eaeaea;
   
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     color: #eaeaea;
   }
 }
@@ -609,7 +609,7 @@ figcaption {
 }
 
 // Mobile adjustments
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .fullwidth {
     width: 100%;
     margin-right: 0;
@@ -675,7 +675,7 @@ th, td {
   div.table-wrapper { overflow-x: auto; }
 
     // Mobile-specific improvements
-    @media (max-width: 760px) {
+    @media (max-width: 768px) {
       div.table-wrapper {
         position: relative;
         margin: 1rem 0;
@@ -728,7 +728,7 @@ th, td {
   
   // Dark theme adjustments for table wrapper
   [data-theme="dark"] {
-    @media (max-width: 760px) {
+    @media (max-width: 768px) {
       div.table-wrapper {
         &.show-scroll-hint:before {
           color: #999;
@@ -775,7 +775,7 @@ div.epigraph > blockquote > footer > cite {
 }
 
 // Mobile adjustments for epigraphs
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   div.epigraph > blockquote,
   div.epigraph > blockquote > p,
   div.epigraph > blockquote > footer {
@@ -1410,7 +1410,7 @@ input:checked + .slider {
     }
 
     // Dark mode mobile sidenote/marginnote styles
-    @media (max-width: 760px) {
+    @media (max-width: 768px) {
         .sidenote,
         .marginnote {
             width: 80%;
@@ -1505,7 +1505,7 @@ input:checked + .slider {
       opacity: 0.95;       // More visible in dark mode
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 768px) {
       .sidenote,
       .marginnote {
         width: 80%;
@@ -1756,7 +1756,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   word-spacing: 0.01em;
 
   // Responsive adjustments
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     &:first-letter {
       font-size: 3em;
     }
@@ -1920,7 +1920,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   }
 
   // Mobile-specific adjustments
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     margin: 1rem 0;
     
     .marginal-caption {
@@ -1944,7 +1944,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 
 // Ensure the plot container doesn't overflow on small screens
 article {
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     overflow-x: hidden;  // Prevent horizontal scrolling
   }
 }
@@ -1958,7 +1958,7 @@ article {
     .marginal-caption {
       color: #eaeaea;
       
-      @media (max-width: 760px) {
+      @media (max-width: 768px) {
         color: #eaeaea;
       }
     }
@@ -1997,7 +1997,7 @@ mjx-container[display="false"] {
 }
 
 // Responsive adjustments for math
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   mjx-container {
     font-size: 0.9em !important;  // Slightly smaller on mobile
     max-width: 100%;
@@ -2034,7 +2034,7 @@ mjx-container[display="false"] {
 }
 
 // Add responsive adjustment for blockquotes on mobile
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   blockquote,
   .epigraph {
     width: 100%; // Full width on mobile
@@ -2105,7 +2105,7 @@ blockquote {
 }
 
 // Mobile adjustments for callouts
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .callout {
     width: 80%;
     padding-left: 5%;
