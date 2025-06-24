@@ -221,7 +221,9 @@ $$
 where, we have some additional terms such as the view factor $$(F = 0.25)$$, Earth's black body temperature $$(T_{Earth} = -20 °C)$$, and Earth's albedo $$(Al = 0.3)$$. Thus, the net radiative power per square meter of a passive radiator system operating near **20 °C** is therefore:
 
 $$
-P_{\text{rad, net}} = \underbrace{770.48}_{\text{Radiated (both sides)}} - \underbrace{122.94}_{\text{Sun absorbed}} - \underbrace{14.46}_{\text{Earth absorbed}} = \boxed{633.08\,\text{W/m}^2}
+\begin{align}
+P_{\text{rad, net}} &= \underbrace{770.48}_{\text{Radiated (both sides)}} - \underbrace{122.94}_{\text{Sun absorbed}} - \underbrace{14.46}_{\text{Earth absorbed}}\\ &= \boxed{633.08\,\text{W/m}^2}
+\end{align}
 $$
 
 ## Radiator Area Required
