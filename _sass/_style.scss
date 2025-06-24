@@ -623,34 +623,22 @@ figcaption {
 
 /*-- Table styling section - For Tufte-Jekyll, booktabs style is default for Markdown tables  --*/
 
-table, table.booktabs {
-  width: auto;
-  margin: 1.4rem auto;
-  border-spacing: 0;
-  border-collapse: collapse;
+table, table.booktabs { width: auto;  //making booktabs style tables the unstyled default in case someone uses Markdown styling
+  //margin: 0 auto;
+  border-spacing: 0px;
+  border-top: 2px solid  #333333;
+  border-bottom: 2px solid  #333333; }
+
+.booktabs th, th { border-bottom: 1px solid  #333333;
+padding: 0.65ex 0.5em 0.4ex 0.5em;
+font-weight: normal;
+//text-align: center; 
+}
+
+th, td { 
+  font-size: 1rem;
+  line-height: 1.4;
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  
-  // Strong border lines at top and bottom
-  border-top: 2px solid $color-text;
-  border-bottom: 2px solid $color-text;
-}
-
-// Header styling with bottom border
-.booktabs th, th {
-  padding: 0.4em 0.5em;
-  border-bottom: 1px solid $color-text;  // Thin line under headers
-  font-size: 1rem;
-  line-height: 1.4;
-  font-weight: normal;
-}
-
-// Cell styling without borders
-.booktabs td, td {
-  padding: 0.4em 0.5em;
-  border-bottom: none;
-  font-size: 1rem;
-  line-height: 1.4;
-  text-align: left;
 }
 
 .booktabs th.cmid, th { border-bottom: 1px solid lighten( #333333, 25%); }
@@ -658,6 +646,10 @@ table, table.booktabs {
 .booktabs th.nocmid { border-bottom: none; }
 
 .booktabs tbody tr:first-child td,  tr:first-child td { padding-top: 0.65ex; } /* add space between thead row and tbody */
+
+.booktabs td, td {  padding-left: 0.5em;
+     padding-right: 0.5em;
+     text-align: left; }            
 
 .booktabs caption, caption { font-size: 90%;
      text-align: left;
@@ -670,45 +662,6 @@ table, table.booktabs {
 .booktabs tbody tr, .booktabs thead tr th.l, .booktabs td.l { text-align: left !important; }
 .booktabs tbody tr, .booktabs thead tr th.c, .booktabs td.c { text-align: center !important; }
 .booktabs tbody tr, .booktabs thead tr th.r, .booktabs td.r { text-align: right !important; }
-
-// Table wrapper for overflow handling
-.table-wrapper {
-  overflow-x: auto;
-  text-align: center;
-  margin: 1rem 0;
-  position: relative;
-  
-  // Mobile-specific improvements
-  @media (max-width: 760px) {
-    margin: 1rem -20px;  // Extend to screen edges on mobile
-    border-radius: 0;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-    
-    // Add subtle visual cue for scrollability
-    &:before {
-      content: "← Scroll to view full table →";
-      display: block;
-      text-align: center;
-      font-size: 0.8em;
-      color: #666;
-      padding: 0.5em;
-      background: rgba(0,0,0,0.02);
-      margin-bottom: 0;
-    }
-    
-    // Gradient fade effect to indicate more content
-    &:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 20px;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.8));
-      pointer-events: none;
-    }
-  }
-}
 
 .table-caption { float:right;
   clear:right;
@@ -1331,22 +1284,6 @@ input:checked + .slider {
 
     .table-caption {
         color: #eaeaea;
-    }
-
-    // Dark theme support for table wrapper mobile improvements
-    .table-wrapper {
-        @media (max-width: 760px) {
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
-            
-            &:before {
-                color: #b4b4b4;
-                background: rgba(255,255,255,0.02);
-            }
-            
-            &:after {
-                background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
-            }
-        }
     }
 
     .slider {
