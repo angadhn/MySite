@@ -381,7 +381,7 @@ W_{stowed} &= W_{deployed} = 3.4 \text{ m} \\
 L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \\
 T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
 
-$$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \ \rho_{ORU} &= \frac{79.2}{15.84} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
+$$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \\ \rho_{ORU} &= \frac{79.2}{15.84} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
 **Combined ISS Performance:**
 
