@@ -1,5 +1,5 @@
 ---
-title: Space Data Center
+title: Space Data Centers
 created: 2025-06-19
 published: 2025-06-20
 tags:
@@ -8,21 +8,20 @@ tags:
 permalink: /space-data-centers-1
 top_of_mind: "true"
 completion_score: 25
-image:
-companion music:
-subtitle:
+image: 
+companion music: 
+subtitle: A Technoeconomic Analysis
 ---
 # Abstract
 
-Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this could be feasibly within a single launch with existing roll-out solar panels used on the ISS. However, this is based on speculative numbers on the iROSA's stowed volume. This single launch feasiblity could change as sizing radiators and MMOD/radiation shielding is pending. Considerations for fuel requirements for in-space assembly will also significantly affect launch numbers—this requires specifications and mission architectures that are not publicly available. On the note of launch costs, the whitepaper's (erroneous) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term; even if launch comes down to $500/kg{%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}, one launch would result in an overall cost of $53.2M, not the purported $8.2M. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
-
+Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this is infeasible in a single launch. This is based on analysing existing roll-out solar panels used on the ISS and its radiative cooling technologies. I have not analysed the effects of MMOD/radiation shielding and the impact of propellant use for in-orbit assembly on launch numbers—this requires specifications and mission architectures that have not been made public and might not yet be fully developed. On the note of launch costs, the whitepaper's (miscalculated) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M {%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}. So, even if costs drop to $500/kg, a single launch results in an overall cost of $53.2M, not the purported $8.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC). As my work shows, being solar arrays for a 40 Mw to orbit will require 3 launches-this is based on existing roll-out solar arrays on the ISS. Similarly, the ISS radiator benchmarks indicate that 9 launches would be needed for the SDC.
 
 > [!warning]This is a work-in-progress
 > This block is to warn you that everything below should be considered a draft as there is more analysis to be completed. This block will be removed once I feel my analysis is complete and fully documented below. So, please treat everything below as potentially inaccurate as this is just my explorations of working in public.
 
 # Introduction
 
-On Earth, data centers run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. So, technologists and entrepreneurs have recently talked up data centres in space to resolve three issues with terrestrial data centers (TDC):
+On Earth, data centers run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. Recently, technologists and entrepreneurs have  talked up placing data centres in space to resolve three issues with terrestrial data centers (TDC):
 1. Data centers require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
 2. A lot of waste heat is generated running TDCs, which bodes poorly for climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
 3. Real estate for data centers is a massive bottleneck and this land could be used for other purposes.
