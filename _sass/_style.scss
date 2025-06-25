@@ -632,7 +632,7 @@ table, table.booktabs { width: auto;  //making booktabs style tables the unstyle
 .booktabs th, th { border-bottom: 1px solid  #333333;
 padding: 0.65ex 0.5em 0.4ex 0.5em;
 font-weight: normal;
-//text-align: center; 
+text-align: center; 
 }
 
 th, td { 
@@ -649,7 +649,7 @@ th, td {
 
 .booktabs td, td {  padding-left: 0.5em;
      padding-right: 0.5em;
-     text-align: left; }            
+     text-align: center; }            
 
 .booktabs caption, caption { font-size: 90%;
      text-align: left;
