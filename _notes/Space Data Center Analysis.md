@@ -136,7 +136,7 @@ The ISS Solar Array Wings represent mature Z-fold solar technology, with each wi
 
 Each SAW wing has a documented mass of 1,100 kg and deploys 420 m² of active solar collection area (35 m × 12 m). This yields the mass density characteristic of Z-fold solar array technology:
 
-$$ \begin{align} \rho_{mass,SAW} &= \frac{m_{SAW}}{A_{deployed,SAW}} \ &= \frac{1100 \text{ kg}}{35 \times 12 \text{ m}^2} \ &= \frac{1100 \text{ kg}}{420 \text{ m}^2} = 2.62 \text{ kg/m}^2 \end{align} $$
+$$ \begin{align} \rho_{mass,SAW} &= \frac{m_{SAW}}{A_{deployed,SAW}} \\ &= \frac{1100 \text{ kg}}{35 \times 12 \text{ m}^2} \\ &= \frac{1100 \text{ kg}}{420 \text{ m}^2} = 2.62 \text{ kg/m}^2 \end{align} $$
 
 This mass density reflects the integrated Z-fold system including photovoltaic cells, accordion deployment mechanisms, structural backing, electrical distribution networks, and robust mounting hardware designed for long-term space operations.
 
@@ -144,13 +144,13 @@ This mass density reflects the integrated Z-fold system including photovoltaic c
 
 Applying this empirical mass density to Starcloud's 128,000 m² solar array requirement:
 
-$$ \begin{align} m_{Starcloud,solar,SAW} &= A_{required} \times \rho_{mass,SAW} \ &= 128,000 \text{ m}^2 \times 2.62 \text{ kg/m}^2 \ &= 335,360 \text{ kg} = 335.4 \text{ tonnes} \end{align} $$
+$$ \begin{align} m_{Starcloud,solar,SAW} &= A_{required} \times \rho_{mass,SAW} \\ &= 128,000 \text{ m}^2 \times 2.62 \text{ kg/m}^2 \\ &= 335,360 \text{ kg} = 335.4 \text{ tonnes} \end{align} $$
 
 **Launch Constraint Analysis:**
 
 Comparing mass-limited versus volume-limited launch requirements reveals a critical distinction from the iROSA case:
 
-$$ \begin{align} N_{launches,volume} &= 4 \text{ to } 5 \text{ launches (from packing analysis)} \ N_{launches,mass} &= \lceil \frac{335.4}{150} \rceil = 3 \text{ launches} \end{align} $$
+$$ \begin{align} N_{launches,volume} &= 4 \text{ to } 5 \text{ launches (from packing analysis)} \\ N_{launches,mass} &= \lceil \frac{335.4}{150} \rceil = 3 \text{ launches} \end{align} $$
 
 **SAW Z-fold arrays remain volume-constrained**, requiring 4-5 launches based on packing density limitations rather than the 3 launches suggested by mass considerations alone.
 ## Analysis of ISS Roll-Out Solar Array (iROSA)
