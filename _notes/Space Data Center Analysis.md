@@ -366,17 +366,20 @@ For the ISS radiator systems, we can model the folding geometry as follows. Each
 
 The Photovoltaic Thermal Control System radiator deploys as a 3.12 m × 13.6 m array consisting of 7 individual panels. When folded, each panel maintains its 3.12 m width but reduces its length to 13.6/7 = 1.94 m. Assuming each panel has a thickness of 0.2 m, the stowed configuration becomes:
 
-$$ \begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{13.6}{7} = 1.94 \text{ m} \ T_{stowed} &= N_{panels} \times t_{panel} = 7 \times 0.2 = 1.4 \text{ m} \end{align} $$
+$$ \begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \\ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{13.6}{7} = 1.94 \text{ m} \\ T_{stowed} &= N_{panels} \times t_{panel} = 7 \times 0.2 = 1.4 \text{ m} \end{align} $$
 
 The stowed volume and packing density for a single PVR unit are:
 
-$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5.01 \text{ m}^2/\text{m}^3 \end{align} $$
+$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5.01 \text{ m}^2/\text{m}^3 \end{align} $$
 
 **EATCS Radiator (ORU) Analysis:**
 
 Similarly, the External Active Thermal Control System radiator deploys as a 23.3 m × 3.4 m array with 8 panels folding along the 23.3 m dimension:
 
-$$ \begin{align} W_{stowed} &= W_{deployed} = 3.4 \text{ m} \ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \ T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
+$$ \begin{align}
+W_{stowed} &= W_{deployed} = 3.4 \text{ m} \\
+L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \\
+T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
 
 $$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \ \rho_{ORU} &= \frac{79.2}{15.84} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
@@ -384,7 +387,9 @@ $$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \ \rh
 
 The ISS thermal control system utilizes 4 PVR units (PVTCS) and 6 ORU units (EATCS), yielding:
 
-$$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \ &= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \ \rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
+$$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
+&= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \\
+\rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
 **Starcloud Launch Requirements:**
 
