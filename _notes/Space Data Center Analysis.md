@@ -465,10 +465,11 @@ This is closer to the [stated power needs](https://www.supermicro.com/manuals/br
 
 $$ \begin{align} m_{servers,Starcloud} &= N_{racks} \times m_{rack} \\ &= 300 \times 1{,}360 \text{ kg} \\ &= \boxed{408 \text{ tonnes}} \end{align} $$
 
-**Launch Requirements:**
-$$ \begin{align} N_{launches,servers} &= \lceil \frac{408}{100} \rceil = 5 \text{ launches} \\ N_{launches,total} &= \lceil \frac{1{,}686.6}{100} \rceil = 17 \text{ launches} \end{align}
+These will require 5 Starship launches:
 $$
-So 5 Starship launches are needed. So, as it stands the current launch manifest has 22 launches.
+N_{launches,servers} = \lceil \frac{408}{100} \rceil = 5 \text{ launches}
+$$
+
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
