@@ -88,14 +88,15 @@ Next, I examine the performance of two space-proven designs for deployable solar
 
 ## Analysis of Solar Array Wings (SAW)
 
-The image below shows a ROSA and against one wing of the ISS Solar Array Win (SAW).
+The image below shows one wing of the ISS Solar Array Win (SAW) and a small a Roll-Out Solar Array (ROSA).
 
 ![ISS SAW is a LOT larger than the early ROSA.](assets/imgs/space-data-centers/Rosa-SAW.png)
 
-The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the trusses names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
+The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboard side—which explains why the truss names are prefixed with P's and S's (e.g., P-6 and S-6). Altogether, the eight solar array wings generate about 240 kilowatts in direct sunlight, or about 84 to 120 kilowatts average power (cycling between sunlight and shade).
 
-Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weighing well 1,100 kg. Now, the power density based on this wing span works out to about 71.43  W/m² but a more accurate estimate is possible. Each photovoltaic blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
 ### Power Density
+
+Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weigh well 1,100 kg. The power density based on this wing span is 71.43  W/m² but a more appropriate estimate can be determined from the specs of the photovoltaic blanket. Each blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
 
 So the power density of a wing with two blankets works out to 147.7  W/m² from:
 
@@ -107,7 +108,7 @@ $$
 \end{align}
 $$
 
-So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **2.1x more efficient** than SAW's 147.7 W/m².
+So, achieving Starcloud's assumed power density of 312 W/m² requires SAW technology to be **2.1x more efficient**.
 
 ### Volume
 
