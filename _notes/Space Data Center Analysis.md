@@ -1,5 +1,5 @@
 ---
-title: 40 MW Space Data Centres are not a single-launch $8.2M project
+title: Starcloud says 1 launch, $8M. ISS tech says 17 launches, $850M+
 created: 2025-06-19
 published: 2025-06-20
 tags:
