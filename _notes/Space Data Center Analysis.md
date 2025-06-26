@@ -20,10 +20,10 @@ Starcloud have claimed that a single 100-ton Starship launch could suffice to cr
 
 On Earth, data centres run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. Recently, technologists and entrepreneurs have  talked up placing data centres in space to resolve three issues with terrestrial data centres (TDC):
 1. Data centres require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
-2. A lot of waste heat is generated running TDCs, which bodes poorly for climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
+2. A lot of waste heat is generated running TDCs, which contributes to climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
 3. Real estate for data centres is a massive bottleneck and this land could be used for other purposes.
 
-Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need resolution. So, space, in theory, sounds like a speedier answer from a regulatory perspetive—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But delivering a GW-scale SDC requires engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, needs a square of side 357 m. This would far exceed the span of the largest space structure ever built—the ISS is about 100 m in its longest dimension.
+Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need to be resolved. So, space, in theory, sounds like a speedier answer from a regulatory perspective—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But delivering a GW-scale SDC requires engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, needs a square of side 357 m. This would far exceed the span of the largest space structure ever built—the ISS is about 100 m in its longest dimension.
 
 So, there's now at least one [YCombinator](https://YCombinator.com)-backed company, Starcloud Inc., working on building SDCs—they released a whitepaper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe). They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
 
@@ -54,7 +54,7 @@ The whitepaper presents a table where the total costs of running a 40MW data cen
 - **Total: $167M**
 	  
 **Space:**
-- Energy: $2M (cost of solar array)
+- Energy: $2M (cost of solar arrays)
 - Launch: $5M (single launch)
 - Radiation shielding: $1.2M
 - **Total: $8.2M**
@@ -289,16 +289,15 @@ $$
 
 Again, as was the case with the solar arrays, a more realistic estimate would be based on 80% of the fairing volume being usable which would lead to **79 m²/m³** as the areal packing density.
 
-### Clarifications of whitepaper on radiator performance
-
-Previously, we calculated the **solar power density** as $$ P_{\text{solar}} = 312.5\,\text{W/m}^2 $$ and determined the area of solar arrays required for a 40MW cluster as 
-$$A_{\text{solar}}=128{,}000\,\text{m}^2$$. The ratio of solar to radiator areas is then:
+The ratio of solar to radiator areas is then:
 
 $$
 \frac{A_{\text{solar}}}{A_{\text{rad}}} = \frac{128{,}000}{63{,}183} \approx 2.02
 $$
 
-which clarifies Starcloud's statement that the radiator area needed is indeed roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels. For an idealized two-sided blackbody plate's power density, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity. Now, we estimate the sizing based on the ISS's benchmarks.
+which clarifies Starcloud's statement that the radiator area needed is indeed roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels.
+
+For an idealized two-sided blackbody plate's power density, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity. Now, we estimate the sizing based on the ISS's benchmarks.
 
 ## The ISS systems as a benchmark 
 
@@ -457,7 +456,9 @@ The analysis demonstrates that regardless of server mass assumptions—whether o
 
 # Further Reading
 - [International Space Station Evolution Data Book Volume I. Baseline Design Revision A Catherine A. Jorgensen, Editor FDC/NYMA, Hampton, Virginia](https://ntrs.nasa.gov/citations/20000120039)
-- [[To be deleted|TBD]]
+- [Active Thermal Control System (ATCS) Overview](https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf)
+- [MANAGING RISK FOR THERMAL VACUUM TESTING OF THE INTERNATIONAL SPACE STATION RADIATORS](https://ntrs.nasa.gov/api/citations/20010059377/downloads/20010059377.pdf?)
+- [Black Body Radiation](https://acd-ext.gsfc.nasa.gov/anonftp/acd/daac_ozone/Lecture4/Text/Semifinal/blackbodyintro.html#:~:text=The%20Earth's%20surface%20is%20warmed,the%20Earth's%20surface%20to%20cool.)
 
 [^1]: 
 	As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.
