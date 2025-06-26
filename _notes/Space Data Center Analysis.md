@@ -486,10 +486,6 @@ The analysis demonstrates that regardless of server mass assumptions—whether o
 
 [[Conclusion on Whitepaper]]
 
-
-
-
-
 # Further Reading
 - [International Space Station Evolution Data Book Volume I. Baseline Design Revision A Catherine A. Jorgensen, Editor FDC/NYMA, Hampton, Virginia](https://ntrs.nasa.gov/citations/20000120039)
 - [[To be deleted|TBD]]
