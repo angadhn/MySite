@@ -68,7 +68,9 @@ Now this means their projected energy cost is $0.002/kWh in space versus $0.045-
 
 Launch costs are calculated from launch numbers, whose estimation requires some design specifications of the SDC (mass and geometry). As I read the whitepaper, it was unclear how SDC's total mass would be 100 tonnes (or 167 tonnes) as these aren't publicly shared—it is either proprietary information or yet to be defined. However, there are other ways to derive these design specs to verify the launch claims by using information in the whitepaper and filling in the gaps by examining state-of-the-art systems.
 
-With these specs, a mass-based estimate of launches can be derived but one can also determine launch numbers that account for how the SDC's elements fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating."%}. The remainder of this blog estimates the launch numbers by deriving some design specs for three main part os the SDC: [[Space Data Center Analysis#Solar Arrays|solar arrays]], [[Space Data Center Analysis#Radiator|radiators]], and [[Space Data Center Analysis#Servers Mass|servers]].
+With these specs, a mass-based estimate of launches can be derived but one can also determine launch numbers that account for how the SDC's elements fits into a rocket. Here, one essentially breaks the SDC into its subsystems to works out if/how their geometries fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating.
+
+The remainder of this blog is dedicated to estimating these launch numbers for three main part of the SDC: [[Space Data Center Analysis#Solar Arrays|solar arrays]], [[Space Data Center Analysis#Radiator|radiators]], and [[Space Data Center Analysis#Servers Mass|servers]].
 
 # Solar Arrays
 
