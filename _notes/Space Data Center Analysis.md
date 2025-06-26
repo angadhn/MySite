@@ -74,9 +74,7 @@ The remainder of this blog is dedicated to estimating these launch numbers for t
 
 # Solar Arrays
 
-## Desired Packaging Densities
-
-Their long-term goal is to build a 5 GW system which they state needs solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m², which we will denote as $$P_{\text{solar}}$$. Using the same power density, their smaller 40 MW SDC needs 128,000 m² of solar panels. This would need to be packed into a single launch Starship, which has a fairing volume of 1000 m³. We now define areal packing density, which is the area of these arrays divided by the Starship's fairing volume; this works out to 128 m²/m³.
+Starcloud's long-term goal is to build a 5 GW system, for which they require solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m² from which we can determine that their smaller 40 MW SDC needs 128,000 m² of solar panels. To pack this into a single Starship with a fairing volume of 1000 m³, we can determine the desired areal packing density which is the area of these arrays divided by the Starship's fairing volume. This works out to 128 m²/m³.
 
 $$
 \begin{align}
@@ -84,7 +82,7 @@ $$
 \end{align}
 $$
 
-This means that we would need to fit 128 m² into a  m³ of Starship. This is a quite optimistic estimate as every little bit of volume is being used; but such efficiency is impractical. A more realistic estimate would be that 80% of the available 1000 m³ can be used; the areal packing density then becomes **160 m²/m³**.
+This means that we would need to fit 128 m² of solar panels into a  m³ of Starship where we have assumed that all of the paylod bay's fairing volume is usable; but such packing efficiency is impractical but we will stick with this optimistic estimate for now. However, a more realistic estimate might permit about 80% of the available 1000 m³ to be used in which case the areal packing density is **160 m²/m³**.
 
 To estimate if this is feasible based on current technologies, I will examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAW's and are set to become its next-generation replacements; this ISS variant is called iROSA.
 
