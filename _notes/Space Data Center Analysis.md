@@ -184,7 +184,7 @@ $$
 \end{align}
 $$
 
-Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, 2 launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
+Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, two launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
 
 ### Mass Density
 
@@ -426,17 +426,15 @@ With Starship's 100-tonne payload capacity to LEO, the mass-limited launch requi
 
 $$ \begin{align} N_{launches,ORU} &= \lceil \frac{894.9}{100} \rceil = 9 \text{ launches} \\ N_{launches,PVR} &= \lceil \frac{1103.4}{100} \rceil = 12 \text{ launches} \\ N_{launches,ISS} &= \lceil \frac{949.8}{100} \rceil = 10 \text{ launches} \end{align} $$
 
-The stark contrast between volume-limited launches (1.6-1.8) and mass-limited launches (9-12) demonstrates that **mass emerges as the dominant constraint** for large-scale radiator deployment. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
+The stark contrast between packing density-limited launches (13) and mass-limited launches (9-12) demonstrates that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
 
-This mass constraint represents a **6-8× penalty** compared to volumetric limitations, fundamentally undermining Starcloud's economic case. Even aggressive mass reduction through advanced materials would need to achieve **90% mass savings** relative to ISS technology to approach single-launch feasibility—a revolutionary improvement far beyond evolutionary materials advances.
-
-The analysis reveals that Starcloud's radiator mass alone would consume the equivalent of **10 Starship launches** using proven ISS technology, before considering the data center payload, power systems, structural elements, or operational margins. This transforms their claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
+The analysis reveals that Starcloud's radiator mass alone would consume the equivalent of **13 Starship launches** using proven ISS technology, before considering the data center payload, power systems, structural elements, or operational margins. This transforms their claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
 
 **Comparative Context:**
 
 The solar array mass density of 3.10 kg/m² proves remarkably efficient compared to radiator systems (14-17 kg/m²), reflecting the fundamental difference between power generation and thermal management technologies. Solar arrays primarily consist of thin photovoltaic films with minimal structural requirements, while radiators demand substantial mass for heat transfer fluids, thermal exchange surfaces, and robust mounting systems.
 
-However, even this favorable mass efficiency cannot overcome the sheer scale of Starcloud's power requirements. The 396.8-tonne solar array mass alone would consume **2.6 Starship launches** before considering radiators, data center payload, or structural systems—fundamentally challenging the single-launch architecture that underpins their economic case.
+However, even this favorable mass efficiency cannot overcome the sheer scale of Starcloud's power requirements. The 396.8-tonne solar array mass alone would consume **13 Starship launches** before considering radiators, data center payload, or structural systems—fundamentally challenging the single-launch architecture that underpins their economic case.
 
 ## Summary of Radiator Launch Requirements
 
