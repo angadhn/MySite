@@ -363,11 +363,10 @@ Our radiator mass analysis reveals the fundamental constraint limiting Starcloud
 | **ISS Combined**    | 10       | 50M                 | 1B                   |
 
 The challenge of launching radiators for a 40 MW SDC requires at least 9 launches if we are building on ISS technology. This also shows that the solar array mass density of 3.10 kg/m² proves remarkably efficient compared to radiator systems (14-17 kg/m²), reflecting the fundamental difference between power generation and thermal management technologies. Solar arrays primarily consist of thin photovoltaic films with minimal structural requirements, while radiators demand substantial mass for heat transfer fluids, thermal exchange surfaces, and robust mounting systems. The radiator mass suggests that revolutionary advances in thermal management technology—achieving 90% mass reduction relative to ISS systems—would be necessary to approach single-launch viability. Such improvements exceed materials advances and represent unprecedented engineering breakthroughs for space-qualified thermal control systems.
+
 ## Volume-based launch numbers
 
-The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. Unlike the previous analysis that assumed a fixed 0.51 m thickness inherited from solar panel technology, a more detailed examination reveals that radiator panels are likely thinner individual structures that stack when folded.
-
-For the ISS radiator systems, we can model the folding geometry as follows. Each radiator unit consists of multiple panels that fold accordion-style along their longest dimension. When stowed, these panels stack atop one another, creating a total thickness equal to the number of panels multiplied by individual panel thickness.
+The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. For the ISS radiator systems, we can model the folding geometry as follows. Each radiator unit consists of multiple panels that fold accordion-style along their longest dimension. When stowed, these panels stack atop one another, creating a total thickness equal to the number of panels multiplied by individual panel thickness. Unlike the previous analysis on solar panels where a fixed 0.51 m thickness for the stowed volume was inherited from solar panel empirical data, radiator panels are not as well documented publicly.
 
 **PVTCS Radiator (PVR) Analysis:**
 
@@ -401,10 +400,11 @@ $$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
 So, all of these radiator systems have the same packing densities so the number of launches is then given by the ratio of Starcloud's desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
 
 
-
 The volume-based launches (13) and mass-based launches (9-12) demonstrates that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
 
 The analysis reveals that Starcloud's radiator mass alone would consume the equivalent of **13 Starship launches** using proven ISS technology, before considering the data center payload, power systems, structural elements, or operational margins. This transforms their claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
+
+The analysis demonstrates that **volume, not mass, emerges as the critical limiting factor** for large-scale radiator deployment. This volume constraint reflects the density of thermal management systems, which require substantial structural mass for heat transfer mechanisms, fluid manifolds, and thermal exchange surfaces. Even with optimistic $5M launch costs, Starcloud's radiator deployment alone would cost $45-60M before considering the data center payload, power systems, or operational margins.
 
 # Servers
 
