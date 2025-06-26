@@ -124,19 +124,11 @@ This is far lower than the desired packing density desired by Starcloud to fit t
 
 ### Mass-based launch numbers
 
-The mass analysis of the Solar Array Wings reveals how deployment architectures create distinct constraint patterns. While volume limitations dominated SAW packing requirements, the mass characteristics will provide insight into the fundamental trade-offs between Z-fold and roll-out solar technologies.
-
-**SAW Mass Characteristics:**
-
-The ISS Solar Array Wings represent mature Z-fold solar technology, with each wing optimized for maximum power generation within the mass and volume constraints of Space Shuttle deployment. The substantial structural requirements of accordion-style folding mechanisms contribute significantly to overall system mass.
-
-**SAW Mass Analysis:**
-
-Each SAW wing has a documented mass of 1,100 kg and deploys 420 m² of active solar collection area (35 m × 12 m). This yields the mass density characteristic of Z-fold solar array technology:
+Each SAW wing has a documented mass of 1,100 kg and deploys 420 m² of active solar collection area (35 m × 12 m). This yields the mass density characteristic of the Z-fold SAW technology:
 
 $$ \begin{align} \rho_{mass,SAW} &= \frac{m_{SAW}}{A_{deployed,SAW}} \\ &= \frac{1100 \text{ kg}}{35 \times 12 \text{ m}^2} \\ &= \frac{1100 \text{ kg}}{420 \text{ m}^2} = 2.62 \text{ kg/m}^2 \end{align} $$
 
-This mass density reflects the integrated Z-fold system including photovoltaic cells, accordion deployment mechanisms, structural backing, electrical distribution networks, and robust mounting hardware designed for long-term space operations.
+This mass density reflects the integrated Z-fold system including photovoltaic cells, accordion deployment mechanisms, structural backing, electrical distribution networks, and mounting hardware designed for long-term space operations.
 
 **Starcloud Solar Array Mass Scaling:**
 
