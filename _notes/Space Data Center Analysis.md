@@ -60,9 +60,8 @@ The costs for TDCs and SDCs are broken down as follows:
 
 Now this means their projected energy cost is $0.002/kWh in space versus $0.045-0.17/kWh terrestrially—this is between 22 to 85 times cheaper. This raises questions about feasibility.
 
-
 > [!warning]Erroneous Launch Costs in Whitepaper
-> Their whitepaper states: "_$5 million per launch... with a payload capacity of 100 tons... translates to approximately $30 per kilogram_". This works out to $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $5M—though, as I say in the abstract, a single launch would cost $50M. This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost. In my analysis below, I present launch costs as either optimistic ($5M) or pessimistic ($100M).
+> Their whitepaper states: "$5 million per launch... with a payload capacity of 100 tons... translates to approximately $30 per kilogram" but this is actually $50/kg to reach orbit—this is in two locations so I am unsure why this is the case. Working from their claimed $30/kg cost, the mass of the SDC would then be 167 tonnes. This means two 100-tonne Starship launches (or a single 200-ton Starship launch, which is on SpaceX's roadmap). This means their launch cost just went up by $3-5M. A more pessimistic (or realistic) cost per launch would be $50-$100M per 100-tonne Starship; some have said $1000/kg to orbit is a reasonable cost. In my analysis below, I present launch costs as either optimistic ($5M) or pessimistic ($100M).
 
 # Solar Arrays: Launch Numbers from First Principles
 
@@ -476,7 +475,7 @@ So 5 Starship launches are needed. So, as it stands the current launch manifest 
 | **Radiators**    | 949.8         | 3.2×             | 13       |
 | **Total System** | 1,686.6       | 5.6×             | 22       |
 
-
+# Conclusion
 Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 5 times**, requiring 17 total launches versus their claimed single launch—representing a **1,700% cost increase** from $5M to $85M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch costs.
 
 The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management mass**, which systematically dominates launch requirements for large-scale space-based computing systems.
