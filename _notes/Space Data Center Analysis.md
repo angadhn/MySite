@@ -292,14 +292,14 @@ $$
 This can be used to compute the area needed to radiate 40 MW of waste heat (assuming as much heat is generated as electricity is produced):
 
 $$
-A_{\text{rad}} = \frac{40{,}000{,}000}{633.08} \approx \boxed{63{,}190\,\text{m}^2}
+A_{\text{rad}} = \frac{40{,}000{,}000}{633.08} \approx \boxed{63{,}183.1\,\text{m}^2}
 $$
 
 This is roughly **0.063 km²** of radiator surface that their whitepaper claims also needs packing in  the same Starship's fairing volume of 1000 m³. The areal packing density is 63.2 m²/m³.
 
 $$
 \begin{align}
-{(Packing \, density)}_{desired} &=\frac{63{,}190}{1000}\\ &= 63{.}19 \, m^2/m^3
+{(Packing \, density)}_{desired} &=\frac{63{,}183}{1000}\\ &= 63{.}18 \, m^2/m^3
 \end{align}
 $$
 
@@ -315,10 +315,10 @@ $$
 and determined the area of solar arrays required for a 40MW cluster as $$A_{\text{solar}}=128{,}000\,\text{m}^2$$. The area ratio of solar to radiator is then:
 
 $$
-\frac{A_{\text{solar}}}{A_{\text{rad}}} = \frac{128{,}000}{63{,}190} \approx 1.94
+\frac{A_{\text{solar}}}{A_{\text{rad}}} = \frac{128{,}000}{63{,}183} \approx 2.02
 $$
 
-which is in agreement with Starcloud's claims that radiator area needed is roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels. For an idealized two-sided blackbody plate's power denity, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity.
+which clarifies Starcloud's statement that radiator area needed is roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels. For an idealized two-sided blackbody plate's power denity, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity.
 
 ## The ISS benchmark and systems
 
@@ -465,11 +465,7 @@ $$ \begin{align} m_{servers,Starcloud} &= N_{racks} \times m_{rack} \\ &= 300 \t
 **Launch Requirements:**
 $$ \begin{align} N_{launches,servers} &= \lceil \frac{408}{100} \rceil = 5 \text{ launches} \\ N_{launches,total} &= \lceil \frac{1{,}686.6}{100} \rceil = 17 \text{ launches} \end{align}
 $$
-So 5 Starship launches are needed.
-
-## Validation of Core Argument
-
-Starcloud's own server mass assumptions **strengthen rather than weaken** the case against single-launch feasibility:
+So 5 Starship launches are needed. So, as it stands the current launch manifest has 22 launches.
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
