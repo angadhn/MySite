@@ -64,11 +64,15 @@ Now this means their projected energy cost is $0.002/kWh in space versus $0.045-
 > [!warning]Erroneous Launch Costs in Whitepaper
 > Their whitepaper states: "$5 million per launch... with a payload capacity of 100 tons... translates to approximately $30 per kilogram" but this is actually $50/kg to reach orbit—this is in two locations so I am unsure why this is the case. Working from their claimed $30/kg cost, the mass of the SDC would then be 167 tonnes. This means two 100-tonne Starship launches (or a single 200-ton Starship launch, which is on SpaceX's roadmap). This means their launch cost just went up by $3-5M. A more pessimistic (or realistic) cost per launch would be $50-$100M per 100-tonne Starship; some have said $1000/kg to orbit is a reasonable cost. In my analysis below, I present launch costs as either optimistic ($5M) or pessimistic ($100M).
 
-# Solar Arrays: Launch Numbers from First Principles
+## Launch Numbers from First Principles
 
 Launch costs are calculated from launch numbers and determining this requires the design specifications of the system (mass and geometry). As I read the whitepaper, it was unclear how their system's total mass was going to be 100 tonnes (or 167 tonnes) as Starcloud haven't publicly shared their mass breakdown or component-level design documentation—it is either proprietary information or they are still figuring this out. But as it is hard to verify their mass claims, I thought I would try to estimate these specs for myself using what informaton is in the whitepaper and examine the ISS as a way to fill in the gaps.
 
-With these specs, a mass-based estimate of launches can be derived but one can also determine revised launch numbers that account for how the SDC's elements fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating."%}.
+With these specs, a mass-based estimate of launches can be derived but one can also determine launch numbers that account for how the SDC's elements fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating."%}.
+
+The remainder of this blog estimates these over three sections on [[Space Data Center Analysis#Solar Arrays|solar arrays]], [[Space Data Center Analysis#Radiator|radiators]], and [[Space Data Center Analysis#Servers Mass|servers]].
+ 
+# Solar Arrays
 
 ## Desired Packaging Densities
 
