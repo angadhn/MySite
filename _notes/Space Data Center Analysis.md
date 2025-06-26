@@ -4,10 +4,10 @@ created: 2025-06-19
 published: 2025-06-20
 tags:
   - space
-  - WiP
+  - essays
 permalink: /space-data-centers-1
 top_of_mind: "true"
-completion_score: 25
+completion_score: 65
 image:
 companion music:
 subtitle: A Technoeconomic Analysis
