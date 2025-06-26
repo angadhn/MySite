@@ -96,7 +96,7 @@ The ISS has 8 such (SAWs) attached to trusses; four each on its port and starboa
 
 ### Power Density
 
-Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space and weigh well 1,100 kg. The power density based on this wing span is 71.43  W/m² but a more appropriate estimate can be determined from the specs of the photovoltaic blanket. Each blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
+Each wing generates nearly 31 kilowatts (kW) of direct current power from two solar "blankets". When fully extended, the pair span 35 metres in length and 12 metres in width. These are the largest ever deployed in space. The power density based on this wing span is 71.43  W/m² but a more appropriate estimate can be determined from the specs of the photovoltaic blanket. Each blanket comprises 16,400 cells of 8-cm by 8-cm; this gives the real actual light collecting area of each blanket and multiplying by two results in that for a single SAW.
 
 So the power density of a wing with two blankets works out to 147.7  W/m² from:
 
@@ -110,7 +110,7 @@ $$
 
 So, achieving Starcloud's assumed power density of 312 W/m² requires SAW technology to be **2.1x more efficient**.
 
-### Volume-based Launch numbers
+### Volume-based launch numbers
 
 The packing density of one SAW module (i.e., a pair of deployable blankets) can be determined from using its stowed volume within a launch vehicle. The data suggest that the module packs into a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
 
@@ -122,7 +122,7 @@ $$
 
 This is far lower than the desired packing density desired by Starcloud to fit the solar arrays into a single Starship. The number of launches can thus be computed from the ratio of the Starcloud and SAW packing densities—a dimensionless number—which is 3.24. This means we would need 4 launches using SAW technology. If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches.
 
-### Mass
+### Mass-based launch numbers
 
 The mass analysis of the Solar Array Wings reveals how deployment architectures create distinct constraint patterns. While volume limitations dominated SAW packing requirements, the mass characteristics will provide insight into the fundamental trade-offs between Z-fold and roll-out solar technologies.
 
