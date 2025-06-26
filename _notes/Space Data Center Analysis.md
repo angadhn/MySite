@@ -470,6 +470,7 @@ $$
 N_{launches,servers} = \lceil \frac{408}{100} \rceil = 5 \text{ launches}
 $$
 
+The racks alone are over a single Starship launch.
 # Conclusion
 
 So after this analysis, the launch manifest therefore looks like this:
