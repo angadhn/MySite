@@ -454,11 +454,13 @@ The analysis demonstrates that **volume, not mass, emerges as the critical limit
 The radiator mass challenge suggests that revolutionary advances in thermal management technology—achieving 90% mass reduction relative to ISS systems—would be necessary to approach single-launch viability. Such improvements far exceed evolutionary materials advances and represent unprecedented engineering breakthroughs for space-qualified thermal control systems.
 
 # Servers
-Having established that a radiators' mass dominates the SDC launch manifest, it is also worth deriving their implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). This is claimed to take up 50% of Starship's payload bay volume. We can c
+
+Having established that a radiators' volume dominates the SDC launch manifest, it is also worth deriving their implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). This is claimed to take up 50% of Starship's payload bay volume. I clarify that the calculations align with the actual specs of the rack:
 
 $$
 \begin{align} P_{effective,per-rack} &= \frac{P_{total}}{N_{racks}} \\ &= \frac{40{,}000 \text{ kW}}{300} \\ &= 133.3 \text{ kW per rack} \end{align}
 $$
+
 This is closer to the [stated power needs](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) of 132 kW per rack. The system apparently weighs [1.36 metric tonnes](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20weights%201.36%20metrics%20tons%2C%20or%203%2C000%20pounds.). So, for sake of simplicity in math, let's go with **1,360 kg per rack** as a representative estimate:
 
 $$ \begin{align} m_{servers,Starcloud} &= N_{racks} \times m_{rack} \\ &= 300 \times 1{,}360 \text{ kg} \\ &= \boxed{408 \text{ tonnes}} \end{align} $$
