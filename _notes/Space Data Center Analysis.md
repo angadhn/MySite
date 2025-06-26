@@ -474,12 +474,12 @@ So 5 Starship launches are needed. So, as it stands the current launch manifest 
 | ---------------- | ------------- | ---------------- | -------- |
 | **Servers**      | 408.0         | 1.0×             | 5        |
 | **Solar Arrays** | 396.8         | 1.3×             | 4        |
-| **Radiators**    | 949.8         | 3.2×             | 13       |
-| **Total System** | 1,686.6       | 5.6×             | 22       |
+| **Radiators**    | 949.8         | 3.2×             | 13-16    |
+| **Total System** | 1,686.6       | 5.6×             | 22-25    |
 
 # Conclusion
 
-Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 5 times**, requiring 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $85M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch costs.
+Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 5 times**, requiring **22-25 total launches** versus their claimed single launch—representing a **2,200% cost increase** from $5M to $85M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch costs.
 
 The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems.
 
