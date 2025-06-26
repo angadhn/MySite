@@ -1,5 +1,5 @@
 ---
-title: 40 MW Space Data Centers
+title: 40 MW Space Data Centers are not a single-launch $8.2M project
 created: 2025-06-19
 published: 2025-06-20
 tags:
