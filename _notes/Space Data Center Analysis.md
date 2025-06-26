@@ -440,12 +440,12 @@ So after this analysis, the launch manifest therefore looks like this:
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
-| Component        | Mass (tonnes) | Ratio to Servers | Launches |
-| ---------------- | ------------- | ---------------- | -------- |
-| **Servers**      | 408.0         | 1.0×             | 4-5      |
-| **Solar Arrays** | 396.8         | 1.3×             | 4-5      |
-| **Radiators**    | 949.8         | 3.2×             | 12-16    |
-| **Total System** | 1,686.6       | 5.6×             | 22       |
+| Component        | Mass (tonnes) | Ratio to Server Mass | Launches |
+| ---------------- | ------------- | -------------------- | -------- |
+| **Servers**      | 408.0         | 1.0×                 | 4-5      |
+| **Solar Arrays** | 396.8         | 1.3×                 | 4-5      |
+| **Radiators**    | 949.8         | 2.3×                 | 9-16     |
+| **Total System** | 1,686.6       | 4.13×                | 17-22    |
 
 
 
