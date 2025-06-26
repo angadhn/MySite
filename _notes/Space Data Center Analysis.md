@@ -435,7 +435,7 @@ $$
 The racks alone are over a single Starship launch.
 # Conclusion
 
-So after this analysis, the launch manifest therefore looks like this:
+So after this analysis, the launch profile looks like this:
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
