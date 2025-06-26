@@ -448,6 +448,7 @@ So after this analysis, the launch profile looks like this:
 
 Even using Starcloud's own optimistic specifications, the support infrastructure still outweighs servers by nearly 4 times, requiring upto 22 total launches versus their claimed single launch—representing a 2,200% cost increase from $5M to $110M using an optimistic launch cost ($5M/launch), or $2.2B using a pessimistic $100M/launch ($100M/launch). While there is more one could analyse, the analysis demonstrates that regardless of server mass assumptions—commercial rack deployment (300 tonnes) or with optimized space hardware (maybe 150 tonnes?)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic technoeconomic analysis.
 
+
 # Further Reading
 - [International Space Station Evolution Data Book Volume I. Baseline Design Revision A Catherine A. Jorgensen, Editor FDC/NYMA, Hampton, Virginia](https://ntrs.nasa.gov/citations/20000120039)
 - [Active Thermal Control System (ATCS) Overview](https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf)
