@@ -279,7 +279,7 @@ $$
 A_{\text{rad}} = \frac{40{,}000{,}000}{633.08} \approx \boxed{63{,}183.1\,\text{m}^2}
 $$
 
-This is roughly **0.063 km²** of radiator surface that their whitepaper claims also needs packing in  the same Starship's fairing volume of 1000 m³. The areal packing density is 63.2 m²/m³.
+This is roughly **0.063 km²** of radiator surface that their whitepaper claims also needs packing in  the same Starship's fairing volume of 1,000 m³. While we already know this is unlikely—because of the 5 launches already needed for the solar arrays—we determine that a single launch Starship will dictate that the radiator has an areal packing density of 63.18 m²/m³.
 
 $$
 \begin{align}
@@ -287,7 +287,7 @@ $$
 \end{align}
 $$
 
-A more realistic estimate would be based on 80% of the fairing volume being available. In this case, the areal packing density is **79 m²/m³**.
+Again, as was the case with the solar arrays, a more realistic estimate would be based on 80% of the fairing volume being usable which would lead to **79 m²/m³** as the areal packing density.
 ### Clarifications of whitepaper on radiator performance
 
 Previously, we calculated the **solar power density** as:
