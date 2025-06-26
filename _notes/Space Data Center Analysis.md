@@ -461,7 +461,7 @@ $$
 \begin{align} P_{effective,per-rack} &= \frac{P_{total}}{N_{racks}} \\ &= \frac{40{,}000 \text{ kW}}{300} \\ &= 133.3 \text{ kW per rack} \end{align}
 $$
 
-This is closer to the [stated power needs](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) of 132 kW per rack. The system apparently weighs [1.36 metric tonnes](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20weights%201.36%20metrics%20tons%2C%20or%203%2C000%20pounds.). So, for sake of simplicity in math, let's go with **1,360 kg per rack** as a representative estimate:
+This is closer to the [stated power needs](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) of 132 kW per rack. The rack apparently weighs [1.36 metric tonnes](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20weights%201.36%20metrics%20tons%2C%20or%203%2C000%20pounds.). So, for 300 racks we have:
 
 $$ \begin{align} m_{servers,Starcloud} &= N_{racks} \times m_{rack} \\ &= 300 \times 1{,}360 \text{ kg} \\ &= \boxed{408 \text{ tonnes}} \end{align} $$
 
