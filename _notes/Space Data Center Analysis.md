@@ -484,7 +484,7 @@ Even using Starcloud's own optimistic specifications, **the support infrastructu
 
 The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management mass**, which systematically dominates launch requirements for large-scale space-based computing systems.
 
-## Additional Technical Inconsistencies
+%% ## Additional Technical Inconsistencies
 
 Beyond server mass calculations, Starcloud's whitepaper contains several other questionable technical assumptions:
 
@@ -494,7 +494,7 @@ Beyond server mass calculations, Starcloud's whitepaper contains several other q
 
 **Launch Cost Optimism:** Even accepting their optimistic $5M launch costs, the 17-launch requirement transforms their $8.2M total cost claim into **$85M minimum**—excluding assembly operations, structural systems, and operational margins.
 
-**Economic Case Collapse:** Using realistic $100M launch costs, their space data center costs escalate to **$1.7B**—making it 10× more expensive than the $167M terrestrial alternative they claim to beat.
+**Economic Case Collapse:** Using realistic $100M launch costs, their space data center costs escalate to **$1.7B**—making it 10× more expensive than the $167M terrestrial alternative they claim to beat. %%
 
 [[Conclusion on Whitepaper]]
 
