@@ -39,6 +39,7 @@ Now, in-space assembly of large space structures, like large aperture telescopes
 3. Finally, we could also think about if/when the carbon footprint of launches offset the benefits of a SDC. But the report suggests that achieving AGI could need 1 GW centers but large hyperscale Earth-based data centers today reach 100 megawatts (MW) meaning they "do not scale well or sustainably to gigawatt (GW) sizes".
 
 Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centers) but by examining the first two aspects, I imagine we will know how well the business case of this company adds up.
+
 # Starcloud's Business Case
 
 While one could begin by asking how much compute workload should be moved to space to make a meaningful dent from a climate angle—a really good reason to do so—economic incentives that guarantee large returns on investment are what appeal to private investors, at the end of the day. This is why Starcloud exists but space agencies haven't invested in the area. So, this analysis begins by examining [Starcloud](https://angadh.com/assets/papers/starcloud-wp.pdf)'s numbers to justify their business case for SDC.
@@ -65,9 +66,9 @@ Now this means their projected energy cost is $0.002/kWh in space versus $0.045-
 
 # Solar Arrays: Launch Numbers from First Principles
 
-To determine the cost of launch requires knowledge of number of launches. There are number of ways we can go about doing this: the traditional approach would involve determining the mass of the SDC—this assumes to be how Starcloud make their single launch claim but there is no clarity on how their system could be 100 tonnes which requires some initial SDC design.
+To determine the cost of launch requires knowledge of number of launches. There are a number of ways we can go about doing this: the traditional approach would involve determining the mass of the SDC. As I read the whitepaper, it was unclear how their system's total mass was going to be 100 tonnes (or 167 tonnes), which requires some SDC design specs.
 
-After a mass-based estimate of launches, one can further refine the first-order designs to determine revised launch numbers that account for how the SDC structure fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its parts might not necessarily be as accommodating."%}.
+With these specs, a mass-based estimate of launches can be derived but one can also determine revised launch numbers that account for how the SDC's elements fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating."%}.
 
 As Starcloud haven't publicly shared their mass breakdown or component-level design documentation—could either be proprietary information or they are still figuring this out—it is hard to verify their mass claims. I hope to derive this in a future update to this post{%sidenote 'telescope-assembly-overlap' "I see many overlapping architectural challenges here based on my earlier work into in-space assembly of space telescopes"%}. But there is another way for us to determine the number of launches- from their SDC's assumed power density (i.e., power output by a solar array per unit area). I will present that after a short detour to illustrate an issue with the math in their whitepaper.
 ## Desired Packaging Densities
