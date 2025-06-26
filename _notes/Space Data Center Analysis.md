@@ -352,21 +352,9 @@ With Starship's 100-tonne payload capacity to LEO, the mass-limited launch requi
 
 $$ \begin{align} N_{launches,ORU} &= \lceil \frac{894.9}{100} \rceil = 9 \text{ launches} \\ N_{launches,PVR} &= \lceil \frac{1103.4}{100} \rceil = 12 \text{ launches} \\ N_{launches,ISS} &= \lceil \frac{949.8}{100} \rceil = 10 \text{ launches} \end{align} $$
 
-The stark contrast between packing density-limited launches (13) and mass-limited launches (9-12) demonstrates that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
-
-The analysis reveals that Starcloud's radiator mass alone would consume the equivalent of **13 Starship launches** using proven ISS technology, before considering the data center payload, power systems, structural elements, or operational margins. This transforms their claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
-
-**Comparative Context:**
-
-The solar array mass density of 3.10 kg/m² proves remarkably efficient compared to radiator systems (14-17 kg/m²), reflecting the fundamental difference between power generation and thermal management technologies. Solar arrays primarily consist of thin photovoltaic films with minimal structural requirements, while radiators demand substantial mass for heat transfer fluids, thermal exchange surfaces, and robust mounting systems.
-
-However, even this favorable mass efficiency cannot overcome the sheer scale of Starcloud's power requirements. The 396.8-tonne solar array mass alone would consume **13 Starship launches** before considering radiators, data center payload, or structural systems—fundamentally challenging the single-launch architecture that underpins their economic case.
-
-### Summary of Mass-based Launch Requirements
-
 Our radiator mass analysis reveals the fundamental constraint limiting Starcloud's single-launch architecture. The calculations are summarised below, where the pessimistic launch cost is based on a $100M Starship launch and an optimistic cost uses Starcloud's $5M launch cost assumption:
 
-{%marginnote 'radiator-table' "ISS radiator technology benchmarks reveal mass as the dominant constraint" %}
+{%marginnote 'radiator-table' "ISS radiators launch manifest based on mass estimates." %}
 
 | Radiator Technology | Launches | Optimistic Cost ($) | Pessimistic Cost ($) |
 | ------------------- | -------- | ------------------- | -------------------- |
@@ -374,10 +362,7 @@ Our radiator mass analysis reveals the fundamental constraint limiting Starcloud
 | **PVTCS (PVR)**     | 12       | 60M                 | 1.2B                 |
 | **ISS Combined**    | 10       | 50M                 | 1B                   |
 
-The analysis demonstrates that **volume, not mass, emerges as the critical limiting factor** for large-scale radiator deployment. This volume constraint reflects the density of thermal management systems, which require substantial structural mass for heat transfer mechanisms, fluid manifolds, and thermal exchange surfaces. Even with optimistic $5M launch costs, Starcloud's radiator deployment alone would cost $45-60M before considering the data center payload, power systems, or operational margins.
-
-The radiator mass challenge suggests that revolutionary advances in thermal management technology—achieving 90% mass reduction relative to ISS systems—would be necessary to approach single-launch viability. Such improvements far exceed evolutionary materials advances and represent unprecedented engineering breakthroughs for space-qualified thermal control systems.
-
+The challenge of launching radiators for a 40 MW SDC requires at least 9 launches if we are building on ISS technology. This also shows that the solar array mass density of 3.10 kg/m² proves remarkably efficient compared to radiator systems (14-17 kg/m²), reflecting the fundamental difference between power generation and thermal management technologies. Solar arrays primarily consist of thin photovoltaic films with minimal structural requirements, while radiators demand substantial mass for heat transfer fluids, thermal exchange surfaces, and robust mounting systems. The radiator mass suggests that revolutionary advances in thermal management technology—achieving 90% mass reduction relative to ISS systems—would be necessary to approach single-launch viability. Such improvements exceed materials advances and represent unprecedented engineering breakthroughs for space-qualified thermal control systems.
 ## Volume-based launch numbers
 
 The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. Unlike the previous analysis that assumed a fixed 0.51 m thickness inherited from solar panel technology, a more detailed examination reveals that radiator panels are likely thinner individual structures that stack when folded.
@@ -414,6 +399,12 @@ $$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
 \rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
 So, all of these radiator systems have the same packing densities so the number of launches is then given by the ratio of Starcloud's desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
+
+
+
+The volume-based launches (13) and mass-based launches (9-12) demonstrates that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
+
+The analysis reveals that Starcloud's radiator mass alone would consume the equivalent of **13 Starship launches** using proven ISS technology, before considering the data center payload, power systems, structural elements, or operational margins. This transforms their claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
 
 # Servers
 
