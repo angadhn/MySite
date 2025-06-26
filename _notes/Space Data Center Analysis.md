@@ -450,10 +450,10 @@ Even using Starcloud's own optimistic specifications, the support infrastructure
 
 
 # Further Reading
+- [Thales Alenia Space reveals results of ASCEND feasibility study on space data centers](https://www.thalesaleniaspace.com/en/press-releases/thales-alenia-space-reveals-results-ascend-feasibility-study-space-data-centers-0)
 - [International Space Station Evolution Data Book Volume I. Baseline Design Revision A Catherine A. Jorgensen, Editor FDC/NYMA, Hampton, Virginia](https://ntrs.nasa.gov/citations/20000120039)
 - [Active Thermal Control System (ATCS) Overview](https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf)
 - [MANAGING RISK FOR THERMAL VACUUM TESTING OF THE INTERNATIONAL SPACE STATION RADIATORS](https://ntrs.nasa.gov/api/citations/20010059377/downloads/20010059377.pdf?)
 - [Black Body Radiation](https://acd-ext.gsfc.nasa.gov/anonftp/acd/daac_ozone/Lecture4/Text/Semifinal/blackbodyintro.html#:~:text=The%20Earth's%20surface%20is%20warmed,the%20Earth's%20surface%20to%20cool.)
 
-[^1]: 
-	As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.
+[^1]: As a space aficionado, my only gripe with SDC is that it adds to the data services space economy, which we know is proven to work well with GPS and satellite communications, but does little to advance the scale of human habitation in orbit.
