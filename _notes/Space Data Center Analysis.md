@@ -407,15 +407,9 @@ $$
 N_{launches} = \lceil \frac{63.18}{5} \rceil = 13 \text{ launches}
 $$
 
-This reveals that radiator packing density dictates needing approximately **13 Starship launches** in addition to the 4-5 needed for solar panels.
+The volume-based launches (13) and mass-based launches (9-12) are quite similar despite the math demonstrating that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass (for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces) that also pack less efficiently than the roll-out solar arrays.
 
-
-The volume-based launches (13) and mass-based launches (9-12) demonstrates that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
-
-The analysis reveals that Starcloud's radiator mass alone would consume the equivalent of **13 Starship launches** using proven ISS technology, before considering the data center payload, power systems, structural elements, or operational margins. This transforms their claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
-
-The analysis demonstrates that **volume, not mass, emerges as the critical limiting factor** for large-scale radiator deployment. This volume constraint reflects the density of thermal management systems, which require substantial structural mass for heat transfer mechanisms, fluid manifolds, and thermal exchange surfaces. Even with optimistic $5M launch costs, Starcloud's radiator deployment alone would cost $45-60M before considering the data center payload, power systems, or operational margins.
-
+While this analysis demonstrates that **volume, not mass, is the critical limiting factor** for large-scale radiator deployment, it should be noted that this is dependent on the assumed panel thickness panel of 0.2 m. **Reducing panel thickness** to 0.05 m reduces volume-defined launches to 4 but then we fall back to **radiator mass being the critical limiting factor** so we will still need between 9-12 launches when using ISS-like technology. This transforms the claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
 # Servers
 
 Having established that a radiators' volume dominates the SDC launch manifest, it is also worth deriving their implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). This is claimed to take up 50% of Starship's payload bay volume. I clarify that the calculations align with the actual specs of the rack:
