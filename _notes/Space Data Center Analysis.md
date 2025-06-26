@@ -1,5 +1,5 @@
 ---
-title: Space Data Centers
+title: "40 MW Space Data Centers: neither single launch nor $8.2M"
 created: 2025-06-19
 published: 2025-06-20
 tags:
@@ -8,16 +8,13 @@ tags:
 permalink: /space-data-centers-1
 top_of_mind: "true"
 completion_score: 25
-image: 
-companion music: 
+image:
+companion music:
 subtitle: A Technoeconomic Analysis
 ---
 # Abstract
 
 Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this is infeasible in a single launch. This is based on analysing existing roll-out solar panels used on the ISS and its radiative cooling technologies. I have not analysed the effects of MMOD/radiation shielding and the impact of propellant use for in-orbit assembly on launch numbers—this requires specifications and mission architectures that have not been made public and might not yet be fully developed. On the note of launch costs, the whitepaper's (miscalculated) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M {%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}. So, even if costs drop to $500/kg, a single launch results in an overall cost of $53.2M, not the purported $8.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC). As my work shows, being solar arrays for a 40 Mw to orbit will require 3 launches-this is based on existing roll-out solar arrays on the ISS. Similarly, the ISS radiator benchmarks indicate that 9 launches would be needed for the SDC.
-
-> [!warning]This is a work-in-progress
-> This block is to warn you that everything below should be considered a draft as there is more analysis to be completed. This block will be removed once I feel my analysis is complete and fully documented below. So, please treat everything below as potentially inaccurate as this is just my explorations of working in public.
 
 # Introduction
 
@@ -26,9 +23,9 @@ On Earth, data centers run on the existing electricity grid that, crudely put, u
 2. A lot of waste heat is generated running TDCs, which bodes poorly for climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
 3. Real estate for data centers is a massive bottleneck and this land could be used for other purposes.
 
-Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need resolution. So, space, in theory, sounds like a speedier answer from a regulatory framework—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But to deliver GW-scale SDCs require engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, would need a square of side 357m. This would far exceed the span of largest space structure ever built—the ISS is about 100 m.
+Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need resolution. So, space, in theory, sounds like a speedier answer from a regulatory perspetive—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But delivering a GW-scale SDC requires engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, needs a square of side 357 m. This would far exceed the span of the largest space structure ever built—the ISS is about 100 m in its longest dimension.
 
-So, there's now at least one YCombinator-backed company, Starcloud Inc., working on building SDCs—they released a white paper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe). They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
+So, there's now at least one YCombinator-backed company, Starcloud Inc., working on building SDCs—they released a whitepaper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe). They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
 
 ## My qualifications
 
@@ -63,6 +60,10 @@ The costs for TDCs and SDCs are broken down as follows:
 
 Now this means their projected energy cost is $0.002/kWh in space versus $0.045-0.17/kWh terrestrially—this is between 22 to 85 times cheaper. This raises questions about feasibility.
 
+
+> [!warning]Erroneous Launch Costs in Whitepaper
+> Their whitepaper states: "_$5 million per launch... with a payload capacity of 100 tons... translates to approximately $30 per kilogram_". This works out to $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $5M—though, as I say in the abstract, a single launch would cost $50M. This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost. In my analysis below, I present launch costs as either optimistic ($5M) or pessimistic ($100M).
+
 # Solar Arrays: Launch Numbers from First Principles
 
 To determine the cost of launch requires knowledge of number of launches. There are number of ways we can go about doing this: the traditional approach would involve determining the mass of the SDC—this assumes to be how Starcloud make their single launch claim but there is no clarity on how their system could be 100 tonnes which requires some initial SDC design.
@@ -70,10 +71,6 @@ To determine the cost of launch requires knowledge of number of launches. There 
 After a mass-based estimate of launches, one can further refine the first-order designs to determine revised launch numbers that account for how the SDC structure fits into a rocket{%sidenote "architecture-launch-numbers" "Here, one essentially breaks the large space system into its smaller elements and works out if/how their geometries can be made to fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its parts might not necessarily be as accommodating."%}.
 
 As Starcloud haven't publicly shared their mass breakdown or component-level design documentation—could either be proprietary information or they are still figuring this out—it is hard to verify their mass claims. I hope to derive this in a future update to this post{%sidenote 'telescope-assembly-overlap' "I see many overlapping architectural challenges here based on my earlier work into in-space assembly of space telescopes"%}. But there is another way for us to determine the number of launches- from their SDC's assumed power density (i.e., power output by a solar array per unit area). I will present that after a short detour to illustrate an issue with the math in their whitepaper.
-
-> [!warning]White paper math is incongruous
-> The whitepaper states $5M to launch a 100-tonne Starship to Low Earth Orbit (LEO) Sun-Synchronous Orbit (SSO). This works out to a $50/kg to reach orbit but the whitepaper says that this translates to $30/kg—this is in two locations so I am unsure why this is the case. With their claimed per kg cost, the mass of the SDC is 167 tonnes. This means two 100-tonne Starship launches or, it could be a single 200-ton Starship launch, which is on SpaceX's roadmap. This means their launch cost just went up by $3M or $5M—though, as I say in the abstract, a single launch would cost $50M {%sidenote 'optimistic-thousand-per-kg' "This could even be $100M per 100-tonne launch as some have said $1000/kg to orbit is also a reasonable cost."%}.
-
 ## Desired Packaging Densities
 
 Their long-term goal is to build a 5 GW system which they state needs solar arrays spanning an area of 4km × 4km. This is a power density of 312 W/m², which we will denote as $$P_{\text{solar}}$$. Using the same power density, their smaller 40 MW SDC needs 128,000 m² of solar panels. This would need to be packed into a single launch Starship, which has a fairing volume of 1000 m³. We now define areal packing density, which is the area of these arrays divided by the Starship's fairing volume; this works out to 128 m²/m³.
@@ -121,7 +118,7 @@ $$
 \end{align}
 $$
 
-This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 3.24 which means we would need nearly 4 launches with SAW technology. If we used the more realistic estimate packing density (160 m²/m³), it might need 5 launches.
+This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 3.24 which means we would need nearly 4 launches with SAW technology. **If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches**.
 
 ### Mass Density
 
@@ -149,7 +146,7 @@ $$ \begin{align} m_{Starcloud,solar,SAW} &= A_{required} \times \rho_{mass,SAW} 
 
 Comparing mass-limited versus volume-limited launch requirements reveals a critical distinction from the iROSA case:
 
-$$ \begin{align} N_{launches,volume} &= 4 \text{ to } 5 \text{ launches (from packing analysis)} \\ N_{launches,mass} &= \lceil \frac{335.4}{150} \rceil = 3 \text{ launches} \end{align} $$
+$$ \begin{align} N_{launches,volume} &= 5 \text{ launches (from packing analysis)} \\ N_{launches,mass} &= \lceil \frac{335.4}{100} \rceil = 4 \text{ launches} \end{align} $$
 
 **SAW Z-fold arrays remain volume-constrained**, requiring 4-5 launches based on packing density limitations rather than the 3 launches suggested by mass considerations alone.
 ## Analysis of ISS Roll-Out Solar Array (iROSA)
@@ -215,11 +212,11 @@ $$ \begin{align} m_{Starcloud,solar} &= A_{required} \times \rho_{mass,iROSA} \\
 
 Comparing the mass-limited and volume-limited launch requirements reveals the constraining factor for solar array deployment:
 
-$$ \begin{align} N_{launches,volume} &= \frac{V_{required}}{V_{Starship}} = \frac{494.6}{1000} \approx 1 \text{ launch} \\ N_{launches,mass} &= \lceil \frac{m_{Starcloud,solar}}{m_{Starship,payload}} \rceil \\ &= \lceil \frac{396.8}{150} \rceil = 3 \text{ launches} \end{align} $$
+$$ \begin{align} N_{launches,volume} &= \frac{V_{required}}{V_{Starship}} = \frac{494.6}{1000} \approx 1 \text{ launch} \\ N_{launches,mass} &= \lceil \frac{m_{Starcloud,solar}}{m_{Starship,payload}} \rceil \\ &= \lceil \frac{396.8}{100} \rceil = 4 \text{ launches} \end{align} $$
 
 The analysis reveals that **mass emerges as the limiting constraint** for solar array deployment, requiring **3 launches** compared to the single launch suggested by volumetric analysis alone. This represents a **3× penalty** where mass considerations override the favorable packing density characteristics of roll-out solar technology.
 
-## Summary of Launches
+## Summary of Launches for Solar Panels
 
 Our calculations thus far are summarised below, where the pessimistic launch cost is based on a $100M Starship launch and an optimistic cost uses Starcloud's $5M launch cost assumption:
 
@@ -227,8 +224,8 @@ Our calculations thus far are summarised below, where the pessimistic launch cos
 
 | Array Design | Launches | Optimistic cost ($) | Pessimisitic cost ($) |
 | ------------ | -------- | ------------------- | --------------------- |
-| **Z-fold**   | 4 to 5   | 20M-25M             | 400M-500M             |
-| **Roll-out** | 3        | 5M-15M              | 100M-300M             |
+| **Z-fold**   | 5        | 25M                 | 500M                  |
+| **Roll-out** | 4        | 20M                 | 400M                  |
 
 The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
 
@@ -307,7 +304,7 @@ $$
 $$
 
 A more realistic estimate would be based on 80% of the fairing volume being available. In this case, the areal packing density is **79 m²/m³**.
-## Clarifications of white paper on radiator performance
+## Clarifications of whitepaper on radiator performance
 
 Previously, we calculated the **solar power density** as:
 
@@ -390,15 +387,7 @@ $$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
 &= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \\
 \rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
-**Starcloud Launch Requirements:**
-
-Using these ISS-derived packing densities, Starcloud's 63,190 m² radiator requirement translates to launch numbers of:
-
-- **PVTCS performance**: 1.81 launches
-- **EATCS performance**: 1.58 launches
-- **ISS combined performance**: 1.64 launches
-
-This more detailed analysis reveals that radiator packing density is significantly better than initially estimated, requiring approximately **1.6-1.8 Starship launches** rather than the 4+ launches calculated using the thicker solar panel assumptions. The key insight is that radiator panels, being primarily thin thermal exchange surfaces rather than thick photovoltaic cells, can achieve much more efficient stowed configurations when properly modeled as stacked thin panels rather than thick monolithic structures.
+So, all of these systems have roughly the same packing densities so the number of launches is then given by the ratio of desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
 ### Mass Density
 
 The mass density analysis reveals a critical constraint that fundamentally challenges Starcloud's single-launch architecture. Unlike volumetric packing, which showed promising results near single-launch feasibility, the mass requirements present a far more severe limitation based on flight-proven ISS radiator technology.
@@ -467,7 +456,54 @@ This mass constraint reflects the inherent physics of thermal management systems
 
 The radiator mass challenge suggests that revolutionary advances in thermal management technology—achieving 90% mass reduction relative to ISS systems—would be necessary to approach single-launch viability. Such improvements far exceed evolutionary materials advances and represent unprecedented engineering breakthroughs for space-qualified thermal control systems.
 
+# Servers Mass
+Having established that a radiators' mass dominates the SDC launch manifest, it is also worth deriving their implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). This is claimed to take up 50% of Starship's payload bay volume. We can c
+
+$$
+\begin{align} P_{effective,per-rack} &= \frac{P_{total}}{N_{racks}} \\ &= \frac{40{,}000 \text{ kW}}{300} \\ &= 133.3 \text{ kW per rack} \end{align}
+$$
+This is closer to the [stated power needs](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) of 132 kW per rack. The system apparently weighs [1.36 metric tonnes](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20weights%201.36%20metrics%20tons%2C%20or%203%2C000%20pounds.). So, for sake of simplicity in math, let's go with **1,360 kg per rack** as a representative estimate:
+
+$$ \begin{align} m_{servers,Starcloud} &= N_{racks} \times m_{rack} \\ &= 300 \times 1{,}360 \text{ kg} \\ &= \boxed{408 \text{ tonnes}} \end{align} $$
+
+**Launch Requirements:**
+$$ \begin{align} N_{launches,servers} &= \lceil \frac{408}{100} \rceil = 5 \text{ launches} \\ N_{launches,total} &= \lceil \frac{1{,}686.6}{100} \rceil = 17 \text{ launches} \end{align}
+$$
+So 5 Starship launches are needed.
+
+## Validation of Core Argument
+
+Starcloud's own server mass assumptions **strengthen rather than weaken** the case against single-launch feasibility:
+
+{%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
+
+| Component        | Mass (tonnes) | Ratio to Servers | Launches |
+| ---------------- | ------------- | ---------------- | -------- |
+| **Servers**      | 408.0         | 1.0×             | 5        |
+| **Solar Arrays** | 396.8         | 1.3×             | 4        |
+| **Radiators**    | 949.8         | 3.2×             | 10       |
+| **Total System** | 1,686.6       | 5.6×             | 19       |
+
+Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by 5.6:1**, requiring 17 total launches versus their claimed single launch—representing a **1,700% cost increase** from $5M to $85M using their optimistic launch costs, or $1.7B using realistic $100M/launch costs.
+
+The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management mass**, which systematically dominates launch requirements for large-scale space-based computing systems.
+
+## Additional Technical Inconsistencies
+
+Beyond server mass calculations, Starcloud's whitepaper contains several other questionable technical assumptions:
+
+**Solar Array Power Density Claims:** They reference ">1000 W/kg" power densities for thin-film solar cells, yet NASA's most advanced iROSA technology achieves only ~181 W/m² area density with current space-qualified systems. Starcloud assumes 312 W/m²—requiring **1.7× efficiency improvements** over flight-proven technology.
+
+**Thermal Management Oversimplification:** Their claim that radiators need "less than half the size of solar arrays" ignores the **6-8× mass penalty** revealed by ISS thermal control system analysis. Area efficiency means nothing when mass constraints dominate launch requirements.
+
+**Launch Cost Optimism:** Even accepting their optimistic $5M launch costs, the 17-launch requirement transforms their $8.2M total cost claim into **$85M minimum**—excluding assembly operations, structural systems, and operational margins.
+
+**Economic Case Collapse:** Using realistic $100M launch costs, their space data center costs escalate to **$1.7B**—making it 10× more expensive than the $167M terrestrial alternative they claim to beat.
+
 [[Conclusion on Whitepaper]]
+
+
+
 
 
 # Further Reading
