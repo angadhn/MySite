@@ -120,7 +120,11 @@ $$
 \end{align}
 $$
 
-This is far lower than the desired packing density desired by Starcloud to fit the solar arrays into a single Starship. The number of launches can thus be computed from the ratio of the Starcloud and SAW packing densities—a dimensionless number—which is 3.24. This means we would need 4 launches using SAW technology. If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches.
+This is far lower than the desired packing density desired by Starcloud to fit the solar arrays into a single Starship. The number of launches can thus be computed from the ratio of the Starcloud and SAW packing densities—a dimensionless number—which is 3.24.
+
+$$ N_{launches,volume} = \frac{128}{39.43} = 5 \text{ launches }  $$
+
+This means we would need 4 launches using SAW technology. If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches.
 
 ### Mass-based launch numbers
 
@@ -130,19 +134,17 @@ $$ \begin{align} \rho_{mass,SAW} &= \frac{m_{SAW}}{A_{deployed,SAW}} \\ &= \frac
 
 This mass density reflects the integrated Z-fold system including photovoltaic cells, accordion deployment mechanisms, structural backing, electrical distribution networks, and mounting hardware designed for long-term space operations.
 
-**Starcloud Solar Array Mass Scaling:**
-
 Applying this empirical mass density to Starcloud's 128,000 m² solar array requirement:
 
 $$ \begin{align} m_{Starcloud,solar,SAW} &= A_{required} \times \rho_{mass,SAW} \\ &= 128,000 \text{ m}^2 \times 2.62 \text{ kg/m}^2 \\ &= 335,360 \text{ kg} = 335.4 \text{ tonnes} \end{align} $$
-
-**Launch Constraint Analysis:**
 
 Comparing mass-limited versus volume-limited launch requirements reveals a critical distinction from the iROSA case:
 
 $$ \begin{align} N_{launches,volume} &= 5 \text{ launches (from packing analysis)} \\ N_{launches,mass} &= \lceil \frac{335.4}{100} \rceil = 4 \text{ launches} \end{align} $$
 
-**SAW Z-fold arrays remain volume-constrained**, requiring 4-5 launches based on packing density limitations rather than the 3 launches suggested by mass considerations alone.
+> [!tip]Takeaway 1
+> SAW Z-fold arrays remain volume-constrained, requiring 4-5 launches based on packing density limitations rather than the 3 launches suggested by mass considerations alone.
+
 ## Analysis of ISS Roll-Out Solar Array (iROSA)
 
 ![iROSAs are half the length and width of the SAW but much larger than the early ROSAs developed for other missions.](assets/imgs/space-data-centers/irosa.png)
@@ -156,7 +158,9 @@ The seventh and eighth, are planned to be installed on the 2A and 3B power chann
 
 ### Power Density
 
-Each iROSA generates nearly 20 kilowatts (kW) of direct current power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets is not in the public domain but appears to be more negligible than between a pair of SAW blankets; the specifications of the solar cells and their arrangement are also known. So, the power density here is based purely on the wing span, which works out to about 255 W/m² from:
+Each iROSA generates nearly 20 kilowatts (kW) of power from two rolled-up solar blankets. When fully extended, the pair span 18.3 metres in length and 6 metres in width. The gap between the blankets does not appear to be in the public domain but appears to be negligible than that between the pair of SAW blankets; the specifications of the solar cells and their arrangement are also not known.
+
+So, the power density here is based purely on the wing span, which works out to about 182.1 W/m² from:
 
 $$
 \begin{align}
@@ -164,13 +168,13 @@ $$
 \end{align}
 $$
 
-So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **1.71x more efficient** than iROSA's 255 W/m².
+So, to achieve Starcloud's assumed power density of 312 W/m², their solar technology would need to be **1.71x more efficient** than iROSA.
 
-### Volume
+### Volume-based launch numbers
 
 {% marginfigure 'mf-id-1' 'assets/imgs/space-data-centers/iROSA-dragon.jpg' "iROSA canisters stowed in cargo Dragon's trunk. [Source](https://en.wikipedia.org/wiki/File:Crs-28-sep-1024x576.jpg)"  %}
 
-As done with the SAW module analysis (i.e., a pair of deployable blankets), we can use the stowed volume of an iROSA module to compute the number of launches. Sadly, this data is also not public but estimates can be made by examining its imagers stowed in a cargo Dragon as well as alongside humans for scale. The iROSAs packed into a cargo Dragon trunk and each blanket packed into a canister; the length of this canister can be assumed to be 3 m, a dimension that remains unchanged for either blanket as it rolls out. Each blanket's 18.3 m deployed span can be assumed to pack into a canister of diameter of 0.3 m. So two such canisters per iROSA leads to a packing density of 
+As done with the SAW module analysis (i.e., a pair of deployable blankets), we can use the stowed volume of an iROSA module to compute the number of launches. Sadly, this data is also not public but estimates can be made by examining its imagers stowed in a cargo Dragon as well as alongside humans for scale. The iROSAs packed into a cargo Dragon trunk and each blanket packed into a canister; the length of this canister is assumed to be 3 m, a dimension that remains unchanged for either blanket as it rolls out. Each blanket's 18.3 m deployed span can be assumed to pack into a canister of diameter of 0.3 m. So two such canisters per iROSA leads to a packing density of 
 
 $$
 \begin{align}
@@ -178,31 +182,17 @@ $$
 \end{align}
 $$
 
-Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, two launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
+Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the desired and iROSA packing densities. At 0.49, this is well under a single Starship launch.
 
-### Mass
+### Mass-based launch numbers
 
-While the packing density analysis suggested favorable volumetric efficiency for iROSA technology, the mass constraint presents a secondary limitation that requires careful examination. Solar arrays, though significantly lighter than thermal management systems, still impose substantial mass penalties when scaled to Starcloud's massive power requirements.
-
-**iROSA Mass Characteristics:**
-
-The ISS Roll-Out Solar Arrays provide empirical mass data for modern space-qualified photovoltaic technology. Each iROSA unit represents current state-of-the-art in deployable solar array design, optimized for both performance and mass efficiency through advanced materials and roll-out deployment mechanisms.
-
-**iROSA Mass Analysis:**
-
-Each iROSA unit has a documented mass of 340 kg and deploys 109.8 m² of active solar collection area. This yields a mass density characteristic of modern roll-out solar technology:
+While the packing density analysis suggested favorable volumetric efficiency for iROSA technology, the mass constraint presents a secondary limitation that requires careful examination. Each iROSA unit has a documented mass of 340 kg and deploys 109.8 m² of active solar collection area yielding a mass density for modern roll-out solar technology:
 
 $$ \begin{align} \rho_{mass,iROSA} &= \frac{m_{iROSA}}{A_{deployed,iROSA}} \\ &= \frac{340 \text{ kg}}{18.3 \times 6 \text{ m}^2} \\ &= \frac{340 \text{ kg}}{109.8 \text{ m}^2} = 3.10 \text{ kg/m}^2 \end{align} $$
 
-This mass density reflects the integrated system including photovoltaic cells, deployment mechanisms, structural backing, electrical harnesses, and mounting hardware required for autonomous space deployment.
-
-**Starcloud Solar Array Mass Scaling:**
-
-Scaling this empirical mass density to Starcloud's 128,000 m² solar array requirement reveals the magnitude of the mass challenge for their power generation system:
+This mass density reflects the integrated system including photovoltaic cells, deployment mechanisms, structural backing, electrical harnesses, and mounting hardware required for autonomous space deployment. Scaling this empirical mass density to Starcloud's 128,000 m² solar array requirement reveals the magnitude of the mass challenge for their power generation system:
 
 $$ \begin{align} m_{Starcloud,solar} &= A_{required} \times \rho_{mass,iROSA} \\ &= 128,000 \text{ m}^2 \times 3.10 \text{ kg/m}^2 \\ &= 396,800 \text{ kg} = 396.8 \text{ tonnes} \end{align} $$
-
-**Launch Constraint Analysis:**
 
 Comparing the mass-limited and volume-limited launch requirements reveals the constraining factor for solar array deployment:
 
@@ -210,7 +200,17 @@ $$ \begin{align} N_{launches,volume} &= \frac{V_{required}}{V_{Starship}} = \fra
 
 The analysis reveals that **mass emerges as the limiting constraint** for solar array deployment, requiring **3 launches** compared to the single launch suggested by volumetric analysis alone. This represents a **3× penalty** where mass considerations override the favorable packing density characteristics of roll-out solar technology.
 
-## Summary of Launches for Solar Panels
+The comparison between SAW and iROSA mass densities reveals important technological evolution patterns:
+
+- **SAW Z-fold**: 2.62 kg/m² (more mass-efficient)
+- **iROSA roll-out**: 3.10 kg/m² (18% heavier per unit area)
+
+Despite being newer technology, iROSA exhibits higher mass density due to the robust deployment mechanisms required for roll-out architecture. However, iROSA's superior volumetric packing efficiency (258.78 vs 39.43 m²/m³) more than compensates for this mass penalty, resulting in overall lower launch requirements.
+
+> [!tip]Takeaway 2
+> This analysis demonstrates that **constraint patterns depend critically on deployment architecture**. Z-fold systems optimize for mass efficiency but suffer volumetric penalties, while roll-out systems achieve exceptional packing density at modest mass cost. For large-scale space infrastructure, the volumetric constraint increasingly dominates due to launch vehicle fairing limitations, explaining the industry's migration toward roll-out solar array technologies.
+
+## Summary of Launch Costs for Solar Panels
 
 Our calculations thus far are summarised below, where the pessimistic launch cost is based on a $100M Starship launch and an optimistic cost uses Starcloud's $5M launch cost assumption:
 
@@ -221,22 +221,10 @@ Our calculations thus far are summarised below, where the pessimistic launch cos
 | **Z-fold**   | 5        | 25M                 | 500M                  |
 | **Roll-out** | 4        | 20M                 | 400M                  |
 
-The above is not to say that SDCs have no value but the answer for space commercialisation is unlikely to be found through economic analysis through overly optimistic launch costs.
-
 The iROSA analysis reveals that **mass, not volume, constrains solar array deployment**—requiring 3 launches despite favorable packing density. This pattern emerges consistently across both power generation and thermal management systems, where mass penalties systematically exceed volumetric limitations for large-scale space infrastructure.
 
-So this begs the question if it is possible to build the radiators in the remaining margin retained by the areal density.
+So this begs the question if on what the launch estimates for the radiators look like.
 
-**Technology Evolution Insights:**
-
-The comparison between SAW and iROSA mass densities reveals important technological evolution patterns:
-
-- **SAW Z-fold**: 2.62 kg/m² (more mass-efficient)
-- **iROSA roll-out**: 3.10 kg/m² (18% heavier per unit area)
-
-Despite being newer technology, iROSA exhibits higher mass density due to the robust deployment mechanisms required for roll-out architecture. However, iROSA's superior volumetric packing efficiency (258.78 vs 39.43 m²/m³) more than compensates for this mass penalty, resulting in overall lower launch requirements.
-
-This analysis demonstrates that **constraint patterns depend critically on deployment architecture**. Z-fold systems optimize for mass efficiency but suffer volumetric penalties, while roll-out systems achieve exceptional packing density at modest mass cost. For large-scale space infrastructure, the volumetric constraint increasingly dominates due to launch vehicle fairing limitations, explaining the industry's migration toward roll-out solar array technologies.
 # Radiators
 
 To reject the full 40 MW thermal load generated by the data center, radiative cooling in deep space is required. Since space lacks convective and conductive heat transfer, **all waste heat must be radiated**, this is typically done via deployable surfaces.
@@ -482,7 +470,7 @@ So after this analysis, the launch manifest therefore looks like this:
 
 Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 5 times**, requiring 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $110M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch.
 
-The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems.
+The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic technoeconomic analysis.
 
 [[Conclusion on Whitepaper]]
 
