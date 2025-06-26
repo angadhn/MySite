@@ -477,7 +477,6 @@ So 5 Starship launches are needed. So, as it stands the current launch manifest 
 | **Radiators**    | 949.8         | 3.2×             | 13       |
 | **Total System** | 1,686.6       | 5.6×             | 22       |
 
-
 # Conclusion
 
 Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 5 times**, requiring 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $85M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch costs.
