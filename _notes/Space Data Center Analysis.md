@@ -366,38 +366,48 @@ The challenge of launching radiators for a 40 MW SDC requires at least 9 launche
 
 ## Volume-based launch numbers
 
-The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. For the ISS radiator systems, we can model the folding geometry as follows. Each radiator unit consists of multiple panels that fold accordion-style along their longest dimension. When stowed, these panels stack atop one another, creating a total thickness equal to the number of panels multiplied by individual panel thickness. Unlike the previous analysis on solar panels where a fixed 0.51 m thickness for the stowed volume was inherited from solar panel empirical data, radiator panels are not as well documented publicly.
+The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. For the ISS radiator systems, we can model the folding geometry as follows. Each radiator unit consists of multiple panels that fold accordion-style along their longest dimension. When stowed, these panels stack atop one another, creating a total thickness equal to the number of panels multiplied by individual panel thickness. Unlike the previous analysis on solar panels where a fixed 0.51 m thickness for the stowed volume was inherited from solar panel empirical data, radiator panels are not as well documented publicly. We examine each of the radiator designs below:
 
-**PVTCS Radiator (PVR) Analysis:**
+**EATCS Radiator (ORU) Analysis:** The External Active Thermal Control System radiator deploys as a 23.3 m × 3.4 m array with 8 panels folding along the 23.3 m dimension:
 
-The Photovoltaic Thermal Control System radiator deploys as a 3.12 m × 13.6 m array consisting of 7 individual panels. When folded, each panel maintains its 3.12 m width but reduces its length to 13.6/7 = 1.94 m. Assuming each panel has a thickness of 0.2 m, the stowed configuration becomes:
-
-$$ \begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \\ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{13.6}{7} = 1.94 \text{ m} \\ T_{stowed} &= N_{panels} \times t_{panel} = 7 \times 0.2 = 1.4 \text{ m} \end{align} $$
-
-The stowed volume and packing density for a single PVR unit are:
-
-$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
-
-**EATCS Radiator (ORU) Analysis:**
-
-Similarly, the External Active Thermal Control System radiator deploys as a 23.3 m × 3.4 m array with 8 panels folding along the 23.3 m dimension:
-
-$$ \begin{align}
+$$
+\begin{align}
 W_{stowed} &= W_{deployed} = 3.4 \text{ m} \\
 L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \\
-T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
+T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align}
+$$
 
 $$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \\ \rho_{ORU} &= \frac{79.2}{15.84} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
 
-**Combined ISS Performance:**
+**PVTCS Radiator (PVR) Analysis:** The Photovoltaic Thermal Control System radiator deploys as a 3.12 m × 13.6 m array consisting of 7 individual panels. When folded, each panel maintains its 3.12 m width but reduces its length to 13.6/7 = 1.94 m. Assuming each panel has a thickness of 0.2 m, the stowed configuration becomes:
 
-The ISS thermal control system utilizes 4 PVR units (PVTCS) and 6 ORU units (EATCS), yielding:
+$$
+\begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \\ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{13.6}{7} = 1.94 \text{ m} \\ T_{stowed} &= N_{panels} \times t_{panel} = 7 \times 0.2 = 1.4 \text{ m} \end{align}
+$$
+
+The stowed volume and packing density for a single PVR unit are:
+
+$$
+\begin{align}
+V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\
+&= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\
+\rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5 \text{ m}^2/\text{m}^3 \end{align}
+$$
+
+
+**Combined ISS Performance:** So for their combined performance on the the ISS, we account for the 6 ORU radiators of the EATCS and 4 radiators of the PVTCS to yield:
 
 $$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
 &= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \\
 \rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
-So, all of these radiator systems have the same packing densities so the number of launches is then given by the ratio of Starcloud's desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
+Despite variations in their deployed areas, these radiator systems have the same packing densities. The number of launches is then computed as 13 from the ratio of Starcloud's desired packing density to the ISS benchmarks above
+
+$$
+N_{launches} = \lceil \frac{63.18}{5} \rceil = 13 \text{ launches}
+$$
+
+This reveals that radiator packing density dictates needing approximately **13 Starship launches** in addition to the 4-5 needed for solar panels.
 
 
 The volume-based launches (13) and mass-based launches (9-12) demonstrates that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces.
