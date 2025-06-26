@@ -442,13 +442,13 @@ Our radiator mass analysis reveals the fundamental constraint limiting Starcloud
 
 {%marginnote 'radiator-table' "ISS radiator technology benchmarks reveal mass as the dominant constraint" %}
 
-|Radiator Technology|Launches|Optimistic Cost ($)|Pessimistic Cost ($)|
-|---|---|---|---|
-|**EATCS (ORU)**|9|45M|900M|
-|**PVTCS (PVR)**|12|60M|1.2B|
-|**ISS Combined**|10|50M|1B|
+| Radiator Technology | Launches | Optimistic Cost ($) | Pessimistic Cost ($) |
+| ------------------- | -------- | ------------------- | -------------------- |
+| **EATCS (ORU)**     | 9        | 45M                 | 900M                 |
+| **PVTCS (PVR)**     | 12       | 60M                 | 1.2B                 |
+| **ISS Combined**    | 10       | 50M                 | 1B                   |
 
-The analysis demonstrates that **mass, not volume, emerges as the critical limiting factor** for large-scale radiator deployment. While volumetric packing densities suggested near single-launch feasibility (1.6-1.8 launches), mass requirements using flight-proven ISS technology demand 9-12 launches—representing a **6-8× penalty** that fundamentally undermines the economic case for space-based data centers.
+The analysis demonstrates that **volume, not mass, emerges as the critical limiting factor** for large-scale radiator deployment. While volumetric packing densities suggested near single-launch feasibility (1.6-1.8 launches), mass requirements using flight-proven ISS technology demand 9-12 launches—representing a **6-8× penalty** that fundamentally undermines the economic case for space-based data centers.
 
 This mass constraint reflects the inherent physics of thermal management systems, which require substantial structural mass for heat transfer mechanisms, fluid manifolds, and thermal exchange surfaces. Even with optimistic $5M launch costs, Starcloud's radiator deployment alone would cost $45-60M before considering the data center payload, power systems, or operational margins.
 
