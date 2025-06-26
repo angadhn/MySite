@@ -14,7 +14,7 @@ subtitle: A Technoeconomic Analysis
 ---
 # Abstract
 
-Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this is infeasible in a single launch but requires a total of 22 launches. The SDC's solar arrays require 4 launches determined by examining existing solar arrays on the ISS. Similarly, the ISS's radiator benchmarks indicate that 13 launches would be needed for the SDC's thermal management system. The server racks would require an addition 5 launches. I have not analysed the effects of MMOD/radiation shielding and the impact of propellant use for in-orbit assembly on launch numbers—this requires specifications and mission architectures that have not been made public and might not yet be fully developed. On the note of launch costs, the whitepaper's (miscalculated) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M {%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}. So, even if costs drop to $500/kg, a single launch results in an overall cost of $53.2M, not the purported $8.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
+Starcloud have claimed that a single 100-ton Starship launch could suffice to create a 40 MW space data centre (SDC) for $8.2 M. My analysis finds that this is infeasible in a single launch but requires a total of upto 22 launches. The SDC's solar arrays require 4 launches determined by examining existing solar arrays on the ISS. Similarly, the ISS's radiator benchmarks indicate that 13 launches would be needed for the SDC's thermal management system. The server racks would require an addition 5 launches. I have not analysed the effects of MMOD/radiation shielding and the impact of propellant use for in-orbit assembly on launch numbers—this requires specifications and mission architectures that have not been made public and might not yet be fully developed. On the note of launch costs, the whitepaper's (miscalculated) assumed launch cost is $30/kg. This makes their comparative economic analysis to terrestrial data centers unmoored from reality in the near term. Some experts speculate that $1000/kg would be an optimistic launch cost, which means $100M per launch and a total cost of $103.2M {%sidenote "owid-launch-cost" "In [2021 dollars](https://ourworldindata.org/grapher/cost-space-launches-low-earth-orbit), a Falcon-9 launch costs $2600/kg and a Falcon Heavy's at $1500/kg. So, even $500/kg is also a fairly optimistic estimate."%}. So, even if costs drop to $500/kg, a single launch results in an overall cost of $53.2M, not the purported $8.2M. If a second launch is needed, then the worst case number is $200M making it more than their reported cost of running a terrestrial data center (TDC).
 
 # Introduction
 
@@ -440,20 +440,20 @@ So after this analysis, the launch manifest therefore looks like this:
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
-| Component        | Mass (tonnes) | Ratio to Server Mass | Launches |
-| ---------------- | ------------- | -------------------- | -------- |
-| **Servers**      | 408.0         | 1.0×                 | 4-5      |
-| **Solar Arrays** | 396.8         | 1.3×                 | 4-5      |
-| **Radiators**    | 949.8         | 2.3×                 | 9-16     |
-| **Total System** | 1,686.6       | 4.13×                | 17-22    |
+| Component        | Mass (tonnes) | Ratio to Server Mass | Launches | Optimistic Cost ($M) | Pessimistic Cost ($M) |
+| ---------------- | ------------- | -------------------- | -------- | -------------------- | --------------------- |
+| **Servers**      | 408.0         | 1.0×                 | 4-5      | 20-25                | 400-500               |
+| **Solar Arrays** | 396.8         | 1.3×                 | 4-5      | 20-25                | 400-500               |
+| **Radiators**    | 894.9-1103.4  | 2.1x-2.7×            | 9-16     | 45-80                | 900-1600              |
+| **Total System** | 1,686.6       | 4.13×                | 17-22    | 85-130               | 1700-2200             |
 
+Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 4 times**, requiring upto 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $110M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch.
 
+The launches alone are in the vicinity of a billion dollars. There is still more one could analyse about these systems based on existing technologies, as mentioned in the abstract, and then there is the complexity 
 
-Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 5 times**, requiring 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $110M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch.
 
 The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic technoeconomic analysis.
 
-[[Conclusion on Whitepaper]]
 
 # Further Reading
 - [International Space Station Evolution Data Book Volume I. Baseline Design Revision A Catherine A. Jorgensen, Editor FDC/NYMA, Hampton, Virginia](https://ntrs.nasa.gov/citations/20000120039)
