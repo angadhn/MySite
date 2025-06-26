@@ -439,19 +439,14 @@ So after this analysis, the launch profile looks like this:
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
-| Component        | Mass (tonnes) | Launches | Optimistic Cost ($M) | Pessimistic Cost ($M) |
+| Component        | Mass (tonnes) | Launches | Optimistic Cost ($M) | Pessimistic Cost ($B) |
 | ---------------- | ------------- | -------- | -------------------- | --------------------- |
-| **Servers**      | 408.0         | 4-5      | 20-25                | 400-500               |
-| **Solar Arrays** | 396.8         | 4-5      | 20-25                | 400-500               |
-| **Radiators**    | 894.9-1103.4  | 9-16     | 45-80                | 900-1600              |
-| **Total System** | 1,686.6       | 17-22    | 85-130               | 1700-2200             |
+| **Servers**      | 408.0         | 4-5      | 20-25                | .4-.5                 |
+| **Solar Arrays** | 396.8         | 4-5      | 20-25                | .4-.5                 |
+| **Radiators**    | 894.9-1103.4  | 9-16     | 45-80                | .9-1.6                |
+| **Total System** | 1,686.6       | 17-22    | 85-130               | 1.7-2.2               |
 
-Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 4 times**, requiring upto 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $110M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch.
-
-The launches alone are in the vicinity of a billion dollars. There is still more one could analyse about these systems based on existing technologies, as mentioned in the abstract, and then there is the complexity 
-
-
-The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic technoeconomic analysis.
+Even using Starcloud's own optimistic specifications, the support infrastructure still outweighs servers by nearly 4 times, requiring upto 22 total launches versus their claimed single launch—representing a 2,200% cost increase from $5M to $110M using an optimistic launch cost ($5M/launch), or $2.2B using a pessimistic $100M/launch ($100M/launch). While there is more one could analyse, the analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic technoeconomic analysis.
 
 
 # Further Reading
