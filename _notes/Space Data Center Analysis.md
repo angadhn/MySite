@@ -110,9 +110,9 @@ $$
 
 So, achieving Starcloud's assumed power density of 312 W/m² requires SAW technology to be **2.1x more efficient**.
 
-### Volume
+### Volume-based Launch numbers
 
-To determine the packing density of one SAW module (i.e., a pair of deployable blankets), we use the stowed volume of this single module that fit within a launched vehicle. The data suggest that this is a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
+The packing density of one SAW module (i.e., a pair of deployable blankets) can be determined from using its stowed volume within a launch vehicle. The data suggest that the module packs into a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
 
 $$
 \begin{align}
@@ -120,7 +120,7 @@ $$
 \end{align}
 $$
 
-This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 3.24 which means we would need nearly 4 launches with SAW technology. **If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches**.
+This is far lower than the desired packing density desired by Starcloud to fit the solar arrays into a single Starship. The number of launches can thus be computed from the ratio of the Starcloud and SAW packing densities—a dimensionless number—which is 3.24. This means we would need 4 launches using SAW technology. If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches.
 
 ### Mass
 
