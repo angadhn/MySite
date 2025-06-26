@@ -109,7 +109,7 @@ $$
 
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **2.1x more efficient** than SAW's 147.7 W/m².
 
-### Packing Density
+### Volume
 
 To determine the packing density of one SAW module (i.e., a pair of deployable blankets), we use the stowed volume of this single module that fit within a launched vehicle. The data suggest that this is a cuboid of square face of 4.57 m and 0.51 m thick—the result is a packing density of
 
@@ -121,7 +121,7 @@ $$
 
 This density is far lower than the packing density needed by Starcloud. Therefore, to determine the number of launches, we would just need to comput the ratio of the Starcloud and SAW packing densities—a dimensionless number. This is 3.24 which means we would need nearly 4 launches with SAW technology. **If we used the more realistic estimate packing density (160 m²/m³), it would need 5 launches**.
 
-### Mass Density
+### Mass
 
 The mass analysis of the Solar Array Wings reveals how deployment architectures create distinct constraint patterns. While volume limitations dominated SAW packing requirements, the mass characteristics will provide insight into the fundamental trade-offs between Z-fold and roll-out solar technologies.
 
@@ -173,7 +173,7 @@ $$
 
 So, to achieve Starcloud's assumed power density of 312 W/m², solar technology would need to be **1.71x more efficient** than iROSA's 255 W/m².
 
-### Packing Density
+### Volume
 
 {% marginfigure 'mf-id-1' 'assets/imgs/space-data-centers/iROSA-dragon.jpg' "iROSA canisters stowed in cargo Dragon's trunk. [Source](https://en.wikipedia.org/wiki/File:Crs-28-sep-1024x576.jpg)"  %}
 
@@ -187,7 +187,7 @@ $$
 
 Again, one can determine the number of launches for the SDC's solar panels by computing the ratio of the Starcloud and iROSA packing densities. At 0.49, this is well under a single Starship launch but, if the canister canister diameter increases to 0.5 m, two launches become necessary. The iROSA canisters diameter could fall anywhere in this range.
 
-### Mass Density
+### Mass
 
 While the packing density analysis suggested favorable volumetric efficiency for iROSA technology, the mass constraint presents a secondary limitation that requires careful examination. Solar arrays, though significantly lighter than thermal management systems, still impose substantial mass penalties when scaled to Starcloud's massive power requirements.
 
@@ -288,7 +288,7 @@ P_{\text{rad, net}} &= \underbrace{770.48}_{\text{Radiated (both sides)}} - \und
 \end{align}
 $$
 
-## Radiator Area Required
+## Radiator Area Required for the SDC
 
 This can be used to compute the area needed to radiate 40 MW of waste heat (assuming as much heat is generated as electricity is produced):
 
@@ -305,7 +305,7 @@ $$
 $$
 
 A more realistic estimate would be based on 80% of the fairing volume being available. In this case, the areal packing density is **79 m²/m³**.
-## Clarifications of whitepaper on radiator performance
+### Clarifications of whitepaper on radiator performance
 
 Previously, we calculated the **solar power density** as:
 
@@ -321,7 +321,7 @@ $$
 
 which clarifies Starcloud's statement that radiator area needed is roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels. For an idealized two-sided blackbody plate's power denity, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity.
 
-## The ISS benchmark and systems
+## The ISS systems as a benchmark 
 
 [The station's systems and experiments consume a large amount of electrical power, almost all of which is converted to heat.](https://en.wikipedia.org/wiki/International_Space_Station#:~:text=The%20station%27s%20systems%20and%20experiments%20consume%20a%20large%20amount%20of%20electrical%20power%2C%20almost%20all%20of%20which%20is%20converted%20to%20heat). So, ~120 kW of electrical power essentially all of which becomes waste heat that must be radiated away. Its radiators operate at -40°C—much colder than Starcloud's assumed 20°C. Keeping same emissivity as the Starcloud system, we can determine that it radiates $$(P_{\text{radiated}})_\text{ISS} = 308.7\,\text{W/m²}$$ and the net heat radiated after accounting for environmental effects is $$(P_{\text{radiated}})_\text{ISS} = 171.3\,\text{W/m²}$$. To achieve thermal control and maintain components at acceptable temperatures, this heat must be transferred radiators with an area of
 
@@ -348,48 +348,12 @@ The EATCS consists of an internal, non-toxic, water coolant loop used to cool an
 
 The Photovoltaic Thermal Control System (PVTCS) consists of ammonia loops that collect excess heat from the Electrical Power System (EPS) components in the Integrated Equipment Assembly (IEA) on P4 and eventually S4 and transport this heat to the PV radiators (located on P4, P6, S4 and S6) where it is rejected to space. The PVTCS consist of ammonia coolant, eleven coldplates, two Pump Flow Control Subassemblies (PFCS) and one Photovoltaic Radiator (PVR).
 
-## Sizing
+### Sizing of ISS Radiators
+
 - **EATCS**: Page 3-16 of [ISS Handbook](https://ntrs.nasa.gov/api/citations/20000120038/downloads/20000120038.pdf) confirms that there are 6 radiator ORUs (3 on S1 truss, 3 on P1 truss). Page 14 of [ATCS Overview](https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf), each ORU weighs 1,122 kg and spans 23.3 m × 3.4 m (i.e., 79.2 m²) for a total EATCS area of  475 m² from six ORUs. The 6 radiators are capable of radiating 70 kW of heat with a specific heat rejection of 11.1 W/kg.
 - **PVTCS**: **PVTCS**: The [ATCS Overview](https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf) specifies 4 Photovoltaic Radiators (PVRs), one per solar truss (S4, P4, P6, S6). Each PVR weighs 741 kg and spans 3.12 m × 13.6 m  (i.e., 42.4 m²) for a total PVTCS area of 170 m² from four PVRs. The 4 radiators are capable of radiating 56 kW of heat with a specific heat rejection of 18.9 W/kg.
 - **Combined Radiator Performance** **Combined area**: Their combined area is 645 m², which is quite close to our theoretical estimate above for the ISS using the Stefan-Boltzmann law. Together they reject about  126 kW of heat, which is also close to the power generated by the ISS. Then we can measure they performance per unit area by dividing heat radiated by area to get 195 W/m². We can also calculate the specific heat rejection by dividing dividing heat radiated by mass to get 195 W/kg with a combined specific heat rejection of 13.5 W/kg.
-
-### Packing Density
-
-The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. Unlike the previous analysis that assumed a fixed 0.51 m thickness inherited from solar panel technology, a more detailed examination reveals that radiator panels are likely thinner individual structures that stack when folded.
-
-For the ISS radiator systems, we can model the folding geometry as follows. Each radiator unit consists of multiple panels that fold accordion-style along their longest dimension. When stowed, these panels stack atop one another, creating a total thickness equal to the number of panels multiplied by individual panel thickness.
-
-**PVTCS Radiator (PVR) Analysis:**
-
-The Photovoltaic Thermal Control System radiator deploys as a 3.12 m × 13.6 m array consisting of 7 individual panels. When folded, each panel maintains its 3.12 m width but reduces its length to 13.6/7 = 1.94 m. Assuming each panel has a thickness of 0.2 m, the stowed configuration becomes:
-
-$$ \begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \\ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{13.6}{7} = 1.94 \text{ m} \\ T_{stowed} &= N_{panels} \times t_{panel} = 7 \times 0.2 = 1.4 \text{ m} \end{align} $$
-
-The stowed volume and packing density for a single PVR unit are:
-
-$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
-
-**EATCS Radiator (ORU) Analysis:**
-
-Similarly, the External Active Thermal Control System radiator deploys as a 23.3 m × 3.4 m array with 8 panels folding along the 23.3 m dimension:
-
-$$ \begin{align}
-W_{stowed} &= W_{deployed} = 3.4 \text{ m} \\
-L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \\
-T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
-
-$$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \\ \rho_{ORU} &= \frac{79.2}{15.84} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
-
-**Combined ISS Performance:**
-
-The ISS thermal control system utilizes 4 PVR units (PVTCS) and 6 ORU units (EATCS), yielding:
-
-$$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
-&= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \\
-\rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
-
-So, all of these radiator systems have the same packing densities so the number of launches is then given by the ratio of Starcloud's desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
-### Mass Density
+## Mass
 
 The mass density analysis reveals a critical constraint that fundamentally challenges Starcloud's single-launch architecture. Unlike volumetric packing, which showed promising results near single-launch feasibility, the mass requirements present a far more severe limitation based on flight-proven ISS radiator technology.
 
@@ -437,7 +401,7 @@ The solar array mass density of 3.10 kg/m² proves remarkably efficient compared
 
 However, even this favorable mass efficiency cannot overcome the sheer scale of Starcloud's power requirements. The 396.8-tonne solar array mass alone would consume **13 Starship launches** before considering radiators, data center payload, or structural systems—fundamentally challenging the single-launch architecture that underpins their economic case.
 
-## Summary of Radiator Launch Requirements
+### Summary of Mass-based Launch Requirements
 
 Our radiator mass analysis reveals the fundamental constraint limiting Starcloud's single-launch architecture. The calculations are summarised below, where the pessimistic launch cost is based on a $100M Starship launch and an optimistic cost uses Starcloud's $5M launch cost assumption:
 
@@ -452,6 +416,43 @@ Our radiator mass analysis reveals the fundamental constraint limiting Starcloud
 The analysis demonstrates that **volume, not mass, emerges as the critical limiting factor** for large-scale radiator deployment. This volume constraint reflects the density of thermal management systems, which require substantial structural mass for heat transfer mechanisms, fluid manifolds, and thermal exchange surfaces. Even with optimistic $5M launch costs, Starcloud's radiator deployment alone would cost $45-60M before considering the data center payload, power systems, or operational margins.
 
 The radiator mass challenge suggests that revolutionary advances in thermal management technology—achieving 90% mass reduction relative to ISS systems—would be necessary to approach single-launch viability. Such improvements far exceed evolutionary materials advances and represent unprecedented engineering breakthroughs for space-qualified thermal control systems.
+
+## Volume
+
+The radiator packing density calculation requires careful consideration of how panels fold and stack when stowed. Unlike the previous analysis that assumed a fixed 0.51 m thickness inherited from solar panel technology, a more detailed examination reveals that radiator panels are likely thinner individual structures that stack when folded.
+
+For the ISS radiator systems, we can model the folding geometry as follows. Each radiator unit consists of multiple panels that fold accordion-style along their longest dimension. When stowed, these panels stack atop one another, creating a total thickness equal to the number of panels multiplied by individual panel thickness.
+
+**PVTCS Radiator (PVR) Analysis:**
+
+The Photovoltaic Thermal Control System radiator deploys as a 3.12 m × 13.6 m array consisting of 7 individual panels. When folded, each panel maintains its 3.12 m width but reduces its length to 13.6/7 = 1.94 m. Assuming each panel has a thickness of 0.2 m, the stowed configuration becomes:
+
+$$ \begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \\ L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{13.6}{7} = 1.94 \text{ m} \\ T_{stowed} &= N_{panels} \times t_{panel} = 7 \times 0.2 = 1.4 \text{ m} \end{align} $$
+
+The stowed volume and packing density for a single PVR unit are:
+
+$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
+
+**EATCS Radiator (ORU) Analysis:**
+
+Similarly, the External Active Thermal Control System radiator deploys as a 23.3 m × 3.4 m array with 8 panels folding along the 23.3 m dimension:
+
+$$ \begin{align}
+W_{stowed} &= W_{deployed} = 3.4 \text{ m} \\
+L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \\
+T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
+
+$$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \\ \rho_{ORU} &= \frac{79.2}{15.84} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
+
+**Combined ISS Performance:**
+
+The ISS thermal control system utilizes 4 PVR units (PVTCS) and 6 ORU units (EATCS), yielding:
+
+$$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
+&= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \\
+\rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
+
+So, all of these radiator systems have the same packing densities so the number of launches is then given by the ratio of Starcloud's desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
 
 # Servers
 
