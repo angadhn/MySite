@@ -475,26 +475,9 @@ So 5 Starship launches are needed. So, as it stands the current launch manifest 
 | **Solar Arrays** | 396.8         | 1.3×             | 4        |
 | **Radiators**    | 949.8         | 3.2×             | 13       |
 | **Total System** | 1,686.6       | 5.6×             | 22       |
-<!--
-Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by 5.6:1**, requiring 17 total launches versus their claimed single launch—representing a **1,700% cost increase** from $5M to $85M using their optimistic launch costs, or $1.7B using realistic $100M/launch costs.
-
-The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management mass**, which systematically dominates launch requirements for large-scale space-based computing systems.
+|                  |               |                  |          |
 
 
-
-## Additional Technical Inconsistencies
-
-Beyond server mass calculations, Starcloud's whitepaper contains several other questionable technical assumptions:
-
-**Solar Array Power Density Claims:** They reference ">1000 W/kg" power densities for thin-film solar cells, yet NASA's most advanced iROSA technology achieves only ~181 W/m² area density with current space-qualified systems. Starcloud assumes 312 W/m²—requiring **1.7× efficiency improvements** over flight-proven technology.
-
-**Thermal Management Oversimplification:** Their claim that radiators need "less than half the size of solar arrays" ignores the **6-8× mass penalty** revealed by ISS thermal control system analysis. Area efficiency means nothing when mass constraints dominate launch requirements.
-
-**Launch Cost Optimism:** Even accepting their optimistic $5M launch costs, the 17-launch requirement transforms their $8.2M total cost claim into **$85M minimum**—excluding assembly operations, structural systems, and operational margins.
-
-**Economic Case Collapse:** Using realistic $100M launch costs, their space data center costs escalate to **$1.7B**—making it 10× more expensive than the $167M terrestrial alternative they claim to beat.
-
-!-->
 
 
 [[Conclusion on Whitepaper]]
