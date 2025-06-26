@@ -439,12 +439,12 @@ So after this analysis, the launch manifest therefore looks like this:
 
 {%marginnote 'table' "Mass constraints dominate solar array deployment requirements" %}
 
-| Component        | Mass (tonnes) | Ratio to Server Mass | Launches | Optimistic Cost ($M) | Pessimistic Cost ($M) |
-| ---------------- | ------------- | -------------------- | -------- | -------------------- | --------------------- |
-| **Servers**      | 408.0         | 1.0×                 | 4-5      | 20-25                | 400-500               |
-| **Solar Arrays** | 396.8         | 1.3×                 | 4-5      | 20-25                | 400-500               |
-| **Radiators**    | 894.9-1103.4  | 2.1x-2.7×            | 9-16     | 45-80                | 900-1600              |
-| **Total System** | 1,686.6       | 4.13×                | 17-22    | 85-130               | 1700-2200             |
+| Component        | Mass (tonnes) | Launches | Optimistic Cost ($M) | Pessimistic Cost ($M) |
+| ---------------- | ------------- | -------- | -------------------- | --------------------- |
+| **Servers**      | 408.0         | 4-5      | 20-25                | 400-500               |
+| **Solar Arrays** | 396.8         | 4-5      | 20-25                | 400-500               |
+| **Radiators**    | 894.9-1103.4  | 9-16     | 45-80                | 900-1600              |
+| **Total System** | 1,686.6       | 17-22    | 85-130               | 1700-2200             |
 
 Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by nearly 4 times**, requiring upto 22 total launches versus their claimed single launch—representing a **2,200% cost increase** from $5M to $110M using an optimistic launch costs, or $2.2B using a pessimistic $100M/launch.
 
