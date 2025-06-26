@@ -479,13 +479,13 @@ Starcloud's own server mass assumptions **strengthen rather than weaken** the ca
 | **Solar Arrays** | 396.8         | 1.3×             | 4        |
 | **Radiators**    | 949.8         | 3.2×             | 13       |
 | **Total System** | 1,686.6       | 5.6×             | 22       |
-
+<!--
 Even using Starcloud's own optimistic specifications, **the support infrastructure still outweighs servers by 5.6:1**, requiring 17 total launches versus their claimed single launch—representing a **1,700% cost increase** from $5M to $85M using their optimistic launch costs, or $1.7B using realistic $100M/launch costs.
 
 The analysis demonstrates that regardless of server mass assumptions—whether optimized space hardware (115.7 tonnes) or commercial rack deployment (300 tonnes)—the fundamental constraint remains **thermal management mass**, which systematically dominates launch requirements for large-scale space-based computing systems.
 
 
-<!--
+
 ## Additional Technical Inconsistencies
 
 Beyond server mass calculations, Starcloud's whitepaper contains several other questionable technical assumptions:
