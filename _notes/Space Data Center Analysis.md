@@ -407,9 +407,14 @@ $$
 N_{launches} = \lceil \frac{63.18}{5} \rceil = 13 \text{ launches}
 $$
 
-The volume-based launches (13) and mass-based launches (9-12) are quite similar despite the math demonstrating that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass (for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces) that also pack less efficiently than the roll-out solar arrays.
+The volume-based launches (13) and mass-based launches (9-12) are quite similar despite the math demonstrating that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass (for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces) that also pack less efficiently than the roll-out solar arrays. Recalling that 63.18 m²/m³ is assuming all of the payload bay is accessible—more realistically this could be 79 m²/m³, which means **this could be up to 16 launches**.
 
 While this analysis demonstrates that **volume, not mass, is the critical limiting factor** for large-scale radiator deployment, it should be noted that this is dependent on the assumed panel thickness panel of 0.2 m. **Reducing panel thickness** to 0.05 m reduces volume-defined launches to 4 but then we fall back to **radiator mass being the critical limiting factor** so we will still need between 9-12 launches when using ISS-like technology. This transforms the claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology.
+
+
+> [!tip] Takeaway 3
+> Radiators will be notoriously harder to launch in a single launch as they currently rely on folded designs, makes them far less mass and volume efficient than roll-up solar arrays. The current estimate is that a 40 MW SDC's radiators will require between 9 and 16 launches. 
+
 
 # Servers
 
@@ -437,9 +442,9 @@ So after this analysis, the launch manifest therefore looks like this:
 
 | Component        | Mass (tonnes) | Ratio to Servers | Launches |
 | ---------------- | ------------- | ---------------- | -------- |
-| **Servers**      | 408.0         | 1.0×             | 5        |
-| **Solar Arrays** | 396.8         | 1.3×             | 4        |
-| **Radiators**    | 949.8         | 3.2×             | 13       |
+| **Servers**      | 408.0         | 1.0×             | 4-5      |
+| **Solar Arrays** | 396.8         | 1.3×             | 4-5      |
+| **Radiators**    | 949.8         | 3.2×             | 12-16    |
 | **Total System** | 1,686.6       | 5.6×             | 22       |
 
 
