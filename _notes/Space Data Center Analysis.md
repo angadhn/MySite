@@ -1,5 +1,5 @@
 ---
-title: There’s no way that Starcloud can put a data centre in space at $8.2 million using one Starship launch
+title: There’s no way that Starcloud can put a data centre in space at $8.2 million in one Starship
 created: 2025-06-19
 published: 2025-06-20
 tags:
@@ -9,7 +9,7 @@ permalink: /space-data-centers-1
 top_of_mind: "true"
 completion_score: 65
 image: /assets/imgs/space-data-centers/starcloud-concept-art.png
-companion music: 
+companion music:
 subtitle: A Technoeconomic Analysis
 ---
 # Abstract
