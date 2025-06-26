@@ -366,7 +366,7 @@ $$ \begin{align} W_{stowed} &= W_{deployed} = 3.12 \text{ m} \\ L_{stowed} &= \f
 
 The stowed volume and packing density for a single PVR unit are:
 
-$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5.01 \text{ m}^2/\text{m}^3 \end{align} $$
+$$ \begin{align} V_{PVR} &= W_{stowed} \times L_{stowed} \times T_{stowed} \\ &= 3.12 \times 1.94 \times 1.4 = 8.47 \text{ m}^3 \\ \rho_{PVR} &= \frac{A_{deployed}}{V_{stowed}} = \frac{42.4}{8.47} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
 
 **EATCS Radiator (ORU) Analysis:**
 
@@ -377,7 +377,7 @@ W_{stowed} &= W_{deployed} = 3.4 \text{ m} \\
 L_{stowed} &= \frac{L_{deployed}}{N_{panels}} = \frac{23.3}{8} = 2.91 \text{ m} \\
 T_{stowed} &= N_{panels} \times t_{panel} = 8 \times 0.2 = 1.6 \text{ m} \end{align} $$
 
-$$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \\ \rho_{ORU} &= \frac{79.2}{15.84} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
+$$ \begin{align} V_{ORU} &= 3.4 \times 2.91 \times 1.6 = 15.84 \text{ m}^3 \\ \rho_{ORU} &= \frac{79.2}{15.84} = 5 \text{ m}^2/\text{m}^3 \end{align} $$
 
 **Combined ISS Performance:**
 
@@ -387,7 +387,7 @@ $$ \begin{align} V_{ISS,total} &= 4 \times V_{PVR} + 6 \times V_{ORU} \\
 &= 4 \times 8.47 + 6 \times 15.84 = 128.9 \text{ m}^3 \\
 \rho_{ISS,combined} &= \frac{645}{128.9} = 5.00 \text{ m}^2/\text{m}^3 \end{align} $$
 
-So, all of these systems have roughly the same packing densities so the number of launches is then given by the ratio of desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
+So, all of these radiator systems have the same packing densities so the number of launches is then given by the ratio of Starcloud's desired packing density to existing packing density.  This reveals that radiator packing density dictates requiring approximately **13 Starship launches** in addition to those needed for solar panels.
 ### Mass Density
 
 The mass density analysis reveals a critical constraint that fundamentally challenges Starcloud's single-launch architecture. Unlike volumetric packing, which showed promising results near single-launch feasibility, the mass requirements present a far more severe limitation based on flight-proven ISS radiator technology.
