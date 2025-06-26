@@ -40,11 +40,11 @@ Now, in-space assembly of large space structures, like large aperture telescopes
 
 Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centers) but by examining the first two aspects, I imagine we will know how well the business case of this company adds up.
 # Starcloud's Business Case
-While one could begin by asking how much compute workload should be moved to space to make a meaningful dent on the climate—a really good reason to do so—economic incentives that lead to large returns on investment are what appeal to private at the end of the day which is why Starcloud exist but space agencies haven't invested here. So, my analysis begins by examining [[starcloud-wp.pdf|Starcloud]]'s numbers to justify their business case for SDC.
 
-Their whitepaper presents a table where the total costs of running a 40MW data centre cluster over ten years is determined to be $167M on Earth versus $8.2M for space; launch is the largest contributor to Starcloud's total costs and they presume that one launch shall be enough, which I was skeptical about.
+While one could begin by asking how much compute workload should be moved to space to make a meaningful dent from a climate angle—a really good reason to do so—economic incentives that guarantee large returns on investment are what appeal to private investors, at the end of the day. This is why Starcloud exists but space agencies haven't invested in the area. So, this analysis begins by examining [Starcloud](https://angadh.com/assets/papers/starcloud-wp.pdf)'s numbers to justify their business case for SDC.
 
-The costs for TDCs and SDCs are broken down as follows:
+The whitepaper presents a table where the total costs of running a 40MW data centre cluster over ten years is determined to be $167M on Earth versus $8.2M for space; launch is the largest contributor to Starcloud's total costs and they presume that one launch shall be enough, which I was skeptical about. As I show [[Space Data Center Analysis#Servers Mass|later]], 300 of their benchmark Nvidia racks alone require 3 launches. That said, the whitepaper's breakdown of costs for TDCs and SDCs are as follows:
+
 **Terrestrial:**
 - Energy: $140M (@ $0.04/kWh)
 - Cooling: $7M (@ 5% of power usage)
