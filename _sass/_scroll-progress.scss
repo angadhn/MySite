@@ -8,6 +8,11 @@
   height: 100vh;
   overflow-y: auto;
   
+  // Hide on very small screens to prevent overlap
+  @media (max-width: 480px) {
+    display: none;
+  }
+  
   .scroll-progress-content {
     background: transparent; // Transparent background
     padding: 1rem 0.5rem;
