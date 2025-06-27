@@ -1,0 +1,342 @@
+/*-- Tufte CSS Components: Sidenotes, Marginnotes, Fullwidth, and Marginal Figures --*/
+
+// Counter reset (this needs to be applied to body in the main styles)
+// counter-reset: sidenote-counter;
+
+// Sidenote essentials
+.sidenote {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-style: italic;
+  float: right;
+  clear: right;
+  margin-right: -45%;
+  width: 35%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  vertical-align: baseline;
+  position: relative;
+}
+
+// Sidenote numbers and toggle
+.sidenote-number {
+  counter-increment: sidenote-counter;
+  cursor: pointer;
+}
+
+.sidenote-number:after {
+  content: counter(sidenote-counter, lower-roman);
+  color: crimson;
+  font-size: 0.8rem;
+  top: -0.5rem;
+  left: 0.1rem;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.sidenote:before {
+  content: counter(sidenote-counter, lower-roman) " ";
+  color: crimson;
+  font-size: 0.8rem;
+  top: -0.5rem;
+  position: relative;
+}
+
+// Hide checkbox
+input.margin-toggle {
+  display: none;
+}
+
+// Marginnote styles (very similar to sidenotes but without counter)
+.marginnote {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-style: italic;
+  float: right;
+  clear: right;
+  margin-right: -45%;
+  width: 35%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  vertical-align: baseline;
+  position: relative;
+  font-style: italic;
+  
+  // Add max-width to ensure images don't overflow
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  img + br {
+    display: block;
+    content: "";
+    margin: -0.5rem 0;
+  }
+
+  // Rounded edges for margin notes videos
+  video {
+    border-radius: 12px;
+  }
+}
+
+// Toggle symbol for marginnotes
+label.margin-toggle:not(.sidenote-number) {
+  display: none;
+}
+
+// Main column figure styles
+.maincolumn-figure {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.maincolumn-figure img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+figure {
+  position: relative;  // Create positioning context
+  margin: 2rem 0;  // Add vertical spacing between figures
+}
+
+.marginal-caption {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  position: absolute;
+  right: -45%;
+  top: 0;
+  width: 35%;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-style: italic;
+  color: $color-text;
+  text-align: left;
+}
+
+// Full-width figures
+.fullwidth {
+  position: relative;
+  width: 140%;        // Increased width to extend further
+  margin-left: 0;     // Align with left edge of content
+  margin-right: -60%; // Push into right margin
+  clear: both;
+  padding: 2rem 0;
+}
+
+.fullwidth img {
+  width: 100%;
+  max-width: 100%;
+}
+
+figcaption {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: $color-text;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+// Plot container with marginal caption
+.plot-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+
+  .marginal-caption {
+    position: absolute;
+    right: -45%;
+    top: 0;
+    width: 35%;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+    color: $color-text;
+    text-align: left;
+  }
+
+  iframe {
+    width: 100%;
+    height: 600px;  // Increased from 500px to 600px
+    border: none;
+    background: transparent;
+    min-height: 550px;  // Added minimum height
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  article {
+    width: 105%;
+    
+    // Prevent horizontal scrolling
+    overflow-x: hidden;
+  }
+  
+  label.margin-toggle.sidenote-number {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .sidenote,
+  .marginnote {
+    float: none !important;
+    clear: both !important;
+    width: 80%;
+    max-width: 350px;
+    margin: 1.2rem auto;
+    padding: 1rem 1.2rem;
+    background: #f8f8f8;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    text-align: left;
+    display: none;
+    border: 1px solid #222;
+  }
+
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote {
+    display: block;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+    content: "⊕";
+  }
+
+  .marginnote {
+    display: none;
+    float: left;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    padding: 0.5rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+  }
+
+  .margin-toggle:checked + .marginnote {
+    display: block;
+  }
+
+  figure {
+    margin: 1rem 0;  // Slightly less spacing on mobile
+  }
+  
+  .marginal-caption {
+    position: relative;
+    right: 0;
+    width: 100%;
+    margin: 0.3rem 0 0 0;
+    padding: 0;
+    font-size: 0.9rem;
+    text-align: center;
+    color: $color-subtext;
+  }
+
+  .fullwidth {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  figcaption {
+    font-size: 0.9rem;  // Slightly smaller font
+    margin-top: 0.3rem; // Less margin
+    padding: 0 1rem;    // Add some side padding
+  }
+
+  .plot-container {
+    margin: 1rem 0;
+    
+    .marginal-caption {
+      position: relative;
+      right: 0;
+      width: 100%;
+      margin: 0.5rem 0 0 0;
+      text-align: center;
+      color: $color-subtext;
+    }
+    
+    iframe {
+      height: 500px;  // Slightly reduced height for mobile but still taller than before
+      min-height: 450px;  // Added minimum height for mobile
+      min-width: 300px;
+      margin: 0 -20px;
+      width: calc(100% + 40px);
+    }
+  }
+}
+
+// Dark theme adjustments
+[data-theme="dark"] {
+  .marginal-caption {
+    color: #eaeaea;
+    
+    @media (max-width: 768px) {
+      color: #eaeaea;
+    }
+  }
+
+  figcaption {
+    color: #eaeaea;
+  }
+
+  .sidenote-number:after,
+  .sidenote:before {
+    color: #00adb5;
+  }
+
+  // Dark mode mobile sidenote/marginnote styles
+  @media (max-width: 768px) {
+    .sidenote,
+    .marginnote {
+      width: 80%;
+      max-width: 350px;
+      background: #1f232b;
+      color: #eaeaea;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 1px solid #3d434d;
+    }
+
+    label.margin-toggle:not(.sidenote-number) {
+      color: #eaeaea;
+    }
+
+    .sidenote-number {
+      color: #00adb5;
+    }
+  }
+
+  // Ensure sidenote numbers maintain dark theme colors
+  .sidenote-number:after {
+    color: #00adb5;
+  }
+
+  // Style the toggle symbol for dark mode
+  label.margin-toggle:not(.sidenote-number) {
+    color: #00adb5;
+  }
+
+  .plot-container {
+    iframe {
+      filter: invert(1) hue-rotate(180deg);
+    }
+    
+    .marginal-caption {
+      color: #eaeaea;
+      
+      @media (max-width: 768px) {
+        color: #eaeaea;
+      }
+    }
+  }
+}
+
+/* -- End of Tufte CSS Components --*/ 
