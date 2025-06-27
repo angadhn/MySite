@@ -41,10 +41,6 @@ body {
   max-width: 80em;
   counter-reset: sidenote-counter;
   padding-top: 2vh;
-
-  @media (min-width: 820px) {
-    font-size: 1.3rem;
-  }
 }
 
 // Base content width
