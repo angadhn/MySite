@@ -446,7 +446,7 @@ $$
 N_{launches,servers} = \lceil \frac{408}{100} \rceil = 5 \text{ launches}
 $$
 
-The racks alone are over a single Starship launch.
+The 408-tonne server mass alone exceeds Starship's 100-tonne payload capacity by 4×.
 # Conclusion
 
 So after this analysis, the launch profile looks like this:
@@ -460,7 +460,7 @@ So after this analysis, the launch profile looks like this:
 | **Radiators**    | 894.9-1103.4  | 9-16     | 45-80                | .9-1.6                |
 | **Total System** | 1,686.6       | 17-22    | 85-130               | 1.7-2.2               |
 
-Even using Starcloud's own optimistic specifications, the support infrastructure still outweighs servers by nearly 4 times, requiring upto 22 total launches versus their claimed single launch—representing a 2,200% cost increase from $5M to $110M using an optimistic launch cost ($5M/launch), or $2.2B using a pessimistic $100M/launch ($100M/launch). While there is more one could analyse, the analysis demonstrates that regardless of server mass assumptions—commercial rack deployment (300 tonnes) or with optimized space hardware (maybe 150 tonnes?)—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic techno-economic analysis.
+Even using Starcloud's own optimistic specifications, the support infrastructure still outweighs servers by nearly 4 times, requiring upto 22 total launches versus their claimed single launch—representing a 2,200% cost increase from $5M to $110M using an optimistic launch cost ($5M/launch), or $2.2B using a pessimistic $100M/launch ($100M/launch). While there is more one could analyse, the analysis demonstrates that regardless of server mass assumptions—commercial rack deployment (300 tonnes) or with optimized space hardware—the fundamental constraint remains **thermal management volume**, which systematically dominates launch requirements for large-scale space-based computing systems. This work is not to say that SDCs have no value but that the case for SDC needs more realistic techno-economic analysis.
 
 
 # Further Reading
