@@ -31,12 +31,12 @@ There stated objective is delivering a GW-scale SDC—this requires engineering 
 
 ## Space challenges
 
-Now, in-space assembly of large space structures, like large aperture telescopes, comes with its own challenges. For the sake of this analysis, I will classify them in the same three categories as I did at the start for TDCs but present them in reverse order:
+Now, in-space assembly of large space structures, like large aperture telescopes, comes with its own challenges. For the sake of this SDC analysis, I will classify them in the same three categories as I did at the start for TDCs but presented in reverse order:
 1. Real estate: Starcloud's target is to achieve a 5 GW cluster spanning, with solar arrays spanning 4 km by 4 km—this would comfortably become the largest structure in space—which will need in-space assembly. This is, in some sense, equivalent to real estate.
 2. Cooling (aka Thermal Management): On Earth, data centres use air (convection) and water cooling (conduction) but in space, thermal management requires radiation, which is less efficient—convection is impossible in a vacuum and while water could extract heat from the center, cooling that heated up water would then pose another problem.
 3. Finally, we could also think about if/when the carbon footprint of launches offset the benefits of a SDC. But the report suggests that achieving AGI could need 1 GW centres but large hyperscale Earth-based data centres today reach 100 megawatts (MW) meaning they "do not scale well or sustainably to gigawatt (GW) sizes".
 
-Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centres) but by examining the first two aspects, I imagine we will know how well the business case of this company adds up.
+Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centres) but by examining the first two aspects, I imagine we will know get a sense of how well the business case of this company adds up.
 
 # Starcloud's Business Case
 
