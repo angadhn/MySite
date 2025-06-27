@@ -341,6 +341,7 @@ The ISS radiator system is summarised below:
 | ------ | --------- | --------- | --------- | ------------------- | --------------- |
 | EATCS  | 6         | 475       | 6,732     | 70                  | 11.1            |
 | PVTCS  | 4         | 170       | 2,964     | 56                  | 18.9            |
+
 We now proceed to estimate the launch numbers.
 ## Mass-based launch numbers
 
