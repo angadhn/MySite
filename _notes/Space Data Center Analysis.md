@@ -82,7 +82,7 @@ $$
 
 This means that we would need to fit 128 m² of solar panels into a  m³ of Starship where we have assumed that all of the paylod bay's fairing volume is usable; but such packing efficiency is impractical but we will stick with this optimistic estimate for now. However, a more realistic estimate might permit about 80% of the available 1000 m³ to be used in which case the areal packing density is **160 m²/m³**.
 
-Next, I examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAWs and are set to become its next-generation replacements; this ISS variant is called iROSA.
+Next, I examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAWs and are set to become its next-generation replacements; this ISS variant is called iROSA. I examine these two designs because the ISS represents both the largest solar array deployment and the most power-hungry space structure to date, providing a realistic systems engineering perspective that accounts for panel sizes, deployment mechanisms, and proven space performance.
 
 ## Analysis of Solar Array Wings (SAW)
 
