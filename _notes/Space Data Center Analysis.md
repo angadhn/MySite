@@ -427,7 +427,7 @@ While this analysis demonstrates that **volume, not mass, is the critical limiti
 
 
 > [!tip] Takeaway 3
-> Radiators require 9-16 launches due to their inherently lower mass and volume efficiency compared to roll-out solar arrays, with volume constraints dominating in this analysis. I am genuinely skeptical about radiators being single launch in the near-time horizon; they will always be heavy and can not roll-up like solar arrays.
+> Radiators appear to require 9-16 launches due to their inherently lower mass and volume efficiency compared to roll-out solar arrays. I am genuinely skeptical about radiators being single launch here in the near-time horizon unless rapid advancements (e.g novel materials with high specific heat rejection rates) happen. In their current form, they do not conveniently roll-up like thin film solar arrays so will stow inefficiently in launchers.
 
 # Server Racks
 
