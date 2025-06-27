@@ -433,7 +433,7 @@ The analysis closes out with a brief examination of server racks.
 
 # Server Racks
 
-Having established that radiators are more dominant than power systems on the SDC launch manifest, it is also worth deriving the SDC's implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). This is claimed to take up 50% of Starship's payload bay volume. First, I clarify that the calculations align with the actual specs of the rack:
+Having established that radiators are more dominant than power systems on the SDC launch manifest, it is also worth deriving the SDC's implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). First, I clarify that the calculations align with the actual specs of the rack:
 
 $$
 \begin{align} P_{effective,per-rack} &= \frac{P_{total}}{N_{racks}} \\ &= \frac{40{,}000 \text{ kW}}{300} \\ &= 133.3 \text{ kW per rack} \end{align}
@@ -448,7 +448,7 @@ $$
 N_{launches,servers} = \lceil \frac{408}{100} \rceil = 5 \text{ launches}
 $$
 
-The 408-tonne server mass alone exceeds Starship's 100-tonne payload capacity by 4×.
+The 408-tonne server mass alone exceeds Starship's 100-tonne payload capacity by a little over 4×; I treat this as 5 launches here but 4 launches might not be unreasonable. However, Starcloud's claim that racks will take up 50% of Starship's payload bay volume is unlikely—not the expert here on chip/rack/server design but shedding 75% of its mass seems radical.
 # Conclusion
 
 So after this analysis, the launch profile looks like this:
