@@ -429,6 +429,8 @@ While this analysis demonstrates that **volume, not mass, is the critical limiti
 > [!tip] Takeaway 3
 > Radiators appear to require 9-16 launches due to their inherently lower mass and volume efficiency compared to roll-out solar arrays. I am genuinely skeptical about radiators being single launch here in the near-time horizon unless rapid advancements (e.g novel materials with high specific heat rejection rates) happen. In their current form, they do not conveniently roll-up like thin film solar arrays so will stow inefficiently in launchers.
 
+The analysis closes out with a brief examination of server racks.
+
 # Server Racks
 
 Having established that radiators are more dominant than power systems on the SDC launch manifest, it is also worth deriving the SDC's implicit server mass assumptions and compare them to industry benchmarks. Their total compute deployment of ~40 MW is to be achieved using 300 [Nvidia GB200 NVL72](https://www.supermicro.com/manuals/brochure/Brochure-AI-SuperCluster-NVIDIA-GB200-NVL72.pdf) racks with each rack needing [120 kW per rack](https://www.sunbirddcim.com/blog/your-data-center-ready-nvidia-gb200-nvl72#:~:text=The%20GB200%20NVL72%20is%20likely%20to%20require%20120%20kW%20per%20rack). This is claimed to take up 50% of Starship's payload bay volume. First, I clarify that the calculations align with the actual specs of the rack:
