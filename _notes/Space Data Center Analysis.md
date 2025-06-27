@@ -279,7 +279,7 @@ $$
 A_{\text{rad}} = \frac{40{,}000{,}000}{633.08} \approx \boxed{63{,}183.1\,\text{m}^2}
 $$
 
-This is roughly **0.063 km²** of radiator surface that their whitepaper claims also needs packing in  the same Starship's fairing volume of 1,000 m³. While we already know this is unlikely—because of the 5 launches already needed for the solar arrays—we determine that a single launch Starship will dictate that the radiator has an areal packing density of 63.18 m²/m³.
+This amounts to approximately **0.063 km²** of radiator surface area, which their whitepaper also claims must fit within the same Starship fairing volume of 1,000 m³. While this is clearly impossible—given that the solar arrays alone already require five separate launches—we can calculate the required areal packing density for the radiator to fit inside a single Starship. It would need to achieve an areal packing density of **63.18 m²/m³**, an extraordinarily high and likely unachievable figure.
 
 $$
 \begin{align}
@@ -297,7 +297,7 @@ $$
 
 which clarifies Starcloud's statement that the radiator area needed is indeed roughly half that of the solar array. However, examining the power density ratio of the radiator to solar  arrays tells us that the performance of the radiator is just about twice better than the power generation capacity of the solar panels.
 
-For an idealized two-sided blackbody plate's power density, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity. Now, we estimate the sizing based on the ISS's benchmarks.
+For an idealized two-sided blackbody plate's power density, this ratio is 2.68; this is closer to the paper's statement of "roughly three times the electricity generated per square meter by solar panels". Thus, it is important to clarify that under Starcloud’s assumed radiator and environmental parameters, the whitepaper's commentary could be strengthened by focusing on a radiator system's heat rejection capability being approximately **twice**, not three times, the power per square meter as the solar array generates electricity. To ground this theoretical model in real-world hardware, we now compare it against the ISS’s proven radiator systems.
 
 ## The ISS systems as a benchmark 
 
