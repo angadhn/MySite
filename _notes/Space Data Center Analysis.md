@@ -66,9 +66,9 @@ Now this means their projected energy cost is $0.002/kWh in space versus $0.045-
 
 Launch costs are calculated from launch numbers, whose estimation requires some design specifications of the SDC (mass and geometry). As I read the whitepaper, it was unclear how SDC's total mass would be 100 tonnes (or 167 tonnes) as these aren't publicly shared—it is either proprietary information or yet to be defined. However, there are other ways to derive these design specs to verify the launch claims by using information in the whitepaper and filling in the gaps by examining state-of-the-art systems.
 
-With these specs, a mass-based estimate of launches can be derived but one can also determine launch numbers that account for how the SDC's elements fits into a rocket. Here, one essentially breaks the SDC into its subsystems to works out if/how their geometries fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating.
+With these specs, a mass-based estimate of launches can be derived but one can also determine launch numbers that account for how the SDC's elements fits into a rocket. Here, one essentially breaks the SDC into its subsystems to determine whether their geometries fit into the volume of a launcher's fairing. So, even if the mass estimates indicate the SDC fits into a single launcher, its volume might not necessarily be as accommodating, and vice versa.
 
-The remainder of this blog is dedicated to estimating these launch numbers for three main part of the SDC: [[Space Data Center Analysis#Solar Arrays|solar arrays]], [[Space Data Center Analysis#Radiator|radiators]], and [[Space Data Center Analysis#Servers Mass|servers]].
+The remainder of this analysis is dedicated to estimating these launch numbers for three main parts of the SDC: [[Space Data Center Analysis#Solar Arrays|solar arrays]], [[Space Data Center Analysis#Radiator|radiators]], and [[Space Data Center Analysis#Servers Mass|servers]].
 
 # Solar Arrays for SDC
 
@@ -82,7 +82,7 @@ $$
 
 This means that we would need to fit 128 m² of solar panels into a  m³ of Starship where we have assumed that all of the paylod bay's fairing volume is usable; but such packing efficiency is impractical but we will stick with this optimistic estimate for now. However, a more realistic estimate might permit about 80% of the available 1000 m³ to be used in which case the areal packing density is **160 m²/m³**.
 
-Next, I examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAW's and are set to become its next-generation replacements; this ISS variant is called iROSA.
+Next, I examine the performance of two space-proven designs for deployable solar arrays (of the three options that Starcloud propose to use as per their whitepaper). The first design is the **Z-folds arrays** which are the legacy design used on the ISS's Solar Array Wings (SAW) and the second, called roll-out solar arrays (ROSA), augmented to the SAWs and are set to become its next-generation replacements; this ISS variant is called iROSA.
 
 ## Analysis of Solar Array Wings (SAW)
 
