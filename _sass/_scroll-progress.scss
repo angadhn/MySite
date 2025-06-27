@@ -8,9 +8,9 @@
   height: 100vh;
   overflow-y: auto;
   
-  // Hide on very small screens to prevent overlap
+  // Switch to horizontal bar on small screens
   @media (max-width: 480px) {
-    display: none;
+    display: none; // Hide the vertical sidebar
   }
   
   .scroll-progress-content {
@@ -395,4 +395,39 @@
       background-color: rgba(255, 255, 255, 0.4);
     }
   }
-} 
+}
+
+// Horizontal progress bar for small screens
+.horizontal-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(128, 128, 128, 0.2);
+  z-index: 1000;
+  display: none;
+  
+  // Show only on small screens
+  @media (max-width: 480px) {
+    display: block;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: crimson;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+}
+
+// Dark theme support for horizontal progress
+[data-theme="dark"] {
+  .horizontal-scroll-progress {
+    background-color: rgba(128, 128, 128, 0.3);
+    
+    .progress-bar {
+      background-color: #00adb5; // Use teal for dark mode
+    }
+  }
+}

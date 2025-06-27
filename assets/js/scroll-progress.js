@@ -82,6 +82,9 @@ class ScrollProgress {
     // Insert into the page
     document.body.appendChild(this.progressContainer);
 
+    // Create horizontal progress bar for small screens
+    this.createHorizontalProgress();
+
     // Add table of contents functionality for desktop/laptop devices
     this.addTableOfContents();
 
@@ -142,6 +145,19 @@ class ScrollProgress {
         <span class="progress-text">${heading.text}</span>
       </div>
     `;
+  }
+
+  createHorizontalProgress() {
+    // Create horizontal progress bar for small screens
+    this.horizontalProgressContainer = document.createElement('div');
+    this.horizontalProgressContainer.className = 'horizontal-scroll-progress';
+    this.horizontalProgressContainer.innerHTML = `
+      <div class="progress-bar"></div>
+    `;
+
+    // Insert into the page
+    document.body.appendChild(this.horizontalProgressContainer);
+    this.horizontalProgressBar = this.horizontalProgressContainer.querySelector('.progress-bar');
   }
 
   attachScrollListener() {
@@ -229,6 +245,19 @@ class ScrollProgress {
         item.style.setProperty('--progress', progress);
       }
     });
+
+    // Update horizontal progress bar
+    this.updateHorizontalProgress(scrollTop, documentHeight);
+  }
+
+  updateHorizontalProgress(scrollTop, documentHeight) {
+    if (!this.horizontalProgressBar) return;
+    
+    const windowHeight = window.innerHeight;
+    const scrollableHeight = documentHeight - windowHeight;
+    const scrollProgress = scrollableHeight > 0 ? (scrollTop / scrollableHeight) * 100 : 0;
+    
+    this.horizontalProgressBar.style.width = `${Math.min(Math.max(scrollProgress, 0), 100)}%`;
   }
 }
 
