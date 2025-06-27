@@ -279,7 +279,7 @@ $$
 A_{\text{rad}} = \frac{40{,}000{,}000}{633.08} \approx \boxed{63{,}183.1\,\text{m}^2}
 $$
 
-This amounts to approximately **0.063 km²** of radiator surface area, which their whitepaper also claims must fit within the same Starship fairing volume of 1,000 m³. While this is clearly impossible—given that the solar arrays alone already require five separate launches—we can calculate the required areal packing density for the radiator to fit inside a single Starship. It would need to achieve an areal packing density of **63.18 m²/m³**, an extraordinarily high and likely unachievable figure.
+This amounts to approximately **0.063 km²** of radiator surface area, which their whitepaper also claims must fit within the same Starship fairing volume of 1,000 m³. While this is clearly impossible—given that the solar arrays alone already require five separate launches—we can calculate the required areal packing density for the radiator to fit inside a single Starship. It would need to achieve an areal packing density of **63.18 m²/m³**, an extraordinarily high (and likely unachievable) figure.
 
 $$
 \begin{align}
