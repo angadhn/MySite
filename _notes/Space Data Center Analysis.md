@@ -271,6 +271,8 @@ P_{\text{rad, net}} &= \underbrace{770.48}_{\text{Radiated (both sides)}} - \und
 \end{align}
 $$
 
+However, this theoretical calculation assumes heat is uniformly distributed across the radiator surface. The real engineering challenge is getting heat from the source (in this case, the data center) to every point on the radiator surface without adding prohibitive mass in pumps, pipes, and manifolds—similar to how your home radiator needs internal channels to distribute hot water throughout the unit.
+
 ## Radiator Area Required for the SDC
 
 This can be used to compute the area needed to radiate 40 MW of waste heat (assuming as much heat is generated as electricity is produced):
@@ -339,9 +341,13 @@ $$ \begin{align} \rho_{mass,ORU} &= \frac{m_{ORU}}{A_{deployed,ORU}} \\ &= \frac
 
 $$ \begin{align} \rho_{mass,PVR} &= \frac{m_{PVR}}{A_{deployed,PVR}} \\ &= \frac{741 \text{ kg}}{42.4 \text{ m}^2} = 17.48 \text{ kg/m}^2 \end{align} $$
 
+These mass figures (14-17 kg/m²) reflect not just the radiating surface, but the complex internal heat distribution networks. Each radiator contains ammonia coolant loops, manifolds to distribute flow, internal channels to reach every corner of the panel, pumps, and mounting hardware. This internal ‘plumbing’ represents the majority of the radiator mass—the actual radiating surface is relatively lightweight.
+
 **Combined Systems Mass Performance:** The complete ISS thermal control system comprises the PVTCS units and ATCS, yielding a system-level mass density of:
 
 $$ \begin{align} m_{ISS,total} &= 4 \times 741 + 6 \times 1122 = 9696 \text{ kg} \\ \rho_{mass,ISS} &= \frac{9696}{645} = 15.03 \text{ kg/m}^2 \end{align} $$
+
+The radiator mass challenge stems from the need to transport heat internally within each panel. Unlike solar arrays that only need electrical connections, radiators require heavy fluid distribution systems to ensure uniform temperature across their entire surface. This internal heat transport infrastructure—not the radiation physics itself—drives the 4-5x mass penalty compared to solar panels.
 
 Scaling these empirical mass densities to Starcloud's 63,190 m² radiator requirement reveals the magnitude of the mass challenge:
 
@@ -408,7 +414,7 @@ $$
 
 The volume-based launches (13) and mass-based launches (9-12) are quite similar despite the math demonstrating that **volume emerges as the dominant constraint for large-scale radiator deployment**. This reflects the fundamental physics of thermal management systems, which require substantial structural mass (for heat transfer fluids, manifolds, mounting hardware, and thermal exchange surfaces) that also pack less efficiently than the roll-out solar arrays. Recalling that 63.18 m²/m³ is assuming all of the payload bay is accessible—more realistically this could be 79 m²/m³, which means **this could be up to 16 launches**.
 
-While this analysis demonstrates that **volume, not mass, is the critical limiting factor** for large-scale radiator deployment, it should be noted that this is dependent on the assumed panel thickness panel of 0.2 m. **Reducing panel thickness** to 0.05 m reduces volume-defined launches to 4 but then we fall back to **radiator mass being the critical limiting factor** so we will still need between 9-12 launches when using ISS-like technology. This transforms the claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology. Achieving single-launch feasibility requires a **packing density of 63.18 m²/m³**—well beyond demonstrated deployable radiator technologies.
+While this analysis demonstrates that **volume, not mass, is the critical limiting factor** for large-scale radiator deployment, it should be noted that this is dependent on the assumed panel thickness panel of 0.2 m. **Reducing panel thickness** to 0.05 m reduces volume-defined launches to 4 but then we fall back to **radiator mass being the critical limiting factor** so we will still need between 9-12 launches when using ISS-like technology. This transforms the claimed $5M single-launch deployment into a $1B+ multi-launch operation using realistic launch costs and flight-proven thermal management technology. Achieving single-launch feasibility requires a **packing density of 63.18 m²/m³**—roughly an order of magnitude beyond demonstrated deployable radiator technologies.
 
 
 > [!tip] Takeaway 3
