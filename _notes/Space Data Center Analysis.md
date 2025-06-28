@@ -457,6 +457,7 @@ Even using Starcloud's own optimistic specifications, the support infrastructure
 
 
 # Further Reading
+- [Review of advanced radiator technologies for spacecraft power systems and space thermal control](https://www.researchgate.net/publication/24301713_Review_of_advanced_radiator_technologies_for_spacecraft_power_systems_and_space_thermal_control)
 - [International Space Station Evolution Data Book Volume I. Baseline Design Revision A Catherine A. Jorgensen, Editor FDC/NYMA, Hampton, Virginia](https://ntrs.nasa.gov/citations/20000120039)
 - [Active Thermal Control System (ATCS) Overview](https://www.nasa.gov/wp-content/uploads/2021/02/473486main_iss_atcs_overview.pdf)
 - [MANAGING RISK FOR THERMAL VACUUM TESTING OF THE INTERNATIONAL SPACE STATION RADIATORS](https://ntrs.nasa.gov/api/citations/20010059377/downloads/20010059377.pdf?)
