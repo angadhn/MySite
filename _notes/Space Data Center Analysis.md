@@ -1,16 +1,17 @@
 ---
-title: There’s no way that Starcloud can put a data centre in space at $8.2 million using one Starship launch
+title: No way Starcloud’s putting a data centre in space in a Starship or $8.2 million
 created: 2025-06-19
 published: 2025-06-20
 tags:
   - space
   - essays
+  - AI
 permalink: /space-data-centers-1
 top_of_mind: "true"
-completion_score: 75
+completion_score: 85
 image: /assets/imgs/space-data-centers/starcloud-concept-art.png
-companion music:
-subtitle: A Technoeconomic Analysis
+companion music: 
+subtitle: A Technoeconomic Benchmark against ISS technologies
 ---
 # Abstract
 
@@ -20,12 +21,12 @@ Starcloud have claimed that a single 100-ton Starship launch could suffice to cr
 
 On Earth, data centres run on the existing electricity grid that, crudely put, use a combination of fossil fuels or terrestrial solar. Recently, technologists and entrepreneurs have  talked up placing data centres in space to resolve three issues with terrestrial data centres (TDC):
 1. Data centres require tremendous amounts of energy, which is plentiful and "free" in space. There, 24/7 solar power is unhindered by day/night cycles, weather, and atmospheric losses (attenuation).
-2. A lot of waste heat is generated running TDCs, which contributes to climate change—so migrating to space would alleviate the toll on Earth's thermal budget. This seems like a compelling environmental argument. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI.
-3. Real estate for data centres is a massive bottleneck and this land could be used for other purposes.
+2. A lot of waste heat is generated running TDCs, whose [cooling systems](https://m.youtube.com/watch?v=JYmu1eNvfNQ) also  impact the environment—so migrating to space would alleviate the toll on Earth's thermal budget. TDCs already consume about [1-1.5% of global electricity](https://www.iea.org/energy-system/buildings/data-centres-and-data-transmission-networks) and it's safe to assume that this will only grow in the pursuit of AGI. This seems like a compelling reason to move to orbit.
+3. Real estate for data centres is a massive bottleneck and this land could be used for other purposes. [People are also generally annoyed by data centres](https://youtu.be/SpMIs6AnUW8?feature=shared) coming up near their homes and you can’t expect everyone to want to relocate.
 
-Now, Sam Altman has also talked up nuclear energy as a solution, which I suspect is maybe a more desirable solution from an energy and climate angle but the regulatory barriers need to be resolved. So, space, in theory, sounds like a speedier answer from a regulatory perspective—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But delivering a GW-scale SDC requires engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, needs a square of side 357 m. This would far exceed the span of the largest space structure ever built—the ISS is about 100 m in its longest dimension.
+Now, Sam Altman has also talked up nuclear energy as a solution to point 1, which I suspect is probably more desirable than going into space but the regulatory barriers need to be resolved. So, space, in theory, sounds like a panacea—as a space person, I'd love nothing more than for there to be a strong economic case for space[^1]. But delivering a GW-scale SDC requires engineering solar arrays in the km scale, which will not be easy. Even the 40 MW system, that Starcloud used to benchmark against TDCs, needs a square of side 357 m. This would far exceed the span of the largest space structure ever built—the ISS is about 100 m in its longest dimension. As we’ll see there are other challenges with cooling.
 
-So, there's now at least one [YCombinator](https://YCombinator.com)-backed company, Starcloud Inc., working on building SDCs—they released a whitepaper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe). They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
+A [YCombinator](https://YCombinator.com)-backed company, Starcloud Inc., released a whitepaper on this and I decided to dive in (with Claude to speedrun my analysis, of course). They begin by pointing us to some of the unique benefits of space solar, the main one being its 95%+ [capacity factor](https://en.wikipedia.org/wiki/Capacity_factor) versus just a median capacity factor of 24% for US terrestrial solar (under 10% in northern Europe). They continue to say that combined with 40% higher peak power due to no atmospheric losses, you get over 5x the energy output from the same solar array. This is not exactly my forte so I am not fact-checking these claims—let's accept them as true.
 
 ## My qualifications
 
@@ -34,11 +35,11 @@ If I can claim a bit of domain expertise, it's on the space side. Reading Starcl
 ## Space challenges
 
 Now, in-space assembly of large space structures, like large aperture telescopes, comes with its own challenges. For the sake of this analysis, I will classify them in the same three categories as I did at the start for TDCs but present them in reverse order:
-1. Real estate: Starcloud's target is to achieve a 5 GW cluster spanning, with solar arrays spanning 4 km by 4 km—this would comfortably become the largest structure in space—which will need in-space assembly. This is, in some sense, equivalent to real estate.
+1. Real estate: Starcloud's target is to achieve a 5 GW cluster, with solar arrays spanning 4 km by 4 km—this would comfortably become the largest structure in space yet—which will need launch followed by in-space assembly. This is analogous to TDC’s real estate.
 2. Cooling (aka Thermal Management): On Earth, data centres use air (convection) and water cooling (conduction) but in space, thermal management requires radiation, which is less efficient—convection is impossible in a vacuum and while water could extract heat from the center, cooling that heated up water would then pose another problem.
 3. Finally, we could also think about if/when the carbon footprint of launches offset the benefits of a SDC. But the report suggests that achieving AGI could need 1 GW centres but large hyperscale Earth-based data centres today reach 100 megawatts (MW) meaning they "do not scale well or sustainably to gigawatt (GW) sizes".
 
-Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centres) but by examining the first two aspects, I imagine we will know how well the business case of this company adds up.
+Now, I will treat that last item as speculative mostly because it is out of my wheelhouse. However, if it is true, then we will need some alternative (either nuclear or space-based data centres) but by examining the performance-driven launch numbers of the first two aspects (except in-space assembly in point 1), I imagine we will know how well the business case of this company adds up.
 
 # Starcloud's Business Case
 
@@ -418,7 +419,7 @@ While this analysis demonstrates that **volume, not mass, is the critical limiti
 
 
 > [!tip] Takeaway 3
-> Radiators likely require 9–16 Starship launches due to their inherently lower mass and volume efficiency compared to roll-out solar arrays. Unlike thin-film PV, current radiator designs do not stow compactly, and lack deployable architectures with similar areal packing density. Without rapid advancement—such as lightweight materials with high specific heat rejection per unit mass or compact deployable structures—it is difficult to see radiators achieving single-launch feasibility for 40 MW-scale systems in the near term. Thermal management, not compute or power generation, remains the primary launch-limiting factor for orbital data centers. 
+> Radiators likely require 9–16 Starship launches due to their inherently lower mass and volume efficiency compared to roll-out solar arrays. Unlike thin-film PV, current radiator designs do not stow compactly, and lack deployable architectures with similar areal packing density. Without rapid advancement—such as lightweight materials with high specific heat rejection per unit mass or compact deployable structures—it is difficult to see radiators achieving single-launch feasibility for 40 MW-scale systems in the near term. Thermal management, not compute or power generation, remains the primary launch-limiting factor for orbital data centers. [Integrated solar panels with and thin-film thermal similar in design to the iROSA](https://t.co/5IRpX3wMT9) are currently being researched at a very early stage. These are to cool solar panels for space-based solar power but how, if at all, this can also be applied to chips is unclear. Liquid cooling technologies with heat exchangers will still be needed and are bulky.
 
 That said, we will close out with an examination of server racks.
 

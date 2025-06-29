@@ -9,7 +9,7 @@
   overflow-y: auto;
   
   // Switch to horizontal bar on small screens
-  @media (max-width: 480px) {
+  @media (max-width: 401px) {
     display: none; // Hide the vertical sidebar
   }
   
@@ -409,7 +409,7 @@
   display: none;
   
   // Show only on small screens
-  @media (max-width: 480px) {
+  @media (max-width: 401px) {
     display: block;
   }
   
