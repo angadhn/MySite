@@ -5,7 +5,10 @@ class MobileSidenotes {
   }
 
   init() {
-    // Only initialize on mobile devices
+    // Always attach toggle symbol listeners for all devices
+    this.attachToggleSymbolListeners();
+    
+    // Only initialize mobile-specific features on mobile devices
     if (!this.isMobileDevice()) {
       return;
     }
@@ -22,6 +25,20 @@ class MobileSidenotes {
     this.backdrop = document.createElement('div');
     this.backdrop.className = 'mobile-sidenote-backdrop';
     document.body.appendChild(this.backdrop);
+  }
+
+  attachToggleSymbolListeners() {
+    // Initialize all toggle symbols on page load
+    document.querySelectorAll('.margin-toggle').forEach(toggle => {
+      this.updateToggleSymbol(toggle);
+    });
+
+    // Monitor checkbox changes to update toggle symbols (works on all devices)
+    document.addEventListener('change', (e) => {
+      if (e.target.classList.contains('margin-toggle')) {
+        this.updateToggleSymbol(e.target);
+      }
+    });
   }
 
   attachEventListeners() {
@@ -64,6 +81,15 @@ class MobileSidenotes {
     }
   }
 
+  updateToggleSymbol(toggle) {
+    // Find the associated label (previous sibling for marginnotes)
+    const label = toggle.previousElementSibling;
+    if (label && label.classList.contains('margin-toggle') && !label.classList.contains('sidenote-number')) {
+      // Update the symbol based on toggle state
+      label.textContent = toggle.checked ? ' ⊖' : ' ⊕';
+    }
+  }
+
   dismissSidenote(sidenote) {
     // Find the associated checkbox/toggle
     const toggle = sidenote.previousElementSibling;
@@ -78,6 +104,8 @@ class MobileSidenotes {
     const openToggles = document.querySelectorAll('.margin-toggle:checked');
     openToggles.forEach(toggle => {
       toggle.checked = false;
+      // Update the symbol when dismissing
+      this.updateToggleSymbol(toggle);
       // Trigger change event manually to ensure normal flow  
       toggle.dispatchEvent(new Event('change', { bubbles: true }));
     });
