@@ -215,11 +215,25 @@ figcaption {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
     z-index: 1000;
     display: none;
     cursor: pointer;
+    
+    // Default transparent for marginnotes
+    background: transparent;
+    backdrop-filter: none;
+    
+    // Hazy backdrop for sidenotes
+    &.hazy {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(2px);
+    }
+    
+    // Explicit transparent class for marginnotes
+    &.transparent {
+      background: transparent;
+      backdrop-filter: none;
+    }
   }
 
   .margin-toggle:checked + .sidenote,
@@ -325,7 +339,15 @@ figcaption {
     }
 
     .mobile-sidenote-backdrop {
-      background: rgba(0, 0, 0, 0.5);
+      // Default remains transparent
+      
+      &.hazy {
+        background: rgba(0, 0, 0, 0.5);
+      }
+      
+      &.transparent {
+        background: transparent;
+      }
     }
 
     label.margin-toggle:not(.sidenote-number) {

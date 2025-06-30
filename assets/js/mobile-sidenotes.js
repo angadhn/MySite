@@ -71,13 +71,23 @@ class MobileSidenotes {
   }
 
   updateBackdropVisibility() {
-    // Only check for actual sidenotes, not marginnotes (which are for image captions)
+    // Check for actual sidenotes
     const openSidenotes = document.querySelectorAll('.margin-toggle:checked + .sidenote');
+    // Check for marginnotes 
+    const openMarginnotes = document.querySelectorAll('.margin-toggle:checked + .marginnote');
     
     if (openSidenotes.length > 0) {
+      // Show hazy backdrop for sidenotes
       this.backdrop.style.display = 'block';
+      this.backdrop.className = 'mobile-sidenote-backdrop hazy';
+    } else if (openMarginnotes.length > 0) {
+      // Show transparent backdrop for marginnotes only
+      this.backdrop.style.display = 'block';
+      this.backdrop.className = 'mobile-sidenote-backdrop transparent';
     } else {
+      // Hide backdrop when nothing is open
       this.backdrop.style.display = 'none';
+      this.backdrop.className = 'mobile-sidenote-backdrop';
     }
   }
 
