@@ -54,10 +54,10 @@ class MobileSidenotes {
   }
 
   updateBackdropVisibility() {
-    // Check for both sidenotes and marginnotes
-    const openNotes = document.querySelectorAll('.margin-toggle:checked + .sidenote, .margin-toggle:checked + .marginnote');
+    // Only check for actual sidenotes, not marginnotes (which are for image captions)
+    const openSidenotes = document.querySelectorAll('.margin-toggle:checked + .sidenote');
     
-    if (openNotes.length > 0) {
+    if (openSidenotes.length > 0) {
       this.backdrop.style.display = 'block';
     } else {
       this.backdrop.style.display = 'none';
