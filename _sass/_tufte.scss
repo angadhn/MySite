@@ -186,24 +186,58 @@ figcaption {
 
   .sidenote,
   .marginnote {
-    float: none !important;
-    clear: both !important;
-    width: 80%;
+    position: fixed !important;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
     max-width: 350px;
-    margin: 1.2rem auto;
-    padding: 1rem 1.2rem;
-    background: #f8f8f8;
-    border-radius: 12px;
+    margin: 0;
+    padding: 1.5rem 1.2rem 2rem 1.2rem;
+    background: #fff;
+    border-radius: 16px;
     font-size: 0.95rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
     text-align: left;
     display: none;
-    border: 1px solid #222;
+    border: none;
+    z-index: 1001;
+    max-height: 70vh;
+    overflow-y: auto;
+    float: none !important;
+    clear: none !important;
+  }
+
+  // Separate backdrop element (created by JavaScript)
+  .mobile-sidenote-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
   }
 
   .margin-toggle:checked + .sidenote,
   .margin-toggle:checked + .marginnote {
     display: block;
+    animation: slideUpCentered 0.3s ease-out;
+  }
+  
+  // Slide up animation with proper centering
+  @keyframes slideUpCentered {
+    from {
+      transform: translateX(-50%) translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
   }
 
   label.margin-toggle:not(.sidenote-number) {
@@ -211,20 +245,7 @@ figcaption {
     content: "⊕";
   }
 
-  .marginnote {
-    display: none;
-    float: left;
-    clear: both;
-    width: 95%;
-    margin: 1rem 2.5%;
-    padding: 0.5rem;
-    background: #f8f8f8;
-    border-radius: 4px;
-  }
-
-  .margin-toggle:checked + .marginnote {
-    display: block;
-  }
+  // Marginnote styles are now unified with sidenote popup behavior above
 
   figure {
     margin: 1rem 0;  // Slightly less spacing on mobile
@@ -297,12 +318,14 @@ figcaption {
   @media (max-width: 768px) {
     .sidenote,
     .marginnote {
-      width: 80%;
-      max-width: 350px;
       background: #1f232b;
       color: #eaeaea;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      border: 1px solid #3d434d;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+      border-top: 1px solid #3d434d;
+    }
+
+    .mobile-sidenote-backdrop {
+      background: rgba(0, 0, 0, 0.5);
     }
 
     label.margin-toggle:not(.sidenote-number) {
