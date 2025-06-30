@@ -195,6 +195,14 @@
     backdrop-filter: blur(15px);
     overflow-y: auto;
     
+    // Hide scrollbars for table of contents
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Internet Explorer and Edge
+    
+    &::-webkit-scrollbar {
+      display: none; // WebKit browsers (Chrome, Safari, etc.)
+    }
+    
     &.show {
       opacity: 1;
       visibility: visible;
@@ -363,38 +371,14 @@
 
 // Custom scrollbar for progress container
 .scroll-progress {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  // Hide scrollbars completely for mobile compatibility
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // Internet Explorer and Edge
 
   &::-webkit-scrollbar {
-    width: 4px;
+    display: none; // WebKit browsers (Chrome, Safari, etc.)
   }
 
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  // Dark theme scrollbar
-  [data-theme="dark"] & {
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-  }
 }
 
 // Horizontal progress bar for small screens
@@ -407,6 +391,15 @@
   background-color: rgba(128, 128, 128, 0.2);
   z-index: 1000;
   display: none;
+  overflow: hidden; // Hide any scrollbars
+  
+  // Hide scrollbars completely
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // Internet Explorer and Edge
+  
+  &::-webkit-scrollbar {
+    display: none; // WebKit browsers (Chrome, Safari, etc.)
+  }
   
   // Show only on small screens
   @media (max-width: 401px) {
