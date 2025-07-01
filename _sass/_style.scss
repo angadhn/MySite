@@ -998,6 +998,14 @@ input:checked + .slider {
         color: #b4b0b0;
     }
 
+    time {
+        color: #6c7a89;  // Darker subtext color for dark mode
+    }
+
+    span[style*="color: hsl(0, 0%, 30%)"] {
+        color: #6c7a89 !important;  // Override inline style for bullet separator in dark mode
+    }
+
 
 
     .slider {

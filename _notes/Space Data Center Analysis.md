@@ -10,8 +10,9 @@ permalink: /space-data-centers-1
 top_of_mind: "true"
 completion_score: 85
 image: /assets/imgs/space-data-centers/starcloud-concept-art.png
-companion music: 
+companion music:
 subtitle: A Technoeconomic Benchmark against ISS technologies
+discussion: https://news.ycombinator.com/item?id=44390781
 ---
 # Abstract
 

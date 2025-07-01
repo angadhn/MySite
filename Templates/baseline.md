@@ -9,4 +9,5 @@ completion_score:
 image:
 companion music:
 subtitle:
+discussion:
 ---
