@@ -1339,12 +1339,13 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
     font-weight: bold;
     font-size: 3.5em;
     float: left;
-    padding-right: 0.1em;
-    line-height: 0.7;
+    padding-right: 0.12em;  // Slightly increased padding for better spacing
+    padding-top: 0.05em;    // Small top padding to align better
+    line-height: 0.8;       // Slightly increased line-height
     color: crimson;
   }
 
-  // Improved text wrapping and hyphenation
+  // Improved text wrapping and hyphenation - removed problematic properties
   word-wrap: break-word;
   overflow-wrap: break-word;
   -webkit-hyphens: auto;
@@ -1355,17 +1356,22 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   // Add language hint for better hyphenation
   lang: "en";
   
-  // Prevent orphans and widows
-  text-wrap: balance;
+  // Removed text-wrap: balance as it conflicts with floated first letter
+  // Removed letter-spacing and word-spacing adjustments
   
-  // Fine-tune spacing
-  letter-spacing: -0.01em;
-  word-spacing: 0.01em;
+  // Better clearfix to prevent layout issues
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
   // Responsive adjustments
   @media (max-width: 768px) {
     &:first-letter {
       font-size: 3em;
+      padding-right: 0.1em;
+      padding-top: 0.03em;
     }
     &:first-line {
       font-size: 1em;
