@@ -129,6 +129,7 @@ So, let’s get back to building rotating wheel space stations again.
 
 _Thanks to Ben Southwood and Eli Dourado for reading early drafts of this and providing feedback. All errors are my own._
 ## Further Reading
+- [Inflatocookbook](https://web.media.mit.edu/~bcroy/inflato-splitpages-small.pdf) h/t [Tom Milton](https://x.com/tsmilton_amodo)
 - [NASA’s Space Settlements Study](https://ntrs.nasa.gov/api/citations/19770014162/downloads/19770014162_update.pdf) from the 1970s; the infamous Stanford Torus study.
 - James Hansens’s “[Spaceflight revolution: NASA Langley Research Center from Sputnik to Apollo](https://ntrs.nasa.gov/citations/19950021264)”
 - T A Heppenheimer's "[Space Shuttle Decision](https://search.worldcat.org/title/40305626)".
