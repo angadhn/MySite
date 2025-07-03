@@ -10,6 +10,7 @@ top_of_mind: "false"
 completion_score: 95
 image: /assets/imgs/WiP1/WebbGoodYear.jpg
 companion music: https://soundcloud.com/adamfreeland/adam-freeland-pale-blue-dot-dj
+subtitle: This article appears on Convergent Research's [Gap Maps](https://www.gap-map.org/gaps/outdated-space-station-construction/).
 ---
 In 1962. There — that answers the clickbaity title right away.
 
