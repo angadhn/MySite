@@ -99,7 +99,7 @@ The following table summarizes the structural mass and stowage volume across thr
 | Scenario | Environment       | Assumptions                                  | Fabric Mass | Volume | Starship Launches |
 | -------- | ----------------- | -------------------------------------------- | ----------- | ------ | ----------------- |
 | 1        | LEO (high debris) | Full MMOD protection, no bulkhead            | 74 tonnes   | 733 m³ | 1                 |
-| 2        | Deep space        | Minimal MMOD protection, no bulkhead<br>     | 28 tonnes   | 463 m³ | 1                 |
+| 2        | Deep space        | Minimal MMOD protection, no bulkhead<br>     | 27.5 tonnes | 463 m³ | 1                 |
 | 3        | LEO (high debris) | Full MMOD protection, bulkhead mass included | 105 tonnes  | 733 m³ | 2                 |
 
 These estimates highlight the significant mass savings achievable through orbital environment selection and demonstrate the importance of early architectural assumptions in space station design.
