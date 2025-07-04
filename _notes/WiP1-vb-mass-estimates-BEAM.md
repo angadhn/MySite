@@ -88,19 +88,18 @@ In Low Earth Orbit, orbital debris is abundant. Based on TransHab studies, appro
 
 **Result:** 75 tonnes fabric mass, fitting in one Starship launch
 
-## Scenario 2: Deep Space (Low Debris)
+## Scenario 2: Low Debris Orbits
 
-In deep space environments (higher orbits, lunar vicinity, Lagrange points), orbital debris is minimal. MMOD shielding drops to only ~14% of total fabric mass (Page 5 in [Litteken et al., 2019](https://www.researchgate.net/profile/Douglas-Litteken/publication/333919095_System_Integration_Comparison_Between_Inflatable_and_Metallic_Spacecraft_Structures/links/5e75387392851cf2719a389c/System-Integration-Comparison-Between-Inflatable-and-Metallic-Spacecraft-Structures.pdf?__cf_chl_tk=pDGvn9SayN3u94_S2IxijTtcfUUkhKg0khQn23ldwPY-1735002576-1.0.1.1-tXvyxaLfG.lXVagYY.rMLfOHHkqRP9DP3HAh.jXshUY)).
+In low debris environments (higher orbits, lunar vicinity, Lagrange points), orbital debris is minimal. MMOD shielding drops to only ~14% of total fabric mass (Page 5 in [Litteken et al., 2019](https://www.researchgate.net/profile/Douglas-Litteken/publication/333919095_System_Integration_Comparison_Between_Inflatable_and_Metallic_Spacecraft_Structures/links/5e75387392851cf2719a389c/System-Integration-Comparison-Between-Inflatable-and-Metallic-Spacecraft-Structures.pdf?__cf_chl_tk=pDGvn9SayN3u94_S2IxijTtcfUUkhKg0khQn23ldwPY-1735002576-1.0.1.1-tXvyxaLfG.lXVagYY.rMLfOHHkqRP9DP3HAh.jXshUY)).
 
 **Calculation steps:**
 
 1. Non-shielding fabric mass (constant): 32% of BEAM's 960 kg = 307 kg
-2. In deep space, this 307 kg represents 86% of total fabric mass
-3. Total deep space BEAM mass: 307 kg ÷ 0.86 = 357 kg
-4. Deep space mass per surface area: 357 kg ÷ 57 m² = 6.3 kg/m²
+2. In low debris orbits, this 307 kg represents 86% of total fabric mass
+3. Total BEAM mass in this case: 307 kg ÷ 0.86 = 357 kg
+4. Mass per surface area: 357 kg ÷ 57 m² = 6.3 kg/m²
 5. Von Braun wheel fabric mass: 4,440 m² × 6.3 kg/m² = **28 tonnes**
-
-Assuming better packing efficiency in deep space (9 m²/m³): 6. Stowed volume: 4,440 m² ÷ 9 m²/m³ = 490 m³
+6. Stowed volume: 4,440 m² ÷ 9 m²/m³ = 490 m³. Note that we assume better packing efficiency in low debris  environments (9 m²/m³). 
 
 **Result:** 28 tonnes fabric mass, easily fitting in one Starship launch
 
@@ -121,7 +120,7 @@ This scenario uses BEAM's full 1,360 kg mass (including bulkheads) to provide a 
 | Scenario | Environment       | Assumptions                                  | Fabric Mass | Volume | Starship Launches |
 | -------- | ----------------- | -------------------------------------------- | ----------- | ------ | ----------------- |
 | 1        | LEO (high debris) | Full MMOD protection, no bulkhead            | 75 tonnes   | 740 m³ | 1                 |
-| 2        | Deep space        | Minimal MMOD protection, no bulkhead<br>     | 28 tonnes   | 490 m³ | 1                 |
+| 2        | Low debris orbits | Minimal MMOD protection, no bulkhead<br>     | 28 tonnes   | 490 m³ | 1                 |
 | 3        | LEO (high debris) | Full MMOD protection, bulkhead mass included | 106 tonnes  | 740 m³ | 2                 |
 
 These estimates demonstrate the significant mass savings possible through careful orbital environment selection and highlight how MMOD protection requirements drive inflatable habitat design.
