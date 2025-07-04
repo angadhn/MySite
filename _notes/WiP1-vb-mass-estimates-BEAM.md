@@ -66,9 +66,6 @@ When stowed for launch:
 - **Length:** 2.1 m
 - **Diameter:** 2.36 m
 - **Stowed volume:** ~9.5 m³
-  $$
-  V = \pi \left(\frac{2.36}{2}\right)^2 \times 2.1 \approx 9.2\,\text{m}^3
-  $$
 
 From these numbers, we can calculate BEAM's **packing efficiency** - how much deployed surface area fits into a given stowed volume:
 $$
