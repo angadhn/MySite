@@ -15,7 +15,7 @@ hideFromHomePage: "true"
 ---
 This appendix provides the detailed methodology used to estimate the mass and volume requirements for components of an inflatable space station—most notably the pressurizing air supply and inflatable fabric shell. It supports the main arguments presented in the Works in Progress piece and is based on a von Braun-style toroidal habitat concept.
 
-# Von Braun Wheel geometric parameters
+# Von Braun Wheel Design Parameters
 
 The von Braun wheel design assumes a torus with major radius R = 37.5 m and minor radius r = 3 m. The internal volume is calculated using the standard torus volume formula:
 
@@ -25,7 +25,7 @@ $$
 
 For a torus with the same dimensions, the surface area is: Surface area = 4π²Rr = 4π²(37.5)(3) ≈ 4,440 m²
 
-# Air Mass Calculation
+# Air Mass Requirements
 At standard atmospheric conditions, air has a density of approximately 1.2 kg/m³. Therefore, the total air mass required is:
 
 $$
@@ -34,7 +34,7 @@ $$
 
 This represents the equivalent mass of air needed to pressurize the habitat to Earth-like atmospheric pressure (1 bar). [[Delivering compress air would require new solutions]]
 
-# BEAM
+# Using BEAM as a Scaling Baseline
 
 ![The Bigelow Expandable Activity Module](assets/imgs/WiP1/BEAM.png)
 
