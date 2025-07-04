@@ -72,7 +72,6 @@ $$
 \text{Packing efficiency}=\frac{57\,m^2}{9.5\,m^3}​\approx6\,m^2/m^3
 $$
 
-
 # Fabric Mass Scenarios
 
 The mass of an inflatable habitat's fabric depends heavily on the space environment as the risk of colliding with micrometeoroids and orbital debris (MMOD) varies between orbit. We examine three scenarios:
