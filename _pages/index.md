@@ -21,7 +21,7 @@ _My [other site](https://angadhn.com) is the primary link to my teaching resourc
   <div class="notes-column">
     <h5>Recent Essays</h5>
     <ul>
-      {% assign notes_with_essays = site.notes | where_exp: "note", "note.tags contains 'essays'" | sort: "published" | reverse %}
+      {% assign notes_with_essays = site.notes | where_exp: "note", "note.tags contains 'essays' and note.hideFromHomePage != true and note.hideFromHomePage != 'true'" | sort: "published" | reverse %}
       {% for note in notes_with_essays limit: 5 %}
         <li>
           • <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}" style="font-family: 'Futura', serif;">{{ note.title }}</a>
@@ -33,7 +33,7 @@ _My [other site](https://angadhn.com) is the primary link to my teaching resourc
   <div class="notes-column">
     <h5>Updated</h5>
     <ul>
-      {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
+      {% assign recent_notes = site.notes | where_exp: "note", "note.hideFromHomePage != true and note.hideFromHomePage != 'true'" | sort: "last_modified_at_timestamp" | reverse %}
       {% assign count = 0 %}
       {% for note in recent_notes %}
         {% unless note.tags contains 'WiP' %}
@@ -54,7 +54,7 @@ _My [other site](https://angadhn.com) is the primary link to my teaching resourc
   <div class="notes-column">
     <h5>In the Garage</h5>
     <ul>
-      {% assign WiP_notes = site.notes | where_exp: "note", "note.tags contains 'WiP'"  | sort: "last_modified_at_timestamp" | reverse %}
+      {% assign WiP_notes = site.notes | where_exp: "note", "note.tags contains 'WiP' and note.hideFromHomePage != true and note.hideFromHomePage != 'true'"  | sort: "last_modified_at_timestamp" | reverse %}
       {% for note in WiP_notes limit: 5 %}
         <li>
           • <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}" style="font-family: 'Futura', serif;">{{ note.title }}</a>
