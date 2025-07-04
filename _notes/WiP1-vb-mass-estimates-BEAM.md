@@ -4,7 +4,7 @@ created: 2025-07-04
 published: 2025-07-04
 tags:
   - WiP
-permalink: /WiP-piece-math-inflatalbe-space-station
+permalink: /WiP-piece-math-inflatable-space-station
 top_of_mind: "false"
 completion_score:
 image:
