@@ -117,7 +117,7 @@ This scenario uses BEAM's full 1,360 kg mass (including bulkheads) to provide a 
 
 # Summary
 
-| Scenarios/Orbits     | Assumptions                                  | Fabric Mass | Volume | Starship Launches |
+| Scenarios and Orbits | Description                                  | Fabric Mass | Volume | Starship Launches |
 | -------------------- | -------------------------------------------- | ----------- | ------ | ----------------- |
 | 1. LEO (high debris) | Full MMOD protection, no bulkhead            | 75 tonnes   | 740 m³ | 1                 |
 | 2. Low debris orbits | Minimal MMOD protection, no bulkhead<br>     | 28 tonnes   | 490 m³ | 1                 |
