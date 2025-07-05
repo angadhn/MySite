@@ -123,6 +123,6 @@ This scenario uses BEAM's full 1,360 kg mass (including bulkheads) to provide a 
 | 2. Low debris orbits | Minimal MMOD protection, no bulkhead<br>     | 28 tonnes   | 490 m³ | 1                 |
 | 3. LEO (high debris) | Full MMOD protection, bulkhead mass included | 106 tonnes  | 740 m³ | 2                 |
 
-These estimates demonstrate the significant mass savings possible through careful orbital environment selection and highlight how MMOD protection requirements drive inflatable habitat design.
+These estimates demonstrate the significant potential mass savings possible based on orbital environment selection and highlight how MMOD protection requirements drive inflatable habitat design.
 
 **Important limitations:** These estimates offer a first-order understanding of how inflatable station mass might scale with area and orbit. They are not engineering specifications, but they help illustrate the architectural trade space for future rotating habitats—and point toward the role of materials and environment in mission feasibility.
