@@ -117,11 +117,11 @@ This scenario uses BEAM's full 1,360 kg mass (including bulkheads) to provide a 
 
 # Summary
 
-| Scenarios and Orbits | Description                                  | Fabric Mass | Volume | Starship Launches |
-| -------------------- | -------------------------------------------- | ----------- | ------ | ----------------- |
-| 1. LEO (high debris) | Full MMOD protection, no bulkhead            | 75 tonnes   | 740 m³ | 1                 |
-| 2. Low debris orbits | Minimal MMOD protection, no bulkhead<br>     | 28 tonnes   | 490 m³ | 1                 |
-| 3. LEO (high debris) | Full MMOD protection, bulkhead mass included | 106 tonnes  | 740 m³ | 2                 |
+| Scenarios and Orbits | Description                                  | Fabric Mass (tonnes) | Volume (m³) | Starship Launches |
+| -------------------- | -------------------------------------------- | -------------------- | ----------- | ----------------- |
+| 1. LEO (high debris) | Full MMOD protection, no bulkhead            | 75                   | 740         | 1                 |
+| 2. Low debris orbits | Minimal MMOD protection, no bulkhead<br>     | 28                   | 490         | 1                 |
+| 3. LEO (high debris) | Full MMOD protection, bulkhead mass included | 106                  | 740         | 2                 |
 
 These estimates demonstrate the significant potential mass savings possible based on orbital environment selection and highlight how MMOD protection requirements drive inflatable habitat design.
 
