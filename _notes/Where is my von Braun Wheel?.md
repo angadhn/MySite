@@ -11,6 +11,7 @@ completion_score: 95
 image: /assets/imgs/WiP1/WebbGoodYear.jpg
 companion music: https://soundcloud.com/adamfreeland/adam-freeland-pale-blue-dot-dj
 subtitle: This article appears on Convergent Research's [Gap Maps](https://www.gap-map.org/capabilities/new-construction-approaches-for-space-stations/).
+discussion: https://news.ycombinator.com/item?id=44455022
 ---
 In 1962. There — that answers the clickbaity title right away.
 
