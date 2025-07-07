@@ -20,7 +20,7 @@ hideFromHomePage: "false"
 [Composite Overwrapped Pressure Vessels](https://en.wikipedia.org/wiki/Composite_overwrapped_pressure_vessel) were developed as an alternative all-metal pressure vessels used in space vehicles of the 60s and 70s to store propellants and other fluids. It comprises a metallic liner and an overwrap (that wraps around the liner)—together they contain gases or propellants.
 
 > For example for a pressure vessel that is 1,300 cubic inches with storing for example helium or a gas at 9700 psi that is equivalent to 3.6 pounds of TNT.
-> - [Lorie Grimes-Ledesma](https://youtu.be/ojg-H0iylbY?list=PLpEqMkxe7Xk-9J-Ba1-nR7V1f8_MLRjt5&t=40) 
+> - [Lorie Grimes-Ledesma](https://youtu.be/ojg-H0iylbY?list=PLpEqMkxe7Xk-9J-Ba1-nR7V1f8_MLRjt5&t=49) 
 
 Their primary advantage over similar-sized metallic pressure vessel is lowering mass by upto 50%; COPVs, however, carry an increased cost of manufacturing and certification.
 
