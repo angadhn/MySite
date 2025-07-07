@@ -21,6 +21,8 @@ A [Composite Overwrapped Pressure Vessel](https://en.wikipedia.org/wiki/Composit
 
 A [bit of history](https://ntrs.nasa.gov/api/citations/20110008406/downloads/20110008406.pdf) is that a technology transfer task—involving cooperation between NASA and multiple fire service organizationss in NYC, LA, and Boston—focused on improving respiratory protection for municipal firefighters led to the commercialization of COPVs. Hundreds of thousands of COPVs are now produced per year for commercial applications.
 
+# Risks of COPVs
+
 > For example for a pressure vessel that is 1,300 cubic inches with storing for example helium or a gas at 9700 psi that is equivalent to 3.6 pounds of TNT.
 > 
 > [Lorie Grimes-Ledesma](https://youtu.be/ojg-H0iylbY?list=PLpEqMkxe7Xk-9J-Ba1-nR7V1f8_MLRjt5&t=49) 
@@ -38,4 +40,4 @@ The below are resources that may prove useful for [[Delivering air at this scale
 
 - [Composite Overwrapped Pressure Vessels, A Primer](https://ntrs.nasa.gov/api/citations/20110008406/downloads/20110008406.pdf)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=xz9IYziYnBW9Ea19&amp;list=PLpEqMkxe7Xk-9J-Ba1-nR7V1f8_MLRjt5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="360" height="315" src="https://www.youtube.com/embed/videoseries?si=xz9IYziYnBW9Ea19&amp;list=PLpEqMkxe7Xk-9J-Ba1-nR7V1f8_MLRjt5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
