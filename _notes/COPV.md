@@ -26,7 +26,7 @@ A [Composite Overwrapped Pressure Vessel](https://en.wikipedia.org/wiki/Composit
 Their primary advantage over similar-sized metallic pressure vessel is from mass savings—they can be lighter by upto 50%. COPVs, however, carry an increased cost of manufacturing and certification.
 
 The [three most important failures modes for COPVs](https://www.youtube.com/watch?v=k1EOi_yQL_M&list=PLpEqMkxe7Xk-9J-Ba1-nR7V1f8_MLRjt5&index=6) that need to be understood for long-term deep space misssions:
-- LInear Fatigure Crack Growyth and Crazck frowth
+- Fatigue crack growth in Liner and crack growth in Boss (?)
 - Impact damage
 - Stress-Rupture mechanisms
 
