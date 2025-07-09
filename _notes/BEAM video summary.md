@@ -1,5 +1,5 @@
 ---
-title: Some notes on BEAM
+title: Some notes on BEAM from NASA video
 created: 22/12/2024
 published: 2024-12-31
 tags:
@@ -9,8 +9,8 @@ tags:
   - essays
 permalink: /BEAM
 top_of_mind: "false"
-completion_score: 
-image: 
+completion_score:
+image:
 companion music:
 ---
 Rajib Dasgupta's 2016 interview as project manager for NASA's BEAM (Bigelow Expandable Activity Module) was very informative and recommended to those interested in inflatable space habitats. BEAM's addition to the ISS jas proved that expandable tech on a human-rated spacecraft (ISS) can reach TRL 9.
