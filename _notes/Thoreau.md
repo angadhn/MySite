@@ -108,6 +108,6 @@ As I have tried to explain above, if we see this coupling between technology and
 
 [^17]: I mean that it should not disrupt the common person on the street; I do not buy into, for example, Extinction Rebellion's protests to shut down the tube. It disrupts the daily commuter more than the corporations, who are possibly just mildly irritated.
 
-[^20]: While the term is a mouthful, I choose to use word this for its neutral tone when compared to kleptocracy and oligarchy which do not sufficiently capture the power dynamics of modern technologies (especially digital) in democratic governments.
+[^20]: While the term is a mouthful, I choose to use this word for its neutral tone when compared to kleptocracy and oligarchy which do not sufficiently capture the power dynamics of modern technologies (especially digital) or its democratic aspects.
 
 [^21]: [[Graeber and Thiel|His debate with Thiel]] is pertinent but also enjoyable.

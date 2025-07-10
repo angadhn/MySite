@@ -29,7 +29,7 @@ On Norway's investment strategy:
 
 # Saudi Arabia
 
-More from Claude, which tells me that depsite Saudi Arabia and Norway having SWFs from oil wealth, their approaches and outcomes are quite different.
+More from Claude, which tells me that despite Saudi Arabia and Norway having SWFs from oil wealth, their approaches and outcomes are quite different.
 
 Norway's Approach:
 - Highly transparent fund with clear ethical guidelines
