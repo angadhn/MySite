@@ -45,3 +45,19 @@ defaults:
 
 url: "https://angadh.com"
 description: "Angadh's meditations"  # Make this more descriptive
+
+# Giscus Comments Configuration
+giscus:
+  enabled: true
+  repository: "angadhn/MySite"
+  repository_id: "R_kgDONu57Fw"
+  category: "Comments"
+  category_id: "DIC_kwDONu57F84Csy3k"
+  mapping: "pathname"
+  strict: "0"
+  reactions_enabled: "1"
+  emit_metadata: "0"
+  input_position: "bottom"
+  theme: "preferred_color_scheme"
+  language: "en"
+  loading: "lazy"
