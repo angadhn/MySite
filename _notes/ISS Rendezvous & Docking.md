@@ -1,7 +1,11 @@
 ---
-title:  "ISS Rendezvous (and some) Docking"
+title: ISS Rendezvous (and some) Docking
 published: 2024-12-19
-tags: [space stations]
+tags:
+  - space
+  - spaceships
+created: 2024-12-19
+permalink: /rdv-1
 ---
 I started thinking about how docking might work with an inflatable station since writing about the
 Goodyear concept  [[inflatable von Braun Stations|here]]. I have been trying to think about how spacecraft might dock to such a 

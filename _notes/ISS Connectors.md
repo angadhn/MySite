@@ -2,7 +2,8 @@
 title: The ISS's Connector Mechanisms
 published: 2024-12-21
 tags:
-  - space stations
+  - space
+  - spaceships
 top_of_mind: "true"
 created: 2024-12-21
 ---
