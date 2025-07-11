@@ -2,9 +2,9 @@
 title: Some Space Stations in Fiction and Reality
 published: 2024-09-29
 tags:
-  - space stations
   - essays
-  - NASA
+  - teaching
+  - spaceships
 permalink: /vonBraunComparison
 ---
 An earlier post in my teaching resources for a final

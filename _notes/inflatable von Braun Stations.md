@@ -2,7 +2,6 @@
 title: "Inflatable von Braun space stations: an idea worth revisiting?"
 published: 2024-10-06
 tags:
-  - space stations
   - inflatable
   - essays
   - NASA
