@@ -5,12 +5,12 @@ author:
   - W B Yeats
 published: ""
 created: 2025-05-01
-description: 
+description:
 tags:
-  - great-poems
+  - poetry
 permalink: /yeats-1
 top_of_mind: "false"
-completion_score: 
+completion_score:
 image:
 ---
 > Had I the heavens’ embroidered cloths, 
