@@ -199,20 +199,6 @@
 
             // Only show dropdown when menu is open
             &.menu-open {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: calc(100% - 0.5rem);
-                    right: 0;
-                    width: max-content;
-                    min-width: 150px;
-                    height: calc(2rem * var(--item-count, 3));
-                    background: var(--background-color, #fff);
-                    border-radius: 4px;
-                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                    z-index: 999;
-                }
-
                 .nav-link.link-page {
                     display: block;
                     position: absolute;
@@ -225,8 +211,8 @@
                     background: none;
                     
                     &:hover {
-                        background: rgba(0, 0, 0, 0.05);
-                        color: crimson;
+                        background: none;
+                        color: crimson !important;
                     }
 
                     @for $i from 1 through 10 {
@@ -272,20 +258,6 @@
                 // These styles are now in the mobile-hamburger.open class
             }
             
-            &:before {
-                content: '';
-                position: absolute;
-                top: calc(100% - 0.5rem);
-                right: 0;
-                width: max-content;
-                min-width: 150px;
-                height: calc(2rem * var(--item-count, 3));
-                background: var(--background-color, #fff);
-                border-radius: 4px;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                z-index: 999;
-            }
-            
             .nav-link.link-page {
                 display: block;
                 position: absolute;
@@ -298,8 +270,8 @@
                 background: none;
                 
                 &:hover {
-                    background: rgba(0, 0, 0, 0.05);
-                    color: crimson;
+                    background: none;
+                    color: crimson !important;
                 }
                 
                 @for $i from 1 through 10 {
