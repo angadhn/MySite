@@ -1254,10 +1254,11 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 }
 
 [data-theme="dark"] .category-link {
-  color: #00adb5;  // Keep teal for dark mode
+  color: crimson;  // Keep teal for dark mode
   
   &:hover {
-    color: #00adb5 !important;
+    background: none;
+    color: #e4eff0 !important;
   }
 }
 
