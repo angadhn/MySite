@@ -343,7 +343,7 @@ a {
   }
 }
 
-*:focus:not(nav *, .theme-switch *, .floating-mobile-toc-button *, .mobile-toc-toggle *) {
+*:focus:not(nav *, .nav-wrapper *, .theme-switch *, .floating-mobile-toc-button *, .mobile-toc-toggle *) {
   background: #ffe8bc !important;
   color: black !important;
 }
@@ -1058,7 +1058,7 @@ input:checked + .slider {
 
 
     // Override focus style for dark mode, excluding nav
-    *:focus:not(nav *, .theme-switch *, .floating-mobile-toc-button *, .mobile-toc-toggle *) {
+    *:focus:not(nav *, .nav-wrapper *, .theme-switch *, .floating-mobile-toc-button *, .mobile-toc-toggle *) {
         background: #1f232b !important;
         color: #00adb5 !important;
     }
@@ -1254,10 +1254,10 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 }
 
 [data-theme="dark"] .category-link {
-  color: #00adb5;  // Keep teal for dark mode
+  color: crimson;  // Use crimson for consistency
   
   &:hover {
-    color: #00adb5 !important;
+    color: crimson !important;
   }
 }
 
