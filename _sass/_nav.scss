@@ -198,30 +198,51 @@
             padding-bottom: 1rem;
 
             // Only show dropdown when menu is open
-            &.menu-open {
-                .nav-link.link-page {
-                    display: block;
-                    position: absolute;
-                    right: 0;
-                    width: max-content;
-                    min-width: 150px;
-                    padding: 0.5rem 1rem;
-                    text-align: right;
-                    z-index: 1000;
+                    &.menu-open {
+            // Create a nice box container for the menu items
+            &:before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 140px; // Reduced from 200px
+                height: calc(var(--item-count, 4) * 2rem + 0.5rem); // Reduced spacing
+                background: rgba(255, 255, 255, 0.95);
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 8px; // Slightly smaller radius
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); // Smaller shadow
+                backdrop-filter: blur(10px);
+                z-index: 999;
+                padding: 0.25rem 0; // Reduced padding
+                margin-top: 0.1rem; // Moved closer to button
+            }
+            
+            .nav-link.link-page {
+                display: block;
+                position: absolute;
+                right: 0;
+                width: 140px; // Match container width
+                padding: 0.5rem 0.75rem; // Reduced padding
+                text-align: right;
+                z-index: 1000;
+                background: none;
+                border-radius: 4px; // Smaller radius
+                margin: 0 0.25rem; // Reduced margin
+                transition: background-color 0.2s ease;
+                font-size: 0.9rem; // Slightly smaller font
+                
+                &:hover {
                     background: none;
-                    
-                    &:hover {
-                        background: none;
-                        color: crimson !important;
-                    }
-
-                    @for $i from 1 through 10 {
-                        &:nth-of-type(#{$i}) {
-                            top: calc(100% - 0.5rem + #{($i - 1) * 2}rem);
-                        }
+                    color: crimson !important;
+                }
+                
+                @for $i from 1 through 10 {
+                    &:nth-of-type(#{$i}) {
+                        top: calc(100% + 0.25rem + #{($i - 1) * 2}rem); // Reduced spacing
                     }
                 }
             }
+        }
         }
 
         // Dropdown box display - Modify this to exclude the logo-wrapper from triggering the dropdown
@@ -256,29 +277,6 @@
         &.menu-open {
             .mobile-hamburger {
                 // These styles are now in the mobile-hamburger.open class
-            }
-            
-            .nav-link.link-page {
-                display: block;
-                position: absolute;
-                right: 0;
-                width: max-content;
-                min-width: 150px;
-                padding: 0.5rem 1rem;
-                text-align: right;
-                z-index: 1000;
-                background: none;
-                
-                &:hover {
-                    background: none;
-                    color: crimson !important;
-                }
-                
-                @for $i from 1 through 10 {
-                    &:nth-of-type(#{$i}) {
-                        top: calc(100% - 0.5rem + #{($i - 1) * 2}rem);
-                    }
-                }
             }
         }
     }
@@ -347,13 +345,18 @@
             &.menu-open {
                 &:before {
                     background: #1f232b;
-                    border: 1px solid #3d434d;
+                    border: none !important;
+                    box-shadow: none;
+                    border-radius: 8px;
+                    backdrop-filter: none;
                 }
                 
                 .nav-link.link-page {
+                    border-radius: 4px;
+                    
                     &:hover {
-                        background: rgba(255, 255, 255, 0.1);
-                        color: crimson;
+                        background: none;
+                        color: crimson !important;
                     }
                 }
             }
