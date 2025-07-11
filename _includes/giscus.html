@@ -1,5 +1,6 @@
 {% if site.giscus.enabled %}
-<div class="giscus-container" style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border, #e1e4e8);">
+<div class="giscus-container" style="margin-top: 1rem;">
+  <h1 style="margin-bottom: 1rem;">Comments</h1>
   <script src="https://giscus.app/client.js"
           data-repo="{{ site.giscus.repository }}"
           data-repo-id="{{ site.giscus.repository_id }}"
@@ -10,7 +11,7 @@
           data-reactions-enabled="{{ site.giscus.reactions_enabled | default: '1' }}"
           data-emit-metadata="{{ site.giscus.emit_metadata | default: '0' }}"
           data-input-position="{{ site.giscus.input_position | default: 'bottom' }}"
-          data-theme="{{ site.giscus.theme | default: 'preferred_color_scheme' }}"
+          data-theme="{{ site.giscus.theme | default: 'auto' }}"
           data-lang="{{ site.giscus.language | default: 'en' }}"
           data-loading="{{ site.giscus.loading | default: 'lazy' }}"
           crossorigin="anonymous"

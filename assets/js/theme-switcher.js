@@ -14,11 +14,26 @@ function updateImages(isDark) {
     });
 }
 
+// Update giscus theme
+function updateGiscusTheme(themeName) {
+    const giscusFrame = document.querySelector('iframe.giscus-frame');
+    if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage({
+            giscus: {
+                setConfig: {
+                    theme: themeName === 'dark' ? 'dark' : 'light'
+                }
+            }
+        }, 'https://giscus.app');
+    }
+}
+
 // Apply theme changes
 function applyTheme(themeName) {
     document.documentElement.setAttribute('data-theme', themeName);
     toggleSwitch.checked = themeName === 'dark';
     updateImages(themeName === 'dark');
+    updateGiscusTheme(themeName);
     
     // Update manifest link
     const manifestLink = document.querySelector('link[rel="manifest"]');
@@ -58,6 +73,19 @@ prefersDarkScheme.addListener((e) => {
     // Only apply system theme changes if user hasn't set a preference
     if (!localStorage.getItem('theme')) {
         applyTheme(e.matches ? 'dark' : 'light');
+    }
+});
+
+// Listen for giscus messages to update theme when iframe loads
+window.addEventListener('message', (event) => {
+    if (event.origin !== 'https://giscus.app') return;
+    
+    if (event.data.giscus && event.data.giscus.ready) {
+        // Giscus is ready, update its theme to match current site theme
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme) {
+            updateGiscusTheme(currentTheme);
+        }
     }
 });
 
