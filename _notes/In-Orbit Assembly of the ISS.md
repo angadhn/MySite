@@ -3,7 +3,7 @@ title: One of the best ISS videos I have seen
 published: 2024-12-20
 tags:
   - space
-  - stations
+  - spaceships
 created: 2024-12-20
 top_of_mind: "false"
 ---

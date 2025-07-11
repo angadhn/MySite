@@ -5,7 +5,7 @@ created: 14-09-2024
 tags:
   - teaching
   - space
-  - stations
+  - spaceships
 permalink: /UG_final_year_project
 top_of_mind: "false"
 ---
