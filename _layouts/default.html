@@ -8,7 +8,9 @@
     </div>
 
     {% include link-previews.html wrapperQuerySelector="content" %}
+    {% unless page.layout == 'note' %}
     {% include newsletter.html %}
+    {% endunless %}
     <footer>{% include footer.html %}</footer>
 
     <script src="{{ site.baseurl }}/assets/js/scroll-progress.js"></script>
