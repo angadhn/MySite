@@ -6,6 +6,13 @@ tags:
   - spaceships
 created: 2024-12-19
 permalink: /rdv-1
+top_of_mind: "false"
+completion_score:
+image:
+companion music:
+subtitle:
+discussion:
+hideFromHomePage: "false"
 ---
 I started thinking about how docking might work with an inflatable station since writing about the
 Goodyear concept  [[inflatable von Braun Stations|here]]. I have been trying to think about how spacecraft might dock to such a 
