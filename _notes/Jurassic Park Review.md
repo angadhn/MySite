@@ -13,12 +13,13 @@ tags:
 permalink: /jurassic-park-review
 top_of_mind: "false"
 completion_score: 100
-image: 
+image: /assets/imgs/GardenofDinoDelights.png
 companion music: 
 subtitle: The origin of “Marvel movies” species
 ---
 Jurassic Park has aged so confusingly. Undoubtedly awe-inspiring visually—not just for its action set pieces but also its sweeping vistas where dinosaurs populate lush, verdant landscapes with the same abundant density of life that characterizes Hieronymous Bosch’s Garden of Earthly Delights.
 
+![Garden of Dino Delights](assets/imgs/GardenofDinoDelights.png)
 The circumstances under which I rewatched this once-upon-a-time childhood favourite of mine cannot be divulged but, in concert with the hilariously cringey dialogue from characters with personalities only as complex as the dinosaurs, it delivered an unmistakable clarity on how my erratically [premium mediocre](https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/) taste in movies could be traced to its specific early exposure. These are the kind of movies that sweep you into  its gravitational pull and escaping its orbit is not too different from perennial cycles of doomscrolling. It’s just easy to watch this stuff.
 
 I first saw this movie nearly 30 years ago—yes, I’m now as old as the dinosaurs—so obviously didn’t realise that this was such bad cinema (barring the amazing action!)! Then, I read the damn books when I was 12—and I loved them. And I loved Timeline, too. Shoot me! But damn, even I know better than to go back and read Crichton now.
