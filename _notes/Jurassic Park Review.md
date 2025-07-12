@@ -45,4 +45,4 @@ I think what really vexed me into frustrated live-tweeting was that for a movie 
 
 I did soldier on to rewatch “The Lost World” to ensure total annihilation of my childhood memories. In the WWE, he’d definitely go by Steven “The Spectacle” Spielberg but I’m now done with such cinematic opulence. I can only wonder about the many productive child-hours I lost to the Jurassic Park movies. But, in the long term, I may have been cured of my hunger for sloppified Hollywood menagerie. 
 
-[^1]: For future self-ed, I should skim: https://www.cell.com/callback?red_uri=%2Fcurrent-biology%2Ffulltext%2FS0960-9822%252818%252931268-5&code=Uf58W0k7bBJ502VRMVhuPbRH-cOWcKMrilB_1L09&state=15857709121
+[^1]: For future self-ed, I should skim this [paper](https://www.cell.com/callback?red_uri=%2Fcurrent-biology%2Ffulltext%2FS0960-9822%252818%252931268-5&code=Uf58W0k7bBJ502VRMVhuPbRH-cOWcKMrilB_1L09&state=15857709121).
