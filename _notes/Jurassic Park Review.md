@@ -17,7 +17,7 @@ image: /assets/imgs/GardenofDinoDelights.jpg
 companion music:
 subtitle: The origin of “Marvel movies” species
 ---
-Jurassic Park has aged so confusingly. Undoubtedly awe-inspiring visually—not just for its action set pieces but also its sweeping vistas where dinosaurs populate lush, verdant landscapes with the same abundant density of life that characterizes Hieronymous Bosch’s Garden of Earthly Delights.
+Jurassic Park has aged so confusingly. Undoubtedly awe-inspiring visually—not just for its action set pieces but also its sweeping vistas where dinosaurs populate lush, verdant landscapes with the same abundant density of life that characterises Hieronymous Bosch’s Garden of Earthly Delights.
 
 ![Garden of Dino Delights](assets/imgs/GardenofDinoDelights.jpg)
 The circumstances under which I rewatched this once-upon-a-time childhood favourite of mine cannot be divulged but, in concert with the hilariously cringey dialogue from characters with personalities only as complex as the dinosaurs, it delivered an unmistakable clarity on how my erratically [premium mediocre](https://www.ribbonfarm.com/2017/08/17/the-premium-mediocre-life-of-maya-millennial/) taste in movies could be traced to its specific early exposure. These are the kind of movies that sweep you into  its gravitational pull and escaping its orbit is not too different from perennial cycles of doomscrolling. It’s just easy to watch this stuff.
@@ -42,7 +42,6 @@ While I was mostly disappointed as I [live-tweeted](https://x.com/angadhn/status
 ![](https://media1.tenor.com/m/lt3lDXvsGbkAAAAd/jurassic.gif)
 
 I think what really vexed me into frustrated live-tweeting was that for a movie that could be so much more, it ends up as yet another dystopian vision via sci-fi—aside from being unoriginal, the deeply problematic premise about horrible philanthropist and thoughtless scientists just gets under my skin because such dystopian views do not emerge from shallow decision making by some of the smartest people. I’m get to see such totally hollow humans in my line of work. I do hope the community proves to be better as they progress technology.
-
 
 I did soldier on to rewatch “The Lost World” to ensure total annihilation of my childhood memories. In the WWE, he’d definitely go by Steven “The Spectacle” Spielberg but I’m now done with such cinematic opulence. I can only wonder about the many productive child-hours I lost to the Jurassic Park movies. But, in the long term, I may have been cured of my hunger for sloppified Hollywood menagerie. 
 
