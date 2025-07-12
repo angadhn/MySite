@@ -1254,7 +1254,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
 }
 
 [data-theme="dark"] .category-link {
-  color: crimson;  // Keep teal for dark mode
+  color: rgb(205, 7, 46);  // Keep teal for dark mode
   
   &:hover {
     background: none;
@@ -1354,8 +1354,7 @@ a:not(.site-logo):not(.internal-link):not(.custom-icon):not(.nav-link):not([href
   -ms-hyphens: auto;
   hyphens: auto;
   
-  // Add language hint for better hyphenation
-  lang: "en";
+  // Language hint for better hyphenation should be set in HTML, not CSS
   
   // Removed text-wrap: balance as it conflicts with floated first letter
   // Removed letter-spacing and word-spacing adjustments

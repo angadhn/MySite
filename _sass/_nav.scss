@@ -273,12 +273,7 @@
             z-index: 999; /* One less than theme switcher to ensure proper layering */
         }
         
-        // Remove the old menu-open styles as we'll use the mobile-hamburger.open class
-        &.menu-open {
-            .mobile-hamburger {
-                // These styles are now in the mobile-hamburger.open class
-            }
-        }
+        // Mobile hamburger is styled above in the .mobile-hamburger class
     }
 
     .desktop-nav {
