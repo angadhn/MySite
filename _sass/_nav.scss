@@ -350,7 +350,7 @@
                     border-radius: 4px;
                     
                     &:hover {
-                        background: none;
+                        background: none !important;
                         color: crimson !important;
                     }
                 }
