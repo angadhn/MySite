@@ -10,6 +10,7 @@ tags:
   - review
   - mindslop
   - movies
+  - essays
 permalink: /jurassic-park-review
 top_of_mind: "false"
 completion_score: 100
